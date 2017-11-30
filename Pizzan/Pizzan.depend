@@ -1,0 +1,34 @@
+# depslib dependency file v1.0
+1512043225 source:c:\users\asdis\desktop\pizzaforrit\pizzan\controllers\welcomecontroller.cpp
+	"WelcomeController.h"
+
+1512043276 c:\users\asdis\desktop\pizzaforrit\pizzan\controllers\welcomecontroller.h
+	"WelcomeView.h"
+	<iostream>
+
+1512043276 c:\users\asdis\desktop\pizzaforrit\pizzan\view\\welcomeview.h
+	<iostream>
+
+1512043228 source:c:\users\asdis\desktop\pizzaforrit\pizzan\view\welcomeview.cpp
+	"WelcomeView.h"
+
+1512043276 c:\users\asdis\desktop\pizzaforrit\pizzan\view\welcomeview.h
+	<iostream>
+
+1512043761 source:c:\users\asdis\desktop\pizzaforrit\pizzan\controllers\pizza.cpp
+	"Pizza.h"
+
+1512043761 c:\users\asdis\desktop\pizzaforrit\pizzan\controllers\pizza.h
+
+1512044222 source:c:\users\asdis\desktop\pizzaforrit\pizzan\controllers\welcome.cpp
+	"Welcome.h"
+
+1512044213 c:\users\asdis\desktop\pizzaforrit\pizzan\controllers\welcome.h
+	<iostream>
+	"WelcomeView.h"
+
+1512044031 source:c:\users\asdis\desktop\pizzaforrit\pizzan\main.cpp
+	<iostream>
+	"Welcome.h"
+	"WelcomeView.h"
+

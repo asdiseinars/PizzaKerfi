@@ -13,6 +13,9 @@
 				<Option compiler="gcc" />
 				<Compiler>
 					<Add option="-g" />
+					<Add directory="View/" />
+					<Add directory="Controllers" />
+					<Add directory="Controller" />
 				</Compiler>
 			</Target>
 			<Target title="Release">
@@ -22,6 +25,9 @@
 				<Option compiler="gcc" />
 				<Compiler>
 					<Add option="-O2" />
+					<Add directory="View/" />
+					<Add directory="Controllers" />
+					<Add directory="Controller" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
@@ -32,6 +38,14 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="Controllers/Pizza.cpp" />
+		<Unit filename="Controllers/Pizza.h" />
+		<Unit filename="Controllers/Topping.cpp" />
+		<Unit filename="Controllers/Topping.h" />
+		<Unit filename="Controllers/Welcome.cpp" />
+		<Unit filename="Controllers/Welcome.h" />
+		<Unit filename="View/WelcomeView.cpp" />
+		<Unit filename="View/WelcomeView.h" />
 		<Unit filename="main.cpp" />
 		<Extensions>
 			<code_completion />

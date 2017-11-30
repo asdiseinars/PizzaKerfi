@@ -1,9 +1,12 @@
 #include <iostream>
+#include "Welcome.h"
+#include "WelcomeView.h"
 
 using namespace std;
 
 int main()
 {
-    cout << "Hello world!" << endl;
+    Welcome menu;
+    menu.initialize();
     return 0;
 }
