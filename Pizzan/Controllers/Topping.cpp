@@ -1,7 +1,6 @@
 #include "Topping.h"
 
-Topping::Topping()
-{
+Topping::Topping(){
     string name = "";
     double price = 0.0;
 }
@@ -12,8 +11,7 @@ Topping::Topping(string name, double price){
 
 }
 
-Topping::~Topping()
-{
+Topping::~Topping(){
     //dtor
 }
 

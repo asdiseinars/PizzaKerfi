@@ -1,5 +1,6 @@
 #ifndef WELCOMEVIEW_H
 #define WELCOMEVIEW_H
+#include "PizzaView.h"
 #include <iostream>
 
 using namespace std;
