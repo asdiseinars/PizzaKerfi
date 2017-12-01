@@ -2,6 +2,7 @@
 <CodeBlocks_layout_file>
 	<FileVersion major="1" minor="0" />
 	<ActiveTarget name="Debug" />
+<<<<<<< HEAD
 	<File name="MODELS\home.cpp" open="1" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="11" topLine="0" />
@@ -40,6 +41,11 @@
 	<File name="REPO\pizzadata.h" open="1" top="0" tabpos="10" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="127" topLine="0" />
+=======
+	<File name="REPO\pizzadata.cpp" open="1" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="283" topLine="0" />
+>>>>>>> dd2f37c10f138dd1c0a5b7c38e3b1c2f7eded7a2
 		</Cursor>
 	</File>
 	<File name="UI\HomeUI.cpp" open="1" top="1" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
@@ -47,16 +53,23 @@
 			<Cursor1 position="650" topLine="1" />
 		</Cursor>
 	</File>
+<<<<<<< HEAD
 	<File name="MODELS\pizza.cpp" open="1" top="0" tabpos="7" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="546" topLine="43" />
-		</Cursor>
-	</File>
-	<File name="MODELS\home.h" open="1" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+=======
+	<File name="main.cpp" open="1" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="43" topLine="0" />
+			<Cursor1 position="32" topLine="0" />
+>>>>>>> dd2f37c10f138dd1c0a5b7c38e3b1c2f7eded7a2
 		</Cursor>
 	</File>
+	<File name="UI\HomeUI.cpp" open="1" top="1" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="901" topLine="12" />
+		</Cursor>
+	</File>
+<<<<<<< HEAD
 	<File name="REPO\pizzadata.cpp" open="1" top="0" tabpos="11" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="51" topLine="0" />
@@ -65,6 +78,11 @@
 	<File name="UI\pizzaui.cpp" open="1" top="0" tabpos="9" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="333" topLine="0" />
+=======
+	<File name="REPO\pizzadata.h" open="1" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="198" topLine="0" />
+>>>>>>> dd2f37c10f138dd1c0a5b7c38e3b1c2f7eded7a2
 		</Cursor>
 	</File>
 </CodeBlocks_layout_file>

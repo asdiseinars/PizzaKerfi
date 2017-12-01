@@ -12,8 +12,6 @@ class PizzaData
 
     public:
         PizzaData();
-        virtual ~PizzaData();
-
         void storePizza(Pizza& pizza);
         Pizza retrievePizza();
 

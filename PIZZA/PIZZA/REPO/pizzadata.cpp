@@ -4,10 +4,6 @@ PizzaData::PizzaData(){
 
 }
 
-PizzaData::~PizzaData(){
-    //dtor
-}
-
 void PizzaData::storePizza(Pizza& pizza){
     ofstream fout;
 
@@ -22,7 +18,7 @@ void PizzaData::storePizza(Pizza& pizza){
 Pizza PizzaData::retrievePizza(){
     ifstream fin;
 
-    fin.open("pizzas.dat", ios::app | ios::binary);
+    fin.open("pizzas.dat", ios::binary);
 
     Pizza pizza;
     fin >> pizza;
