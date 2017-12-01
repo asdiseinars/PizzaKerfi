@@ -7,15 +7,14 @@
 using namespace std;
 
 
-
-class PizzaView
+class PizzaUI
 {
     private:
 
     public:
-        PizzaView();
-        virtual ~PizzaView();
-        void displayPizzaView();
+        PizzaUI();
+        virtual ~PizzaUI();
+        void displayPizzaUI();
 
 };
 

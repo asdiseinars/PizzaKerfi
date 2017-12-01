@@ -1,12 +1,13 @@
 #include <iostream>
-#include "Welcome.h"
+#include "home.h"
 
 
 using namespace std;
 
 int main()
 {
-    Welcome menu;
+    Home menu;
     menu.initialize();
+
     return 0;
 }

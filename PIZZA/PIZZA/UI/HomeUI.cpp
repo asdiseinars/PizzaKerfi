@@ -1,10 +1,12 @@
-#include "WelcomeView.h"
+#include "HomeUI.h"
 
-WelcomeView::WelcomeView(){ }
+HomeUI::HomeUI(){
+}
 
-void WelcomeView::displayWelcome(){
+void HomeUI::displayHome(){
 
     char selection = '\0';
+
     while(selection != 'q'){
         cout << "Type 1 if you are an admin" << endl;
         cout << "Type 2 if you are a salesman" << endl;
@@ -17,11 +19,9 @@ void WelcomeView::displayWelcome(){
         cin >> selection;
 
         if(selection == '1'){
-            PizzaView pizzaview;
-            pizzaview.displayPizzaView();
+            PizzaUI pizzaui;
+            pizzaui.displayPizzaUI();
             cout << endl;
         }
    }
-
-
 }

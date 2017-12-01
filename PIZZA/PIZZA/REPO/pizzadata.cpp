@@ -1,7 +1,7 @@
 #include "PizzaData.h"
 
 PizzaData::PizzaData(){
-    //ctor
+
 }
 
 PizzaData::~PizzaData(){
@@ -31,3 +31,4 @@ Pizza PizzaData::retrievePizza(){
 
     return pizza;
 }
+

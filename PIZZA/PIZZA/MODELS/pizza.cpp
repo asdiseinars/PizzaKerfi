@@ -1,7 +1,7 @@
 #include "Pizza.h"
 
-Pizza::Pizza()
-{
+Pizza::Pizza(){
+
     verbose = true;
 }
 
@@ -17,22 +17,22 @@ void Pizza::addTopping(Topping topping){
 
 void Pizza::write(ofstream& fout) const {
 
-    int tCount = toppings.size();
+    int toppingCount = toppings.size();
 
-    fout.write((char*)(&tCount), sizeof(int));
+    fout.write((char*)(&toppingCount), sizeof(int));
 
-    /*for(int i = 0; i < tCount; i++){
+    /*for(int i = 0; i < toppingCount; i++){
         fout.write((char*)(&toppings.at(i)), sizeof(Topping));
     }*/
 
-    for(int i = 0; i < tCount; i++){
+    for(int i = 0; i < toppingCount; i++){
         toppings[i].write(fout);
     }
 }
 
 void Pizza::read(ifstream& fin) {
-    int tCount;
-    fin.read((char*)(&tCount), sizeof(int));
+    int toppingCount;
+    fin.read((char*)(&toppingCount), sizeof(int));
 
     Topping topping;
     for(unsigned int i = 0; i < toppings.size(); i++){
@@ -65,7 +65,5 @@ ostream& operator << (ostream& out, Pizza& pizza) {
 
     return out;
 }
-
-
 
 

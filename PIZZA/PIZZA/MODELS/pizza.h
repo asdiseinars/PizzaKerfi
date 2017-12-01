@@ -3,7 +3,6 @@
 #include "Topping.h"
 #include <iostream>
 #include <fstream>
-
 #include <vector>
 
 using namespace std;
@@ -23,8 +22,6 @@ class Pizza
         friend istream& operator >> (istream& in, Pizza& pizza);
         friend ostream& operator << (ostream& out, Pizza& pizza);
         bool verbose;
-
-
 
 };
 

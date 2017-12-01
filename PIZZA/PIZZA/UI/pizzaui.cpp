@@ -1,21 +1,21 @@
-#include "PizzaView.h"
+#include "PizzaUI.h"
 #include "Pizza.h"
 #include "Topping.h"
 #include <iostream>
 
 using namespace std;
 
-PizzaView::PizzaView()
+PizzaUI::PizzaUI()
 {
     //ctor
 }
 
-PizzaView::~PizzaView()
+PizzaUI::~PizzaUI()
 {
     //dtor
 }
 
-void PizzaView::displayPizzaView(){
+void PizzaUI::displayPizzaUI(){
 
     char selection = '\0';
 
@@ -25,13 +25,13 @@ void PizzaView::displayPizzaView(){
     cin >> selection;
 
     if(selection == 'm'){
-        int tCount;
+        int toppingCount;
 
         cout << "How many toppings: ";
-        cin >> tCount;
+        cin >> toppingCount;
 
-        Pizza pizza(tCount);
-        for(int i = 0; i < tCount; i++){
+        Pizza pizza(toppingCount);
+        for(int i = 0; i < toppingCount; i++){
             Topping topping;
             cin >> topping;
             pizza.addTopping(topping);
@@ -53,3 +53,6 @@ void PizzaView::displayPizzaView(){
 
     }
 }
+
+
+

@@ -1,11 +1,10 @@
 #ifndef PIZZADATA_H
 #define PIZZADATA_H
-#include <fstream>
 #include "Pizza.h"
+#include <fstream>
 #include <iostream>
 
 using namespace std;
-
 
 class PizzaData
 {
@@ -22,3 +21,4 @@ class PizzaData
 };
 
 #endif // PIZZADATA_H
+

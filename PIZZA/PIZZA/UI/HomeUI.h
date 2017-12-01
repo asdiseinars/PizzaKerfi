@@ -1,19 +1,18 @@
 #ifndef WELCOMEVIEW_H
 #define WELCOMEVIEW_H
-#include "PizzaView.h"
+#include "PizzaUI.h"
 #include <iostream>
 
 using namespace std;
 
 
-class WelcomeView
+class HomeUI
 {
     private:
 
     public:
-        WelcomeView();
-        void displayWelcome();
-
+        HomeUI();
+        void displayHome();
 
 };
 
