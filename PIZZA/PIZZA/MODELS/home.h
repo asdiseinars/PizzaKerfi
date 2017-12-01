@@ -8,11 +8,10 @@ using namespace std;
 class Home
 {
     private:
-        HomeUI homeui;
 
     public:
         Home();
-        void initialize();
+
 };
 
 #endif // HOME_H
