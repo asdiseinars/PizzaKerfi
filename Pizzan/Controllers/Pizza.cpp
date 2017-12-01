@@ -5,6 +5,10 @@ Pizza::Pizza()
     //ctor
 }
 
+
+Pizza::Pizza(int toppingCount) {
+
+}
 Pizza::~Pizza()
 {
     //dtor
@@ -35,7 +39,6 @@ void Pizza::read(ifstream& fin) {
         fin.read((char*)(&toppings), sizeof(Topping));
         addTopping(topping);
     }
-
 }
 
 istream& operator >> (istream& in, Pizza& pizza) {
@@ -50,7 +53,7 @@ istream& operator >> (istream& in, Pizza& pizza) {
     return in;
 }
 
-ostream& operator << (ostream& out,  Pizza& pizza) {
+ostream& operator << (ostream& out, Pizza& pizza) {
     out << "Pizza with toppings: " << endl;
 
     for (int i = 0; i < pizza.toppings.size(); i++) {

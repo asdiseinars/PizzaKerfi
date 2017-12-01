@@ -12,7 +12,6 @@ class WelcomeView
 
     public:
         WelcomeView();
-        virtual ~WelcomeView();
         void displayWelcome();
 
 

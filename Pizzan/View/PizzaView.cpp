@@ -38,6 +38,16 @@ void PizzaView::displayPizzaView(){
 
         cout << pizza << endl;
 
+        PizzaData data;
+        data.storePizza(pizza);
+
+    }
+
+    else if (selection == 'r') {
+        PizzaData data;
+
+        Pizza pizza = data.retrievePizza();
+        cout << pizza << endl;
 
     }
 }

@@ -14,7 +14,6 @@ class Welcome
 
     public:
         Welcome();
-        virtual ~Welcome();
         void initialize();
 
 

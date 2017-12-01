@@ -1,16 +1,14 @@
 #include "PizzaData.h"
 
-PizzaData::PizzaData()
-{
+PizzaData::PizzaData(){
     //ctor
 }
 
-PizzaData::~PizzaData()
-{
+PizzaData::~PizzaData(){
     //dtor
 }
 
-void PizzaData::storePizza( Pizza& pizza){
+void PizzaData::storePizza(Pizza& pizza){
     ofstream fout;
 
     fout.open("pizzas.txt");

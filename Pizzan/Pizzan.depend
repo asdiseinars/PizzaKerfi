@@ -6,52 +6,64 @@
 	"WelcomeView.h"
 	<iostream>
 
-1512050359 c:\users\asdis\desktop\pizzaforrit\pizzan\view\\welcomeview.h
+1512054666 c:\users\asdis\desktop\pizzaforrit\pizzan\view\\welcomeview.h
 	"PizzaView.h"
 	<iostream>
 
-1512043228 source:c:\users\asdis\desktop\pizzaforrit\pizzan\view\welcomeview.cpp
+1512054165 source:c:\users\asdis\desktop\pizzaforrit\pizzan\view\welcomeview.cpp
 	"WelcomeView.h"
 
-1512043276 c:\users\asdis\desktop\pizzaforrit\pizzan\view\welcomeview.h
+1512054666 c:\users\asdis\desktop\pizzaforrit\pizzan\view\welcomeview.h
+	"PizzaView.h"
 	<iostream>
 
-1512051471 source:c:\users\asdis\desktop\pizzaforrit\pizzan\controllers\pizza.cpp
+1512054363 source:c:\users\asdis\desktop\pizzaforrit\pizzan\controllers\pizza.cpp
 	"Pizza.h"
 
-1512051471 c:\users\asdis\desktop\pizzaforrit\pizzan\controllers\pizza.h
+1512055993 c:\users\asdis\desktop\pizzaforrit\pizzan\controllers\pizza.h
 	"Topping.h"
 	<iostream>
 	<fstream>
 	<vector>
 
-1512044222 source:c:\users\asdis\desktop\pizzaforrit\pizzan\controllers\welcome.cpp
+1512054608 source:c:\users\asdis\desktop\pizzaforrit\pizzan\controllers\welcome.cpp
 	"Welcome.h"
 
-1512050359 c:\users\asdis\desktop\pizzaforrit\pizzan\controllers\welcome.h
+1512054637 c:\users\asdis\desktop\pizzaforrit\pizzan\controllers\welcome.h
 	<iostream>
 	"WelcomeView.h"
 
-1512044031 source:c:\users\asdis\desktop\pizzaforrit\pizzan\main.cpp
+1512054561 source:c:\users\asdis\desktop\pizzaforrit\pizzan\main.cpp
 	<iostream>
 	"Welcome.h"
-	"WelcomeView.h"
 
-1512051720 c:\users\asdis\desktop\pizzaforrit\pizzan\view\\pizzaview.h
+1512056030 c:\users\asdis\desktop\pizzaforrit\pizzan\view\\pizzaview.h
 	"Pizza.h"
+	"PizzaData.h"
 	<iostream>
 
 1512049069 c:\users\asdis\desktop\pizzaforrit\pizzan\controllers\topping.h
 	<iostream>
 
-1512050956 source:c:\users\asdis\desktop\pizzaforrit\pizzan\controllers\topping.cpp
+1512055453 source:c:\users\asdis\desktop\pizzaforrit\pizzan\controllers\topping.cpp
 	"Topping.h"
 
-1512051471 source:c:\users\asdis\desktop\pizzaforrit\pizzan\data\pizzadata.cpp
+1512054165 source:c:\users\asdis\desktop\pizzaforrit\pizzan\data\pizzadata.cpp
 	"PizzaData.h"
 
-1512051472 c:\users\asdis\desktop\pizzaforrit\pizzan\data\pizzadata.h
+1512054221 c:\users\asdis\desktop\pizzaforrit\pizzan\data\pizzadata.h
 	<fstream>
 	"Pizza.h"
+	<iostream>
+
+1512056215 source:c:\users\asdis\desktop\pizzaforrit\pizzan\view\pizzaview.cpp
+	"PizzaView.h"
+	"Pizza.h"
+	"Topping.h"
+	<iostream>
+
+1512056030 c:\users\asdis\desktop\pizzaforrit\pizzan\view\pizzaview.h
+	"Pizza.h"
+	"PizzaData.h"
 	<iostream>
 

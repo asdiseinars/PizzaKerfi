@@ -1,14 +1,6 @@
 #include "WelcomeView.h"
 
-WelcomeView::WelcomeView()
-{
-    //ctor
-}
-
-WelcomeView::~WelcomeView()
-{
-    //dtor
-}
+WelcomeView::WelcomeView(){ }
 
 void WelcomeView::displayWelcome(){
     char selection = '\0';
