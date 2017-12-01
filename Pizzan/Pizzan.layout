@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_layout_file>
+	<FileVersion major="1" minor="0" />
+	<ActiveTarget name="Debug" />
+<<<<<<< HEAD
+	<File name="Data\PizzaData.cpp" open="1" top="1" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="374" topLine="5" />
+=======
+<<<<<<< HEAD
+	<File name="Data\PizzaData.h" open="1" top="0" tabpos="9" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="259" topLine="0" />
+=======
+<<<<<<< HEAD
+	<File name="Controllers\Pizza.h" open="1" top="0" tabpos="9" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="0" topLine="0" />
+=======
+<<<<<<< HEAD
+	<File name="Controllers\Pizza.h" open="1" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="209" topLine="0" />
+=======
+	<File name="View\WelcomeView.h" open="1" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="268" topLine="0" />
+>>>>>>> 9797874da624fac5c83d5573defcb7a298a5c6fd
+		</Cursor>
+	</File>
+	<File name="Controllers\Welcome.h" open="1" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+<<<<<<< HEAD
+			<Cursor1 position="115" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="Controllers\Welcome.cpp" open="1" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="124" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="main.cpp" open="1" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="43" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="View\WelcomeView.cpp" open="1" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="524" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="Data\PizzaData.cpp" open="1" top="0" tabpos="13" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="148" topLine="4" />
+		</Cursor>
+	</File>
+	<File name="View\PizzaView.cpp" open="1" top="1" tabpos="11" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="771" topLine="26" />
+		</Cursor>
+	</File>
+	<File name="Controllers\Topping.h" open="1" top="0" tabpos="8" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="414" topLine="0" />
+=======
+			<Cursor1 position="262" topLine="0" />
+>>>>>>> 8478f4b33e4ce1a3b9e0d7ecccb2ab6421f9b89a
+>>>>>>> f2f1dc94ffd647a7e11cffdfebe0e498f424b613
+		</Cursor>
+	</File>
+	<File name="Controllers\Welcome.cpp" open="1" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+<<<<<<< HEAD
+			<Cursor1 position="0" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="Controllers\Pizza.cpp" open="1" top="1" tabpos="7" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="104" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="View\WelcomeView.cpp" open="1" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="651" topLine="0" />
+=======
+			<Cursor1 position="60" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="View\WelcomeView.cpp" open="1" top="1" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="574" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="main.cpp" open="1" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="148" topLine="0" />
+>>>>>>> f2f1dc94ffd647a7e11cffdfebe0e498f424b613
+		</Cursor>
+	</File>
+	<File name="View\PizzaView.cpp" open="1" top="0" tabpos="11" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="486" topLine="8" />
+		</Cursor>
+	</File>
+	<File name="Controllers\Topping.cpp" open="1" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="652" topLine="0" />
+		</Cursor>
+	</File>
+<<<<<<< HEAD
+	<File name="Data\PizzaData.cpp" open="1" top="0" tabpos="8" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="299" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="Controllers\Pizza.h" open="1" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="463" topLine="0" />
+=======
+	<File name="View\WelcomeView.h" open="1" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+<<<<<<< HEAD
+			<Cursor1 position="268" topLine="0" />
+=======
+			<Cursor1 position="60" topLine="0" />
+>>>>>>> 9797874da624fac5c83d5573defcb7a298a5c6fd
+>>>>>>> 8478f4b33e4ce1a3b9e0d7ecccb2ab6421f9b89a
+		</Cursor>
+	</File>
+	<File name="Controllers\Welcome.h" open="1" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="262" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="Controllers\Topping.cpp" open="1" top="0" tabpos="8" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+<<<<<<< HEAD
+			<Cursor1 position="0" topLine="0" />
+=======
+<<<<<<< HEAD
+			<Cursor1 position="224" topLine="0" />
+>>>>>>> f2f1dc94ffd647a7e11cffdfebe0e498f424b613
+		</Cursor>
+	</File>
+	<File name="View\PizzaView.h" open="1" top="0" tabpos="10" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="184" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="Controllers\Topping.h" open="1" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="341" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="Controllers\Welcome.cpp" open="1" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+<<<<<<< HEAD
+			<Cursor1 position="0" topLine="0" />
+=======
+			<Cursor1 position="259" topLine="0" />
+=======
+			<Cursor1 position="491" topLine="0" />
+>>>>>>> 9797874da624fac5c83d5573defcb7a298a5c6fd
+>>>>>>> 8478f4b33e4ce1a3b9e0d7ecccb2ab6421f9b89a
+>>>>>>> f2f1dc94ffd647a7e11cffdfebe0e498f424b613
+>>>>>>> d8b0440da4430a9a776301d8e1125c7aaaac8551
+		</Cursor>
+	</File>
+</CodeBlocks_layout_file>
