@@ -1,5 +1,5 @@
 #include <iostream>
-#include "home.h"
+#include "Home.h"
 
 
 using namespace std;

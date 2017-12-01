@@ -9,7 +9,6 @@ Pizza::Pizza(int toppingCount) {
 
 }
 
-
 void Pizza::addTopping(Topping topping){
 
     toppings.push_back(topping);
@@ -20,10 +19,6 @@ void Pizza::write(ofstream& fout) const {
     int toppingCount = toppings.size();
 
     fout.write((char*)(&toppingCount), sizeof(int));
-
-    /*for(int i = 0; i < toppingCount; i++){
-        fout.write((char*)(&toppings.at(i)), sizeof(Topping));
-    }*/
 
     for(int i = 0; i < toppingCount; i++){
         toppings[i].write(fout);

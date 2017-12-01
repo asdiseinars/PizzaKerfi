@@ -23,5 +23,30 @@ void HomeUI::displayHome(){
             pizzaui.displayPizzaUI();
             cout << endl;
         }
-   }
+
+        else if (selection == '2'){
+            cout << "Welcome salesman" << endl;
+
+            cout << endl;
+
+        }
+        else if (selection == '3'){
+            cout << "Welcome baker" << endl;
+            cout << endl;
+
+        }
+        else if (selection == '4'){
+            cout << "Welcome customer" << endl;
+            cout << endl;
+        }
+
+        else if (selection == 'h'){
+            ///texti
+
+        }
+        else if (selection == 'a'){
+            ///texti
+        }
+    }
+
 }
