@@ -16,6 +16,8 @@
 					<Add directory="View/" />
 					<Add directory="Controllers" />
 					<Add directory="Controller" />
+					<Add directory="View" />
+					<Add directory="Data" />
 				</Compiler>
 			</Target>
 			<Target title="Release">
@@ -28,6 +30,8 @@
 					<Add directory="View/" />
 					<Add directory="Controllers" />
 					<Add directory="Controller" />
+					<Add directory="View" />
+					<Add directory="Data" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
@@ -44,6 +48,10 @@
 		<Unit filename="Controllers/Topping.h" />
 		<Unit filename="Controllers/Welcome.cpp" />
 		<Unit filename="Controllers/Welcome.h" />
+		<Unit filename="Data/PizzaData.cpp" />
+		<Unit filename="Data/PizzaData.h" />
+		<Unit filename="View/PizzaView.cpp" />
+		<Unit filename="View/PizzaView.h" />
 		<Unit filename="View/WelcomeView.cpp" />
 		<Unit filename="View/WelcomeView.h" />
 		<Unit filename="main.cpp" />

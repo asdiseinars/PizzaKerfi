@@ -1,6 +1,6 @@
 #include <iostream>
 #include "Welcome.h"
-#include "WelcomeView.h"
+
 
 using namespace std;
 

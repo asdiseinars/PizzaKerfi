@@ -16,11 +16,14 @@ Topping::~Topping(){
 }
 
 istream& operator >> (istream& in, Topping& topping){
-
+    in >> topping.name;
+    in >> topping.price;
     return in;
 }
 
 ostream& operator << (ostream& out, Topping& topping){
+    out << topping.name;
+    out << topping.price;
 
     return out;
 }

@@ -16,6 +16,7 @@ class Pizza
 
     public:
         Pizza();
+        Pizza(int toppingCount);
         virtual ~Pizza();
         void addTopping(Topping topping);
         void write(ofstream& fout) const;

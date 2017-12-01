@@ -15,7 +15,7 @@ class PizzaData
         PizzaData();
         virtual ~PizzaData();
 
-        void storePizza( Pizza& pizza);
+        void storePizza(Pizza& pizza);
         Pizza retrievePizza();
 
 
