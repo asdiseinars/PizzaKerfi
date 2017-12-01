@@ -2,17 +2,13 @@
 
 Pizza::Pizza()
 {
-    //ctor
+    verbose = true;
 }
-
 
 Pizza::Pizza(int toppingCount) {
 
 }
-Pizza::~Pizza()
-{
-    //dtor
-}
+
 
 void Pizza::addTopping(Topping topping){
 
@@ -25,8 +21,12 @@ void Pizza::write(ofstream& fout) const {
 
     fout.write((char*)(&tCount), sizeof(int));
 
-    for(int i = 0; i < tCount; i++){
+    /*for(int i = 0; i < tCount; i++){
         fout.write((char*)(&toppings.at(i)), sizeof(Topping));
+    }*/
+
+    for(int i = 0; i < tCount; i++){
+        toppings[i].write(fout);
     }
 }
 
@@ -35,8 +35,8 @@ void Pizza::read(ifstream& fin) {
     fin.read((char*)(&tCount), sizeof(int));
 
     Topping topping;
-    for(int i = 0; i < toppings.size(); i++){
-        fin.read((char*)(&toppings), sizeof(Topping));
+    for(unsigned int i = 0; i < toppings.size(); i++){
+        topping.read(fin);
         addTopping(topping);
     }
 }
@@ -46,7 +46,7 @@ istream& operator >> (istream& in, Pizza& pizza) {
     in >> toppingCount;
 
     Topping topping;
-    for (int i = 0; i < pizza.toppings.size(); i++) {
+    for (unsigned int i = 0; i < pizza.toppings.size(); i++) {
         in >> topping;
         pizza.addTopping(topping);
     }
@@ -54,11 +54,14 @@ istream& operator >> (istream& in, Pizza& pizza) {
 }
 
 ostream& operator << (ostream& out, Pizza& pizza) {
-    out << "Pizza with toppings: " << endl;
-
-    for (int i = 0; i < pizza.toppings.size(); i++) {
-        out << pizza.toppings.at(i) << endl;
+    if (pizza.verbose) {
+            out << "Pizza with toppings: " << endl;
     }
+
+    for (unsigned int i = 0; i < pizza.toppings.size(); i++) {
+        out << pizza.toppings[i] << endl;
+    }
+
 
     return out;
 }

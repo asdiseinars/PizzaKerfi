@@ -16,6 +16,7 @@ PizzaView::~PizzaView()
 }
 
 void PizzaView::displayPizzaView(){
+
     char selection = '\0';
 
     cout << "m: make pizza" << endl;
@@ -47,6 +48,7 @@ void PizzaView::displayPizzaView(){
         PizzaData data;
 
         Pizza pizza = data.retrievePizza();
+
         cout << pizza << endl;
 
     }
