@@ -16,6 +16,8 @@
 					<Add directory="UI" />
 					<Add directory="MODELS" />
 					<Add directory="REPO" />
+					<Add directory="CONTROLLERS" />
+					<Add directory="GLOBAL" />
 				</Compiler>
 			</Target>
 			<Target title="Release">
@@ -28,6 +30,8 @@
 					<Add directory="UI" />
 					<Add directory="MODELS" />
 					<Add directory="REPO" />
+					<Add directory="CONTROLLERS" />
+					<Add directory="GLOBAL" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
@@ -38,8 +42,10 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
-		<Unit filename="MODELS/home.cpp" />
-		<Unit filename="MODELS/home.h" />
+		<Unit filename="CONTROLLERS/HomeController.cpp" />
+		<Unit filename="CONTROLLERS/HomeController.h" />
+		<Unit filename="GLOBAL/GlobalHelp.cpp" />
+		<Unit filename="GLOBAL/GlobalHelp.h" />
 		<Unit filename="MODELS/pizza.cpp" />
 		<Unit filename="MODELS/pizza.h" />
 		<Unit filename="MODELS/topping.cpp" />
