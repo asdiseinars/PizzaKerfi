@@ -11,8 +11,9 @@ PizzaData::~PizzaData(){
 void PizzaData::storePizza(Pizza& pizza){
     ofstream fout;
 
-    fout.open("pizzas.txt");
+    fout.open("pizzas.dat", ios::app | ios::binary);
 
+    pizza.verbose = false;
     fout << pizza;
 
     fout.close();
@@ -20,7 +21,8 @@ void PizzaData::storePizza(Pizza& pizza){
 
 Pizza PizzaData::retrievePizza(){
     ifstream fin;
-    fin.open("pizzas.txt");
+
+    fin.open("pizzas.dat", ios::app | ios::binary);
 
     Pizza pizza;
     fin >> pizza;

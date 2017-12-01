@@ -10,17 +10,17 @@
 	"PizzaView.h"
 	<iostream>
 
-1512054165 source:c:\users\asdis\desktop\pizzaforrit\pizzan\view\welcomeview.cpp
+1512126383 source:c:\users\asdis\desktop\pizzaforrit\pizzan\view\welcomeview.cpp
 	"WelcomeView.h"
 
 1512054666 c:\users\asdis\desktop\pizzaforrit\pizzan\view\welcomeview.h
 	"PizzaView.h"
 	<iostream>
 
-1512054363 source:c:\users\asdis\desktop\pizzaforrit\pizzan\controllers\pizza.cpp
+1512126794 source:c:\users\asdis\desktop\pizzaforrit\pizzan\controllers\pizza.cpp
 	"Pizza.h"
 
-1512055993 c:\users\asdis\desktop\pizzaforrit\pizzan\controllers\pizza.h
+1512127423 c:\users\asdis\desktop\pizzaforrit\pizzan\controllers\pizza.h
 	"Topping.h"
 	<iostream>
 	<fstream>
@@ -42,21 +42,23 @@
 	"PizzaData.h"
 	<iostream>
 
-1512049069 c:\users\asdis\desktop\pizzaforrit\pizzan\controllers\topping.h
+1512123048 c:\users\asdis\desktop\pizzaforrit\pizzan\controllers\topping.h
 	<iostream>
+	<string>
 
-1512055453 source:c:\users\asdis\desktop\pizzaforrit\pizzan\controllers\topping.cpp
+1512123903 source:c:\users\asdis\desktop\pizzaforrit\pizzan\controllers\topping.cpp
+	<fstream>
 	"Topping.h"
 
-1512054165 source:c:\users\asdis\desktop\pizzaforrit\pizzan\data\pizzadata.cpp
+1512126670 source:c:\users\asdis\desktop\pizzaforrit\pizzan\data\pizzadata.cpp
 	"PizzaData.h"
 
-1512054221 c:\users\asdis\desktop\pizzaforrit\pizzan\data\pizzadata.h
+1512126212 c:\users\asdis\desktop\pizzaforrit\pizzan\data\pizzadata.h
 	<fstream>
 	"Pizza.h"
 	<iostream>
 
-1512056215 source:c:\users\asdis\desktop\pizzaforrit\pizzan\view\pizzaview.cpp
+1512126031 source:c:\users\asdis\desktop\pizzaforrit\pizzan\view\pizzaview.cpp
 	"PizzaView.h"
 	"Pizza.h"
 	"Topping.h"

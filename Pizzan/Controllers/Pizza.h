@@ -17,12 +17,13 @@ class Pizza
     public:
         Pizza();
         Pizza(int toppingCount);
-        virtual ~Pizza();
         void addTopping(Topping topping);
         void write(ofstream& fout) const;
         void read(ifstream& fin);
         friend istream& operator >> (istream& in, Pizza& pizza);
         friend ostream& operator << (ostream& out, Pizza& pizza);
+        bool verbose;
+
 
 
 };

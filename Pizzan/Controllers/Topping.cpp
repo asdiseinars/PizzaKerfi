@@ -1,8 +1,8 @@
+#include <fstream>
 #include "Topping.h"
 
 Topping::Topping(){
-    string name = "";
-    double price = 0.0;
+
 }
 
 Topping::Topping(string name, double price){
@@ -11,18 +11,43 @@ Topping::Topping(string name, double price){
 
 }
 
-Topping::~Topping(){
-    //dtor
-}
-
-istream& operator >> (istream& in, Topping& topping){
+istream& operator >> (istream& in, Topping& topping) {
+    in >> ws;
     getline(in, topping.name);
     in >> topping.price;
     return in;
 }
 
-ostream& operator << (ostream& out, Topping& topping){
+ostream& operator << (ostream& out, Topping& topping) {
     out << topping.name << endl;
     out << topping.price;
     return out;
+}
+
+void Topping::write(ofstream& fout) const {
+
+    int stringLenght = name.length() + 1;
+
+    fout.write((char*)(&stringLenght), sizeof(int));
+    fout.write(name.c_str(), stringLenght);
+
+    fout.write((char*)(&price), sizeof(double));
+
+}
+
+void Topping::read(ifstream& fin) {
+
+    int stringLenght;
+
+    fin.read((char*)(&stringLenght), sizeof(int));
+    char* str = new char[stringLenght];
+
+    fin.read(str, stringLenght);
+
+    name = str;
+
+    fin.read((char*)(&price), sizeof(double));
+
+    delete[] str;
+
 }
