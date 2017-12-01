@@ -1,11 +1,12 @@
 #ifndef PIZZAVIEW_H
 #define PIZZAVIEW_H
+#include <iostream>
 #include "Pizza.h"
 #include "PizzaData.h"
-#include <iostream>
+#include "GlobalHelp.h"
 
 using namespace std;
-
+using namespace GlobalHelp;
 
 class PizzaUI
 {

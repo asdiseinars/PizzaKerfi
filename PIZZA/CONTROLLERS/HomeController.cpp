@@ -17,10 +17,12 @@ void HomeController::init(){
 
     do{
         clearScreen();
+        displayLogo();
         displayHome();
         cin >> selection;
 
-    }while(selection !='1' &&
+    }
+    while(selection !='1' &&
            selection != '2' &&
            selection != '3' &&
            selection != '4' &&
@@ -36,26 +38,27 @@ void HomeController::init(){
     }
 
     else if (selection == '2'){
-        cout << "Welcome salesman" << endl;
-
-        cout << endl;
-
+        clearScreen();
+        displaySalesmanUI();
     }
+
     else if (selection == '3'){
-        cout << "Welcome baker" << endl;
-        cout << endl;
-
+        clearScreen();
+        displayBakerUI();
     }
+
     else if (selection == '4'){
-        cout << "Welcome customer" << endl;
-        cout << endl;
+        clearScreen();
+        displayCustomerUI();
     }
 
     else if (selection == 'h'){
-        ///texti
-
+        clearScreen();
+        cout << "Help" << endl;
     }
+
     else if (selection == 'a'){
-        ///texti
+        clearScreen();
+        cout << "About" << endl;
     }
 }

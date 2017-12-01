@@ -1,9 +1,4 @@
 #include "PizzaUI.h"
-#include "Pizza.h"
-#include "Topping.h"
-#include <iostream>
-
-using namespace std;
 
 PizzaUI::PizzaUI()
 {
@@ -17,6 +12,8 @@ PizzaUI::~PizzaUI()
 
 void PizzaUI::displayPizzaUI(){
 
+    clearScreen();
+    displayLogo();
     char selection = '\0';
 
     cout << "m: make pizza" << endl;
