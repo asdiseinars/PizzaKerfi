@@ -123,10 +123,10 @@
 1512142759 c:\users\einarbi\desktop\pizzaforrit\pizza\pizza\global\globalhelp.h
 	<stdlib.h>
 
-1512134239 source:c:\users\asdis\desktop\pizzaforrit\pizza\models\pizza.cpp
+1512317704 source:c:\users\asdis\desktop\pizzaforrit\pizza\models\pizza.cpp
 	"Pizza.h"
 
-1512133114 c:\users\asdis\desktop\pizzaforrit\pizza\models\pizza.h
+1512316377 c:\users\asdis\desktop\pizzaforrit\pizza\models\pizza.h
 	"Topping.h"
 	<iostream>
 	<fstream>
@@ -136,7 +136,7 @@
 	<iostream>
 	<string>
 
-1512133114 source:c:\users\asdis\desktop\pizzaforrit\pizza\models\topping.cpp
+1512317250 source:c:\users\asdis\desktop\pizzaforrit\pizza\models\topping.cpp
 	<fstream>
 	"Topping.h"
 
@@ -198,7 +198,7 @@
 
 1512170082 c:\users\asdis\desktop\pizzaforrit\pizza\bakercontroller.h
 
-1512312918 source:c:\users\asdis\desktop\pizzaforrit\pizza\ui\bakerui.cpp
+1512313222 source:c:\users\asdis\desktop\pizzaforrit\pizza\ui\bakerui.cpp
 	"BakerUI.h"
 
 1512312918 c:\users\asdis\desktop\pizzaforrit\pizza\ui\bakerui.h
@@ -213,7 +213,7 @@
 	"HomeController.h"
 	"GlobalHelp.h"
 
-1512308965 source:c:\users\asdis\desktop\pizzaforrit\pizza\controllers\salesmancontroller.cpp
+1512313536 source:c:\users\asdis\desktop\pizzaforrit\pizza\controllers\salesmancontroller.cpp
 	"SalesmanController.h"
 
 1512308965 c:\users\asdis\desktop\pizzaforrit\pizza\controllers\salesmancontroller.h
@@ -222,10 +222,10 @@
 	"HomeController.h"
 	"GlobalHelp.h"
 
-1512219601 source:c:\users\asdis\desktop\pizzaforrit\pizza\ui\salesmanui.cpp
+1512313536 source:c:\users\asdis\desktop\pizzaforrit\pizza\ui\salesmanui.cpp
 	"SalesmanUI.h"
 
-1512219462 c:\users\asdis\desktop\pizzaforrit\pizza\ui\salesmanui.h
+1512313536 c:\users\asdis\desktop\pizzaforrit\pizza\ui\salesmanui.h
 	<iostream>
 
 1512311816 source:c:\users\asdis\desktop\pizzaforrit\pizza\controllers\customercontroller.cpp
@@ -362,7 +362,7 @@
 
 1512305559 I.h"
 
-1512312762 source:c:\users\asdis\desktop\pizzaforrit\pizza\controllers\admincontroller.cpp
+1512315497 source:c:\users\asdis\desktop\pizzaforrit\pizza\controllers\admincontroller.cpp
 	"AdminController.h"
 
 1512308965 c:\users\asdis\desktop\pizzaforrit\pizza\controllers\admincontroller.h
@@ -373,7 +373,7 @@
 1512312004 c:\users\asdis\desktop\pizzaforrit\pizza\ui\adminui.h
 	<iostream>
 
-1512312004 source:c:\users\asdis\desktop\pizzaforrit\pizza\ui\adminui.cpp
+1512315497 source:c:\users\asdis\desktop\pizzaforrit\pizza\ui\adminui.cpp
 	"AdminUI.h"
 
 1512308403 c2372843d10f45258e97c51b0ec54b2eee2d8
@@ -391,4 +391,16 @@
 
 1512311869 source:c:\users\einarbi\desktop\pizzaforrit\pizza\controllers\admincontroller.cpp
 	"AdminController.h"
+
+1512317653 source:c:\users\asdis\desktop\pizzaforrit\pizza\models\restaurants.cpp
+	"Restaurants.h"
+
+1512317928 c:\users\asdis\desktop\pizzaforrit\pizza\models\restaurants.h
+	<iostream>
+
+1512317877 source:c:\users\asdis\desktop\pizzaforrit\pizza\models\soda.cpp
+	"Soda.h"
+
+1512317928 c:\users\asdis\desktop\pizzaforrit\pizza\models\soda.h
+	<iostream>
 

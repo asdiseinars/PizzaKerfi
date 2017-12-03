@@ -11,6 +11,9 @@ using namespace std;
 class Pizza
 {
     private:
+        string name;
+        string size;
+        double price;
         vector<Topping> toppings;
 
     public:

@@ -53,7 +53,11 @@ void AdminController::init(){
         }
     }
 
-    else if (selection == '2') {
+    else if(selection == '2'){
+        cout << "Edit toppings here" << endl;
+    }
+
+    else if (selection == '3') {
         clearScreen();
         displayLogo();
         displayAdminPizzaUI();
