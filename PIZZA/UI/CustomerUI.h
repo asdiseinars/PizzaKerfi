@@ -8,6 +8,7 @@ using namespace std;
 namespace CustomerUI
 {
     void displayCustomerUI();
+    void displayCustomerMenuUI();
 
 };
 
