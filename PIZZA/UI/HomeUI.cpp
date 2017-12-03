@@ -1,6 +1,6 @@
 #include "HomeUI.h"
 
-void HomeUI::displayHome() {
+void HomeUI::displayHomeUI() {
 
     cout << "Type 1 if you are an admin" << endl;
     cout << "Type 2 if you are a salesman" << endl;

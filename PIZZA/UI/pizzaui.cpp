@@ -18,6 +18,7 @@ void PizzaUI::displayPizzaUI(){
 
     cout << "m: make pizza" << endl;
     cout << "r: read pizza" << endl;
+    cout << "b: back" << endl;
 
     cin >> selection;
 
@@ -43,11 +44,13 @@ void PizzaUI::displayPizzaUI(){
 
     else if (selection == 'r') {
         PizzaData data;
-
         Pizza pizza = data.retrievePizza();
-
         cout << pizza << endl;
+    }
 
+    else if (selection == 'b') {
+        HomeController home;
+        home.init();
     }
 }
 

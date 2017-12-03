@@ -5,7 +5,7 @@
 using namespace std;
 
 namespace HomeUI{
-  void displayHome();
+  void displayHomeUI();
 
 };
 

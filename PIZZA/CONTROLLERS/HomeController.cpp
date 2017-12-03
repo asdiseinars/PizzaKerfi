@@ -6,10 +6,6 @@ HomeController::HomeController()
     //ctor
 }
 
-HomeController::~HomeController()
-{
-    //dtor
-}
 
 void HomeController::init(){
 
@@ -18,7 +14,7 @@ void HomeController::init(){
     do{
         clearScreen();
         displayLogo();
-        displayHome();
+        displayHomeUI();
         cin >> selection;
 
     }
@@ -39,17 +35,21 @@ void HomeController::init(){
 
     else if (selection == '2'){
         clearScreen();
-        displaySalesmanUI();
+        SalesmanController salesman;
+        salesman.init();
+
     }
 
     else if (selection == '3'){
         clearScreen();
-        displayBakerUI();
+        BakerController baker;
+        baker.init();
     }
 
     else if (selection == '4'){
         clearScreen();
-        displayCustomerUI();
+        CustomerController customer;
+        customer.init();
     }
 
     else if (selection == 'h'){

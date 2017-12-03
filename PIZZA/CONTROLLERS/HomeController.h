@@ -3,9 +3,9 @@
 #include "PizzaUI.h"
 #include "HomeUI.h"
 #include "GlobalHelp.h"
-#include "BakerUI.h"
-#include "SalesmanUI.h"
-#include "CustomerUI.h"
+#include "SalesmanController.h"
+#include "BakerController.h"
+#include "CustomerController.h"
 
 using namespace GlobalHelp;
 using namespace HomeUI;
@@ -17,7 +17,6 @@ class HomeController
 {
     public:
         HomeController();
-        virtual ~HomeController();
         void init();
 
     private:

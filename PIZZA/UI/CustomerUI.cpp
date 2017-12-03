@@ -1,6 +1,11 @@
 #include "CustomerUI.h"
 
 void CustomerUI::displayCustomerUI(){
-    cout << "Welcome to the best pizza place in the world!" << endl;
-    cout << "What do you want to order? " << endl;
+    cout << "Insert logo" << endl;
+    cout << endl;
+    cout <<"Press 1 to order from menu"<< endl;
+    cout <<"Press 2 to make your own pizza" << endl;
+    cout <<"Press 3 to blabla " << endl;
+    cout <<"Press 4 to go back" << endl;
+
 }

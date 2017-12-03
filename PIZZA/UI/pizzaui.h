@@ -4,9 +4,11 @@
 #include "Pizza.h"
 #include "PizzaData.h"
 #include "GlobalHelp.h"
+#include "HomeController.h"
 
 using namespace std;
 using namespace GlobalHelp;
+
 
 class PizzaUI
 {

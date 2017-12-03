@@ -1,5 +1,11 @@
 #ifndef SALESMANCONTROLLER_H
 #define SALESMANCONTROLLER_H
+#include <iostream>
+#include "SalesmanUI.h"
+#include "HomeController.h"
+
+using namespace std;
+using namespace SalesmanUI;
 
 
 class SalesmanController
@@ -7,7 +13,6 @@ class SalesmanController
     private:
     public:
         SalesmanController();
-        virtual ~SalesmanController();
         void init();
 
 

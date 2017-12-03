@@ -140,7 +140,7 @@
 	<fstream>
 	"Topping.h"
 
-1512134239 source:c:\users\asdis\desktop\pizzaforrit\pizza\repo\pizzadata.cpp
+1512218274 source:c:\users\asdis\desktop\pizzaforrit\pizza\repo\pizzadata.cpp
 	"PizzaData.h"
 
 1512134239 c:\users\asdis\desktop\pizzaforrit\pizza\repo\pizzadata.h
@@ -148,14 +148,15 @@
 	<fstream>
 	<iostream>
 
-1512158524 source:c:\users\asdis\desktop\pizzaforrit\pizza\ui\pizzaui.cpp
+1512218659 source:c:\users\asdis\desktop\pizzaforrit\pizza\ui\pizzaui.cpp
 	"PizzaUI.h"
 
-1512160888 c:\users\asdis\desktop\pizzaforrit\pizza\ui\pizzaui.h
+1512218659 c:\users\asdis\desktop\pizzaforrit\pizza\ui\pizzaui.h
 	<iostream>
 	"Pizza.h"
 	"PizzaData.h"
 	"GlobalHelp.h"
+	"HomeController.h"
 
 1512142985 source:c:\users\asdis\desktop\pizzaforrit\pizza\main.cpp
 	<iostream>
@@ -167,25 +168,25 @@
 	"HomeUI.h"
 	<iostream>
 
-1512142985 c:\users\asdis\desktop\pizzaforrit\pizza\ui\homeui.h
+1512218517 c:\users\asdis\desktop\pizzaforrit\pizza\ui\homeui.h
 	<iostream>
 
-1512171257 c:\users\asdis\desktop\pizzaforrit\pizza\controllers\homecontroller.h
+1512239890 c:\users\asdis\desktop\pizzaforrit\pizza\controllers\homecontroller.h
 	"PizzaUI.h"
 	"HomeUI.h"
 	"GlobalHelp.h"
-	"BakerUI.h"
-	"SalesmanUI.h"
-	"CustomerUI.h"
+	"SalesmanController.h"
+	"BakerController.h"
+	"CustomerController.h"
 
 1512158112 c:\users\asdis\desktop\pizzaforrit\pizza\global\globalhelp.h
 	<stdlib.h>
 	<iostream>
 
-1512142985 source:c:\users\asdis\desktop\pizzaforrit\pizza\ui\homeui.cpp
+1512218396 source:c:\users\asdis\desktop\pizzaforrit\pizza\ui\homeui.cpp
 	"HomeUI.h"
 
-1512171332 source:c:\users\asdis\desktop\pizzaforrit\pizza\controllers\homecontroller.cpp
+1512239748 source:c:\users\asdis\desktop\pizzaforrit\pizza\controllers\homecontroller.cpp
 	"HomeController.h"
 
 1512160888 source:c:\users\asdis\desktop\pizzaforrit\pizza\global\globalhelp.cpp
@@ -196,36 +197,45 @@
 
 1512170082 c:\users\asdis\desktop\pizzaforrit\pizza\bakercontroller.h
 
-1512170204 source:c:\users\asdis\desktop\pizzaforrit\pizza\ui\bakerui.cpp
+1512220394 source:c:\users\asdis\desktop\pizzaforrit\pizza\ui\bakerui.cpp
 	"BakerUI.h"
 
 1512169954 c:\users\asdis\desktop\pizzaforrit\pizza\ui\bakerui.h
 	<iostream>
 
-1512170451 source:c:\users\asdis\desktop\pizzaforrit\pizza\controllers\bakercontroller.cpp
+1512220470 source:c:\users\asdis\desktop\pizzaforrit\pizza\controllers\bakercontroller.cpp
 	"BakerController.h"
 
-1512170593 c:\users\asdis\desktop\pizzaforrit\pizza\controllers\bakercontroller.h
+1512220383 c:\users\asdis\desktop\pizzaforrit\pizza\controllers\bakercontroller.h
+	"BakerUI.h"
+	<iostream>
+	"HomeController.h"
 
-1512170594 source:c:\users\asdis\desktop\pizzaforrit\pizza\controllers\salesmancontroller.cpp
+1512219803 source:c:\users\asdis\desktop\pizzaforrit\pizza\controllers\salesmancontroller.cpp
 	"SalesmanController.h"
 
-1512170699 c:\users\asdis\desktop\pizzaforrit\pizza\controllers\salesmancontroller.h
+1512219617 c:\users\asdis\desktop\pizzaforrit\pizza\controllers\salesmancontroller.h
+	<iostream>
+	"SalesmanUI.h"
+	"HomeController.h"
 
-1512170710 source:c:\users\asdis\desktop\pizzaforrit\pizza\ui\salesmanui.cpp
+1512219601 source:c:\users\asdis\desktop\pizzaforrit\pizza\ui\salesmanui.cpp
 	"SalesmanUI.h"
 
-1512170594 c:\users\asdis\desktop\pizzaforrit\pizza\ui\salesmanui.h
+1512219462 c:\users\asdis\desktop\pizzaforrit\pizza\ui\salesmanui.h
 	<iostream>
 
-1512170942 source:c:\users\asdis\desktop\pizzaforrit\pizza\controllers\customercontroller.cpp
+1512239748 source:c:\users\asdis\desktop\pizzaforrit\pizza\controllers\customercontroller.cpp
 	"CustomerController.h"
 
-1512171181 c:\users\asdis\desktop\pizzaforrit\pizza\controllers\customercontroller.h
+1512239748 c:\users\asdis\desktop\pizzaforrit\pizza\controllers\customercontroller.h
+	"CustomerUI.h"
+	"HomeController.h"
+	<iostream>
 
-1512171151 source:c:\users\asdis\desktop\pizzaforrit\pizza\ui\customerui.cpp
+1512240216 source:c:\users\asdis\desktop\pizzaforrit\pizza\ui\customerui.cpp
 	"CustomerUI.h"
 
-1512171065 c:\users\asdis\desktop\pizzaforrit\pizza\ui\customerui.h
+1512239748 c:\users\asdis\desktop\pizzaforrit\pizza\ui\customerui.h
 	<iostream>
 

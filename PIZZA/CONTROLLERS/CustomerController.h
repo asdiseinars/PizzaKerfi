@@ -1,5 +1,11 @@
 #ifndef CUSTOMERCONTROLLER_H
 #define CUSTOMERCONTROLLER_H
+#include "CustomerUI.h"
+#include "HomeController.h"
+#include <iostream>
+
+using namespace std;
+using namespace CustomerUI;
 
 
 class CustomerController
@@ -7,10 +13,7 @@ class CustomerController
     private:
     public:
         CustomerController();
-        virtual ~CustomerController();
         void init();
-
-
 
 
 };
