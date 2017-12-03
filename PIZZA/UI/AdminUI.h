@@ -8,7 +8,8 @@ using namespace std;
 namespace AdminUI
 {
     void displayAdminUI();
-    void displayToppingUI();
+    void displayAdminToppingUI();
+    void displayAdminPizzaUI();
 
 };
 
