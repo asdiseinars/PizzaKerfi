@@ -7,8 +7,14 @@ void AdminUI::displayAdminUI(){
     cout << "Press b to go back" << endl;
 }
 
-void AdminUI::displayToppingUI(){
-    cout << "m: add topping" << endl;
-    cout << "r: read pizza" << endl;
-    cout << "b: back" << endl;
+void AdminUI::displayAdminToppingUI(){
+    cout << "Press 1 to add new toppings" << endl;
+    cout << "Press 2 to see all toppings" << endl;
+    cout << "Press b to go back" << endl;
+}
+
+void AdminUI::displayAdminPizzaUI() {
+    cout << "Press 1 to add new pizzas" << endl;
+    cout << "Press 2 to see all pizzas" << endl;
+    cout << "Press b to go back" << endl;
 }

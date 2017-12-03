@@ -243,25 +243,28 @@
 1512239748 c:\users\asdis\desktop\pizzaforrit\pizza\ui\customerui.h
 	<iostream>
 
-<<<<<<< HEAD
-1512305559 source:c:\users\einarbi\desktop\pizzaforrit\pizza\controllers\bakercontroller.cpp
+1512239748 D
+
+1512309215 source:c:\users\einarbi\desktop\pizzaforrit\pizza\controllers\bakercontroller.cpp
 	"BakerController.h"
 
-1512305559 c:\users\einarbi\desktop\pizzaforrit\pizza\controllers\bakercontroller.h
+1512309215 c:\users\einarbi\desktop\pizzaforrit\pizza\controllers\bakercontroller.h
 	"BakerUI.h"
 	<iostream>
 	"HomeController.h"
+	"GlobalHelp.h"
 
 1512305559 c:\users\einarbi\desktop\pizzaforrit\pizza\ui\bakerui.h
 	<iostream>
 
-1512305559 c:\users\einarbi\desktop\pizzaforrit\pizza\controllers\homecontroller.h
+1512309215 c:\users\einarbi\desktop\pizzaforrit\pizza\controllers\homecontroller.h
 	"PizzaUI.h"
 	"HomeUI.h"
 	"GlobalHelp.h"
 	"SalesmanController.h"
 	"BakerController.h"
 	"CustomerController.h"
+	"AdminController.h"
 
 1512305559 c:\users\einarbi\desktop\pizzaforrit\pizza\ui\pizzaui.h
 	<iostream>
@@ -292,32 +295,34 @@
 1512305559 c:\users\einarbi\desktop\pizzaforrit\pizza\ui\homeui.h
 	<iostream>
 
-1512305559 c:\users\einarbi\desktop\pizzaforrit\pizza\controllers\salesmancontroller.h
+1512309215 c:\users\einarbi\desktop\pizzaforrit\pizza\controllers\salesmancontroller.h
 	<iostream>
 	"SalesmanUI.h"
 	"HomeController.h"
+	"GlobalHelp.h"
 
 1512305559 c:\users\einarbi\desktop\pizzaforrit\pizza\ui\salesmanui.h
 	<iostream>
 
-1512305559 c:\users\einarbi\desktop\pizzaforrit\pizza\controllers\customercontroller.h
+1512309215 c:\users\einarbi\desktop\pizzaforrit\pizza\controllers\customercontroller.h
 	"CustomerUI.h"
 	"HomeController.h"
 	<iostream>
+	"GlobalHelp.h"
 
 1512305559 c:\users\einarbi\desktop\pizzaforrit\pizza\ui\customerui.h
 	<iostream>
 
-1512305559 source:c:\users\einarbi\desktop\pizzaforrit\pizza\controllers\customercontroller.cpp
+1512309215 source:c:\users\einarbi\desktop\pizzaforrit\pizza\controllers\customercontroller.cpp
 	"CustomerController.h"
 
-1512305559 source:c:\users\einarbi\desktop\pizzaforrit\pizza\controllers\homecontroller.cpp
+1512309215 source:c:\users\einarbi\desktop\pizzaforrit\pizza\controllers\homecontroller.cpp
 	"HomeController.h"
 
-1512305559 source:c:\users\einarbi\desktop\pizzaforrit\pizza\controllers\salesmancontroller.cpp
+1512309215 source:c:\users\einarbi\desktop\pizzaforrit\pizza\controllers\salesmancontroller.cpp
 	"SalesmanController.h"
 
-1512305559 source:c:\users\einarbi\desktop\pizzaforrit\pizza\global\globalhelp.cpp
+1512309215 source:c:\users\einarbi\desktop\pizzaforrit\pizza\global\globalhelp.cpp
 	"GlobalHelp.h"
 
 1512305559 source:c:\users\einarbi\desktop\pizzaforrit\pizza\main.cpp
@@ -343,7 +348,7 @@
 1512305559 source:c:\users\einarbi\desktop\pizzaforrit\pizza\ui\bakerui.cpp
 	"BakerUI.h"
 
-1512305559 source:c:\users\einarbi\desktop\pizzaforrit\pizza\ui\customerui.cpp
+1512309215 source:c:\users\einarbi\desktop\pizzaforrit\pizza\ui\customerui.cpp
 	"CustomerUI.h"
 
 1512305559 source:c:\users\einarbi\desktop\pizzaforrit\pizza\ui\homeui.cpp
@@ -354,7 +359,9 @@
 
 1512305559 source:c:\users\einarbi\desktop\pizzaforrit\pizza\ui\salesmanui.cpp
 	"SalesmanUI.h"
-=======
+
+1512305559 I.h"
+
 1512308965 source:c:\users\asdis\desktop\pizzaforrit\pizza\controllers\admincontroller.cpp
 	"AdminController.h"
 
@@ -368,5 +375,20 @@
 
 1512308403 source:c:\users\asdis\desktop\pizzaforrit\pizza\ui\adminui.cpp
 	"AdminUI.h"
->>>>>>> 08dc2372843d10f45258e97c51b0ec54b2eee2d8
+
+1512308403 c2372843d10f45258e97c51b0ec54b2eee2d8
+
+1512309215 c:\users\einarbi\desktop\pizzaforrit\pizza\controllers\admincontroller.h
+	"AdminUI.h"
+	"HomeController.h"
+	"GlobalHelp.h"
+
+1512310439 c:\users\einarbi\desktop\pizzaforrit\pizza\ui\adminui.h
+	<iostream>
+
+1512311237 source:c:\users\einarbi\desktop\pizzaforrit\pizza\ui\adminui.cpp
+	"AdminUI.h"
+
+1512311869 source:c:\users\einarbi\desktop\pizzaforrit\pizza\controllers\admincontroller.cpp
+	"AdminController.h"
 
