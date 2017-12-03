@@ -1,9 +1,8 @@
 #include "HomeController.h"
 
 
-HomeController::HomeController()
-{
-    //ctor
+HomeController::HomeController(){
+
 }
 
 
@@ -28,9 +27,10 @@ void HomeController::init(){
 
 
     if(selection == '1'){
-        PizzaUI pizzaui;
-        pizzaui.displayPizzaUI();
-        cout << endl;
+        clearScreen();
+        AdminController admin;
+        admin.init();
+
     }
 
     else if (selection == '2'){

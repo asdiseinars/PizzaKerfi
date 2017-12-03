@@ -42,6 +42,8 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="CONTROLLERS/AdminController.cpp" />
+		<Unit filename="CONTROLLERS/AdminController.h" />
 		<Unit filename="CONTROLLERS/BakerController.cpp" />
 		<Unit filename="CONTROLLERS/BakerController.h" />
 		<Unit filename="CONTROLLERS/CustomerController.cpp" />
@@ -58,6 +60,8 @@
 		<Unit filename="MODELS/Topping.h" />
 		<Unit filename="REPO/pizzadata.cpp" />
 		<Unit filename="REPO/pizzadata.h" />
+		<Unit filename="UI/AdminUI.cpp" />
+		<Unit filename="UI/AdminUI.h" />
 		<Unit filename="UI/BakerUI.cpp" />
 		<Unit filename="UI/BakerUI.h" />
 		<Unit filename="UI/CustomerUI.cpp" />
@@ -66,8 +70,6 @@
 		<Unit filename="UI/HomeUI.h" />
 		<Unit filename="UI/SalesmanUI.cpp" />
 		<Unit filename="UI/SalesmanUI.h" />
-		<Unit filename="UI/pizzaui.cpp" />
-		<Unit filename="UI/pizzaui.h" />
 		<Unit filename="main.cpp" />
 		<Extensions>
 			<code_completion />

@@ -3,7 +3,9 @@
 #include "BakerUI.h"
 #include <iostream>
 #include "HomeController.h"
+#include "GlobalHelp.h"
 
+using namespace GlobalHelp;
 using namespace std;
 using namespace BakerUI;
 

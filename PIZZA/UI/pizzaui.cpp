@@ -16,9 +16,6 @@ void PizzaUI::displayPizzaUI(){
     displayLogo();
     char selection = '\0';
 
-    cout << "m: make pizza" << endl;
-    cout << "r: read pizza" << endl;
-    cout << "b: back" << endl;
 
     cin >> selection;
 

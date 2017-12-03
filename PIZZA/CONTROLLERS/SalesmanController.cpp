@@ -8,6 +8,7 @@ SalesmanController::SalesmanController()
 
 void SalesmanController::init(){
 
+    displayLogo();
     displaySalesmanUI();
     char selection = '\0';
     cout << "Insert option" << endl;
