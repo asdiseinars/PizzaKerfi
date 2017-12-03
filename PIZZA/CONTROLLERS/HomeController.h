@@ -6,9 +6,11 @@
 #include "SalesmanController.h"
 #include "BakerController.h"
 #include "CustomerController.h"
+#include "AdminController.h"
 
 using namespace GlobalHelp;
 using namespace HomeUI;
+using namespace AdminUI;
 using namespace BakerUI;
 using namespace SalesmanUI;
 using namespace CustomerUI;

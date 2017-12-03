@@ -11,6 +11,7 @@ BakerController::~BakerController()
 }
 
 void BakerController::init(){
+    displayLogo();
     displayBakerUI();
     char selection = '\0';
     cout << "Insert option" << endl;

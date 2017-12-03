@@ -7,6 +7,7 @@ CustomerController::CustomerController()
 
 void CustomerController::init(){
 
+    displayLogo();
     displayCustomerUI();
 
     char selection = '\0';

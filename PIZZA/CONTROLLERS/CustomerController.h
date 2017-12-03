@@ -3,7 +3,9 @@
 #include "CustomerUI.h"
 #include "HomeController.h"
 #include <iostream>
+#include "GlobalHelp.h"
 
+using namespace GlobalHelp;
 using namespace std;
 using namespace CustomerUI;
 
