@@ -1,7 +1,14 @@
 #include "BakerUI.h"
 
 void BakerUI::displayBakerUI(){
-    cout << "Welcome baker!" << endl;
-    cout << "Here are the pizzas you should make!" << endl;
+    cout << "BAKER" << endl;
+    cout << endl;
+    cout << "Press 1 to see orders" << endl;
     cout << "Press b to go back" << endl;
 }
+
+void BakerUI::displayBakerOrdersUI(){
+    cout << "Here are the orders you should bake!" << endl;
+}
+
+

@@ -8,6 +8,7 @@ using namespace std;
 namespace BakerUI
 {
     void displayBakerUI();
+    void displayBakerOrdersUI();
 };
 
 #endif // BAKERUI_H
