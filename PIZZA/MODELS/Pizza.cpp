@@ -2,6 +2,9 @@
 
 Pizza::Pizza(){
 
+    string name = "Margarita";
+    string size = "Medium";
+    double price = 1500.0;
     verbose = true;
 }
 
@@ -56,7 +59,6 @@ ostream& operator << (ostream& out, Pizza& pizza) {
     for (unsigned int i = 0; i < pizza.toppings.size(); i++) {
         out << pizza.toppings[i] << endl;
     }
-
 
     return out;
 }

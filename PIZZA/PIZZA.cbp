@@ -56,6 +56,10 @@
 		<Unit filename="GLOBAL/GlobalHelp.h" />
 		<Unit filename="MODELS/Pizza.cpp" />
 		<Unit filename="MODELS/Pizza.h" />
+		<Unit filename="MODELS/Restaurants.cpp" />
+		<Unit filename="MODELS/Restaurants.h" />
+		<Unit filename="MODELS/Soda.cpp" />
+		<Unit filename="MODELS/Soda.h" />
 		<Unit filename="MODELS/Topping.cpp" />
 		<Unit filename="MODELS/Topping.h" />
 		<Unit filename="REPO/pizzadata.cpp" />
