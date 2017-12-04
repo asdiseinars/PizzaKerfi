@@ -11,6 +11,7 @@ using namespace std;
 class Pizza
 {
     private:
+        int number;
         string name;
         string size;
         double price;

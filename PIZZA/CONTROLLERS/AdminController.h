@@ -3,6 +3,8 @@
 #include "AdminUI.h"
 #include "HomeController.h"
 #include "GlobalHelp.h"
+#include "pizzadata.h"
+#include "ToppingData.h"
 
 using namespace GlobalHelp;
 using namespace AdminUI;
@@ -10,9 +12,11 @@ using namespace AdminUI;
 class AdminController
 {
     private:
+        PizzaData pizzaData;
+        ToppingData toppingData;
+
     public:
         AdminController();
-        virtual ~AdminController();
         void init();
 };
 

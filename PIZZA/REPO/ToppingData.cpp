@@ -1,10 +1,9 @@
 #include "ToppingData.h"
-#include <fstream>
-#include <iostream>
-
-using namespace std;
 
 
+ToppingData::ToppingData() {
+
+}
 
 void ToppingData::storeAllToppings(const vector<Topping> &toppings) {
 
@@ -38,6 +37,7 @@ vector<Topping> ToppingData::retrieveAllToppings() {
         }
         fin.close();
     }
+
     return toppings;
 }
 

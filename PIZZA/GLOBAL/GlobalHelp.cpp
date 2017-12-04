@@ -14,3 +14,7 @@ void GlobalHelp::displayLogo(){
     cout << " |_|   |_/___/___|__,_| |_||_|_|___|___|_| |_||___|_| |_| " << endl;
     cout << endl << endl;
 }
+
+void GlobalHelp::displayAdminLogo(){
+    cout << "---- ADMIN -----" << endl;
+}

@@ -2,19 +2,18 @@
 #define TOPPINGDATA_H
 #include <vector>
 #include "topping.h"
+#include <fstream>
 #include <iostream>
 
 using namespace std;
+
 
 class ToppingData
 {
     public:
         ToppingData();
-        virtual ~ToppingData();
-        void storeAllToppings(const vector<Topping> &toppings);
+        void storeAllToppings(const vector<Topping>& toppings);
         vector<Topping> retrieveAllToppings();
-
-
 
     private:
 };

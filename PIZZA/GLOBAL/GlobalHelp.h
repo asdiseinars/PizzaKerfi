@@ -9,6 +9,7 @@ namespace GlobalHelp
 {
     void clearScreen();
     void displayLogo();
+    void displayAdminLogo();
 };
 
 #endif // GLOBALHELP_H
