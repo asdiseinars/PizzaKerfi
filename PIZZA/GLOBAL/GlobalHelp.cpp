@@ -13,4 +13,5 @@ void GlobalHelp::displayLogo(){
     cout << " | |   | |/ / / / (_| | | .  | | || (__| | | |  __/ | | | " << endl;
     cout << " |_|   |_/___/___|__,_| |_||_|_|___|___|_| |_||___|_| |_| " << endl;
     cout << endl << endl;
+    cout << "test kara" << endl;
 }
