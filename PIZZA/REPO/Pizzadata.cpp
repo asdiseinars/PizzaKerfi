@@ -1,5 +1,7 @@
 #include "PizzaData.h"
 
+class FileNotFoundException{};;
+
 PizzaData::PizzaData(){
 
 }
@@ -7,10 +9,10 @@ PizzaData::PizzaData(){
 void PizzaData::storePizza(Pizza& pizza){
     ofstream fout;
 
-    fout.open("Pizza.dat", ios::app | ios::binary);
+    fout.open("Pizza.bin", ios::binary);
 
-    pizza.verbose = false;
-    fout << pizza;
+    //pizza.verbose = false;
+    pizza.write(fout);
 
     fout.close();
 }
@@ -18,13 +20,17 @@ void PizzaData::storePizza(Pizza& pizza){
 Pizza PizzaData::retrievePizza(){
     ifstream fin;
 
-    fin.open("Pizza.dat", ios::binary);
+    fin.open("Pizza.bin", ios::binary);
 
-    Pizza pizza;
-    fin >> pizza;
 
-    fin.close();
+    if(fin.is_open()) {
+        Pizza pizza;
+        //fin >> pizza;
+        pizza.read(fin);
 
-    return pizza;
+        fin.close();
+        return pizza;
+    }
+    throw FileNotFoundException(); ///skil ekki?
 }
 

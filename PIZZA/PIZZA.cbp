@@ -62,6 +62,8 @@
 		<Unit filename="MODELS/Soda.h" />
 		<Unit filename="MODELS/Topping.cpp" />
 		<Unit filename="MODELS/Topping.h" />
+		<Unit filename="REPO/ToppingData.cpp" />
+		<Unit filename="REPO/ToppingData.h" />
 		<Unit filename="REPO/pizzadata.cpp" />
 		<Unit filename="REPO/pizzadata.h" />
 		<Unit filename="UI/AdminUI.cpp" />

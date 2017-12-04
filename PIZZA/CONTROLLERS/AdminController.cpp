@@ -2,7 +2,7 @@
 
 AdminController::AdminController()
 {
-    //ctor
+
 }
 
 AdminController::~AdminController()
@@ -76,7 +76,6 @@ void AdminController::init(){
             clearScreen();
             AdminController admin;
             admin.init();
-
         }
     }
 
