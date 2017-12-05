@@ -39,7 +39,7 @@ void GlobalHelp::displayCustomerLogo() {
 }
 
 void GlobalHelp::displayHomeLogo() {
-    cout << "----- MAIN MENU ? ------" << endl;
+    cout << "----- MAIN MENU ------" << endl;
     cout << endl;
 
 }

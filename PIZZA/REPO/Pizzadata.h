@@ -12,8 +12,9 @@ class PizzaData
 
     public:
         PizzaData();
-        void storePizza(Pizza& pizza);
+        void storePizza(const Pizza& pizza);
         Pizza retrievePizza();
+
 
 
 };

@@ -2,79 +2,57 @@
 #include "Topping.h"
 
 Topping::Topping(){
-
+   name = '\0';
+   price = 0;
+   verbose = true;
 }
 
 Topping::Topping(string name, double price){
     this->name = name;
     this->price = price;
+}
 
+string Topping::getName() {
+    return name;
+}
+double Topping::getPrice() {
+    return price;
+}
+
+void Topping::setName(string name) {
+    this->name = name;
+}
+
+void Topping::setPrice(double price) {
+    this->price = price;
+}
+
+void Topping::setVerbose(bool verbose){
+    this->verbose = verbose;
 }
 
 istream& operator >> (istream& in, Topping& topping) {
-    cout << "Name: ";
+    if(topping.verbose)
+        cout << "Topping name: ";
     in >> ws;
     getline(in, topping.name);
 
-    cout << "Price: ";
+    if(topping.verbose)
+        cout << "Topping price: ";
     in >> topping.price;
 
     return in;
 }
 
-int Topping::get_number(){
-    return number;
-}
-
-string Topping::get_name() {
-    return name;
-}
-double Topping::get_price() {
-    return price;
-}
-
-void Topping::set_number(int number){
-    this->number = number;
-}
-
-void Topping::set_name(string name) {
-    this->name = name;
-}
-
-void Topping::set_price(double price) {
-    this->price = price;
-}
-
 ostream& operator << (ostream& out, Topping& topping) {
+    if(topping.verbose)
+        out << "Topping: ";
     out << topping.name << endl;
-    out << topping.price;
+
+    if(topping.verbose)
+        out << "Price: ";
+    out << topping.price << endl;
+
     return out;
 }
 
-void Topping::write(ofstream& fout) const {
-
-    int stringLenght = name.length() + 1;
-
-    fout.write((char*)(&stringLenght), sizeof(int));
-    fout.write(name.c_str(), stringLenght);
-
-    fout.write((char*)(&price), sizeof(double));
-
-}
-
-void Topping::read(ifstream& fin) {
-
-    int stringLenght;
-
-    fin.read((char*)(&stringLenght), sizeof(int));
-    char* str = new char[stringLenght];
-
-    fin.read(str, stringLenght);
-
-    name = str;
-
-    fin.read((char*)(&price), sizeof(double));
-
-    delete[] str;
-
-}

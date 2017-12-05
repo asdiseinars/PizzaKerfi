@@ -4,18 +4,24 @@
 #include "topping.h"
 #include <fstream>
 #include <iostream>
+#include <stdio.h>
+#include <vector>
 
 using namespace std;
 
-
 class ToppingData
 {
+    private:
+        void clearToppings();
+
     public:
         ToppingData();
-        void storeAllToppings(const vector<Topping>& toppings);
+        void storeAllToppings(vector<Topping> toppings);
         vector<Topping> retrieveAllToppings();
+        void addTopping(Topping& topping);
+        Topping selectTopping();
 
-    private:
 };
 
 #endif // TOPPINGDATA_H
+

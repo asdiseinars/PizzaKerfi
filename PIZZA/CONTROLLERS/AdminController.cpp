@@ -16,69 +16,16 @@ void AdminController::init(){
         clearScreen();
         displayLogo();
         displayAdminLogo();
-        displayAdminToppingUI();
 
-        cin >> selection;
-
-        if(selection == '1'){ // add new toppings
-            int toppingCount;
-
-            cout << "How many new toppings do you want to add? ";
-            cin >> toppingCount;
-
-            Pizza pizza(toppingCount);
-            for(int i = 0; i < toppingCount; i++){
-                Topping topping;
-                cin >> topping;
-                pizza.addTopping(topping);
-            }
-
-            cout << pizza << endl;
-
-            pizzaData.storePizza(pizza);
-
-        }
-
-        else if (selection == '2') { // edit toppings
-           /* Topping topping;
-            cin >> topping;
-            toppingData.storeAllToppings(topping);*/
-
-        }
-
-        else if (selection == '3') { // all toppings
-            cout << "Here are all the toppings you have on list" << endl;
-             /*PizzaData data;
-            Pizza pizza = data.retrievePizza();
-            cout << pizza << endl;*/
-        }
-
-        else if (selection == 'b') {
-            clearScreen();
-            init();
-        }
+        modifyToppings();
     }
 
     else if (selection == '2') { //add/edit pizzas
         clearScreen();
         displayLogo();
         displayAdminLogo();
-        displayAdminPizzaUI();
 
-        cin >> selection;
-
-        if (selection == '1') {
-            cout << "How many pizzas do you want to add? " << endl;
-        }
-
-        else if (selection == '2') {
-            cout << "Display all pizzas on menu: " << endl;
-        }
-
-        else if (selection == 'b') {
-            clearScreen();
-            init();
-        }
+        modifyPizzas();
     }
 
     else if (selection == 'b') {
@@ -86,3 +33,117 @@ void AdminController::init(){
         home.init();
     }
 }
+
+void AdminController::modifyToppings() {
+    char selection;
+    displayAdminToppingUI();
+    cin >> selection;
+
+        if(selection == '1') { // Displays a list of all toppings
+            displayAllToppings();
+        }
+
+        else if (selection == '2') { // Adds new topping to the list
+            addTopping();
+
+        }
+
+        else if (selection == '3') { // Removes topping from the list
+           removeTopping();
+        }
+
+        else if (selection == 'b') {
+            clearScreen();
+            init();
+        }
+}
+
+void AdminController::displayAllToppings(){
+    vector<Topping> toppings = toppingData.retrieveAllToppings();
+    for (unsigned int i = 0; i < toppings.size(); i++) {
+        Topping topp = toppings.at(i);
+        cout << topp << endl;
+    }
+}
+
+void AdminController::addTopping() {
+    char selection = 'y';
+
+    while(selection == 'y'){
+        Topping topping;
+        cin >> topping;
+        toppingData.addTopping(topping);
+
+        cout << endl << "Do you want to add another topping? (y/n)" << endl;
+
+        cin >> selection;
+
+        while(selection != 'y' && selection != 'n') {
+            cout << endl << "Invalid input! " << endl << endl;
+            cout << "Do you want to add another topping? (y/n)" << endl;
+            cin >> selection;
+            cout << endl;
+        }
+    }
+}
+
+
+void AdminController::removeTopping() { //Laga þetta fall
+    vector<Topping> toppings = toppingData.retrieveAllToppings();
+    cout << endl;
+
+    for(unsigned int i = 0; i < toppings.size(); i++){
+        Topping topp = toppings.at(i);
+        cout << "Number: [" << i+1 << "]"<< endl;
+        cout << topp << endl;
+    }
+
+    cout << "What topping do you want to remove? ";
+    int input;
+    cin >> input;
+
+    for(unsigned int i = 0; i < toppings.size(); i++){
+        input = i + 1;
+        toppings.erase(toppings.begin() + input);
+    }
+
+    toppingData.storeAllToppings(toppings);
+    cout << endl << "The topping has been removed!" << endl << endl;
+
+}
+
+void AdminController::modifyPizzas() {
+    char selection;
+    displayAdminPizzaUI();
+    cin >> selection;
+
+    if (selection == '1') { //All pizzas
+        displayAllPizzas();
+    }
+
+    else if (selection == '2') { //Add new pizza to menu
+        addPizzaToMenu();
+
+    }
+
+    else if (selection == '2') { //Remove pizza from menu
+        removePizzaFromMenu();
+
+    }
+
+    else if (selection == 'b') {
+        clearScreen();
+        init();
+    }
+}
+
+void AdminController::displayAllPizzas() {
+}
+
+void AdminController::addPizzaToMenu() {
+}
+
+void AdminController::removePizzaFromMenu() {
+}
+
+

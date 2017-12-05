@@ -1,22 +1,65 @@
 #include "Pizza.h"
 
 Pizza::Pizza(){
-
-    string name = "Margarita";
-    string size = "Medium";
-    double price = 1500.0;
+    name = "Margarita";
+    size = "Medium";
+    price = 1500.0;
     verbose = true;
 }
 
-Pizza::Pizza(int toppingCount) {
-
+Pizza::Pizza(string size, vector<Topping> toppings, int toppingsToAdd){
+    name = "";
+    price = 1500;
+    if(toppingsToAdd > MAX_TOPPINGS) {
+        cout << "Error: Topping amount exceeds max allowed number of toppings" << endl;
+    }
+    else {
+        for (int i = 0; i < toppingsToAdd; i++) {
+            toppings[i] = toppings[i];
+        }
+        toppingCount = toppingsToAdd;
+    }
 }
 
-void Pizza::addTopping(Topping topping){
-
-    toppings.push_back(topping);
+void Pizza:: createPizza() {
 }
 
+string Pizza::getName() {
+    return name;
+}
+
+string Pizza::getSize() {
+    return size;
+}
+
+double Pizza::getPrice() {
+    return price;
+}
+
+vector<Topping> Pizza::getToppings() {
+    return toppings;
+}
+
+void Pizza::setName(string name) {
+    this->name = name;
+}
+
+void Pizza::setSize(string size) {
+    this->size = size;
+}
+
+void Pizza::setPrice(double price) {
+    this->price = price;
+}
+
+void Pizza::setToppings(vector<Topping> toppings) {
+    this->toppings = toppings;
+}
+
+void Pizza::setVerbose(bool verbose) {
+    this->verbose = verbose;
+}
+/*
 void Pizza::write(ofstream& fout) const {
 
     int toppingCount = toppings.size();
@@ -37,84 +80,35 @@ void Pizza::read(ifstream& fin) {
         topping.read(fin);
         addTopping(topping);
     }
-}
-
-int Pizza::get_number() {
-    return number;
-}
-
-string Pizza::get_name() {
-    return name;
-}
-
-string Pizza::get_size() {
-    return size;
-}
-
-double Pizza::get_price() {
-    return price;
-}
-
-vector<Topping> Pizza::get_toppings() {
-    return toppings;
-}
-
-void Pizza::set_number(int number) {
-    this->number = number;
-}
-
-void Pizza::set_name(string name) {
-    this->name = name;
-}
-
-void Pizza::set_size(string size) {
-    this->size = size;
-}
-
-void Pizza::set_price(double price) {
-    this->price = price;
-}
-
-void Pizza::set_toppings(vector<Topping> toppings) {
-    this->toppings = toppings;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
+}*/
 
 
 istream& operator >> (istream& in, Pizza& pizza) {
-    int toppingCount;
-    in >> toppingCount;
 
-    Topping topping;
-    for (unsigned int i = 0; i < pizza.toppings.size(); i++) {
-        in >> topping;
-        pizza.addTopping(topping);
-    }
+    pizza.chooseToppings();
+
     return in;
 }
 
-ostream& operator << (ostream& out, Pizza& pizza) {
-    if (pizza.verbose) {
-            out << "Pizza with toppings: " << endl;
+
+ostream& operator << (ostream& out, const Pizza& pizza) {
+
+    if(pizza.verbose) {
+        out << "Name: " << pizza.name << endl;
+        out << "Price: " << pizza.price << endl;
+        out << endl;
     }
 
-    for (unsigned int i = 0; i < pizza.toppings.size(); i++) {
-        out << pizza.toppings[i] << endl;
+    else {
+        out << pizza.name << endl;
+        out << pizza.price << endl;
     }
 
     return out;
+}
+
+void Pizza::chooseToppings() {
+
 }
 
 
