@@ -22,6 +22,29 @@ istream& operator >> (istream& in, Topping& topping) {
     return in;
 }
 
+int Topping::get_number(){
+    return number;
+}
+
+string Topping::get_name() {
+    return name;
+}
+double Topping::get_price() {
+    return price;
+}
+
+void Topping::set_number(int number){
+    this->number = number;
+}
+
+void Topping::set_name(string name) {
+    this->name = name;
+}
+
+void Topping::set_price(double price) {
+    this->price = price;
+}
+
 ostream& operator << (ostream& out, Topping& topping) {
     out << topping.name << endl;
     out << topping.price;

@@ -23,6 +23,16 @@ class Pizza
         void addTopping(Topping topping);
         void write(ofstream& fout) const;
         void read(ifstream& fin);
+        int get_number();
+        string get_name();
+        string get_size();
+        double get_price();
+        vector<Topping> get_toppings();
+        void set_number(int number);
+        void set_name(string name);
+        void set_size(string size);
+        void set_price(double price);
+        void set_toppings(vector<Topping> toppings);
         friend istream& operator >> (istream& in, Pizza& pizza);
         friend ostream& operator << (ostream& out, Pizza& pizza);
         bool verbose;

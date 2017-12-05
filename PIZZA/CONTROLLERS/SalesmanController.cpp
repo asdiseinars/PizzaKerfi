@@ -24,8 +24,7 @@ void SalesmanController::init(){
 
         if (selection == 'b') {
             clearScreen();
-            SalesmanController salesman;
-            salesman.init();
+            init();
 
         }
     }

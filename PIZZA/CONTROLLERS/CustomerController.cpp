@@ -27,8 +27,7 @@ void CustomerController::init(){
         }
         else if(selection == 'b'){
             clearScreen();
-            CustomerController controllerBack;
-            controllerBack.init();
+            init();
         }
     }
 

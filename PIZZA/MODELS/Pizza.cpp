@@ -39,6 +39,60 @@ void Pizza::read(ifstream& fin) {
     }
 }
 
+int Pizza::get_number() {
+    return number;
+}
+
+string Pizza::get_name() {
+    return name;
+}
+
+string Pizza::get_size() {
+    return size;
+}
+
+double Pizza::get_price() {
+    return price;
+}
+
+vector<Topping> Pizza::get_toppings() {
+    return toppings;
+}
+
+void Pizza::set_number(int number) {
+    this->number = number;
+}
+
+void Pizza::set_name(string name) {
+    this->name = name;
+}
+
+void Pizza::set_size(string size) {
+    this->size = size;
+}
+
+void Pizza::set_price(double price) {
+    this->price = price;
+}
+
+void Pizza::set_toppings(vector<Topping> toppings) {
+    this->toppings = toppings;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 istream& operator >> (istream& in, Pizza& pizza) {
     int toppingCount;
     in >> toppingCount;

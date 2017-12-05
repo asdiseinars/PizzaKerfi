@@ -55,8 +55,7 @@ void AdminController::init(){
 
         else if (selection == 'b') {
             clearScreen();
-            AdminController admin;
-            admin.init();
+            init();
         }
     }
 
@@ -78,8 +77,7 @@ void AdminController::init(){
 
         else if (selection == 'b') {
             clearScreen();
-            AdminController admin;
-            admin.init();
+            init();
         }
     }
 
