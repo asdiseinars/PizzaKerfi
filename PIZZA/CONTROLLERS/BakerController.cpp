@@ -12,8 +12,8 @@ BakerController::~BakerController()
 
 void BakerController::init(){
     displayLogo();
-    displayBakerUI();
     displayBakerLogo();
+    displayBakerUI();
 
     char selection = '\0';
     cin >> selection;

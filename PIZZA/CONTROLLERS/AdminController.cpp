@@ -73,7 +73,7 @@ void AdminController::init(){
         }
 
         else if (selection == '2') {
-            cout << "Read all pizzas on menu: " << endl;
+            cout << "Display all pizzas on menu: " << endl;
         }
 
         else if (selection == 'b') {

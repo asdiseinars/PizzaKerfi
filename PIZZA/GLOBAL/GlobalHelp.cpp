@@ -37,3 +37,9 @@ void GlobalHelp::displayCustomerLogo() {
     cout << endl;
 
 }
+
+void GlobalHelp::displayHomeLogo() {
+    cout << "----- MAIN MENU ? ------" << endl;
+    cout << endl;
+
+}

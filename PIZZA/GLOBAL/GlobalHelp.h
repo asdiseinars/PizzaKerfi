@@ -14,6 +14,7 @@ namespace GlobalHelp
     void displayBakerLogo();
     void displaySalesmanLogo();
     void displayCustomerLogo();
+    void displayHomeLogo();
 
 };
 

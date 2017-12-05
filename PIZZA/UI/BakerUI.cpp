@@ -1,8 +1,6 @@
 #include "BakerUI.h"
 
 void BakerUI::displayBakerUI(){
-    cout << "BAKER" << endl;
-    cout << endl;
     cout << "Press 1 to see orders" << endl;
     cout << "Press b to go back" << endl;
 }
