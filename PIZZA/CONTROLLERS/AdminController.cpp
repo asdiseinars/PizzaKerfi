@@ -1,29 +1,26 @@
 #include "AdminController.h"
 
-AdminController::AdminController()
-{
+AdminController::AdminController() {
 
-}
-
-AdminController::~AdminController()
-{
-    //dtor
 }
 
 void AdminController::init(){
     displayLogo();
+    displayAdminLogo();
     displayAdminUI();
 
     char selection = '\0';
     cin >> selection;
 
-    if (selection == '1') {
+    if (selection == '1') { //add/edit toppings
         clearScreen();
         displayLogo();
+        displayAdminLogo();
         displayAdminToppingUI();
 
         cin >> selection;
-        if(selection == '1'){
+
+        if(selection == '1'){ // add new toppings
             int toppingCount;
 
             cout << "How many new toppings do you want to add? ";
@@ -38,14 +35,24 @@ void AdminController::init(){
 
             cout << pizza << endl;
 
-            PizzaData data;
-            data.storePizza(pizza);
+            pizzaData.storePizza(pizza);
+
         }
-        else if (selection == '2') {
-            PizzaData data;
+
+        else if (selection == '2') { // edit toppings
+           /* Topping topping;
+            cin >> topping;
+            toppingData.storeAllToppings(topping);*/
+
+        }
+
+        else if (selection == '3') { // all toppings
+            cout << "Here are all the toppings you have on list" << endl;
+             /*PizzaData data;
             Pizza pizza = data.retrievePizza();
-            cout << pizza << endl;
+            cout << pizza << endl;*/
         }
+
         else if (selection == 'b') {
             clearScreen();
             AdminController admin;
@@ -53,13 +60,10 @@ void AdminController::init(){
         }
     }
 
-    else if(selection == '2'){
-        cout << "Edit toppings here" << endl;
-    }
-
-    else if (selection == '3') {
+    else if (selection == '2') { //add/edit pizzas
         clearScreen();
         displayLogo();
+        displayAdminLogo();
         displayAdminPizzaUI();
 
         cin >> selection;
@@ -69,7 +73,7 @@ void AdminController::init(){
         }
 
         else if (selection == '2') {
-            cout << "Read all pizzas on menu: " << endl;
+            cout << "Display all pizzas on menu: " << endl;
         }
 
         else if (selection == 'b') {
@@ -83,5 +87,4 @@ void AdminController::init(){
         HomeController home;
         home.init();
     }
-
 }

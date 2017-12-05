@@ -1,10 +1,9 @@
 #include "HomeController.h"
 
 
-HomeController::HomeController(){
+HomeController::HomeController() {
 
 }
-
 
 void HomeController::init(){
 
@@ -13,6 +12,7 @@ void HomeController::init(){
     do{
         clearScreen();
         displayLogo();
+        displayHomeLogo();
         displayHomeUI();
         cin >> selection;
 
@@ -54,11 +54,9 @@ void HomeController::init(){
 
     else if (selection == 'h'){
         clearScreen();
-        cout << "Help" << endl;
     }
 
     else if (selection == 'a'){
         clearScreen();
-        cout << "About" << endl;
     }
 }

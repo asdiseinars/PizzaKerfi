@@ -10,6 +10,7 @@ class Topping
 {
 
     private:
+        int number;
         string name;
         double price;
 
