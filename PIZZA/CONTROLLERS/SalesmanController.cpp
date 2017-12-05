@@ -9,6 +9,7 @@ SalesmanController::SalesmanController()
 void SalesmanController::init(){
 
     displayLogo();
+    displaySalesmanLogo();
     displaySalesmanUI();
     char selection = '\0';
     cin >> selection;
@@ -16,6 +17,7 @@ void SalesmanController::init(){
     if (selection == '1') {
         clearScreen();
         displayLogo();
+        displaySalesmanLogo();
         displaySalesmanMenuUI();
 
         cin >> selection;
@@ -31,6 +33,7 @@ void SalesmanController::init(){
     else if (selection == '2') {
         clearScreen();
         displayLogo();
+        displaySalesmanLogo();
         cout << "Make your own pizza" << endl;
     }
 

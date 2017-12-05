@@ -13,6 +13,7 @@ BakerController::~BakerController()
 void BakerController::init(){
     displayLogo();
     displayBakerUI();
+    displayBakerLogo();
 
     char selection = '\0';
     cin >> selection;
@@ -20,6 +21,7 @@ void BakerController::init(){
     if(selection == '1'){
         clearScreen();
         displayLogo();
+        displayBakerLogo();
         displayBakerOrdersUI();
     }
 

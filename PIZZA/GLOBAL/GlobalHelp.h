@@ -10,6 +10,11 @@ namespace GlobalHelp
     void clearScreen();
     void displayLogo();
     void displayAdminLogo();
+    void displayAdminLogo();
+    void displayBakerLogo();
+    void displaySalesmanLogo();
+    void displayCustomerLogo();
+
 };
 
 #endif // GLOBALHELP_H
