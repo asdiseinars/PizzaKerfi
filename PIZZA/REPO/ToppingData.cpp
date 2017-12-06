@@ -1,20 +1,26 @@
 #include "ToppingData.h"
-#include <fstream>
-#include <iostream>
-
-using namespace std;
 
 
+ToppingData::ToppingData() {
 
-void ToppingData::storeAllToppings(const vector<Topping> &toppings) {
+}
+
+void ToppingData::clearToppings() {
+    ofstream fout;
+    fout.open("toppings.txt");
+    fout.close();
+}
+
+void ToppingData::storeAllToppings(vector<Topping> toppings) {
+
+    clearToppings();
 
     ofstream fout;
-    fout.open("toppings.bin", ios::binary);
-    int toppingCount = toppings.size();
-    fout.write((char*)(&toppingCount), sizeof(int));
+    fout.open("toppings.txt");
 
-    for (int i = 0; i < toppingCount; i++) {
-        toppings[i].write(fout);
+    for(unsigned int i = 0; i < toppings.size(); i++){
+        toppings[i].setVerbose(false);
+        fout << toppings[i];
     }
     fout.close();
 }
@@ -22,24 +28,33 @@ void ToppingData::storeAllToppings(const vector<Topping> &toppings) {
 vector<Topping> ToppingData::retrieveAllToppings() {
 
     vector <Topping> toppings;
-    Topping topping;
+    Topping top;
 
     ifstream fin;
-    fin.open("toppings.bin", ios::binary);
-
-    if(fin.is_open()) {
-        int toppingCount;
-
-        fin.read((char*)(&toppingCount), sizeof(int));
-
-        for (int i = 0; i < toppingCount; i++) {
-            topping.read(fin);
-            toppings.push_back(topping);
-        }
-        fin.close();
+    fin.open("toppings.txt");
+    while(!fin.eof()) {
+        top.setVerbose(false);
+        fin >> top;
+        top.setVerbose(true);
+        toppings.push_back(top);
     }
+    toppings.pop_back();  //er önnur leið til þess að fjarlægja þannig að síðasta stakið komi aftur ekki tvisvar
+
     return toppings;
 }
+
+void ToppingData::addTopping(Topping& topping){
+    ofstream fout;
+    fout.open("toppings.txt", ios::app);
+
+    topping.setVerbose(false);
+    fout << topping;
+    fout.close();
+    topping.setVerbose(true);
+}
+
+
+
 
 
 

@@ -8,6 +8,7 @@ CustomerController::CustomerController()
 void CustomerController::init(){
 
     displayLogo();
+    displayCustomerLogo();
     displayCustomerUI();
 
     char selection = '\0';
@@ -16,6 +17,7 @@ void CustomerController::init(){
     if(selection == '1'){
         clearScreen();
         displayLogo();
+        displayCustomerLogo();
         displayCustomerMenuUI();
 
         cin >> selection;
@@ -25,14 +27,14 @@ void CustomerController::init(){
         }
         else if(selection == 'b'){
             clearScreen();
-            CustomerController controllerBack;
-            controllerBack.init();
+            init();
         }
     }
 
     else if(selection == '2'){
         clearScreen();
         displayLogo();
+        displayCustomerLogo();
         cout << "Make your own pizza" << endl;
         cout << "Add toppings" << endl;
 
