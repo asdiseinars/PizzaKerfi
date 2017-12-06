@@ -1,6 +1,5 @@
 #ifndef TOPPINGDATA_H
 #define TOPPINGDATA_H
-#include <vector>
 #include "topping.h"
 #include <fstream>
 #include <iostream>
@@ -19,7 +18,7 @@ class ToppingData
         void storeAllToppings(vector<Topping> toppings);
         vector<Topping> retrieveAllToppings();
         void addTopping(Topping& topping);
-        Topping selectTopping();
+        //Topping selectTopping();
 
 };
 

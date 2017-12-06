@@ -8,7 +8,8 @@ void PizzaData::storePizzaToMenu(const Pizza& pizza){
 
 }
 
-Pizza PizzaData::retrievePizza(){
+/*Pizza PizzaData::retrievePizza(){
 
 }
 
+*/
