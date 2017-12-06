@@ -246,7 +246,7 @@
 1512498222 c:\users\asdis\desktop\pizzaforrit\pizza\ui\customerui.h
 	<iostream>
 
-1512239748 D
+1512513228 D
 
 1512485975 source:c:\users\einarbi\desktop\pizzaforrit\pizza\controllers\bakercontroller.cpp
 	"BakerController.h"
@@ -444,12 +444,11 @@
 	<stdio.h>
 	<vector>
 
-<<<<<<< HEAD
 1512557716 source:c:\users\asdis\desktop\pizzaforrit\pizza\repo\orderdata.cpp
 	"OrderData.h"
 
 1512557729 c:\users\asdis\desktop\pizzaforrit\pizza\repo\orderdata.h
-=======
+
 1512396201 source:c:\users\karal\desktop\pizzaforrit\pizza\main.cpp
 	<iostream>
 	"Home.h"
@@ -499,7 +498,7 @@
 	<stdio.h>
 	<vector>
 
-1512557880 c:\users\karal\desktop\pizzaforrit\pizza\repo\pizzadata.h
+1512567511 c:\users\karal\desktop\pizzaforrit\pizza\repo\pizzadata.h
 	"Pizza.h"
 	<fstream>
 	<iostream>
@@ -561,7 +560,7 @@
 1512396201 source:c:\users\karal\desktop\pizzaforrit\pizza\ui\salesmanui.cpp
 	"SalesmanUI.h"
 
-1512563907 source:c:\users\karal\desktop\pizzaforrit\pizza\controllers\admincontroller.cpp
+1512567511 source:c:\users\karal\desktop\pizzaforrit\pizza\controllers\admincontroller.cpp
 	"AdminController.h"
 
 1512557880 source:c:\users\karal\desktop\pizzaforrit\pizza\controllers\bakercontroller.cpp
@@ -579,7 +578,7 @@
 1512559277 source:c:\users\karal\desktop\pizzaforrit\pizza\global\globalhelp.cpp
 	"GlobalHelp.h"
 
-1512557880 source:c:\users\karal\desktop\pizzaforrit\pizza\models\pizza.cpp
+1512569729 source:c:\users\karal\desktop\pizzaforrit\pizza\models\pizza.cpp
 	"Pizza.h"
 
 1512557880 source:c:\users\karal\desktop\pizzaforrit\pizza\models\topping.cpp
@@ -591,10 +590,10 @@
 
 1512557880 c:\users\karal\desktop\pizzaforrit\pizza\repo\orderdata.h
 
-1512562510 source:c:\users\karal\desktop\pizzaforrit\pizza\repo\pizzadata.cpp
+1512567511 source:c:\users\karal\desktop\pizzaforrit\pizza\repo\pizzadata.cpp
 	"PizzaData.h"
 
-1512563366 source:c:\users\karal\desktop\pizzaforrit\pizza\repo\toppingdata.cpp
+1512567511 source:c:\users\karal\desktop\pizzaforrit\pizza\repo\toppingdata.cpp
 	"ToppingData.h"
 
 1512557880 source:c:\users\karal\desktop\pizzaforrit\pizza\ui\adminui.cpp
@@ -621,11 +620,11 @@
 	<stdio.h>
 	<vector>
 
-1512564887 source:c:\users\karal\desktop\pizzaforrit\pizza\models\breadsticks.cpp
+1512567425 source:c:\users\karal\desktop\pizzaforrit\pizza\models\breadsticks.cpp
 	"Breadsticks.h"
 	<fstream>
 
-1512564887 c:\users\karal\desktop\pizzaforrit\pizza\models\breadsticks.h
+1512569729 c:\users\karal\desktop\pizzaforrit\pizza\models\breadsticks.h
 	<iostream>
 	<string>
 	<stdio.h>
@@ -639,5 +638,6 @@
 	<iostream>
 	<stdio.h>
 	<vector>
->>>>>>> af5a686e3273eb6efde2742854edee30bacbb71e
+
+1512565813 a686e3273eb6efde2742854edee30bacbb71e
 
