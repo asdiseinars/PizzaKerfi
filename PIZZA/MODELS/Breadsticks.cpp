@@ -33,12 +33,12 @@ void Breadsticks::setVerbose(bool verbose){
 
 istream& operator >> (istream& in, Breadsticks& breadsticks) {
     if(breadsticks.verbose)
-        cout << "Topping name: ";
+        cout << "Breadsticks kind: ";
     in >> ws;
     getline(in, breadsticks.name);
 
     if(breadsticks.verbose)
-        cout << "Topping price: ";
+        cout << "Price: ";
     in >> breadsticks.price;
 
     return in;
@@ -46,7 +46,7 @@ istream& operator >> (istream& in, Breadsticks& breadsticks) {
 
 ostream& operator << (ostream& out, Breadsticks& breadsticks) {
     if(breadsticks.verbose)
-        out << "Topping: ";
+        out << "Breadsticks: ";
     out << breadsticks.name << endl;
 
     if(breadsticks.verbose)
