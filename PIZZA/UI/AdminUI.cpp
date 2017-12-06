@@ -3,7 +3,7 @@
 
 void AdminUI::displayAdminUI(){
     cout << "Press 1 to add/edit toppings" << endl;
-    cout << "Press 2 to edit pizzas" << endl;
+    cout << "Press 2 to add/edit pizzas" << endl;
     cout << "Press b to go back" << endl;
 }
 

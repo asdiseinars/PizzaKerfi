@@ -19,13 +19,13 @@ class AdminController
     public:
         AdminController();
         void init();
-        void modifyToppings();
-        void modifyPizzas();
 
+        void modifyPizzas();
         void displayAllToppings();
         void addTopping();
         void removeTopping();
 
+        void modifyToppings();
         void displayAllPizzas();
         void addPizzaToMenu();
         void removePizzaFromMenu();

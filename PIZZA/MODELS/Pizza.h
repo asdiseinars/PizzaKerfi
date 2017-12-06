@@ -24,14 +24,13 @@ class Pizza
 
     public:
         Pizza();
-        Pizza(string size, vector<Topping> toppings, int toppingsToAdd);
+        Pizza(string size, vector<Topping> toppings, int addToppingToPizza);
         bool verbose;
         //void write(ofstream& fout) const;
         //void read(ifstream& fin);
 
         void createPizza();
         void chooseToppings();
-        //void fixName();
 
 
         string getName();

@@ -56,6 +56,7 @@ void AdminController::modifyToppings() {
             clearScreen();
             init();
         }
+
 }
 
 void AdminController::displayAllToppings(){
@@ -86,7 +87,6 @@ void AdminController::addTopping() {
         }
     }
 }
-
 
 void AdminController::removeTopping() { //Laga þetta fall
     vector<Topping> toppings = toppingData.retrieveAllToppings();
@@ -123,12 +123,10 @@ void AdminController::modifyPizzas() {
 
     else if (selection == '2') { //Add new pizza to menu
         addPizzaToMenu();
-
     }
 
     else if (selection == '2') { //Remove pizza from menu
         removePizzaFromMenu();
-
     }
 
     else if (selection == 'b') {
@@ -137,13 +135,13 @@ void AdminController::modifyPizzas() {
     }
 }
 
-void AdminController::displayAllPizzas() {
+void AdminController::displayAllPizzas() { //Útfæra fall
 }
 
-void AdminController::addPizzaToMenu() {
+void AdminController::addPizzaToMenu() { //útfæra fall
 }
 
-void AdminController::removePizzaFromMenu() {
+void AdminController::removePizzaFromMenu() {//útfæra fall
 }
 
 

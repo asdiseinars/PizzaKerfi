@@ -7,17 +7,17 @@ Pizza::Pizza(){
     verbose = true;
 }
 
-Pizza::Pizza(string size, vector<Topping> toppings, int toppingsToAdd){
-    name = "";
+Pizza::Pizza(string size, vector<Topping> toppings, int addToppingToPizza){
+    name = '\0';
     price = 1500;
-    if(toppingsToAdd > MAX_TOPPINGS) {
+    if(addToppingToPizza > MAX_TOPPINGS) {
         cout << "Error: Topping amount exceeds max allowed number of toppings" << endl;
     }
     else {
-        for (int i = 0; i < toppingsToAdd; i++) {
+        for (int i = 0; i < addToppingToPizza; i++) {
             toppings[i] = toppings[i];
         }
-        toppingCount = toppingsToAdd;
+        toppingCount = addToppingToPizza;
     }
 }
 
@@ -59,6 +59,7 @@ void Pizza::setToppings(vector<Topping> toppings) {
 void Pizza::setVerbose(bool verbose) {
     this->verbose = verbose;
 }
+
 /*
 void Pizza::write(ofstream& fout) const {
 
@@ -94,8 +95,8 @@ istream& operator >> (istream& in, Pizza& pizza) {
 ostream& operator << (ostream& out, const Pizza& pizza) {
 
     if(pizza.verbose) {
-        out << "Name: " << pizza.name << endl;
-        out << "Price: " << pizza.price << endl;
+        out << "Pizza name: " << pizza.name << endl;
+        out << "Pizza price: " << pizza.price << endl;
         out << endl;
     }
 

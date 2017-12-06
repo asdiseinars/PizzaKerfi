@@ -5,6 +5,12 @@ ToppingData::ToppingData() {
 
 }
 
+void ToppingData::clearToppings() {
+    ofstream fout;
+    fout.open("toppings.txt");
+    fout.close();
+}
+
 void ToppingData::storeAllToppings(vector<Topping> toppings) {
 
     clearToppings();
@@ -32,7 +38,7 @@ vector<Topping> ToppingData::retrieveAllToppings() {
         top.setVerbose(true);
         toppings.push_back(top);
     }
-    toppings.pop_back();
+    toppings.pop_back();  //er önnur leið til þess að fjarlægja þannig að síðasta stakið komi aftur ekki tvisvar
 
     return toppings;
 }
@@ -47,12 +53,6 @@ void ToppingData::addTopping(Topping& topping){
     topping.setVerbose(true);
 }
 
-
-void ToppingData::clearToppings() {
-    ofstream fout;
-    fout.open("toppings.txt");
-    fout.close();
-}
 
 
 
