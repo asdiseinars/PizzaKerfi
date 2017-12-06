@@ -56,7 +56,6 @@ void AdminController::modifyToppings() {
             clearScreen();
             init();
         }
-
 }
 
 void AdminController::displayAllToppings(){
