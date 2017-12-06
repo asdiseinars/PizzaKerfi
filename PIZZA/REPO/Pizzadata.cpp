@@ -4,7 +4,7 @@ PizzaData::PizzaData(){
 
 }
 
-void PizzaData::storePizza(const Pizza& pizza){
+void PizzaData::storePizzaToMenu(const Pizza& pizza){
 
 }
 

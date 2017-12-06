@@ -123,7 +123,7 @@
 1512142759 c:\users\einarbi\desktop\pizzaforrit\pizza\pizza\global\globalhelp.h
 	<stdlib.h>
 
-1512556407 source:c:\users\asdis\desktop\pizzaforrit\pizza\models\pizza.cpp
+1512560182 source:c:\users\asdis\desktop\pizzaforrit\pizza\models\pizza.cpp
 	"Pizza.h"
 
 1512556459 c:\users\asdis\desktop\pizzaforrit\pizza\models\pizza.h
@@ -365,7 +365,7 @@
 
 1512305559 I.h"
 
-1512556459 source:c:\users\asdis\desktop\pizzaforrit\pizza\controllers\admincontroller.cpp
+1512564036 source:c:\users\asdis\desktop\pizzaforrit\pizza\controllers\admincontroller.cpp
 	"AdminController.h"
 
 1512553188 c:\users\asdis\desktop\pizzaforrit\pizza\controllers\admincontroller.h
@@ -444,6 +444,12 @@
 	<stdio.h>
 	<vector>
 
+<<<<<<< HEAD
+1512557716 source:c:\users\asdis\desktop\pizzaforrit\pizza\repo\orderdata.cpp
+	"OrderData.h"
+
+1512557729 c:\users\asdis\desktop\pizzaforrit\pizza\repo\orderdata.h
+=======
 1512396201 source:c:\users\karal\desktop\pizzaforrit\pizza\main.cpp
 	<iostream>
 	"Home.h"
@@ -633,4 +639,5 @@
 	<iostream>
 	<stdio.h>
 	<vector>
+>>>>>>> af5a686e3273eb6efde2742854edee30bacbb71e
 
