@@ -13,7 +13,7 @@ void ToppingData::clearToppings() {
 
 void ToppingData::storeAllToppings(vector<Topping> toppings) {
 
-    clearToppings();
+    //clearToppings();
 
     ofstream fout;
     fout.open("toppings.txt");
@@ -38,7 +38,7 @@ vector<Topping> ToppingData::retrieveAllToppings() {
         top.setVerbose(true);
         toppings.push_back(top);
     }
-    toppings.pop_back();  //er önnur leið til þess að fjarlægja þannig að síðasta stakið komi aftur ekki tvisvar
+    toppings.pop_back();
 
     return toppings;
 }

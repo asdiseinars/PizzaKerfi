@@ -101,11 +101,9 @@ void AdminController::removeTopping() { //Laga þetta fall
     cout << "What topping do you want to remove? ";
     int input;
     cin >> input;
+    input -= 1;
 
-    for(unsigned int i = 0; i < toppings.size(); i++){
-        input = i + 1;
-        toppings.erase(toppings.begin() + input);
-    }
+    toppings.erase(toppings.begin() + input);
 
     toppingData.storeAllToppings(toppings);
     cout << endl << "The topping has been removed!" << endl << endl;

@@ -11,8 +11,9 @@ Pizza::Pizza(string size, vector<Topping> toppings, int addToppingToPizza){
     name = '\0';
     price = 1500;
     if(addToppingToPizza > MAX_TOPPINGS) {
-        cout << "Error: Topping amount exceeds max allowed number of toppings" << endl;
+        cout << "WOW! To many toppings!" << endl;
     }
+
     else {
         for (int i = 0; i < addToppingToPizza; i++) {
             toppings[i] = toppings[i];
