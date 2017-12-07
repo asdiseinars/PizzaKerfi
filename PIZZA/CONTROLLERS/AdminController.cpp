@@ -20,7 +20,7 @@ void AdminController::init(){
         modifyToppings();
     }
 
-    else if (selection == '2') { //add/edit pizzas
+    else if (selection == '2') { // Add/edit pizzas
         clearScreen();
         displayLogo();
         displayAdminLogo();

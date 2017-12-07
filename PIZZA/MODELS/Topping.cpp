@@ -45,12 +45,14 @@ istream& operator >> (istream& in, Topping& topping) {
 }
 
 ostream& operator << (ostream& out, Topping& topping) {
-    if(topping.verbose)
+    if(topping.verbose){
         out << "Topping: ";
+    }
     out << topping.name << endl;
 
-    if(topping.verbose)
+    if(topping.verbose){
         out << "Price: ";
+    }
     out << topping.price << endl;
 
     return out;
