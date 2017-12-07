@@ -1,6 +1,6 @@
 #ifndef SODADATA_H
 #define SODADATA_H
-#include "soda.h"
+#include "Soda.h"
 #include <fstream>
 #include <iostream>
 #include <stdio.h>

@@ -27,15 +27,15 @@ void SodaData::storeAllSodas(vector<Soda> sodas) {
 vector<Soda> SodaData::retrieveAllSodas() {
 
     vector <Soda> sodas;
-    Soda sod;
+    Soda soda;
 
     ifstream fin;
     fin.open("sodas.txt");
     while(!fin.eof()) {
-        sod.setVerbose(false);
-        fin >> sod;
-        sod.setVerbose(true);
-        sodas.push_back(sod);
+        soda.setVerbose(false);
+        fin >> soda;
+        soda.setVerbose(true);
+        sodas.push_back(soda);
     }
     sodas.pop_back();
 
