@@ -8,3 +8,5 @@ laukur
 30
 auka ostur
 40
+piparostur
+60
