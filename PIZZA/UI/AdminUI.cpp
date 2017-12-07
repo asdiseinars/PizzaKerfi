@@ -28,12 +28,6 @@ void AdminUI::displayAdminPizzaUI() {
     cout << "Press b to go back" << endl;
 }
 
-
-
-
-
-
-
 void AdminUI::displayAdminSodaUI() {
     cout << "Press 1 to see all sodas" << endl;
     cout << "Press 2 to add new soda" << endl;

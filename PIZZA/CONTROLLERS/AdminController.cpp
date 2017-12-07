@@ -1,4 +1,6 @@
 #include "AdminController.h"
+#include <iostream>
+using namespace std;
 
 AdminController::AdminController() {
 
@@ -28,7 +30,13 @@ void AdminController::init(){
         modifyPizzas();
     }
 
-    else if (selection == '3') {
+    else if (selection == '3') { //Add/edit soda
+        clearScreen();
+        displayLogo();
+        displayAdminLogo();
+    }
+
+    else if (selection == '4') { //Add/edit breadsticks
         clearScreen();
         displayLogo();
         displayAdminLogo();
@@ -41,24 +49,26 @@ void AdminController::init(){
 }
 
 void AdminController::modifyToppings() {
+
     char selection;
     displayAdminToppingUI();
     cin >> selection;
 
-        if(selection == '1') { // Displays a list of all toppings
+    if(selection == '1') { // Displays a list of all toppings
+        clearScreen();
+        displayLogo();
+        displayAdminLogo();
+        displayAllToppings();
+        displayAdminBackOrQuitUI();
+        cin >> selection;
+
+        if (selection == 'b') {
             clearScreen();
             displayLogo();
             displayAdminLogo();
-            displayAllToppings();
-            displayAdminBackOrQuitUI();
-            cin >> selection;
-
-            if (selection == 'b') {
-                clearScreen();
-                displayLogo();
-                displayAdminLogo();
-                modifyToppings();
+            modifyToppings();
             }
+
             else if (selection == 'q') {
                 return;
             }
@@ -83,7 +93,6 @@ void AdminController::modifyToppings() {
             else if (selection == 'q') {
                 return;
             }
-
         }
 
         else if (selection == '3') { // Removes topping from the list
@@ -112,7 +121,6 @@ void AdminController::modifyToppings() {
             init();
         }
 }
-
 
 void AdminController::displayAllToppings(){
     vector<Topping> toppings = toppingData.retrieveAllToppings();
