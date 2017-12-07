@@ -256,6 +256,8 @@ void AdminController::displayAllSodas() {
 }
 
 void AdminController::addPizzaToMenu() {
+<<<<<<< HEAD
+=======
     string myName;
     vector<Topping> myToppings;
     cout << "Name: ";
@@ -286,6 +288,7 @@ void AdminController::addPizzaToMenu() {
     Pizza newPizza(myName, myToppings);
 
     pizzaData.storePizzaToMenu(newPizza);
+>>>>>>> 358504dd433fed237728a3fcd6dd8ec2e668e4ef
 }
 
 void AdminController::addBreadsticksToMenu() {
