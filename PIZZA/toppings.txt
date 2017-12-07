@@ -1,19 +1,6 @@
-ham
-20
-pepperoni
-20
-<<<<<<< HEAD
-olives
-200
-extra cheese
-40
-cheddar
-60
-svepp
+Pepp
+45
+Svepp
 98
-=======
-onion
-30
-extra cheese
-40
->>>>>>> 358504dd433fed237728a3fcd6dd8ec2e668e4ef
+Ananas
+83

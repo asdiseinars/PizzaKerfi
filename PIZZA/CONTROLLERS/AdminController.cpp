@@ -256,20 +256,12 @@ void AdminController::displayAllSodas() {
 }
 
 void AdminController::addPizzaToMenu() {
-<<<<<<< HEAD
-=======
     string myName;
     vector<Topping> myToppings;
-    cout << "Name: ";
+    cout << "Enter: ";
     cin >> myName;
     cout << endl;
 
-    char input;
-//    do{
-//        cin >> input;
-//    }while(!validInput(input));
-
-//    myToppings.push_back(toppingData.getTopping(input));
 
 
     vector<Topping> toppings = toppingData.retrieveAllToppings();
@@ -278,17 +270,32 @@ void AdminController::addPizzaToMenu() {
         cout << "Number: [" << i+1 << "]"<< endl;
         cout << topp << endl;
     }
-    //while lykja
-    cin >> input;
-    int i = input - 48;
-    Topping topp = toppings.at(i-1);
-    cout << topp << endl;
-    myToppings.push_back(topp);
+
+    char selection;
+
+    do{
+        char input;
+        cin >> input;
+        int i = input - 48;
+        Topping topping = toppings.at(i-1);
+        cout << topping << endl;
+        myToppings.push_back(topping);
+
+        cout << endl << "Do you want to add another topping? (y/n)" << endl;
+
+        cin >> selection;
+
+        while(selection != 'y' && selection != 'n') {
+            cout << endl << "Invalid input! " << endl << endl;
+            cout << "Do you want to add another topping? (y/n)" << endl;
+            cin >> selection;
+            cout << endl;
+        }
+    }
+    while(selection == 'y');
 
     Pizza newPizza(myName, myToppings);
-
     pizzaData.storePizzaToMenu(newPizza);
->>>>>>> 358504dd433fed237728a3fcd6dd8ec2e668e4ef
 }
 
 void AdminController::addBreadsticksToMenu() {

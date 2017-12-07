@@ -130,9 +130,6 @@ ostream& operator << (ostream& out, Pizza& pizza) {
 }
 
 
-
-
-
 void Pizza::chooseToppings() {
 
 }

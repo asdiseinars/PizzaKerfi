@@ -14,7 +14,6 @@ class Topping
         string name;
         double price;
 
-
     public:
         Topping();
         Topping(string name, double price);
