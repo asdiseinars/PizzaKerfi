@@ -277,7 +277,7 @@
 	"GlobalHelp.h"
 	"HomeController.h"
 
-1512633319 c:\users\einarbi\desktop\pizzaforrit\pizza\models\pizza.h
+1512657181 c:\users\einarbi\desktop\pizzaforrit\pizza\models\pizza.h
 	"Topping.h"
 	"ToppingData.h"
 	<iostream>
@@ -285,13 +285,15 @@
 	<vector>
 	<string>
 
-1512553156 c:\users\einarbi\desktop\pizzaforrit\pizza\models\topping.h
+1512657350 c:\users\einarbi\desktop\pizzaforrit\pizza\models\topping.h
 	<iostream>
 	<string>
 	<stdio.h>
 
-1512633319 c:\users\einarbi\desktop\pizzaforrit\pizza\repo\pizzadata.h
+1512654864 c:\users\einarbi\desktop\pizzaforrit\pizza\repo\pizzadata.h
 	"Pizza.h"
+	"Topping.h"
+	"ToppingData.h"
 	<fstream>
 	<iostream>
 
@@ -342,14 +344,14 @@
 	"HomeUI.h"
 	<iostream>
 
-1512633319 source:c:\users\einarbi\desktop\pizzaforrit\pizza\models\pizza.cpp
+1512657509 source:c:\users\einarbi\desktop\pizzaforrit\pizza\models\pizza.cpp
 	"Pizza.h"
 
 1512633319 source:c:\users\einarbi\desktop\pizzaforrit\pizza\models\topping.cpp
 	<fstream>
 	"Topping.h"
 
-1512633319 source:c:\users\einarbi\desktop\pizzaforrit\pizza\repo\pizzadata.cpp
+1512654829 source:c:\users\einarbi\desktop\pizzaforrit\pizza\repo\pizzadata.cpp
 	"PizzaData.h"
 
 1512485216 source:c:\users\einarbi\desktop\pizzaforrit\pizza\ui\bakerui.cpp
@@ -388,22 +390,24 @@
 
 1512308403 c2372843d10f45258e97c51b0ec54b2eee2d8
 
-1512633319 c:\users\einarbi\desktop\pizzaforrit\pizza\controllers\admincontroller.h
+1512654695 c:\users\einarbi\desktop\pizzaforrit\pizza\controllers\admincontroller.h
 	"AdminUI.h"
 	"HomeController.h"
 	"GlobalHelp.h"
 	"pizzadata.h"
 	"ToppingData.h"
 	<stdlib.h>
+	"Pizza.h"
 
 1512637541 c:\users\einarbi\desktop\pizzaforrit\pizza\ui\adminui.h
 	<iostream>
 
-1512637541 source:c:\users\einarbi\desktop\pizzaforrit\pizza\ui\adminui.cpp
+1512651763 source:c:\users\einarbi\desktop\pizzaforrit\pizza\ui\adminui.cpp
 	"AdminUI.h"
 
-1512637606 source:c:\users\einarbi\desktop\pizzaforrit\pizza\controllers\admincontroller.cpp
+1512655794 source:c:\users\einarbi\desktop\pizzaforrit\pizza\controllers\admincontroller.cpp
 	"AdminController.h"
+	<iostream>
 
 1512498222 source:c:\users\asdis\desktop\pizzaforrit\pizza\models\restaurants.cpp
 	"Restaurants.h"
@@ -677,7 +681,7 @@
 	"Breadsticks.h"
 	<fstream>
 
-1512633319 c:\users\einarbi\desktop\pizzaforrit\pizza\models\breadsticks.h
+1512651763 c:\users\einarbi\desktop\pizzaforrit\pizza\models\breadsticks.h
 	<iostream>
 	<string>
 	<stdio.h>

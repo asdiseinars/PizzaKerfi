@@ -24,6 +24,7 @@ class Pizza
 
     public:
         Pizza();
+        Pizza(string name, vector<Topping> toppings);
         Pizza(string size, vector<Topping> toppings, int addToppingToPizza);
         bool verbose;
         //void write(ofstream& fout) const;
@@ -31,7 +32,6 @@ class Pizza
 
         void createPizza();
         void chooseToppings();
-
 
         string getName();
         string getSize();
@@ -45,7 +45,7 @@ class Pizza
         void setVerbose(bool verbose);
 
         friend istream& operator >> (istream& in, Pizza& pizza);
-        friend ostream& operator << (ostream& out, const Pizza& pizza);
+        friend ostream& operator << (ostream& out, Pizza& pizza);
 
 
 };

@@ -7,7 +7,15 @@ Pizza::Pizza(){
     verbose = true;
 }
 
-Pizza::Pizza(string size, vector<Topping> toppings, int addToppingToPizza){
+Pizza::Pizza(string name, vector<Topping> toppings){
+    this->name = name;
+    this->toppings = toppings;
+    size = "Medium";
+    price = 1500.0;
+    verbose = true;
+}
+
+/*Pizza::Pizza(string size, vector<Topping> toppings, int addToppingToPizza){
     name = '\0';
     price = 1500;
     if(addToppingToPizza > MAX_TOPPINGS) {
@@ -20,7 +28,7 @@ Pizza::Pizza(string size, vector<Topping> toppings, int addToppingToPizza){
         }
         toppingCount = addToppingToPizza;
     }
-}
+}*/
 
 void Pizza:: createPizza() {
 }
@@ -93,21 +101,37 @@ istream& operator >> (istream& in, Pizza& pizza) {
 }
 
 
-ostream& operator << (ostream& out, const Pizza& pizza) {
+ostream& operator << (ostream& out, Pizza& pizza) {
 
     if(pizza.verbose) {
-        out << "Pizza name: " << pizza.name << endl;
-        out << "Pizza price: " << pizza.price << endl;
-        out << endl;
+        cout << "Pizza name: ";
     }
 
-    else {
         out << pizza.name << endl;
-        out << pizza.price << endl;
+
+    if(pizza.verbose) {
+            cout << "Pizza price: ";
     }
+
+        out << pizza.price << endl;
+
+    if(pizza.verbose) {
+            cout << "Toppings: ";
+    }
+
+
+    for (unsigned int i = 0; i < pizza.toppings.size(); i++) {
+        pizza.toppings[i].verbose = false;
+        out << pizza.toppings[i];
+    }
+    cout << endl;
 
     return out;
 }
+
+
+
+
 
 void Pizza::chooseToppings() {
 

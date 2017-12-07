@@ -155,7 +155,7 @@ void AdminController::addTopping() {
     }
 }
 
-void AdminController::removeTopping() { //Laga þetta fall
+void AdminController::removeTopping() {
     vector<Topping> toppings = toppingData.retrieveAllToppings();
     cout << endl;
 
@@ -255,7 +255,37 @@ void AdminController::displayAllBreadsticks() {
 void AdminController::displayAllSodas() {
 }
 
-void AdminController::addPizzaToMenu() { ///útfæra add föll
+void AdminController::addPizzaToMenu() {
+    string myName;
+    vector<Topping> myToppings;
+    cout << "Name: ";
+    cin >> myName;
+    cout << endl;
+
+    char input;
+//    do{
+//        cin >> input;
+//    }while(!validInput(input));
+
+//    myToppings.push_back(toppingData.getTopping(input));
+
+
+    vector<Topping> toppings = toppingData.retrieveAllToppings();
+    for(unsigned int i = 0; i < toppings.size(); i++){
+        Topping topp = toppings.at(i);
+        cout << "Number: [" << i+1 << "]"<< endl;
+        cout << topp << endl;
+    }
+    //while lykja
+    cin >> input;
+    int i = input - 48;
+    Topping topp = toppings.at(i-1);
+    cout << topp << endl;
+    myToppings.push_back(topp);
+
+    Pizza newPizza(myName, myToppings);
+
+    pizzaData.storePizzaToMenu(newPizza);
 }
 
 void AdminController::addBreadsticksToMenu() {

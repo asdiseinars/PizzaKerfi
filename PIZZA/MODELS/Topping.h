@@ -13,12 +13,12 @@ class Topping
     private:
         string name;
         double price;
-        bool verbose;
+
 
     public:
         Topping();
         Topping(string name, double price);
-
+        bool verbose;
         string getName();
         double getPrice();
 
