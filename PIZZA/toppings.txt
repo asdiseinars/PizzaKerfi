@@ -1,12 +1,13 @@
-skinka
+ham
 20
 pepperoni
 20
-olivur
+olives
 200
-laukur
+onion
 30
-auka ostur
+extra cheese
 40
-piparostur
+cheddar
 60
+

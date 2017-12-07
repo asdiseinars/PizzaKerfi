@@ -28,7 +28,6 @@ class Breadsticks
         friend istream& operator >> (istream& in, Breadsticks& breadsticks);
         friend ostream& operator << (ostream& out, Breadsticks& breadsticks);
 
-
 };
 
 
