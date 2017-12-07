@@ -1,6 +1,8 @@
 #ifndef PIZZADATA_H
 #define PIZZADATA_H
 #include "Pizza.h"
+#include "Topping.h"
+#include "ToppingData.h"
 #include <fstream>
 #include <iostream>
 
@@ -12,7 +14,7 @@ class PizzaData
 
     public:
         PizzaData();
-        void storePizzaToMenu(const Pizza& pizza);
+        void storePizzaToMenu(Pizza& pizza);
         Pizza retrievePizza();
 
 
