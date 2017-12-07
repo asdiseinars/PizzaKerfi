@@ -34,12 +34,16 @@ void AdminController::init(){
         clearScreen();
         displayLogo();
         displayAdminLogo();
+
+        modifySodas();
     }
 
     else if (selection == '4') { //Add/edit breadsticks
         clearScreen();
         displayLogo();
         displayAdminLogo();
+
+        modifyBreadsticks();
     }
 
     else if (selection == 'b') {
@@ -196,13 +200,75 @@ void AdminController::modifyPizzas() {
     }
 }
 
-void AdminController::displayAllPizzas() { //Útfæra fall
+void AdminController::modifyBreadsticks() {
+    char selection;
+    void displayAdminBreadSticksUI();
+    cin >> selection;
+
+    if (selection == '1') { //All breadsticks
+        displayAllBreadsticks();
+    }
+
+    else if (selection == '2') { //Add new breadsticks to menu
+        addBreadsticksToMenu();
+    }
+
+    else if (selection == '2') { //Remove breadsticks from menu
+        removeBreadsticksFromMenu();
+    }
+
+    else if (selection == 'b') {
+        clearScreen();
+        init();
+    }
 }
 
-void AdminController::addPizzaToMenu() { //útfæra fall
+void AdminController::modifySodas() {
+    char selection;
+    void displayAdminSodaUI();
+    cin >> selection;
+
+    if (selection == '1') { //All pizzas
+        displayAllSodas();
+    }
+
+    else if (selection == '2') { //Add new soda to menu
+        addSodaToMenu();
+    }
+
+    else if (selection == '2') { //Remove soda from menu
+        removeSodaFromMenu();
+    }
+
+    else if (selection == 'b') {
+        clearScreen();
+        init();
+    }
 }
 
-void AdminController::removePizzaFromMenu() {//útfæra fall
+void AdminController::displayAllPizzas() { ///Útfæra display föll
 }
 
+void AdminController::displayAllBreadsticks() {
+}
 
+void AdminController::displayAllSodas() {
+}
+
+void AdminController::addPizzaToMenu() { ///útfæra add föll
+}
+
+void AdminController::addBreadsticksToMenu() {
+}
+
+void AdminController::addSodaToMenu() {
+}
+
+void AdminController::removePizzaFromMenu() { ///útfæra remove föll
+}
+
+void AdminController::removeBreadsticksFromMenu() {
+}
+
+void AdminController::removeSodaFromMenu() {
+}

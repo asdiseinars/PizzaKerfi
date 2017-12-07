@@ -544,7 +544,7 @@
 1512396201 c:\users\karal\desktop\pizzaforrit\pizza\ui\customerui.h
 	<iostream>
 
-1512557880 c:\users\karal\desktop\pizzaforrit\pizza\controllers\admincontroller.h
+1512651281 c:\users\karal\desktop\pizzaforrit\pizza\controllers\admincontroller.h
 	"AdminUI.h"
 	"HomeController.h"
 	"GlobalHelp.h"
@@ -607,7 +607,7 @@
 1512567511 source:c:\users\karal\desktop\pizzaforrit\pizza\repo\toppingdata.cpp
 	"ToppingData.h"
 
-1512648253 source:c:\users\karal\desktop\pizzaforrit\pizza\ui\adminui.cpp
+1512649520 source:c:\users\karal\desktop\pizzaforrit\pizza\ui\adminui.cpp
 	"AdminUI.h"
 
 1512557880 source:c:\users\karal\desktop\pizzaforrit\pizza\ui\bakerui.cpp
