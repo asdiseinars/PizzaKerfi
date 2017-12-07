@@ -5,6 +5,7 @@
 #include "ToppingData.h"
 #include <fstream>
 #include <iostream>
+#include <vector>
 
 using namespace std;
 
@@ -15,7 +16,7 @@ class PizzaData
     public:
         PizzaData();
         void storePizzaToMenu(Pizza& pizza);
-        Pizza retrievePizza();
+        vector<Pizza> retrieveAllPizzas();
 
 
 
