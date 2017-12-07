@@ -1,4 +1,10 @@
-Ananas
-45
-svepp
-3
+skinka
+20
+pepperoni
+20
+olivur
+200
+laukur
+30
+auka ostur
+40

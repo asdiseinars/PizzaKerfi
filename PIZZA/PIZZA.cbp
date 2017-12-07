@@ -74,6 +74,8 @@
 		<Unit filename="REPO/ToppingData.h" />
 		<Unit filename="REPO/pizzadata.cpp" />
 		<Unit filename="REPO/pizzadata.h" />
+		<Unit filename="UI/AboutUI.cpp" />
+		<Unit filename="UI/AboutUI.h" />
 		<Unit filename="UI/AdminUI.cpp" />
 		<Unit filename="UI/AdminUI.h" />
 		<Unit filename="UI/BakerUI.cpp" />

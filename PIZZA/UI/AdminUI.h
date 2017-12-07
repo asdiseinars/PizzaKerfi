@@ -10,6 +10,9 @@ namespace AdminUI
     void displayAdminUI();
     void displayAdminToppingUI();
     void displayAdminPizzaUI();
+    void displayAdminSodaUI();
+    void displayAdminBreadSticksUI();
+    void displayAdminBackOrQuitUI();
 
 };
 

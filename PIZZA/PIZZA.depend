@@ -260,7 +260,7 @@
 1512313526 c:\users\einarbi\desktop\pizzaforrit\pizza\ui\bakerui.h
 	<iostream>
 
-1512486183 c:\users\einarbi\desktop\pizzaforrit\pizza\controllers\homecontroller.h
+1512638741 c:\users\einarbi\desktop\pizzaforrit\pizza\controllers\homecontroller.h
 	"PizzaUI.h"
 	"HomeUI.h"
 	"GlobalHelp.h"
@@ -268,6 +268,7 @@
 	"BakerController.h"
 	"CustomerController.h"
 	"AdminController.h"
+	"AboutUI.h"
 
 1512305559 c:\users\einarbi\desktop\pizzaforrit\pizza\ui\pizzaui.h
 	<iostream>
@@ -325,7 +326,7 @@
 1512486183 source:c:\users\einarbi\desktop\pizzaforrit\pizza\controllers\homecontroller.cpp
 	"HomeController.h"
 
-1512486212 source:c:\users\einarbi\desktop\pizzaforrit\pizza\controllers\salesmancontroller.cpp
+1512638350 source:c:\users\einarbi\desktop\pizzaforrit\pizza\controllers\salesmancontroller.cpp
 	"SalesmanController.h"
 
 1512553156 source:c:\users\einarbi\desktop\pizzaforrit\pizza\global\globalhelp.cpp
@@ -395,13 +396,13 @@
 	"ToppingData.h"
 	<stdlib.h>
 
-1512310439 c:\users\einarbi\desktop\pizzaforrit\pizza\ui\adminui.h
+1512637541 c:\users\einarbi\desktop\pizzaforrit\pizza\ui\adminui.h
 	<iostream>
 
-1512633319 source:c:\users\einarbi\desktop\pizzaforrit\pizza\ui\adminui.cpp
+1512637541 source:c:\users\einarbi\desktop\pizzaforrit\pizza\ui\adminui.cpp
 	"AdminUI.h"
 
-1512633319 source:c:\users\einarbi\desktop\pizzaforrit\pizza\controllers\admincontroller.cpp
+1512637606 source:c:\users\einarbi\desktop\pizzaforrit\pizza\controllers\admincontroller.cpp
 	"AdminController.h"
 
 1512498222 source:c:\users\asdis\desktop\pizzaforrit\pizza\models\restaurants.cpp
@@ -424,7 +425,7 @@
 1512376747 c:\users\einarbi\desktop\pizzaforrit\pizza\models\restaurants.h
 	<iostream>
 
-1512633319 source:c:\users\einarbi\desktop\pizzaforrit\pizza\models\soda.cpp
+1512633629 source:c:\users\einarbi\desktop\pizzaforrit\pizza\models\soda.cpp
 	<fstream>
 	"Soda.h"
 
@@ -701,4 +702,10 @@
 	<iostream>
 	<stdio.h>
 	<vector>
+
+1512638719 c:\users\einarbi\desktop\pizzaforrit\pizza\ui\aboutui.h
+	<iostream>
+
+1512638699 source:c:\users\einarbi\desktop\pizzaforrit\pizza\ui\aboutui.cpp
+	"AboutUI.h"
 
