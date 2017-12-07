@@ -31,7 +31,6 @@ class Pizza
         //void read(ifstream& fin);
 
         void createPizza();
-        void chooseToppings();
 
         string getName();
         string getSize();

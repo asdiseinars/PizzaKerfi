@@ -15,21 +15,6 @@ Pizza::Pizza(string name, vector<Topping> toppings){
     verbose = true;
 }
 
-/*Pizza::Pizza(string size, vector<Topping> toppings, int addToppingToPizza){
-    name = '\0';
-    price = 1500;
-    if(addToppingToPizza > MAX_TOPPINGS) {
-        cout << "WOW! Too many toppings!" << endl;
-    }
-
-    else {
-        for (int i = 0; i < addToppingToPizza; i++) {
-            toppings[i] = toppings[i];
-        }
-        toppingCount = addToppingToPizza;
-    }
-}*/
-
 void Pizza:: createPizza() {
 }
 
@@ -94,8 +79,18 @@ void Pizza::read(ifstream& fin) {
 
 
 istream& operator >> (istream& in, Pizza& pizza) {
+    if(pizza.verbose) {
+        cout << "Pizza name: ";
+    }
+        in >> pizza.name;
 
-    pizza.chooseToppings();
+    if(pizza.verbose) {
+        cout << "Toppings: ";
+    }
+    for(unsigned int i = 0; i < pizza.toppings.size(); i++) {
+        pizza.toppings[i].verbose = false;
+        in >> pizza.toppings[i];
+    }
 
     return in;
 }
@@ -129,9 +124,5 @@ ostream& operator << (ostream& out, Pizza& pizza) {
     return out;
 }
 
-
-void Pizza::chooseToppings() {
-
-}
 
 

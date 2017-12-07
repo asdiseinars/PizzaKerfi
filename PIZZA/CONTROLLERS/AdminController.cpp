@@ -246,7 +246,12 @@ void AdminController::modifySodas() {
     }
 }
 
-void AdminController::displayAllPizzas() { ///Útfæra display föll
+void AdminController::displayAllPizzas() { //komin hingað
+    vector<Pizza> pizzas = pizzaData.retrieveAllPizzas();
+    for (unsigned int i = 0; i < pizzas.size(); i++) {
+        Pizza pizza = pizzas.at(i);
+        cout << pizza << endl;
+    }
 }
 
 void AdminController::displayAllBreadsticks() {
@@ -257,6 +262,8 @@ void AdminController::displayAllSodas() {
 
 void AdminController::addPizzaToMenu() {
     string myName;
+    Pizza pizza;
+
     vector<Topping> myToppings;
     cout << "Enter: ";
     cin >> myName;
