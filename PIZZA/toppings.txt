@@ -4,10 +4,9 @@ pepperoni
 20
 olives
 200
-onion
-30
 extra cheese
 40
 cheddar
 60
-
+svepp
+98

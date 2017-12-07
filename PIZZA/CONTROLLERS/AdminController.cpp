@@ -255,7 +255,7 @@ void AdminController::displayAllBreadsticks() {
 void AdminController::displayAllSodas() {
 }
 
-void AdminController::addPizzaToMenu() { ///útfæra add föll
+void AdminController::addPizzaToMenu() {
 }
 
 void AdminController::addBreadsticksToMenu() {
