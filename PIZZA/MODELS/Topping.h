@@ -7,26 +7,25 @@
 using namespace std;
 
 
-class Topping
-{
+class Topping {
 
-    private:
-        string name;
-        double price;
+  private:
+    string name;
+    double price;
 
-    public:
-        Topping();
-        Topping(string name, double price);
-        bool verbose;
-        string getName();
-        double getPrice();
+  public:
+    Topping();
+    Topping(string name, double price);
+    bool verbose;
+    string getName();
+    double getPrice();
 
-        void setName(string name);
-        void setPrice(double price);
-        void setVerbose(bool verbose);
+    void setName(string name);
+    void setPrice(double price);
+    void setVerbose(bool verbose);
 
-        friend istream& operator >> (istream& in, Topping& topping);
-        friend ostream& operator << (ostream& out, Topping& topping);
+    friend istream& operator >> (istream& in, Topping& topping);
+    friend ostream& operator << (ostream& out, Topping& topping);
 
 
 };

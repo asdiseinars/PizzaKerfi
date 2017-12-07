@@ -1,13 +1,13 @@
 #include "Breadsticks.h"
 #include <fstream>
 
-Breadsticks::Breadsticks(){
-   name = '\0';
-   price = 0;
-   verbose = true;
+Breadsticks::Breadsticks() {
+    name = '\0';
+    price = 0;
+    verbose = true;
 }
 
-Breadsticks::Breadsticks(string name, double price){
+Breadsticks::Breadsticks(string name, double price) {
     this->name = name;
     this->price = price;
 }
@@ -27,7 +27,7 @@ void Breadsticks::setPrice(double price) {
     this->price = price;
 }
 
-void Breadsticks::setVerbose(bool verbose){
+void Breadsticks::setVerbose(bool verbose) {
     this->verbose = verbose;
 }
 

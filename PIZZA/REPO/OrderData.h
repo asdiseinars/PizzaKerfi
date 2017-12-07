@@ -2,13 +2,12 @@
 #define ORDERDATA_H
 
 
-class OrderData
-{
+class OrderData {
 
-    private:
+  private:
 
-    public:
-        OrderData();
+  public:
+    OrderData();
 
 
 

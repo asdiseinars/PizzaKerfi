@@ -1,11 +1,10 @@
 #include "PizzaData.h"
 
-PizzaData::PizzaData(){
+PizzaData::PizzaData() {
 
 }
 
-void PizzaData::storePizzaToMenu(Pizza& pizza)
-{
+void PizzaData::addPizzaToMenu(Pizza& pizza) {
     ofstream fout;
     fout.open("pizzamenu.txt", ios::app);
     pizza.setVerbose(false);
@@ -30,4 +29,15 @@ vector<Pizza> PizzaData::retrieveAllPizzas() { ///a eftir að testa
     pizzas.pop_back();
 
     return pizzas;
+}
+
+void PizzaData::storeAllPizzas(vector<Pizza> pizzas) {
+
+    ofstream fout;
+    fout.open("pizzamenu.txt");
+    for(unsigned int i = 0; i < pizzas.size(); i++) {
+        pizzas[i].setVerbose(false);
+        fout << pizzas[i];
+    }
+    fout.close();
 }

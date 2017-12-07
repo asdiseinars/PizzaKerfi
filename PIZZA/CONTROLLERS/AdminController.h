@@ -5,38 +5,47 @@
 #include "GlobalHelp.h"
 #include "pizzadata.h"
 #include "ToppingData.h"
+#include "LocationData.h"
 #include <stdlib.h>
 #include "Pizza.h"
 
 using namespace GlobalHelp;
 using namespace AdminUI;
 
-class AdminController
-{
-    private:
-        PizzaData pizzaData;
-        ToppingData toppingData;
+class AdminController {
+  private:
+    PizzaData pizzaData;
+    ToppingData toppingData;
+    LocationData locationData;
 
-    public:
-        AdminController();
-        void init();
+  public:
+    AdminController();
+    void init();
 
-        void modifyPizzas();
-        void modifyBreadsticks();
-        void modifySodas();
-        void displayAllToppings();
-        void addTopping();
-        void removeTopping();
-        void modifyToppings();
-        void displayAllPizzas();
-        void displayAllBreadsticks();
-        void displayAllSodas();
-        void addPizzaToMenu();
-        void addBreadsticksToMenu();
-        void addSodaToMenu();
-        void removePizzaFromMenu();
-        void removeBreadsticksFromMenu();
-        void removeSodaFromMenu();
+    void modifyPizzas();
+    void displayAllPizzas();
+    void addPizzaToMenu();
+    void removePizzaFromMenu();
+
+    void modifyToppings();
+    void displayAllToppings();
+    void addTopping();
+    void removeTopping();
+
+    void modifyBreadsticks();
+    void displayAllBreadsticks();
+    void addBreadsticksToMenu();
+    void removeBreadsticksFromMenu();
+
+    void modifySodas();
+    void displayAllSodas();
+    void addSodaToMenu();
+    void removeSodaFromMenu();
+
+    void modifyLocations();
+    void displayAllLocations();
+    void addLocations();
+    void removeLocations();
 };
 
 #endif // ADMINCONTROLLER_H

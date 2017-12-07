@@ -4,8 +4,8 @@
 
 using namespace std;
 
-namespace HomeUI{
-  void displayHomeUI();
+namespace HomeUI {
+void displayHomeUI();
 
 };
 

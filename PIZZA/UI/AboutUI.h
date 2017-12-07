@@ -4,13 +4,12 @@
 
 using namespace std;
 
-class AboutUI
-{
-    public:
-        AboutUI();
-        void displayAboutUI();
+class AboutUI {
+  public:
+    AboutUI();
+    void displayAboutUI();
 
-    private:
+  private:
 };
 
 #endif // ABOUTUI_H

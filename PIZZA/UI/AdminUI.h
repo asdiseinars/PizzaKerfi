@@ -5,14 +5,15 @@
 using namespace std;
 
 
-namespace AdminUI
-{
-    void displayAdminUI();
-    void displayAdminToppingUI();
-    void displayAdminPizzaUI();
-    void displayAdminSodaUI();
-    void displayAdminBreadSticksUI();
-    void displayAdminBackOrQuitUI();
+namespace AdminUI {
+void displayAdminUI();
+void displayAdminToppingUI();
+void displayAdminPizzaUI();
+void displayAdminSodaUI();
+void displayAdminBreadSticksUI();
+void displayAdminBackOrQuitUI();
+void displayAdminLocationUI();
+
 
 };
 

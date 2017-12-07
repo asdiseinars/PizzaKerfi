@@ -5,16 +5,15 @@
 
 using namespace std;
 
-namespace GlobalHelp
-{
-    void clearScreen();
-    void displayLogo();
-    void displayAdminLogo();
-    void displayAdminLogo();
-    void displayBakerLogo();
-    void displaySalesmanLogo();
-    void displayCustomerLogo();
-    void displayHomeLogo();
+namespace GlobalHelp {
+void clearScreen();
+void displayLogo();
+void displayAdminLogo();
+void displayAdminLogo();
+void displayBakerLogo();
+void displaySalesmanLogo();
+void displayCustomerLogo();
+void displayHomeLogo();
 
 };
 
