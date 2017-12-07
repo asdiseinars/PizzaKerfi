@@ -28,6 +28,12 @@ void AdminController::init(){
         modifyPizzas();
     }
 
+    else if (selection == '3') {
+        clearScreen();
+        displayLogo();
+        displayAdminLogo();
+    }
+
     else if (selection == 'b') {
         HomeController home;
         home.init();
@@ -40,16 +46,65 @@ void AdminController::modifyToppings() {
     cin >> selection;
 
         if(selection == '1') { // Displays a list of all toppings
+            clearScreen();
+            displayLogo();
+            displayAdminLogo();
             displayAllToppings();
+            displayAdminBackOrQuitUI();
+            cin >> selection;
+
+            if (selection == 'b') {
+                clearScreen();
+                displayLogo();
+                displayAdminLogo();
+                modifyToppings();
+            }
+            else if (selection == 'q') {
+                return;
+            }
         }
 
         else if (selection == '2') { // Adds new topping to the list
+            clearScreen();
+            displayLogo();
+            displayAdminLogo();
             addTopping();
+
+            displayAdminBackOrQuitUI();
+
+            cin >> selection;
+
+              if (selection == 'b') {
+                clearScreen();
+                displayLogo();
+                displayAdminLogo();
+                modifyToppings();
+            }
+            else if (selection == 'q') {
+                return;
+            }
 
         }
 
         else if (selection == '3') { // Removes topping from the list
+           clearScreen();
+           displayLogo();
+           displayAdminLogo();
            removeTopping();
+
+           displayAdminBackOrQuitUI();
+
+           cin >> selection;
+
+           if (selection == 'b') {
+                clearScreen();
+                displayLogo();
+                displayAdminLogo();
+                modifyToppings();
+            }
+            else if (selection == 'q') {
+                return;
+            }
         }
 
         else if (selection == 'b') {
@@ -57,6 +112,7 @@ void AdminController::modifyToppings() {
             init();
         }
 }
+
 
 void AdminController::displayAllToppings(){
     vector<Topping> toppings = toppingData.retrieveAllToppings();

@@ -1,6 +1,11 @@
 #include <fstream>
 #include "Soda.h"
 
+Soda::Soda() {
+name = "";
+price = 0;
+}
+
 Soda::Soda(string name, double price) {
     this->name = name;
     this->price = price;
