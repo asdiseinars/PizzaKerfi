@@ -2,7 +2,35 @@
 <CodeBlocks_layout_file>
 	<FileVersion major="1" minor="0" />
 	<ActiveTarget name="Debug" />
+<<<<<<< HEAD
 	<File name="CONTROLLERS\AdminController.cpp" open="1" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+=======
+<<<<<<< HEAD
+	<File name="MODELS\Pizza.cpp" open="1" top="1" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1766" topLine="70" />
+		</Cursor>
+	</File>
+=======
+<<<<<<< HEAD
+	<File name="MODELS\Topping.cpp" open="1" top="1" tabpos="8" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+	<File name="REPO\ToppingData.h" open="0" top="0" tabpos="8" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+>>>>>>> db6de8530e734d2b4be96713f939aa3477311266
+		<Cursor>
+			<Cursor1 position="1105" topLine="33" />
+		</Cursor>
+	</File>
+	<File name="MODELS\Topping.h" open="1" top="0" tabpos="7" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="579" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="REPO\pizzadata.cpp" open="1" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+>>>>>>> b087080495b5166950ab3abc2e1807a1e1c37712
 		<Cursor>
 			<Cursor1 position="0" topLine="267" />
 		</Cursor>
@@ -32,4 +60,13 @@
 			<Cursor1 position="351" topLine="0" />
 		</Cursor>
 	</File>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> b43e9f7f85c8c2dd14b553cc416863a2a4f1f963
+>>>>>>> f76011ac3e391d95a438170284adb2abf95f49bf
+>>>>>>> db6de8530e734d2b4be96713f939aa3477311266
+>>>>>>> a45a080424d998cf283e9362a84a0011e4efe32b
+>>>>>>> b087080495b5166950ab3abc2e1807a1e1c37712
 </CodeBlocks_layout_file>
