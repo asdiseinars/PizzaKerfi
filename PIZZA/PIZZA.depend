@@ -123,10 +123,10 @@
 1512142759 c:\users\einarbi\desktop\pizzaforrit\pizza\pizza\global\globalhelp.h
 	<stdlib.h>
 
-1512679522 source:c:\users\asdis\desktop\pizzaforrit\pizza\models\pizza.cpp
+1512731600 source:c:\users\asdis\desktop\pizzaforrit\pizza\models\pizza.cpp
 	"Pizza.h"
 
-1512670072 c:\users\asdis\desktop\pizzaforrit\pizza\models\pizza.h
+1512731358 c:\users\asdis\desktop\pizzaforrit\pizza\models\pizza.h
 	"Topping.h"
 	"ToppingData.h"
 	<iostream>
@@ -134,7 +134,7 @@
 	<vector>
 	<string>
 
-1512670073 c:\users\asdis\desktop\pizzaforrit\pizza\models\topping.h
+1512732168 c:\users\asdis\desktop\pizzaforrit\pizza\models\topping.h
 	<iostream>
 	<string>
 	<stdio.h>
@@ -211,7 +211,7 @@
 1512670083 c:\users\asdis\desktop\pizzaforrit\pizza\ui\bakerui.h
 	<iostream>
 
-1512682461 source:c:\users\asdis\desktop\pizzaforrit\pizza\controllers\bakercontroller.cpp
+1512731396 source:c:\users\asdis\desktop\pizzaforrit\pizza\controllers\bakercontroller.cpp
 	"BakerController.h"
 
 1512681861 c:\users\asdis\desktop\pizzaforrit\pizza\controllers\bakercontroller.h
@@ -378,7 +378,7 @@
 
 1512305559 I.h"
 
-1512729562 source:c:\users\asdis\desktop\pizzaforrit\pizza\controllers\admincontroller.cpp
+1512731744 source:c:\users\asdis\desktop\pizzaforrit\pizza\controllers\admincontroller.cpp
 	"AdminController.h"
 	<iostream>
 

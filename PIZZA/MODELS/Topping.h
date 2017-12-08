@@ -24,6 +24,9 @@ class Topping {
     void setPrice(double price);
     void setVerbose(bool verbose);
 
+    friend ifstream& operator >> (ifstream& in, Topping& topping);
+    friend ofstream& operator << (ofstream& out, Topping& topping);
+
     friend istream& operator >> (istream& in, Topping& topping);
     friend ostream& operator << (ostream& out, Topping& topping);
 

@@ -265,8 +265,7 @@ void AdminController::displayAllPizzas() { ///pizzurnar prentast ekki rétt út á 
     }
     else{
         for (unsigned int i = 0; i < pizzas.size(); i++) {
-            Pizza pizza = pizzas.at(i);
-            cout << pizza << endl;
+            cout << pizzas.at(i) << endl;
         }
     }
 }
