@@ -136,8 +136,9 @@ void AdminController::displayAllToppings() {
         cout << "TOPPINGS" << endl;
         cout << "------------------------------------------" << endl << endl;
         for (unsigned int i = 0; i < toppings.size(); i++) {
-            Topping topp = toppings.at(i);
-            cout << topp << endl;
+            Topping topping = toppings.at(i);
+            cout << "Name: " << topping.getName() << "\t \t Price: " << topping.getPrice() << endl;
+            cout << endl;
         }
         cout << "------------------------------------------" << endl;
     }
@@ -147,10 +148,15 @@ void AdminController::addTopping() {
     char selection = 'y';
 
     while(selection == 'y') {
-        Topping topping;
-        cin >> topping;
-        toppingData.addTopping(topping);
+        string newName;
+        double newPrice;
 
+        cout << "Name: ";
+        cin >> newName;
+        cout << "Price: ";
+        cin >> newPrice;
+        Topping topping(newName, newPrice);
+        toppingData.addTopping(topping);
         cout << endl << "Do you want to add another topping? (y/n)" << endl;
 
         cin >> selection;
@@ -169,11 +175,10 @@ void AdminController::removeTopping() {
     cout << endl;
 
     cout << "TOPPINGS" << endl;
-    cout << "------------------------------------------" << endl << endl;
+    cout << "------------------------------------------" << endl;
     for(unsigned int i = 0; i < toppings.size(); i++) {
         Topping topp = toppings.at(i);
-        cout << "Number: [" << i+1 << "]"<< endl;
-        cout << topp << endl;
+        cout << "[" << i+1 << "] \t" << topp.getName() << "\t" << topp.getPrice() << endl;
     }
     cout << "------------------------------------------" << endl;
 
@@ -211,6 +216,102 @@ void AdminController::modifyPizzas() {
         init();
     }
 }
+
+void AdminController::displayAllPizzas() {
+    vector<Pizza> pizzas = pizzaData.retrieveAllPizzas();
+    if(pizzas.size() < 1){
+        cout << "There are no pizzas on the menu! " << endl;
+    }
+    else{
+        for (unsigned int i = 0; i < pizzas.size(); i++) {
+            cout << "[" << i+1 << "] " << pizzas.at(i).getName() << endl;
+            cout << "----------" << endl;
+            cout << "\t" << pizzas.at(i).getPrice() << "kr." << endl;
+            cout << "\tToppings: " << endl;
+            for(unsigned  int j = 0; j < pizzas.at(i).getToppings().size(); j++){
+                Topping t = pizzas.at(i).getToppings().at(j);
+                cout << "\t\t" << pizzas.at(i).getToppings().at(j).getName() << endl;
+            }
+            cout << endl;
+        }
+    }
+}
+
+void AdminController::addPizzaToMenu() {
+    string myName;
+    vector<Topping> myToppings;
+    cout << "Pizza name: ";
+    cin >> myName;
+    double myPrice;
+    cout << "Pizza price: ";
+    cin >> myPrice;
+
+    cout << endl;
+
+
+    cout << "TOPPINGS" << endl;
+    cout << "------------------------------------------" << endl;
+
+    vector<Topping> toppings = toppingData.retrieveAllToppings();
+    for(unsigned int i = 0; i < toppings.size(); i++) {
+        Topping topp = toppings.at(i);
+        cout << "Number: [" << i+1 << "] \t" << topp.getName() << endl;
+    }
+    cout << "------------------------------------------" << endl;
+
+    char selection;
+    int toppingCount = 0;
+
+    do {
+        char input;
+        cout << "Plese enter the number of the topping you want to add to your pizza. " << endl;
+        cin >> input;
+        int inputInt = input - 48;
+        Topping topping = toppings.at(inputInt - 1);
+        cout << "Name: " << topping.getName() << "\t" <<"Price: " << topping.getPrice() << endl;
+        myToppings.push_back(topping);
+
+        toppingCount++;
+        cout << toppingCount;
+
+        cout << endl << "Do you want to add another topping? (y/n)" << endl;
+
+        cin >> selection;
+
+        while(selection != 'y' && selection != 'n') {
+            cout << endl << "Invalid input! " << endl << endl;
+            cout << "Do you want to add another topping? (y/n)" << endl;
+            cin >> selection;
+            cout << endl;
+        }
+    } while(selection == 'y');
+
+    Pizza newPizza(myName, myPrice, toppingCount, myToppings);
+    pizzaData.addPizzaToMenu(newPizza);
+}
+
+void AdminController::removePizzaFromMenu() { ///kemmst ekki í fallið?? get því ekki testað hvort það sé rétt
+    vector<Pizza> pizzas = pizzaData.retrieveAllPizzas();
+    cout << endl;
+/*
+    for(unsigned int i = 0; i < pizzas.size(); i++) {
+        Pizza pizza = pizzas.at(i);
+        cout << "Number: [" << i+1 << "]"<< endl;
+        cout << pizza << endl;
+    }
+*/
+    cout << "What topping do you want to remove? ";
+    int input;
+    cin >> input;
+    input -= 1;
+
+    pizzas.erase(pizzas.begin() + input);
+
+    pizzaData.storeAllPizzas(pizzas);
+    cout << endl << "The pizza has been removed from the menu!" << endl << endl;
+
+}
+
 
 void AdminController::modifyBreadsticks() {
     char selection;
@@ -258,85 +359,6 @@ void AdminController::modifySodas() {
     }
 }
 
-void AdminController::displayAllPizzas() { ///pizzurnar prentast ekki rétt út á skjáinn
-    vector<Pizza> pizzas = pizzaData.retrieveAllPizzas();
-    if(pizzas.size() < 1){
-        cout << "There are no pizza on the menu! " << endl;
-    }
-    else{
-        for (unsigned int i = 0; i < pizzas.size(); i++) {
-            cout << pizzas.at(i) << endl;
-        }
-    }
-}
-
-void AdminController::addPizzaToMenu() {
-    string myName;
-    vector<Topping> myToppings;
-    cout << "Pizza name: ";
-    cin >> myName;
-    cout << endl;
-
-
-    cout << "TOPPINGS" << endl;
-    cout << "------------------------------------------" << endl << endl;
-
-    vector<Topping> toppings = toppingData.retrieveAllToppings();
-    for(unsigned int i = 0; i < toppings.size(); i++) {
-        Topping topp = toppings.at(i);
-        cout << "Number: [" << i+1 << "]"<< endl;
-        cout << topp << endl;
-    }
-
-    cout << "------------------------------------------" << endl;
-
-    char selection;
-    do {
-        char input;
-        cout << "Plese enter the number of the topping you want to add to your pizza. " << endl;
-        cin >> input;
-        int inputInt = input - 48;
-        Topping topping = toppings.at(inputInt - 1);
-        cout << topping << endl;
-        myToppings.push_back(topping);
-
-        cout << endl << "Do you want to add another topping? (y/n)" << endl;
-
-        cin >> selection;
-
-        while(selection != 'y' && selection != 'n') {
-            cout << endl << "Invalid input! " << endl << endl;
-            cout << "Do you want to add another topping? (y/n)" << endl;
-            cin >> selection;
-            cout << endl;
-        }
-    } while(selection == 'y');
-
-    Pizza newPizza(myName, myToppings);
-    pizzaData.addPizzaToMenu(newPizza);
-}
-
-void AdminController::removePizzaFromMenu() { ///kemmst ekki í fallið?? get því ekki testað hvort það sé rétt
-    vector<Pizza> pizzas = pizzaData.retrieveAllPizzas();
-    cout << endl;
-
-    for(unsigned int i = 0; i < pizzas.size(); i++) {
-        Pizza pizza = pizzas.at(i);
-        cout << "Number: [" << i+1 << "]"<< endl;
-        cout << pizza << endl;
-    }
-
-    cout << "What topping do you want to remove? ";
-    int input;
-    cin >> input;
-    input -= 1;
-
-    pizzas.erase(pizzas.begin() + input);
-
-    pizzaData.storeAllPizzas(pizzas);
-    cout << endl << "The pizza has been removed from the menu!" << endl << endl;
-
-}
 
 void AdminController::modifyLocations() {
     char selection;
@@ -417,7 +439,7 @@ void AdminController::displayAllLocations() {
     else{
        for (unsigned int i = 0; i < locations.size(); i++) {
             Location location = locations.at(i);
-            cout << location << endl;
+            cout << location.getName() << endl;
         }
     }
 }
@@ -425,8 +447,12 @@ void AdminController::displayAllLocations() {
 void AdminController::addLocations() {
     char selection = 'y';
     while(selection == 'y') {
-        Location location;
-        cin >> location;
+
+        string newName;
+        cout << "Name: ";
+        cin >> newName;
+
+        Location location(newName);
         locationData.addLocation(location);
 
         cout << endl << "Do you want to add another location? (y/n)" << endl;
@@ -449,7 +475,8 @@ void AdminController::removeLocations() {
     for(unsigned int i = 0; i < locations.size(); i++) {
         Location location = locations.at(i);
         cout << "Number: [" << i+1 << "]"<< endl;
-        cout << location << endl;
+        location.getName();
+
     }
 
     cout << "What location do you want to remove? ";

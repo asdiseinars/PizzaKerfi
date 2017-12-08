@@ -11,7 +11,6 @@ class Breadsticks {
   private:
     string name;
     double price;
-    bool verbose;
 
   public:
     Breadsticks();
@@ -22,7 +21,6 @@ class Breadsticks {
 
     void setName(string name);
     void setPrice(double price);
-    void setVerbose(bool verbose);
 
     friend istream& operator >> (istream& in, Breadsticks& breadsticks);
     friend ostream& operator << (ostream& out, Breadsticks& breadsticks);

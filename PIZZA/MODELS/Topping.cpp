@@ -2,9 +2,8 @@
 #include "Topping.h"
 
 Topping::Topping() {
-    name = '\0';
+    name = "";
     price = 0;
-    verbose = true;
 }
 
 Topping::Topping(string name, double price) {
@@ -27,50 +26,15 @@ void Topping::setPrice(double price) {
     this->price = price;
 }
 
-void Topping::setVerbose(bool verbose) {
-    this->verbose = verbose;
+
+ifstream& operator >> (ifstream& fin, Topping& topping) {
+    fin >> topping.name;
+    fin >> topping.price;
+    return fin;
 }
 
-ifstream& operator >> (ifstream& in, Topping& topping) {
-    in >> ws;
-    getline(in, topping.name);
-
-    in >> topping.price;
-
-    return in;
+ofstream& operator << (ofstream& fout, Topping& topping) {
+    fout << topping.name << endl;
+    fout << topping.price << endl;
+    return fout;
 }
-
-ofstream& operator << (ofstream& out, Topping& topping) {
-    out << topping.name << endl;
-    out << topping.price << endl;
-
-    return out;
-}
-
-istream& operator >> (istream& in, Topping& topping) {
-    if(topping.verbose)
-        cout << "Topping name: ";
-    in >> ws;
-    getline(in, topping.name);
-
-    if(topping.verbose)
-        cout << "Topping price: ";
-    in >> topping.price;
-
-    return in;
-}
-
-ostream& operator << (ostream& out, Topping& topping) {
-    if (topping.verbose) {
-            cout << "Topping: ";
-    }
-    out << topping.name << endl;
-
-    if(topping.verbose) {
-            cout << "Price: ";
-    out << topping.price << endl;
-    }
-
-    return out;
-}
-

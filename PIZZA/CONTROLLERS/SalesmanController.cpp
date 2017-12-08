@@ -57,7 +57,8 @@ void SalesmanController::chooseLocation(){
     cout << "------------------------------------------" << endl;
     for(unsigned int i = 0; i < locations.size(); i++){
         cout << "Location number: [" << i+1 << "]" << endl;
-        cout << locations[i] << endl;
+        Location location;
+        cout << location.getName() << endl;
     }
     cout << "------------------------------------------" << endl;
     cout << "Choose location: ";

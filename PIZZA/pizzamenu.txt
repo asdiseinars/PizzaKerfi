@@ -1,12 +1,27 @@
-PepperoniVeisla
-1500
-Pepperoni
-50
-Pepperoni
-50
 hawaii
-1500
-Topping: Pepperoni
-Price: 50
-Topping: Paprika
-Price: 28
+3000
+2
+Pineapple
+25
+Onion
+32
+bomban
+5000
+5
+Pepperoni
+50
+Pineapple
+25
+Paprika
+28
+Onion
+32
+Mushroom
+38
+pepperoniVeisla
+3000
+2
+Pepperoni
+50
+Pepperoni
+50

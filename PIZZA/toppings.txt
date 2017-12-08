@@ -2,11 +2,9 @@ Pepperoni
 50
 Pineapple
 25
-Ham
-45
-Mushrooms
-30
 Paprika
 28
 Onion
 32
+Mushroom
+38

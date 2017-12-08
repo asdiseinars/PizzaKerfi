@@ -17,7 +17,6 @@ void BreadsticksData::storeAllBreadsticks(vector<Breadsticks> breadsticks) {
     fout.open("breadsticks.txt");
 
     for(unsigned int i = 0; i < breadsticks.size(); i++) {
-        breadsticks[i].setVerbose(false);
         fout << breadsticks[i];
     }
     fout.close();
@@ -31,9 +30,7 @@ vector<Breadsticks> BreadsticksData::retrieveAllBredsticks() {
     ifstream fin;
     fin.open("breadsticks.txt");
     while(!fin.eof()) {
-        bread.setVerbose(false);
         fin >> bread;
-        bread.setVerbose(true);
         breadsticks.push_back(bread);
     }
     breadsticks.pop_back();
@@ -45,10 +42,8 @@ void BreadsticksData::addBreadsticks(Breadsticks& breadsticks) {
     ofstream fout;
     fout.open("breadsticks.txt", ios::app);
 
-    breadsticks.setVerbose(false);
     fout << breadsticks;
     fout.close();
-    breadsticks.setVerbose(true);
 }
 
 

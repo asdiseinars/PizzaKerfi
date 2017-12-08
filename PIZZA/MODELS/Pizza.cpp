@@ -1,18 +1,16 @@
 #include "Pizza.h"
 
 Pizza::Pizza() {
-    name = "Margarita";
-    size = "Medium";
-    price = 1500.0;
-    verbose = true;
+    name = "";
+    price = 0;
+    toppingCount = 0;
 }
 
-Pizza::Pizza(string name, vector<Topping> toppings) {
+Pizza::Pizza(string name, double price, int toppingCount, vector<Topping> toppings) {
     this->name = name;
+    this->price = price;
     this->toppings = toppings;
-    size = "Medium";
-    price = 1500.0;
-    verbose = true;
+    this->toppingCount = toppingCount;
 }
 
 string Pizza::getName() {
@@ -47,56 +45,28 @@ void Pizza::setToppings(vector<Topping> toppings) {
     this->toppings = toppings;
 }
 
-void Pizza::setVerbose(bool verbose) {
-    this->verbose = verbose;
+
+ifstream& operator >> (ifstream& fin, Pizza& pizza) {
+    fin >> pizza.name;
+    fin >> pizza.price;
+    fin >> pizza.toppingCount;
+    for(unsigned int i = 0; i < pizza.toppingCount; i++) {
+        Topping t;
+        fin >> t;
+        pizza.toppings.push_back(t);
+
+    }
+    return fin;
 }
 
-
-ifstream& operator >> (ifstream& in, Pizza& pizza) {
-    in >> pizza.name;
-    for(unsigned int i = 0; i < pizza.toppings.size(); i++) {
-        in >> pizza.toppings[i];
+ofstream& operator << (ofstream& fout, Pizza& pizza) {
+    fout << pizza.name << endl;
+    fout << pizza.price << endl;
+    fout << pizza.toppingCount << endl;
+    for(unsigned int i = 0; i < pizza.toppingCount; i++) {
+        fout << pizza.toppings[i];
     }
-    return in;
-}
-
-
-ofstream& operator << (ofstream& out, Pizza& pizza) {
-
-    out << pizza.name << endl;
-    out << pizza.price << endl;
-    for (unsigned int i = 0; i < pizza.toppings.size(); i++) {
-        out << pizza.toppings[i];
-    }
-    return out;
-}
-
-istream& operator >> (istream& in, Pizza& pizza) {
-    cout << "Pizza name: ";
-    in >> pizza.name;
-
-    cout << "Toppings: ";
-    for(unsigned int i = 0; i < pizza.toppings.size(); i++) {
-        in >> pizza.toppings[i];
-    }
-
-    return in;
-}
-
-ostream& operator << (ostream& out, Pizza& pizza) {
-    cout << "Pizza name: " << endl;
-    out << pizza.name << endl;
-
-    cout << "Pizza price: " << endl;
-    out << pizza.price << endl;
-
-    cout << "Toppings: ";
-    for(unsigned int i = 0; i < pizza.toppings.size(); i++) {
-        pizza.toppings[i].verbose = false;
-        out << pizza.toppings[i] << endl;
-    }
-
-    return out;
+    return fout;
 }
 
 

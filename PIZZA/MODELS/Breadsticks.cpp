@@ -27,9 +27,6 @@ void Breadsticks::setPrice(double price) {
     this->price = price;
 }
 
-void Breadsticks::setVerbose(bool verbose) {
-    this->verbose = verbose;
-}
 
 istream& operator >> (istream& in, Breadsticks& breadsticks) {
     if(breadsticks.verbose)
