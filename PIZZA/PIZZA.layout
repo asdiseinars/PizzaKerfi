@@ -2,7 +2,14 @@
 <CodeBlocks_layout_file>
 	<FileVersion major="1" minor="0" />
 	<ActiveTarget name="Debug" />
+<<<<<<< HEAD
 	<File name="MODELS\Topping.cpp" open="1" top="1" tabpos="8" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+	<File name="REPO\ToppingData.h" open="0" top="0" tabpos="8" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+>>>>>>> db6de8530e734d2b4be96713f939aa3477311266
 		<Cursor>
 			<Cursor1 position="1105" topLine="33" />
 		</Cursor>
@@ -42,4 +49,9 @@
 			<Cursor1 position="332" topLine="8" />
 		</Cursor>
 	</File>
+<<<<<<< HEAD
+=======
+>>>>>>> b43e9f7f85c8c2dd14b553cc416863a2a4f1f963
+>>>>>>> f76011ac3e391d95a438170284adb2abf95f49bf
+>>>>>>> db6de8530e734d2b4be96713f939aa3477311266
 </CodeBlocks_layout_file>
