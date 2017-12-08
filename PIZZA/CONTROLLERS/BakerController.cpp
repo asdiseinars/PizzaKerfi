@@ -8,14 +8,6 @@ void BakerController::init() {
     displayLogo();
     displayBakerLogo();
     chooseLocation();
-
-    /*char selection = '\0';
-    cin >> selection;
-
-    else if (selection == 'b') {
-        HomeController home;
-        home.init();
-    }*/
 }
 
 void BakerController::chooseLocation(){

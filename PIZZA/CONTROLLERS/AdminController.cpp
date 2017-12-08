@@ -261,7 +261,7 @@ void AdminController::modifySodas() {
 void AdminController::displayAllPizzas() { ///pizzurnar prentast ekki rétt út á skjáinn
     vector<Pizza> pizzas = pizzaData.retrieveAllPizzas();
     if(pizzas.size() < 1){
-        cout << "There are no toppings on the menu! " << endl;
+        cout << "There are no pizza on the menu! " << endl;
     }
     else{
         for (unsigned int i = 0; i < pizzas.size(); i++) {

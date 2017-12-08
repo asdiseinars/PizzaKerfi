@@ -1,3 +1,9 @@
 KopCity
 Rkv
 Gardabaer
+<<<<<<< HEAD
+=======
+KefCool
+AkSVeit
+Ibiza
+>>>>>>> ecae0ac69c19996d265b6fe5124016235c4905f5
