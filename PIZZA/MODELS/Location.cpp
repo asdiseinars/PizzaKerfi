@@ -17,18 +17,28 @@ void Location::setVerbose(bool verbose) {
     this->verbose = verbose;
 }
 
-istream& operator >> (istream& in, Location& location){
-    if(location.verbose){
-            cout << "Location name: ";
-    }
+ifstream& operator >> (ifstream& in, Location& location){
     in >> location.name;
 
     return in;
 }
 
-ostream& operator << (ostream& out, const Location& location){
-
+ofstream& operator << (ofstream& out, const Location& location){
     out << location.name << endl;
 
     return out;
+}
+
+ostream& operator << (ostream& out, const Location& location){
+    cout << "Name: ";
+    out << location.name << endl;
+
+    return out;
+}
+
+istream& operator >> (istream& in, Location& location){
+    cout << "Name: ";
+    in >> location.name;
+
+    return in;
 }
