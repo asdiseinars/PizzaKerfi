@@ -254,10 +254,10 @@
 
 1512565813 D
 
-1512730268 source:c:\users\einarbi\desktop\pizzaforrit\pizza\controllers\bakercontroller.cpp
+1512735000 source:c:\users\einarbi\desktop\pizzaforrit\pizza\controllers\bakercontroller.cpp
 	"BakerController.h"
 
-1512730268 c:\users\einarbi\desktop\pizzaforrit\pizza\controllers\bakercontroller.h
+1512735000 c:\users\einarbi\desktop\pizzaforrit\pizza\controllers\bakercontroller.h
 	"BakerUI.h"
 	"HomeController.h"
 	"GlobalHelp.h"
@@ -313,11 +313,13 @@
 1512730268 c:\users\einarbi\desktop\pizzaforrit\pizza\ui\homeui.h
 	<iostream>
 
-1512730268 c:\users\einarbi\desktop\pizzaforrit\pizza\controllers\salesmancontroller.h
+1512735327 c:\users\einarbi\desktop\pizzaforrit\pizza\controllers\salesmancontroller.h
 	<iostream>
 	"SalesmanUI.h"
 	"HomeController.h"
 	"GlobalHelp.h"
+	"Location.h"
+	"LocationData.h"
 
 1512730268 c:\users\einarbi\desktop\pizzaforrit\pizza\ui\salesmanui.h
 	<iostream>
@@ -337,7 +339,7 @@
 1512730268 source:c:\users\einarbi\desktop\pizzaforrit\pizza\controllers\homecontroller.cpp
 	"HomeController.h"
 
-1512730268 source:c:\users\einarbi\desktop\pizzaforrit\pizza\controllers\salesmancontroller.cpp
+1512736302 source:c:\users\einarbi\desktop\pizzaforrit\pizza\controllers\salesmancontroller.cpp
 	"SalesmanController.h"
 
 1512553156 source:c:\users\einarbi\desktop\pizzaforrit\pizza\global\globalhelp.cpp
