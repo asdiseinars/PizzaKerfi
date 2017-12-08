@@ -22,7 +22,7 @@ void BreadsticksData::storeAllBreadsticks(vector<Breadsticks> breadsticks) {
     fout.close();
 }
 
-vector<Breadsticks> BreadsticksData::retrieveAllBredsticks() {
+vector<Breadsticks> BreadsticksData::retrieveAllBreadsticks() {
 
     vector <Breadsticks> breadsticks;
     Breadsticks bread;

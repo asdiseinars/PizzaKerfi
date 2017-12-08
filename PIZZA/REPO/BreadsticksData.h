@@ -12,7 +12,7 @@ class BreadsticksData {
   public:
     BreadsticksData();
     void storeAllBreadsticks(vector<Breadsticks> breadsticks);
-    vector<Breadsticks> retrieveAllBredsticks();
+    vector<Breadsticks> retrieveAllBreadsticks();
     void addBreadsticks(Breadsticks& breadsticks);
 
   private:
