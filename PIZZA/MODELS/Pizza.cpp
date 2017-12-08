@@ -92,6 +92,7 @@ ostream& operator << (ostream& out, Pizza& pizza) {
 
     cout << "Toppings: ";
     for(unsigned int i = 0; i < pizza.toppings.size(); i++) {
+        pizza.toppings[i].verbose = false;
         out << pizza.toppings[i] << endl;
     }
 

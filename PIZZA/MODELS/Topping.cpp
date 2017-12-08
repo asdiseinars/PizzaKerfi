@@ -61,11 +61,15 @@ istream& operator >> (istream& in, Topping& topping) {
 }
 
 ostream& operator << (ostream& out, Topping& topping) {
-    cout << "Topping: ";
+    if (topping.verbose) {
+            cout << "Topping: ";
+    }
     out << topping.name << endl;
 
-    cout << "Price: ";
+    if(topping.verbose) {
+            cout << "Price: ";
     out << topping.price << endl;
+    }
 
     return out;
 }
