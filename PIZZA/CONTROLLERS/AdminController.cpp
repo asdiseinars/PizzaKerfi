@@ -18,7 +18,6 @@ void AdminController::init() {
         clearScreen();
         displayLogo();
         displayAdminLogo();
-
         modifyToppings();
     }
 
@@ -26,7 +25,6 @@ void AdminController::init() {
         clearScreen();
         displayLogo();
         displayAdminLogo();
-
         modifyPizzas();
     }
 
@@ -34,7 +32,6 @@ void AdminController::init() {
         clearScreen();
         displayLogo();
         displayAdminLogo();
-
         modifySodas();
     }
 
@@ -42,7 +39,6 @@ void AdminController::init() {
         clearScreen();
         displayLogo();
         displayAdminLogo();
-
         modifyBreadsticks();
     }
 
@@ -50,7 +46,6 @@ void AdminController::init() {
         clearScreen();
         displayLogo();
         displayAdminLogo();
-
         modifyLocations();
     }
 
@@ -138,10 +133,13 @@ void AdminController::displayAllToppings() {
         cout << "There are no toppings on the menu! " << endl;
     }
     else{
-       for (unsigned int i = 0; i < toppings.size(); i++) {
+        cout << "TOPPINGS" << endl;
+        cout << "------------------------------------------" << endl << endl;
+        for (unsigned int i = 0; i < toppings.size(); i++) {
             Topping topp = toppings.at(i);
             cout << topp << endl;
         }
+        cout << "------------------------------------------" << endl;
     }
 }
 
@@ -170,11 +168,14 @@ void AdminController::removeTopping() {
     vector<Topping> toppings = toppingData.retrieveAllToppings();
     cout << endl;
 
+    cout << "TOPPINGS" << endl;
+    cout << "------------------------------------------" << endl << endl;
     for(unsigned int i = 0; i < toppings.size(); i++) {
         Topping topp = toppings.at(i);
         cout << "Number: [" << i+1 << "]"<< endl;
         cout << topp << endl;
     }
+    cout << "------------------------------------------" << endl;
 
     cout << "What topping do you want to remove? ";
     int input;
@@ -355,7 +356,7 @@ void AdminController::modifyLocations() {
             clearScreen();
             displayLogo();
             displayAdminLogo();
-            modifyToppings();
+            modifyLocations();
         }
 
         else if (selection == 'q') {
@@ -388,7 +389,6 @@ void AdminController::modifyLocations() {
         displayLogo();
         displayAdminLogo();
         removeLocations();
-
         displayAdminBackOrQuitUI();
 
         cin >> selection;
@@ -444,6 +444,24 @@ void AdminController::addLocations() {
 }
 
 void AdminController::removeLocations() {
+    vector<Location> locations = locationData.retrieveAllLocations();
+    cout << endl;
+
+    for(unsigned int i = 0; i < locations.size(); i++) {
+        Location location = locations.at(i);
+        cout << "Number: [" << i+1 << "]"<< endl;
+        cout << location << endl;
+    }
+
+    cout << "What location do you want to remove? ";
+    int input;
+    cin >> input;
+    input -= 1;
+
+    locations.erase(locations.begin() + input);
+
+    locationData.storeAllLocations(locations);
+    cout << endl << "The topping has been removed!" << endl << endl;
 }
 
 void AdminController::displayAllBreadsticks() {
