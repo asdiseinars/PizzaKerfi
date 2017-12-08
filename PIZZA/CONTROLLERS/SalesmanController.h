@@ -10,12 +10,11 @@ using namespace std;
 using namespace SalesmanUI;
 
 
-class SalesmanController
-{
-    private:
-    public:
-        SalesmanController();
-        void init();
+class SalesmanController {
+  private:
+  public:
+    SalesmanController();
+    void init();
 
 
 };

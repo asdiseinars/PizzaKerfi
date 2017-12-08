@@ -1,26 +1,23 @@
 #ifndef BAKERCONTROLLER_H
 #define BAKERCONTROLLER_H
 #include "BakerUI.h"
-#include <iostream>
 #include "HomeController.h"
 #include "GlobalHelp.h"
+#include "Location.h"
+#include "LocationData.h"
+#include <iostream>
 
 using namespace GlobalHelp;
-using namespace std;
 using namespace BakerUI;
+using namespace std;
 
+class BakerController {
+  private:
 
-class BakerController
-{
-    private:
-
-
-    public:
-        BakerController();
-        virtual ~BakerController();
-        void init();
-
-
+  public:
+    BakerController();
+    void init();
+    void chooseLocation();
 
 };
 

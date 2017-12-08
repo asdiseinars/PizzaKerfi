@@ -1,11 +1,10 @@
 #include "CustomerController.h"
 
-CustomerController::CustomerController()
-{
+CustomerController::CustomerController() {
     //ctor
 }
 
-void CustomerController::init(){
+void CustomerController::init() {
 
     displayLogo();
     displayCustomerLogo();
@@ -14,7 +13,7 @@ void CustomerController::init(){
     char selection = '\0';
     cin >> selection;
 
-    if(selection == '1'){
+    if(selection == '1') {
         clearScreen();
         displayLogo();
         displayCustomerLogo();
@@ -22,16 +21,15 @@ void CustomerController::init(){
 
         cin >> selection;
 
-        if(selection == '1'){
+        if(selection == '1') {
             cout << "The pizza that you orderd" << endl;
-        }
-        else if(selection == 'b'){
+        } else if(selection == 'b') {
             clearScreen();
             init();
         }
     }
 
-    else if(selection == '2'){
+    else if(selection == '2') {
         clearScreen();
         displayLogo();
         displayCustomerLogo();

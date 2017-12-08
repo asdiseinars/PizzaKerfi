@@ -1,7 +1,6 @@
 #include "OrderData.h"
 
-OrderData::OrderData()
-{
+OrderData::OrderData() {
     //ctor
 }
 

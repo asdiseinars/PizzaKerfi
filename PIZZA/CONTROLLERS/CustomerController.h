@@ -10,12 +10,11 @@ using namespace std;
 using namespace CustomerUI;
 
 
-class CustomerController
-{
-    private:
-    public:
-        CustomerController();
-        void init();
+class CustomerController {
+  private:
+  public:
+    CustomerController();
+    void init();
 
 
 };

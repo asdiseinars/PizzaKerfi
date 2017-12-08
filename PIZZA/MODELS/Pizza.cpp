@@ -1,36 +1,18 @@
 #include "Pizza.h"
 
-Pizza::Pizza(){
+Pizza::Pizza() {
     name = "Margarita";
     size = "Medium";
     price = 1500.0;
     verbose = true;
 }
 
-Pizza::Pizza(string name, vector<Topping> toppings){
+Pizza::Pizza(string name, vector<Topping> toppings) {
     this->name = name;
     this->toppings = toppings;
     size = "Medium";
     price = 1500.0;
     verbose = true;
-}
-
-/*Pizza::Pizza(string size, vector<Topping> toppings, int addToppingToPizza){
-    name = '\0';
-    price = 1500;
-    if(addToppingToPizza > MAX_TOPPINGS) {
-        cout << "WOW! Too many toppings!" << endl;
-    }
-
-    else {
-        for (int i = 0; i < addToppingToPizza; i++) {
-            toppings[i] = toppings[i];
-        }
-        toppingCount = addToppingToPizza;
-    }
-}*/
-
-void Pizza:: createPizza() {
 }
 
 string Pizza::getName() {
@@ -69,33 +51,20 @@ void Pizza::setVerbose(bool verbose) {
     this->verbose = verbose;
 }
 
-/*
-void Pizza::write(ofstream& fout) const {
-
-    int toppingCount = toppings.size();
-
-    fout.write((char*)(&toppingCount), sizeof(int));
-
-    for(int i = 0; i < toppingCount; i++){
-        toppings[i].write(fout);
-    }
-}
-
-void Pizza::read(ifstream& fin) {
-    int toppingCount;
-    fin.read((char*)(&toppingCount), sizeof(int));
-
-    Topping topping;
-    for(unsigned int i = 0; i < toppings.size(); i++){
-        topping.read(fin);
-        addTopping(topping);
-    }
-}*/
-
 
 istream& operator >> (istream& in, Pizza& pizza) {
+    if(pizza.verbose) {
+        cout << "Pizza name: ";
+    }
+    in >> pizza.name;
 
-    pizza.chooseToppings();
+    if(pizza.verbose) {
+        cout << "Toppings: ";
+    }
+    for(unsigned int i = 0; i < pizza.toppings.size(); i++) {
+        pizza.toppings[i].verbose = false;
+        in >> pizza.toppings[i];
+    }
 
     return in;
 }
@@ -107,18 +76,17 @@ ostream& operator << (ostream& out, Pizza& pizza) {
         cout << "Pizza name: ";
     }
 
-        out << pizza.name << endl;
+    out << pizza.name << endl;
 
     if(pizza.verbose) {
-            cout << "Pizza price: ";
+        cout << "Pizza price: ";
     }
 
-        out << pizza.price << endl;
+    out << pizza.price << endl;
 
     if(pizza.verbose) {
-            cout << "Toppings: ";
+        cout << "Toppings: ";
     }
-
 
     for (unsigned int i = 0; i < pizza.toppings.size(); i++) {
         pizza.toppings[i].verbose = false;
@@ -129,9 +97,5 @@ ostream& operator << (ostream& out, Pizza& pizza) {
     return out;
 }
 
-
-void Pizza::chooseToppings() {
-
-}
 
 

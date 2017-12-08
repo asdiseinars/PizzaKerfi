@@ -8,16 +8,15 @@
 
 using namespace std;
 
-class BreadsticksData
-{
-    public:
-        BreadsticksData();
-        void storeAllBreadsticks(vector<Breadsticks> breadsticks);
-        vector<Breadsticks> retrieveAllBredsticks();
-        void addBreadsticks(Breadsticks& breadsticks);
+class BreadsticksData {
+  public:
+    BreadsticksData();
+    void storeAllBreadsticks(vector<Breadsticks> breadsticks);
+    vector<Breadsticks> retrieveAllBredsticks();
+    void addBreadsticks(Breadsticks& breadsticks);
 
-    private:
-        void clearBreadsticks();
+  private:
+    void clearBreadsticks();
 
 };
 

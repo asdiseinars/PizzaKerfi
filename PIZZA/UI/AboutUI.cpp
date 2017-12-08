@@ -1,7 +1,6 @@
 #include "AboutUI.h"
 
-AboutUI::AboutUI()
-{
+AboutUI::AboutUI() {
 
 }
 

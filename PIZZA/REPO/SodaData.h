@@ -8,17 +8,16 @@
 
 using namespace std;
 
-class SodaData
-{
-    private:
-        void clearSodas();
+class SodaData {
+  private:
+    void clearSodas();
 
-    public:
-        SodaData();
-        void storeAllSodas(vector<Soda> sodas);
-        vector<Soda> retrieveAllSodas();
-        void addSoda(Soda& soda);
-        //Soda selectSoda();
+  public:
+    SodaData();
+    void storeAllSodas(vector<Soda> sodas);
+    vector<Soda> retrieveAllSodas();
+    void addSoda(Soda& soda);
+    //Soda selectSoda();
 
 };
 

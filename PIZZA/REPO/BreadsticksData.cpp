@@ -10,14 +10,13 @@ void BreadsticksData::clearBreadsticks() {
     fout.close();
 }
 
-void BreadsticksData::storeAllBreadsticks(vector<Breadsticks> breadsticks)
-{
+void BreadsticksData::storeAllBreadsticks(vector<Breadsticks> breadsticks) {
     clearBreadsticks();
 
     ofstream fout;
     fout.open("breadsticks.txt");
 
-    for(unsigned int i = 0; i < breadsticks.size(); i++){
+    for(unsigned int i = 0; i < breadsticks.size(); i++) {
         breadsticks[i].setVerbose(false);
         fout << breadsticks[i];
     }
@@ -42,7 +41,7 @@ vector<Breadsticks> BreadsticksData::retrieveAllBredsticks() {
     return breadsticks;
 }
 
-void BreadsticksData::addBreadsticks(Breadsticks& breadsticks){
+void BreadsticksData::addBreadsticks(Breadsticks& breadsticks) {
     ofstream fout;
     fout.open("breadsticks.txt", ios::app);
 

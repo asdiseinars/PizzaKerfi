@@ -16,13 +16,12 @@ using namespace BakerUI;
 using namespace SalesmanUI;
 using namespace CustomerUI;
 
-class HomeController
-{
-    public:
-        HomeController();
-        void init();
+class HomeController {
+  public:
+    HomeController();
+    void init();
 
-    private:
+  private:
 };
 
 #endif // HOMECONTROLLER_H

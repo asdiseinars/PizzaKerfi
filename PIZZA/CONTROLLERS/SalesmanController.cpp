@@ -1,12 +1,11 @@
 #include "SalesmanController.h"
 
-SalesmanController::SalesmanController()
-{
+SalesmanController::SalesmanController() {
     //ctor
 }
 
 
-void SalesmanController::init(){
+void SalesmanController::init() {
 
     displayLogo();
     displaySalesmanLogo();

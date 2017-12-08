@@ -1,6 +1,12 @@
-Pepp
+Pepperoni
+50
+Pineapple
+25
+Ham
 45
-Svepp
-98
-Ananas
-83
+Mushrooms
+30
+Paprika
+28
+Onion
+32

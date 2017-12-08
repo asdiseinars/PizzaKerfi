@@ -1,13 +1,13 @@
 #include <fstream>
 #include "Topping.h"
 
-Topping::Topping(){
-   name = '\0';
-   price = 0;
-   verbose = true;
+Topping::Topping() {
+    name = '\0';
+    price = 0;
+    verbose = true;
 }
 
-Topping::Topping(string name, double price){
+Topping::Topping(string name, double price) {
     this->name = name;
     this->price = price;
 }
@@ -27,7 +27,7 @@ void Topping::setPrice(double price) {
     this->price = price;
 }
 
-void Topping::setVerbose(bool verbose){
+void Topping::setVerbose(bool verbose) {
     this->verbose = verbose;
 }
 
@@ -45,12 +45,12 @@ istream& operator >> (istream& in, Topping& topping) {
 }
 
 ostream& operator << (ostream& out, Topping& topping) {
-    if(topping.verbose){
+    if(topping.verbose) {
         out << "Topping: ";
     }
     out << topping.name << endl;
 
-    if(topping.verbose){
+    if(topping.verbose) {
         out << "Price: ";
     }
     out << topping.price << endl;

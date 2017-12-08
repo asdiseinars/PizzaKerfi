@@ -2,8 +2,8 @@
 #include "Soda.h"
 
 Soda::Soda() {
-name = "";
-price = 0;
+    name = "";
+    price = 0;
 }
 
 Soda::Soda(string name, double price) {
@@ -27,7 +27,7 @@ void Soda::setPrice(double price) {
     this->price = price;
 }
 
-void Soda::setVerbose(bool verbose){
+void Soda::setVerbose(bool verbose) {
     this->verbose = verbose;
 }
 

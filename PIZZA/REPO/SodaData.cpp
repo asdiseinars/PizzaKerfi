@@ -17,7 +17,7 @@ void SodaData::storeAllSodas(vector<Soda> sodas) {
     ofstream fout;
     fout.open("sodas.txt");
 
-    for(unsigned int i = 0; i < sodas.size(); i++){
+    for(unsigned int i = 0; i < sodas.size(); i++) {
         sodas[i].setVerbose(false);
         fout << sodas[i];
     }
@@ -42,7 +42,7 @@ vector<Soda> SodaData::retrieveAllSodas() {
     return sodas;
 }
 
-void SodaData::addSoda(Soda& soda){
+void SodaData::addSoda(Soda& soda) {
     ofstream fout;
     fout.open("sodas.txt", ios::app);
 

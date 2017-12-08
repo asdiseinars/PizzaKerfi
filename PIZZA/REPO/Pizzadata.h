@@ -9,16 +9,14 @@
 
 using namespace std;
 
-class PizzaData
-{
-    private:
+class PizzaData {
+  private:
 
-    public:
-        PizzaData();
-        void storePizzaToMenu(Pizza& pizza);
-        vector<Pizza> retrieveAllPizzas();
-
-
+  public:
+    PizzaData();
+    void addPizzaToMenu(Pizza& pizza);
+    vector<Pizza> retrieveAllPizzas();
+    void storeAllPizzas(vector<Pizza> pizza);
 
 };
 
