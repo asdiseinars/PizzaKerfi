@@ -52,47 +52,48 @@ void Pizza::setVerbose(bool verbose) {
 }
 
 
-istream& operator >> (istream& in, Pizza& pizza) {
-    if(pizza.verbose) {
-        cout << "Pizza name: ";
+ifstream& operator >> (ifstream& in, Pizza& pizza) {
+    in >> pizza.name;
+    for(unsigned int i = 0; i < pizza.toppings.size(); i++) {
+        in >> pizza.toppings[i];
     }
+    return in;
+}
+
+
+ofstream& operator << (ofstream& out, Pizza& pizza) {
+
+    out << pizza.name << endl;
+    out << pizza.price << endl;
+    for (unsigned int i = 0; i < pizza.toppings.size(); i++) {
+        out << pizza.toppings[i];
+    }
+    return out;
+}
+
+istream& operator >> (istream& in, Pizza& pizza) {
+    cout << "Pizza name: ";
     in >> pizza.name;
 
-    if(pizza.verbose) {
-        cout << "Toppings: ";
-    }
+    cout << "Toppings: ";
     for(unsigned int i = 0; i < pizza.toppings.size(); i++) {
-        pizza.toppings[i].verbose = false;
         in >> pizza.toppings[i];
     }
 
     return in;
 }
 
-
 ostream& operator << (ostream& out, Pizza& pizza) {
-
-    if(pizza.verbose) {
-        cout << "Pizza name: ";
-    }
-
+    cout << "Pizza name: " << endl;
     out << pizza.name << endl;
 
-    if(pizza.verbose) {
-        cout << "Pizza price: ";
-    }
-
+    cout << "Pizza price: " << endl;
     out << pizza.price << endl;
 
-    if(pizza.verbose) {
-        cout << "Toppings: ";
+    cout << "Toppings: ";
+    for(unsigned int i = 0; i < pizza.toppings.size(); i++) {
+        out << pizza.toppings[i] << endl;
     }
-
-    for (unsigned int i = 0; i < pizza.toppings.size(); i++) {
-        pizza.toppings[i].verbose = false;
-        out << pizza.toppings[i];
-    }
-    cout << endl;
 
     return out;
 }

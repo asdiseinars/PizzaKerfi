@@ -37,6 +37,9 @@ class Pizza {
     void setToppings(vector<Topping> toppings);
     void setVerbose(bool verbose);
 
+    friend ifstream& operator >> (ifstream& in, Pizza& pizza);
+    friend ofstream& operator << (ofstream& out, Pizza& pizza);
+
     friend istream& operator >> (istream& in, Pizza& pizza);
     friend ostream& operator << (ostream& out, Pizza& pizza);
 

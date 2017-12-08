@@ -31,6 +31,22 @@ void Topping::setVerbose(bool verbose) {
     this->verbose = verbose;
 }
 
+ifstream& operator >> (ifstream& in, Topping& topping) {
+    in >> ws;
+    getline(in, topping.name);
+
+    in >> topping.price;
+
+    return in;
+}
+
+ofstream& operator << (ofstream& out, Topping& topping) {
+    out << topping.name << endl;
+    out << topping.price << endl;
+
+    return out;
+}
+
 istream& operator >> (istream& in, Topping& topping) {
     if(topping.verbose)
         cout << "Topping name: ";
@@ -45,14 +61,10 @@ istream& operator >> (istream& in, Topping& topping) {
 }
 
 ostream& operator << (ostream& out, Topping& topping) {
-    if(topping.verbose) {
-        out << "Topping: ";
-    }
+    cout << "Topping: ";
     out << topping.name << endl;
 
-    if(topping.verbose) {
-        out << "Price: ";
-    }
+    cout << "Price: ";
     out << topping.price << endl;
 
     return out;
