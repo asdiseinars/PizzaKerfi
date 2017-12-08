@@ -490,21 +490,92 @@ void AdminController::removeLocations() {
     cout << endl << "The topping has been removed!" << endl << endl;
 }
 
+
+
+
 void AdminController::displayAllBreadsticks() {
+    vector<Breadsticks> breadsticks = breadsticksData.retrieveAllBreadsticks();
+    if(breadsticks.size() < 1){
+        cout << "There are no side orders on the menu! " << endl;
+    }
+    else{
+        cout << "SIDE ORDERS" << endl;
+        cout << "------------------------------------------" << endl << endl;
+        for (unsigned int i = 0; i < breadsticks.size(); i++) {
+            Breadsticks bread = breadsticks.at(i);
+            cout << "Name: " << bread.getName() << "\t \t Price: " << bread.getPrice() << endl;
+            cout << endl;
+        }
+        cout << "------------------------------------------" << endl;
+    }
 }
 
 void AdminController::addBreadsticksToMenu() {
+    char selection = 'y';
+
+    while(selection == 'y') {
+        string newName;
+        double newPrice;
+
+        cout << "Name: ";
+        cin >> newName;
+        cout << "Price: ";
+        cin >> newPrice;
+        Breadsticks bread(newName, newPrice);
+        breadsticksData.addBreadsticks(bread);
+        cout << endl << "Do you want to add another side order? (y/n)" << endl;
+
+        cin >> selection;
+
+        while(selection != 'y' && selection != 'n') {
+            cout << endl << "Invalid input! " << endl << endl;
+            cout << "Do you want to add another side order? (y/n)" << endl;
+            cin >> selection;
+            cout << endl;
+        }
+    }
 }
 
 void AdminController::removeBreadsticksFromMenu() {
+    vector<Breadsticks> breadsticks = breadsticksData.retrieveAllBreadsticks();
+    cout << endl;
+
+    cout << "SIDE ORDERS" << endl;
+    cout << "------------------------------------------" << endl;
+    for(unsigned int i = 0; i < breadsticks.size(); i++) {
+        Breadsticks bread = breadsticks.at(i);
+        cout << "[" << i+1 << "] \t" << bread.getName() << "\t" << bread.getPrice() << endl;
+    }
+    cout << "------------------------------------------" << endl;
+
+    cout << "What side order do you want to remove? ";
+    int input;
+    cin >> input;
+    input -= 1;
+
+    breadsticks.erase(breadsticks.begin() + input);
+
+    breadsticksData.storeAllBreadsticks(breadsticks);
+    cout << endl << "The side order has been removed!" << endl << endl;
+
 }
 
+
+
+
 void AdminController::displayAllSodas() {
+
 }
 
 void AdminController::addSodaToMenu() {
-}
 
+}
 
 void AdminController::removeSodaFromMenu() {
+
 }
+
+
+
+
+
