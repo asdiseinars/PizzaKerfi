@@ -22,8 +22,8 @@ class Breadsticks {
     void setName(string name);
     void setPrice(double price);
 
-    friend istream& operator >> (istream& in, Breadsticks& breadsticks);
-    friend ostream& operator << (ostream& out, Breadsticks& breadsticks);
+    friend ifstream& operator >> (ifstream& fin, Breadsticks& breadsticks);
+    friend ofstream& operator << (ofstream& fout, Breadsticks& breadsticks);
 
 };
 

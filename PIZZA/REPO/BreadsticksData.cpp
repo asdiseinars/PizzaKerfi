@@ -41,7 +41,6 @@ vector<Breadsticks> BreadsticksData::retrieveAllBredsticks() {
 void BreadsticksData::addBreadsticks(Breadsticks& breadsticks) {
     ofstream fout;
     fout.open("breadsticks.txt", ios::app);
-
     fout << breadsticks;
     fout.close();
 }

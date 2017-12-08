@@ -58,6 +58,8 @@
 		<Unit filename="GLOBAL/GlobalHelp.h" />
 		<Unit filename="MODELS/Breadsticks.cpp" />
 		<Unit filename="MODELS/Breadsticks.h" />
+		<Unit filename="MODELS/Crust.cpp" />
+		<Unit filename="MODELS/Crust.h" />
 		<Unit filename="MODELS/Location.cpp" />
 		<Unit filename="MODELS/Location.h" />
 		<Unit filename="MODELS/Pizza.cpp" />
@@ -68,6 +70,8 @@
 		<Unit filename="MODELS/Topping.h" />
 		<Unit filename="REPO/BreadsticksData.cpp" />
 		<Unit filename="REPO/BreadsticksData.h" />
+		<Unit filename="REPO/CrustData.cpp" />
+		<Unit filename="REPO/CrustData.h" />
 		<Unit filename="REPO/LocationData.cpp" />
 		<Unit filename="REPO/LocationData.h" />
 		<Unit filename="REPO/OrderData.cpp" />

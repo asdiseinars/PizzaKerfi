@@ -2,9 +2,8 @@
 #include <fstream>
 
 Breadsticks::Breadsticks() {
-    name = '\0';
+    name = "";
     price = 0;
-    verbose = true;
 }
 
 Breadsticks::Breadsticks(string name, double price) {
@@ -28,28 +27,17 @@ void Breadsticks::setPrice(double price) {
 }
 
 
-istream& operator >> (istream& in, Breadsticks& breadsticks) {
-    if(breadsticks.verbose)
-        cout << "Breadsticks kind: ";
-    in >> ws;
-    getline(in, breadsticks.name);
+ifstream& operator >> (ifstream& fin, Breadsticks& breadsticks) {
+    fin >> breadsticks.name;
+    fin >> breadsticks.price;
 
-    if(breadsticks.verbose)
-        cout << "Price: ";
-    in >> breadsticks.price;
-
-    return in;
+    return fin;
 }
 
-ostream& operator << (ostream& out, Breadsticks& breadsticks) {
-    if(breadsticks.verbose)
-        out << "Breadsticks: ";
-    out << breadsticks.name << endl;
+ofstream& operator << (ofstream& fout, Breadsticks& breadsticks) {
+    fout << breadsticks.name << endl;
+    fout << breadsticks.price << endl;
 
-    if(breadsticks.verbose)
-        out << "Price: ";
-    out << breadsticks.price << endl;
-
-    return out;
+    return fout;
 }
 
