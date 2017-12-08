@@ -13,6 +13,7 @@ using namespace std;
 
 class BakerController {
   private:
+      LocationData locationData;
 
   public:
     BakerController();
