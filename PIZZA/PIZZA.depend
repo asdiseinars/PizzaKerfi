@@ -225,11 +225,13 @@
 1512670075 source:c:\users\asdis\desktop\pizzaforrit\pizza\controllers\salesmancontroller.cpp
 	"SalesmanController.h"
 
-1512670076 c:\users\asdis\desktop\pizzaforrit\pizza\controllers\salesmancontroller.h
+1512739231 c:\users\asdis\desktop\pizzaforrit\pizza\controllers\salesmancontroller.h
 	<iostream>
 	"SalesmanUI.h"
 	"HomeController.h"
 	"GlobalHelp.h"
+	"Location.h"
+	"LocationData.h"
 
 1512670076 source:c:\users\asdis\desktop\pizzaforrit\pizza\ui\salesmanui.cpp
 	"SalesmanUI.h"
