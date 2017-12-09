@@ -30,26 +30,31 @@ class AdminController {
     void displayAllPizzas();
     void addPizzaToMenu();
     void removePizzaFromMenu();
+    void pizzaBackFunction();
 
     void modifyToppings();
     void displayAllToppings();
     void addTopping();
     void removeTopping();
+    void toppingBackFunction();
 
     void modifyBreadsticks();
     void displayAllBreadsticks();
     void addBreadsticksToMenu();
     void removeBreadsticksFromMenu();
+    void breadsticksBackFunction();
 
     void modifySodas();
     void displayAllSodas();
     void addSodaToMenu();
     void removeSodaFromMenu();
+    void sodaBackFunction();
 
     void modifyLocations();
     void displayAllLocations();
     void addLocations();
     void removeLocations();
+    void locationBackFunction();
 };
 
 #endif // ADMINCONTROLLER_H

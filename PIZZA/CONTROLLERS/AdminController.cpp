@@ -66,19 +66,7 @@ void AdminController::modifyToppings() {
         displayLogo();
         displayAdminLogo();
         displayAllToppings();
-        displayAdminBackOrQuitUI();
-        cin >> selection;
-
-        if (selection == 'b') {
-            clearScreen();
-            displayLogo();
-            displayAdminLogo();
-            modifyToppings();
-        }
-
-        else if (selection == 'q') {
-            return;
-        }
+        toppingBackFunction();
     }
 
     else if (selection == '2') { // Adds new topping to the list
@@ -87,18 +75,7 @@ void AdminController::modifyToppings() {
         displayAdminLogo();
         addTopping();
 
-        displayAdminBackOrQuitUI();
-
-        cin >> selection;
-
-        if (selection == 'b') {
-            clearScreen();
-            displayLogo();
-            displayAdminLogo();
-            modifyToppings();
-        } else if (selection == 'q') {
-            return;
-        }
+        toppingBackFunction();
     }
 
     else if (selection == '3') { // Removes topping from the list
@@ -107,18 +84,7 @@ void AdminController::modifyToppings() {
         displayAdminLogo();
         removeTopping();
 
-        displayAdminBackOrQuitUI();
-
-        cin >> selection;
-
-        if (selection == 'b') {
-            clearScreen();
-            displayLogo();
-            displayAdminLogo();
-            modifyToppings();
-        } else if (selection == 'q') {
-            return;
-        }
+        toppingBackFunction();
     }
 
     else if (selection == 'b') {
@@ -194,21 +160,111 @@ void AdminController::removeTopping() {
 
 }
 
+void AdminController::toppingBackFunction() {
+    displayAdminBackOrQuitUI();
+        char selection;
+        cin >> selection;
+
+        if (selection == 'b') {
+            clearScreen();
+            displayLogo();
+            displayAdminLogo();
+            modifyToppings();
+        }
+
+        else if (selection == 'q') {
+            return;
+        }
+}
+
+void AdminController::pizzaBackFunction() {
+    displayAdminBackOrQuitUI();
+    char selection;
+    cin >> selection;
+
+        if (selection == 'b') {
+            clearScreen();
+            displayLogo();
+            displayAdminLogo();
+            modifyPizzas();
+        }
+        else if (selection == 'q') {
+            return;
+        }
+
+}
+
+void AdminController::locationBackFunction() {
+    displayAdminBackOrQuitUI();
+    char selection;
+    cin >> selection;
+
+    if (selection == 'b') {
+        clearScreen();
+        displayLogo();
+        displayAdminLogo();
+        modifyLocations();
+    }
+
+    else if (selection == 'q') {
+        return;
+    }
+}
+
+void AdminController::breadsticksBackFunction() {
+    displayAdminBackOrQuitUI();
+    char selection;
+    cin >> selection;
+
+    if (selection == 'b') {
+        clearScreen();
+        displayLogo();
+        displayAdminLogo();
+        modifyBreadsticks();
+    }
+
+    else if (selection == 'q') {
+        return;
+    }
+
+
+
+}
+
+void AdminController::sodaBackFunction(){
+    displayAdminBackOrQuitUI();
+        char selection;
+        cin >> selection;
+
+        if (selection == 'b') {
+            clearScreen();
+            displayLogo();
+            displayAdminLogo();
+            modifySodas();
+        }
+        else if (selection == 'q') {
+            return;
+        }
+}
+
 void AdminController::modifyPizzas() {
     char selection;
     displayAdminPizzaUI();
     cin >> selection;
 
-    if (selection == '1') { //All pizzas
+    if (selection == '1') { //See all pizzas
         displayAllPizzas();
+        pizzaBackFunction();
     }
 
     else if (selection == '2') { //Add new pizza to menu
         addPizzaToMenu();
+        pizzaBackFunction();
     }
 
     else if (selection == '3') { //Remove pizza from menu
         removePizzaFromMenu();
+        pizzaBackFunction();
     }
 
     else if (selection == 'b') {
@@ -320,19 +376,22 @@ void AdminController::removePizzaFromMenu() { ///kemmst ekki í fallið?? get því 
 
 void AdminController::modifySodas() {
     char selection;
-    void displayAdminSodasUI(); ///afhvejru er ekki hægt að kalla í þetta fall??
+    void displayAdminSodasUI(); ///Þetta fall birtist ekki!!????
     cin >> selection;
 
     if (selection == '1') { //All pizzas
         displayAllSodas();
+        sodaBackFunction();
     }
 
     else if (selection == '2') { //Add new soda to menu
         addSodaToMenu();
+        sodaBackFunction();
     }
 
     else if (selection == '3') { //Remove soda from menu
         removeSodaFromMenu();
+        sodaBackFunction();
     }
 
     else if (selection == 'b') {
@@ -353,19 +412,7 @@ void AdminController::modifyLocations() {
         displayLogo();
         displayAdminLogo();
         displayAllLocations();
-        displayAdminBackOrQuitUI();
-        cin >> selection;
-
-        if (selection == 'b') {
-            clearScreen();
-            displayLogo();
-            displayAdminLogo();
-            modifyLocations();
-        }
-
-        else if (selection == 'q') {
-            return;
-        }
+        locationBackFunction();
     }
 
     else if (selection == '2') { // Adds new location to the list
@@ -373,19 +420,7 @@ void AdminController::modifyLocations() {
         displayLogo();
         displayAdminLogo();
         addLocations();
-
-        displayAdminBackOrQuitUI();
-
-        cin >> selection;
-
-        if (selection == 'b') {
-            clearScreen();
-            displayLogo();
-            displayAdminLogo();
-            modifyLocations();
-        } else if (selection == 'q') {
-            return;
-        }
+        locationBackFunction();
     }
 
     else if (selection == '3') { // Removes location from the list
@@ -393,18 +428,7 @@ void AdminController::modifyLocations() {
         displayLogo();
         displayAdminLogo();
         removeLocations();
-        displayAdminBackOrQuitUI();
-
-        cin >> selection;
-
-        if (selection == 'b') {
-            clearScreen();
-            displayLogo();
-            displayAdminLogo();
-            modifyLocations();
-        } else if (selection == 'q') {
-            return;
-        }
+        locationBackFunction();
     }
 
     else if (selection == 'b') {
@@ -484,15 +508,21 @@ void AdminController::modifyBreadsticks() {
 
     if (selection == '1') { //All breadsticks
         displayAllBreadsticks();
+        breadsticksBackFunction();
     }
+
 
     else if (selection == '2') { //Add new breadsticks to menu
         addBreadsticksToMenu();
+        breadsticksBackFunction();
     }
+
 
     else if (selection == '2') { //Remove breadsticks from menu
         removeBreadsticksFromMenu();
+        breadsticksBackFunction();
     }
+
 
     else if (selection == 'b') {
         clearScreen();
