@@ -2,109 +2,44 @@
 <CodeBlocks_layout_file>
 	<FileVersion major="1" minor="0" />
 	<ActiveTarget name="Debug" />
-<<<<<<< HEAD
-	<File name="UI\AboutUI.h" open="1" top="0" tabpos="8" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-=======
-<<<<<<< HEAD
-	<File name="CONTROLLERS\CustomerController.h" open="1" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="REPO\CrustData.cpp" open="1" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="637" topLine="15" />
+		</Cursor>
+	</File>
+	<File name="REPO\CrustData.h" open="1" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="366" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="MODELS\Crust.h" open="1" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="0" topLine="1" />
+		</Cursor>
+	</File>
+	<File name="MODELS\Crust.cpp" open="1" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="0" topLine="0" />
 		</Cursor>
 	</File>
-	<File name="UI\AdminUI.cpp" open="1" top="1" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-=======
-<<<<<<< HEAD
-	<File name="MODELS\Soda.h" open="0" top="0" tabpos="9" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
->>>>>>> aec795af077f313d6d75baa2ccdd7fca66d55103
+	<File name="REPO\SodaData.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="145" topLine="0" />
+			<Cursor1 position="303" topLine="0" />
 		</Cursor>
 	</File>
-<<<<<<< HEAD
-	<File name="GLOBAL\GlobalHelp.cpp" open="1" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-=======
-	<File name="CONTROLLERS\GlobalController.h" open="0" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="268" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="CONTROLLERS\BakerController.cpp" open="0" top="0" tabpos="8" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="223" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="CONTROLLERS\GlobalController.cpp" open="0" top="0" tabpos="7" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
->>>>>>> bc0ebaf8da3e892f53181eb458808da7a2134b8d
-		<Cursor>
-			<Cursor1 position="527" topLine="0" />
-		</Cursor>
-	</File>
-<<<<<<< HEAD
-	<File name="CONTROLLERS\GlobalController.cpp" open="1" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-=======
-	<File name="UI\AdminUI.cpp" open="1" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
->>>>>>> 23b906f0a2c8b0805ec744ff0c618a10354efa2c
->>>>>>> bc0ebaf8da3e892f53181eb458808da7a2134b8d
->>>>>>> aec795af077f313d6d75baa2ccdd7fca66d55103
+	<File name="REPO\SodaData.h" open="1" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="0" topLine="0" />
 		</Cursor>
 	</File>
-<<<<<<< HEAD
-	<File name="UI\HomeUI.cpp" open="1" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-=======
-<<<<<<< HEAD
-	<File name="CONTROLLERS\AdminController.cpp" open="1" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="CONTROLLERS\AdminController.cpp" open="1" top="1" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="2035" topLine="74" />
+			<Cursor1 position="17521" topLine="606" />
 		</Cursor>
 	</File>
-=======
-<<<<<<< HEAD
-	<File name="REPO\BreadsticksData.h" open="0" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="MODELS\Soda.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="209" topLine="0" />
+			<Cursor1 position="264" topLine="0" />
 		</Cursor>
 	</File>
-	<File name="REPO\SodaData.cpp" open="0" top="0" tabpos="7" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
->>>>>>> aec795af077f313d6d75baa2ccdd7fca66d55103
-		<Cursor>
-			<Cursor1 position="291" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="CONTROLLERS\GlobalController.cpp" open="1" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="0" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="CONTROLLERS\AdminController.cpp" open="0" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="150" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="UI\AdminUI.cpp" open="1" top="0" tabpos="7" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="1534" topLine="28" />
-		</Cursor>
-	</File>
-	<File name="CONTROLLERS\HomeController.cpp" open="1" top="1" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="1153" topLine="39" />
-		</Cursor>
-	</File>
-	<File name="CONTROLLERS\SalesmanController.cpp" open="1" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="0" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="UI\AboutUI.cpp" open="1" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="946" topLine="0" />
-		</Cursor>
-	</File>
-<<<<<<< HEAD
-=======
->>>>>>> ebe9eeea13e24f00aba4a0d12e23b9594fa3fbf8
->>>>>>> bc0ebaf8da3e892f53181eb458808da7a2134b8d
->>>>>>> aec795af077f313d6d75baa2ccdd7fca66d55103
 </CodeBlocks_layout_file>

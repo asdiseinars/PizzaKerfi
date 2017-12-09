@@ -14,7 +14,7 @@ class CrustData {
 
       public:
         CrustData();
-        void storeAllToppings(vector<Crust> toppings);
+        void storeAllCrusts(vector<Crust> crust);
         vector<Crust> retrieveAllCrusts();
         void addCrust(Crust& crust);
 };
