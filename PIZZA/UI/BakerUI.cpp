@@ -7,5 +7,10 @@ void BakerUI::displayBakerOrderUI() {
     cout << "b: back " << endl;
 }
 
+void BakerUI::displayBakerBackOrQuitUI() {
+    cout << "b: Go back" << endl;
+    cout << "q: Quit" << endl;
+}
+
 
 

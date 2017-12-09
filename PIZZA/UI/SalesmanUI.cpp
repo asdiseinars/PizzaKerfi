@@ -11,3 +11,8 @@ void SalesmanUI::displaySalesmanMenuUI() {
     cout << "Insert what pizza you want to order" << endl;
     cout << "Press b to go back" << endl;
 }
+
+void SalesmanUI::displaySalesmanBackOrQuitUI() {
+    cout << "b: Go back" << endl;
+    cout << "q: Quit" << endl;
+}
