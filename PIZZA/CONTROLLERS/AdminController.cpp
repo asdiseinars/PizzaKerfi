@@ -567,22 +567,69 @@ void AdminController::removeBreadsticksFromMenu() {
 
 }
 
-
-
-
 void AdminController::displayAllSodas() {
-
+   vector<Soda> sodas = sodaData.retrieveAllSodas();
+    if(sodas.size() < 1){
+        cout << "There are no drinks on the menu! " << endl;
+    }
+    else{
+        cout << "DRINKS" << endl;
+        cout << "------------------------------------------" << endl << endl;
+        for (unsigned int i = 0; i < sodas.size(); i++) {
+            Soda soda = sodas.at(i);
+            cout << "Name: " << soda.getName() << "\t \t Price: " << soda.getPrice() << endl;
+            cout << endl;
+        }
+        cout << "------------------------------------------" << endl;
+    }
 }
 
 void AdminController::addSodaToMenu() {
+    char selection = 'y';
 
+    while(selection == 'y') {
+        string newName;
+        double newPrice;
+
+        cout << "Name: ";
+        cin >> newName;
+        cout << "Price: ";
+        cin >> newPrice;
+        Soda soda(newName, newPrice);
+        sodaData.addSoda(soda);
+        cout << endl << "Do you want to add another drink? (y/n)" << endl;
+
+        cin >> selection;
+
+        while(selection != 'y' && selection != 'n') {
+            cout << endl << "Invalid input! " << endl << endl;
+            cout << "Do you want to add another drink? (y/n)" << endl;
+            cin >> selection;
+            cout << endl;
+        }
+    }
 }
 
 void AdminController::removeSodaFromMenu() {
+    vector<Soda> sodas = sodaData.retrieveAllSodas();
+    cout << endl;
+
+    cout << "DRINKS" << endl;
+    cout << "------------------------------------------" << endl;
+    for(unsigned int i = 0; i < sodas.size(); i++) {
+        Soda soda = sodas.at(i);
+        cout << "[" << i+1 << "] \t" << soda.getName() << "\t" << soda.getPrice() << endl;
+    }
+    cout << "------------------------------------------" << endl;
+
+    cout << "What drink do you want to remove? ";
+    int input;
+    cin >> input;
+    input -= 1;
+
+    sodas.erase(sodas.begin() + input);
+
+    sodaData.storeAllSodas(sodas);
+    cout << endl << "The drink has been removed!" << endl << endl;
 
 }
-
-
-
-
-
