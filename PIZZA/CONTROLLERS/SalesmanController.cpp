@@ -4,21 +4,22 @@ SalesmanController::SalesmanController() {
     //ctor
 }
 
-
-
 void SalesmanController::init() {
     displayLogo();
     displaySalesmanLogo();
     string yourLocation = globalController.chooseLocation();
+    modifySalesman(yourLocation);
 }
 
-
-
-    /*displayLogo();
+void SalesmanController::modifySalesman(string yourLocation) {
+    clearScreen();
+    displayLogo();
     displaySalesmanLogo();
+    cout << "\033[4m" << "Your location is " << yourLocation << "\033[0m" << endl << endl;
+    char selection;
     displaySalesmanUI();
-    char selection = '\0';
     cin >> selection;
+
 
     if (selection == '1') {
         clearScreen();
@@ -31,7 +32,6 @@ void SalesmanController::init() {
         if (selection == 'b') {
             clearScreen();
             init();
-
         }
     }
 
@@ -43,11 +43,11 @@ void SalesmanController::init() {
     }
 
     else if (selection == 'b') {
-        HomeController home;
-        home.init();
+        clearScreen();
+        init();
     }
 }
-*/
+
 
 
 

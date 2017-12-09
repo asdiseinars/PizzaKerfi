@@ -1,7 +1,6 @@
 #include "SalesmanUI.h"
 
 void SalesmanUI::displaySalesmanUI() {
-
     cout << "Press 1 to order from menu" << endl;
     cout << "Press 2 to make pizza" << endl;
     cout << "Press b to go back" << endl;

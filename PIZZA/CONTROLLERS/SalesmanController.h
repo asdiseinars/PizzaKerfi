@@ -22,6 +22,7 @@ class SalesmanController {
     SalesmanController();
     void chooseLocation();
     void init();
+    void modifySalesman(string yourLocation);
 
 
 };
