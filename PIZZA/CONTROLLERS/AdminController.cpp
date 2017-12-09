@@ -207,7 +207,7 @@ void AdminController::modifyPizzas() {
         addPizzaToMenu();
     }
 
-    else if (selection == '2') { //Remove pizza from menu
+    else if (selection == '3') { //Remove pizza from menu
         removePizzaFromMenu();
     }
 
@@ -293,13 +293,19 @@ void AdminController::addPizzaToMenu() {
 void AdminController::removePizzaFromMenu() { ///kemmst ekki í fallið?? get því ekki testað hvort það sé rétt
     vector<Pizza> pizzas = pizzaData.retrieveAllPizzas();
     cout << endl;
-/*
-    for(unsigned int i = 0; i < pizzas.size(); i++) {
-        Pizza pizza = pizzas.at(i);
-        cout << "Number: [" << i+1 << "]"<< endl;
-        cout << pizza << endl;
-    }
-*/
+
+    for (unsigned int i = 0; i < pizzas.size(); i++) {
+            cout << "[" << i+1 << "] " << pizzas.at(i).getName() << endl;
+            cout << "----------" << endl;
+            cout << "\t" << pizzas.at(i).getPrice() << "kr." << endl;
+            cout << "\tToppings: " << endl;
+            for(unsigned  int j = 0; j < pizzas.at(i).getToppings().size(); j++){
+                Topping t = pizzas.at(i).getToppings().at(j);
+                cout << "\t\t" << pizzas.at(i).getToppings().at(j).getName() << endl;
+            }
+            cout << endl;
+        }
+
     cout << "What topping do you want to remove? ";
     int input;
     cin >> input;
@@ -410,6 +416,8 @@ void AdminController::modifyLocations() {
 
 void AdminController::displayAllLocations() {
     vector<Location> locations = locationData.retrieveAllLocations();
+    cout << "LOCATIONS" << endl;
+    cout << "------------------------------------------" << endl;
     if(locations.size() < 1){
         cout << "There are no locations on the menu!" << endl;
     }
@@ -419,6 +427,7 @@ void AdminController::displayAllLocations() {
             cout << location.getName() << endl;
         }
     }
+    cout << "------------------------------------------" << endl;
 }
 
 void AdminController::addLocations() {
