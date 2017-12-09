@@ -13,7 +13,7 @@ void BakerController::init() {
     clearScreen();
     displayLogo();
     displayBakerLogo();
-    cout << "Your location is " << yourLocation << endl;
+    cout << "\033[4m" << "Your location is " << yourLocation << "\033[0m" << endl << endl;
     displayBakerOrderUI();
     modifyBakerOrders();
 }
