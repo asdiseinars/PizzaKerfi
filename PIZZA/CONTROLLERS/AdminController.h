@@ -56,15 +56,15 @@ class AdminController {
     void displayAllLocations();
     void addLocations();
     void removeLocations();
-<<<<<<< HEAD
+
 
     void modifyCrust();
     void displayAllCrusts();
     void addCrustToMenu();
     void removeCrustFromMenu();
-=======
+
     void locationBackFunction();
->>>>>>> f72571fe2cfd8a7a8047f0b3af937b7096279e83
+
 };
 
 #endif // ADMINCONTROLLER_H
