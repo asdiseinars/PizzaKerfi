@@ -25,7 +25,6 @@ void Crust::setPrice(double price) {
     this->price = price;
 }
 
-
 ifstream& operator >> (ifstream& fin, Crust& crust) {
     fin >> crust.name;
     fin >> crust.price;

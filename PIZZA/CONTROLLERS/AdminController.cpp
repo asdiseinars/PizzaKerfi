@@ -295,12 +295,13 @@ void AdminController::displayAllPizzas() {
                 Topping t = pizzas.at(i).getToppings().at(j);
                 cout << "\t\t" << pizzas.at(i).getToppings().at(j).getName() << endl;
             }
+            cout << "Crust: " << pizzas.at(i).getCrust().getName();
             cout << endl;
         }
     }
 }
 
-void AdminController::addPizzaToMenu() {
+void AdminController::addPizzaToMenu() { ///gera fallegra
     string myName;
     vector<Topping> myToppings;
     cout << "Pizza name: ";
@@ -311,14 +312,13 @@ void AdminController::addPizzaToMenu() {
 
     cout << endl;
 
-
     cout << "TOPPINGS" << endl;
     cout << "------------------------------------------" << endl;
 
     vector<Topping> toppings = toppingData.retrieveAllToppings();
     for(unsigned int i = 0; i < toppings.size(); i++) {
         Topping topp = toppings.at(i);
-        cout << "Number: [" << i+1 << "] \t" << topp.getName() << endl;
+        cout << "[" << i+1 << "] \t" << topp.getName() << endl;
     }
     cout << "------------------------------------------" << endl;
 
@@ -326,11 +326,11 @@ void AdminController::addPizzaToMenu() {
     int toppingCount = 0;
 
     do {
-        char input;
+        char inputTopping;
         cout << "Plese enter the number of the topping you want to add to your pizza. " << endl;
-        cin >> input;
-        int inputInt = input - 48;
-        Topping topping = toppings.at(inputInt - 1);
+        cin >> inputTopping;
+        int inputIntTopping = inputTopping - 48;
+        Topping topping = toppings.at(inputIntTopping - 1);
         cout << "Name: " << topping.getName() << "\t" <<"Price: " << topping.getPrice() << endl;
         myToppings.push_back(topping);
 
@@ -349,11 +349,27 @@ void AdminController::addPizzaToMenu() {
         }
     } while(selection == 'y');
 
-    Pizza newPizza(myName, myPrice, toppingCount, myToppings);
+    cout << "CRUSTS" << endl;
+    cout << "------------------------------------------" << endl;
+
+    vector<Crust> crusts = crustData.retrieveAllCrusts();
+    for(unsigned int i = 0; i < crusts.size(); i++) {
+        Crust crust = crusts.at(i);
+        cout << "[" << i+1 << "] \t" << crust.getName() << endl;
+    }
+    cout << "------------------------------------------" << endl;
+
+    char inputCrust;
+    cout << "Plese enter the number of the topping you want to add to your pizza. " << endl;
+    cin >> inputCrust;
+    int inputIntCrust = inputCrust - 48;
+    Crust myCrust = crusts.at(inputIntCrust - 1);
+
+    Pizza newPizza(myName, myPrice, toppingCount, myToppings, myCrust);
     pizzaData.addPizzaToMenu(newPizza);
 }
 
-void AdminController::removePizzaFromMenu() { ///kemmst ekki í fallið?? get því ekki testað hvort það sé rétt
+void AdminController::removePizzaFromMenu() {
     vector<Pizza> pizzas = pizzaData.retrieveAllPizzas();
     cout << endl;
 
@@ -673,19 +689,19 @@ void AdminController::modifyCrust() {
     displayAdminCrustUI();
     cin >> selection;
 
-    if (selection == '1') { //All pizzas
+    if (selection == '1') { //All crusts on menu
         displayAllCrusts();
     }
 
-    else if (selection == '2') { //Add new soda to menu
+    else if (selection == '2') { //Add new crust to menu
         addCrustToMenu();
     }
 
-    else if (selection == '3') { //Remove soda from menu
+    else if (selection == '3') { //Remove crust from menu
         removeCrustFromMenu();
     }
 
-    else if (selection == 'b') {
+    else if (selection == 'b') { ///vantar alla back í crust
         clearScreen();
         init();
     }
