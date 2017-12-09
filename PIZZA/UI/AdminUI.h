@@ -12,6 +12,7 @@ namespace AdminUI {
     void displayAdminBackOrQuitUI();
     void displayAdminLocationUI();
     void displayAdminSideOrderUI();
+    void displayAdminCrustUI();
 };
 
 #endif // ADMINUI_H

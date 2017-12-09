@@ -7,6 +7,7 @@ void AdminUI::displayAdminUI() {
     cout << "3. Add/edit drinks" << endl;
     cout << "4: Add/edit side orders" << endl;
     cout << "5: Add/edit locations" << endl;
+    cout << "6: Add/edit crusts" << endl;
     cout << "b: Go back" << endl;
 }
 
@@ -50,6 +51,12 @@ void AdminUI::displayAdminSideOrderUI() {
     cout << "b: Go back" << endl;
 }
 
+void AdminUI::displayAdminCrustUI() {
+    cout << "1: See all crusts" << endl;
+    cout << "2: Add new crust" << endl;
+    cout << "3: Remove crust" << endl;
+    cout << "b: Go back" << endl;
+}
 
 
 

@@ -10,6 +10,7 @@
 #include "Pizza.h"
 #include "BreadsticksData.h"
 #include "SodaData.h"
+#include "CrustData.h"
 
 using namespace GlobalHelp;
 using namespace AdminUI;
@@ -21,6 +22,7 @@ class AdminController {
     LocationData locationData;
     BreadsticksData breadsticksData;
     SodaData sodaData;
+    CrustData crustData;
 
   public:
     AdminController();
@@ -50,6 +52,11 @@ class AdminController {
     void displayAllLocations();
     void addLocations();
     void removeLocations();
+
+    void modifyCrust();
+    void displayAllCrusts();
+    void addCrustToMenu();
+    void removeCrustFromMenu();
 };
 
 #endif // ADMINCONTROLLER_H

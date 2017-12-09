@@ -49,6 +49,13 @@ void AdminController::init() {
         modifyLocations();
     }
 
+    else if (selection == '6') { //Add/edit crust
+        clearScreen();
+        displayLogo();
+        displayAdminLogo();
+        modifyCrust();
+    }
+
     else if (selection == 'b') {
         HomeController home;
         home.init();
@@ -341,7 +348,6 @@ void AdminController::modifySodas() {
     }
 }
 
-
 void AdminController::modifyLocations() {
 
     displayAdminLocationUI();
@@ -412,7 +418,6 @@ void AdminController::modifyLocations() {
         init();
     }
 }
-
 
 void AdminController::displayAllLocations() {
     vector<Location> locations = locationData.retrieveAllLocations();
@@ -631,5 +636,93 @@ void AdminController::removeSodaFromMenu() {
 
     sodaData.storeAllSodas(sodas);
     cout << endl << "The drink has been removed!" << endl << endl;
+}
 
+void AdminController::modifyCrust() {
+    char selection;
+    displayAdminCrustUI();
+    cin >> selection;
+
+    if (selection == '1') { //All pizzas
+        displayAllCrusts();
+    }
+
+    else if (selection == '2') { //Add new soda to menu
+        addCrustToMenu();
+    }
+
+    else if (selection == '3') { //Remove soda from menu
+        removeCrustFromMenu();
+    }
+
+    else if (selection == 'b') {
+        clearScreen();
+        init();
+    }
+}
+
+void AdminController::displayAllCrusts () {
+   vector<Crust> crusts = crustData.retrieveAllCrusts();
+    if(crusts.size() < 1){
+        cout << "There are no drinks on the menu! " << endl;
+    }
+    else{
+        cout << "CRUSTS" << endl;
+        cout << "------------------------------------------" << endl << endl;
+        for (unsigned int i = 0; i < crusts.size(); i++) {
+            Crust crust = crusts.at(i);
+            cout << "Name: " << crust.getName() << "\t \t Price: " << crust.getPrice() << endl;
+            cout << endl;
+        }
+        cout << "------------------------------------------" << endl;
+    }
+}
+
+void AdminController::addCrustToMenu() {
+    char selection = 'y';
+
+    while(selection == 'y') {
+        string newName;
+        double newPrice;
+
+        cout << "Name: ";
+        cin >> newName;
+        cout << "Price: ";
+        cin >> newPrice;
+        Crust crust(newName, newPrice);
+        crustData.addCrust(crust);
+        cout << endl << "Do you want to add another crust? (y/n)" << endl;
+
+        cin >> selection;
+
+        while(selection != 'y' && selection != 'n') {
+            cout << endl << "Invalid input! " << endl << endl;
+            cout << "Do you want to add another crust? (y/n)" << endl;
+            cin >> selection;
+            cout << endl;
+        }
+    }
+}
+
+void AdminController::removeCrustFromMenu() {
+    vector<Crust> crusts = crustData.retrieveAllCrusts();
+    cout << endl;
+
+    cout << "CRUSTS" << endl;
+    cout << "------------------------------------------" << endl;
+    for(unsigned int i = 0; i < crusts.size(); i++) {
+        Crust crust = crusts.at(i);
+        cout << "[" << i+1 << "] \t" << crust.getName() << "\t" << crust.getPrice() << endl;
+    }
+    cout << "------------------------------------------" << endl;
+
+    cout << "What crust do you want to remove? ";
+    int input;
+    cin >> input;
+    input -= 1;
+
+    crusts.erase(crusts.begin() + input);
+
+    crustData.storeAllCrusts(crusts);
+    cout << endl << "The crust has been removed!" << endl << endl;
 }
