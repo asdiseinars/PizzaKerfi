@@ -4,6 +4,7 @@
 #include "SalesmanUI.h"
 #include "HomeController.h"
 #include "GlobalHelp.h"
+#include "GlobalController.h"
 #include "Location.h"
 #include "LocationData.h"
 
@@ -15,6 +16,8 @@ using namespace SalesmanUI;
 class SalesmanController {
   private:
       LocationData locationData;
+      GlobalController globalController;
+
   public:
     SalesmanController();
     void chooseLocation();
