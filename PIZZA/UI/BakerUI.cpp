@@ -1,12 +1,10 @@
 #include "BakerUI.h"
 
-void BakerUI::displayBakerUI() {
-    cout << "Choose your location" << endl;
-    cout << "Press b to go back" << endl;
-}
 
-void BakerUI::displayBakerOrdersUI() {
-    cout << "Here are the orders you should bake!" << endl;
+void BakerUI::displayBakerOrderUI() {
+    cout << "1: See all orders" << endl;
+    cout << "2: merkja status a orders ?" << endl;
+    cout << "b: back " << endl;
 }
 
 

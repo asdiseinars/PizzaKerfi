@@ -7,31 +7,46 @@ BakerController::BakerController() {
 void BakerController::init() {
     displayLogo();
     displayBakerLogo();
-    chooseLocation();
+    string yourLocation = chooseLocation();
+
+    clearScreen();
+    displayLogo();
+    displayBakerLogo();
+    cout << "Your location is " << yourLocation << endl;
+    displayBakerOrderUI();
+    modifyBakerOrders();
 }
 
-void BakerController::chooseLocation(){
-    vector<Location> locations;
-    locations = locationData.retrieveAllLocations();
+string BakerController::chooseLocation(){
+    vector<Location> locations = locationData.retrieveAllLocations();
 
     cout << "LOCATIONS" << endl;
     cout << "------------------------------------------" << endl;
     for(unsigned int i = 0; i < locations.size(); i++){
-        cout << "Location number: [" << i+1 << "]" << endl;
-        Location location;
-        location.getName();
+        cout << "[" << i+1 << "] " << locations[i].getName() << endl;
     }
     cout << "------------------------------------------" << endl;
     cout << "Choose location: ";
     char input = 0;
     cin >> input;
 
+    string yourLocation = "";
+
     int inputInt = input - 48;
     for(unsigned int i = 0; i < locations.size(); i++){
         if(inputInt == i + 1){
-            //?? = locations[i]; hérna verðum við að vista hvaða location hann valdi svo við getum kallað í það í hinum föllunum
-
+            yourLocation = locations[i].getName();
         }
     }
+    cout << yourLocation;
+    return yourLocation;
 }
+
+void BakerController::modifyBakerOrders() {
+
+}
+
+
+
+
 

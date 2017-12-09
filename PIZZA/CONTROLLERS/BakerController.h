@@ -18,7 +18,8 @@ class BakerController {
   public:
     BakerController();
     void init();
-    void chooseLocation();
+    string chooseLocation();
+    void modifyBakerOrders();
 
 };
 
