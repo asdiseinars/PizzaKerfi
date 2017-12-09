@@ -36,13 +36,6 @@ void AdminUI::displayAdminSodaUI() {
     cout << "b: back" << endl;
 }
 
-void AdminUI::displayAdminBreadSticksUI() {
-    cout << "1: See all side orders" << endl;
-    cout << "2: Add new side order" << endl;
-    cout << "3: Remove side order" << endl;
-    cout << "b: back" << endl;
-}
-
 void AdminUI::displayAdminLocationUI() {
     cout << "1: See all locations" << endl;
     cout << "2: Add new location" << endl;
@@ -50,6 +43,12 @@ void AdminUI::displayAdminLocationUI() {
     cout << "b: back" << endl;
 }
 
+void AdminUI::displayAdminSideOrderUI() {
+    cout << "1: See all side orders" << endl;
+    cout << "2: Add new side order" << endl;
+    cout << "3: Remove side order" << endl;
+    cout << "b: back" << endl;
+}
 
 
 

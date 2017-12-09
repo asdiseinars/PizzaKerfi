@@ -6,13 +6,13 @@ using namespace std;
 
 
 namespace AdminUI {
-void displayAdminUI();
-void displayAdminToppingUI();
-void displayAdminPizzaUI();
-void displayAdminSodaUI();
-void displayAdminBreadSticksUI();
-void displayAdminBackOrQuitUI();
-void displayAdminLocationUI();
+    void displayAdminUI();
+    void displayAdminToppingUI();
+    void displayAdminPizzaUI();
+    void displayAdminSodaUI();
+    void displayAdminBackOrQuitUI();
+    void displayAdminLocationUI();
+    void displayAdminSideOrderUI();
 
 
 };
