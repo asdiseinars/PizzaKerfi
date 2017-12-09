@@ -57,5 +57,9 @@ void HomeController::init() {
 
     else if (selection == 'a') {
         clearScreen();
+        displayLogo();
+        displayAboutUI();
+        ///back or quit
+
     }
 }

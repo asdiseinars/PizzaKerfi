@@ -494,7 +494,7 @@
 1512822497 c:\users\karal\desktop\pizzaforrit\pizza\ui\homeui.h
 	<iostream>
 
-1512822497 c:\users\karal\desktop\pizzaforrit\pizza\controllers\homecontroller.h
+1512828127 c:\users\karal\desktop\pizzaforrit\pizza\controllers\homecontroller.h
 	"PizzaUI.h"
 	"HomeUI.h"
 	"GlobalHelp.h"
@@ -503,6 +503,7 @@
 	"CustomerController.h"
 	"AdminController.h"
 	"AboutUI.h"
+	"AdminUI.h"
 
 1512822497 c:\users\karal\desktop\pizzaforrit\pizza\ui\pizzaui.h
 	<iostream>
@@ -586,7 +587,7 @@
 	"BreadsticksData.h"
 	"SodaData.h"
 
-1512823363 c:\users\karal\desktop\pizzaforrit\pizza\ui\adminui.h
+1512826693 c:\users\karal\desktop\pizzaforrit\pizza\ui\adminui.h
 	<iostream>
 
 1512396201 source:c:\users\karal\desktop\pizzaforrit\pizza\models\restaurants.cpp
@@ -604,7 +605,7 @@
 1512822497 source:c:\users\karal\desktop\pizzaforrit\pizza\ui\salesmanui.cpp
 	"SalesmanUI.h"
 
-1512824868 source:c:\users\karal\desktop\pizzaforrit\pizza\controllers\admincontroller.cpp
+1512827227 source:c:\users\karal\desktop\pizzaforrit\pizza\controllers\admincontroller.cpp
 	"AdminController.h"
 	<iostream>
 
@@ -614,7 +615,7 @@
 1512822497 source:c:\users\karal\desktop\pizzaforrit\pizza\controllers\customercontroller.cpp
 	"CustomerController.h"
 
-1512822497 source:c:\users\karal\desktop\pizzaforrit\pizza\controllers\homecontroller.cpp
+1512827711 source:c:\users\karal\desktop\pizzaforrit\pizza\controllers\homecontroller.cpp
 	"HomeController.h"
 
 1512822497 source:c:\users\karal\desktop\pizzaforrit\pizza\controllers\salesmancontroller.cpp
@@ -641,7 +642,7 @@
 1512822497 source:c:\users\karal\desktop\pizzaforrit\pizza\repo\toppingdata.cpp
 	"ToppingData.h"
 
-1512823363 source:c:\users\karal\desktop\pizzaforrit\pizza\ui\adminui.cpp
+1512826693 source:c:\users\karal\desktop\pizzaforrit\pizza\ui\adminui.cpp
 	"AdminUI.h"
 
 1512822497 source:c:\users\karal\desktop\pizzaforrit\pizza\ui\bakerui.cpp
@@ -747,10 +748,10 @@
 1512752577 source:c:\users\einarbi\desktop\pizzaforrit\pizza\ui\aboutui.cpp
 	"AboutUI.h"
 
-1512822497 c:\users\karal\desktop\pizzaforrit\pizza\ui\aboutui.h
+1512828127 c:\users\karal\desktop\pizzaforrit\pizza\ui\aboutui.h
 	<iostream>
 
-1512822497 source:c:\users\karal\desktop\pizzaforrit\pizza\ui\aboutui.cpp
+1512828127 source:c:\users\karal\desktop\pizzaforrit\pizza\ui\aboutui.cpp
 	"AboutUI.h"
 
 1512670084 c:\users\asdis\desktop\pizzaforrit\pizza\ui\aboutui.h

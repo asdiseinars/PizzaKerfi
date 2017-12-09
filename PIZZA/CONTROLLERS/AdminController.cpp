@@ -320,7 +320,7 @@ void AdminController::removePizzaFromMenu() { ///kemmst ekki í fallið?? get því 
 
 void AdminController::modifySodas() {
     char selection;
-    void displayAdminSodaUI();
+    void displayAdminSodasUI(); ///afhvejru er ekki hægt að kalla í þetta fall??
     cin >> selection;
 
     if (selection == '1') { //All pizzas
@@ -331,7 +331,7 @@ void AdminController::modifySodas() {
         addSodaToMenu();
     }
 
-    else if (selection == '2') { //Remove soda from menu
+    else if (selection == '3') { //Remove soda from menu
         removeSodaFromMenu();
     }
 

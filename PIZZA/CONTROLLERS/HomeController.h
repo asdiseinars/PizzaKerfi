@@ -8,6 +8,7 @@
 #include "CustomerController.h"
 #include "AdminController.h"
 #include "AboutUI.h"
+#include "AdminUI.h"
 
 using namespace GlobalHelp;
 using namespace HomeUI;
@@ -15,6 +16,7 @@ using namespace AdminUI;
 using namespace BakerUI;
 using namespace SalesmanUI;
 using namespace CustomerUI;
+using namespace AboutUI;
 
 class HomeController {
   public:
