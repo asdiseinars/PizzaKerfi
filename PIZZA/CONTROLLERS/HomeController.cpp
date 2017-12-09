@@ -20,7 +20,7 @@ void HomeController::init() {
             selection != '2' &&
             selection != '3' &&
             selection != '4' &&
-            selection != 'h' &&
+            selection != 'c' &&
             selection != 'q' &&
             selection != 'a');
 
@@ -51,8 +51,11 @@ void HomeController::init() {
         customer.init();
     }
 
-    else if (selection == 'h') {
+    else if (selection == 'c') {
         clearScreen();
+        displayLogo();
+        displayContactUsUI();
+        ///back or quit
     }
 
     else if (selection == 'a') {
