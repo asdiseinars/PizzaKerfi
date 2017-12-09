@@ -4,7 +4,6 @@
 
 using namespace std;
 
-
 namespace AdminUI {
     void displayAdminUI();
     void displayAdminToppingUI();
