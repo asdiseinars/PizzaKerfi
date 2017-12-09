@@ -3,9 +3,12 @@
 	<FileVersion major="1" minor="0" />
 	<ActiveTarget name="Debug" />
 <<<<<<< HEAD
+<<<<<<< HEAD
 	<File name="UI\AboutUI.cpp" open="1" top="1" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="185" topLine="0" />
+=======
+>>>>>>> 47638ff12d0205a87c9a323f01f46115b05d26a3
 =======
 	<File name="CONTROLLERS\AdminController.cpp" open="1" top="1" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
@@ -28,4 +31,5 @@
 >>>>>>> 3605dc18ed8a38e8bfa99767664fb262d30a9672
 		</Cursor>
 	</File>
+>>>>>>> 3605dc18ed8a38e8bfa99767664fb262d30a9672
 </CodeBlocks_layout_file>
