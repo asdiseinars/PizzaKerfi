@@ -9,6 +9,7 @@
 #include <stdlib.h>
 #include "Pizza.h"
 #include "BreadsticksData.h"
+#include "SodaData.h"
 
 using namespace GlobalHelp;
 using namespace AdminUI;
@@ -19,6 +20,7 @@ class AdminController {
     ToppingData toppingData;
     LocationData locationData;
     BreadsticksData breadsticksData;
+    SodaData sodaData;
 
   public:
     AdminController();

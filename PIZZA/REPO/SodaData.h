@@ -10,7 +10,6 @@ using namespace std;
 
 class SodaData {
   private:
-    void clearSodas();
 
   public:
     SodaData();

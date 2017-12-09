@@ -20,7 +20,6 @@ class Soda {
 
     void setName(string name);
     void setPrice(double price);
-    void setVerbose(bool verbose);
 
     friend istream& operator >> (istream& in, Soda& soda);
     friend ostream& operator << (ostream& out, Soda& soda);
