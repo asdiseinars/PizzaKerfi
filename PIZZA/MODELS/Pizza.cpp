@@ -30,7 +30,7 @@ vector<Topping> Pizza::getToppings() {
     return toppings;
 }
 
-Crust getCrust() {
+Crust Pizza::getCrust() {
     return crust;
 }
 
@@ -50,7 +50,7 @@ void Pizza::setToppings(vector<Topping> toppings) {
     this->toppings = toppings;
 }
 
-void setCrust(Crust crust) {
+void Pizza::setCrust(Crust crust) {
     this->crust = crust;
 }
 
