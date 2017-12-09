@@ -257,9 +257,9 @@
 1512670078 c:\users\asdis\desktop\pizzaforrit\pizza\ui\customerui.h
 	<iostream>
 
-1512822497 D
+1512828491 D
 
-1512827764 source:c:\users\einarbi\desktop\pizzaforrit\pizza\controllers\bakercontroller.cpp
+1512831932 source:c:\users\einarbi\desktop\pizzaforrit\pizza\controllers\bakercontroller.cpp
 	"BakerController.h"
 
 1512827764 c:\users\einarbi\desktop\pizzaforrit\pizza\controllers\bakercontroller.h
@@ -292,13 +292,14 @@
 	"GlobalHelp.h"
 	"HomeController.h"
 
-1512752576 c:\users\einarbi\desktop\pizzaforrit\pizza\models\pizza.h
+1512832962 c:\users\einarbi\desktop\pizzaforrit\pizza\models\pizza.h
 	"Topping.h"
 	"ToppingData.h"
 	<iostream>
 	<fstream>
 	<vector>
 	<string>
+	"Crust.h"
 
 1512752576 c:\users\einarbi\desktop\pizzaforrit\pizza\models\topping.h
 	<iostream>
@@ -320,7 +321,7 @@
 1512752577 c:\users\einarbi\desktop\pizzaforrit\pizza\ui\homeui.h
 	<iostream>
 
-1512827764 c:\users\einarbi\desktop\pizzaforrit\pizza\controllers\salesmancontroller.h
+1512831932 c:\users\einarbi\desktop\pizzaforrit\pizza\controllers\salesmancontroller.h
 	<iostream>
 	"SalesmanUI.h"
 	"HomeController.h"
@@ -344,10 +345,10 @@
 1512752576 source:c:\users\einarbi\desktop\pizzaforrit\pizza\controllers\customercontroller.cpp
 	"CustomerController.h"
 
-1512828637 source:c:\users\einarbi\desktop\pizzaforrit\pizza\controllers\homecontroller.cpp
+1512831932 source:c:\users\einarbi\desktop\pizzaforrit\pizza\controllers\homecontroller.cpp
 	"HomeController.h"
 
-1512827764 source:c:\users\einarbi\desktop\pizzaforrit\pizza\controllers\salesmancontroller.cpp
+1512831932 source:c:\users\einarbi\desktop\pizzaforrit\pizza\controllers\salesmancontroller.cpp
 	"SalesmanController.h"
 
 1512752576 source:c:\users\einarbi\desktop\pizzaforrit\pizza\global\globalhelp.cpp
@@ -379,13 +380,13 @@
 1512828946 source:c:\users\einarbi\desktop\pizzaforrit\pizza\ui\customerui.cpp
 	"CustomerUI.h"
 
-1512752577 source:c:\users\einarbi\desktop\pizzaforrit\pizza\ui\homeui.cpp
+1512831932 source:c:\users\einarbi\desktop\pizzaforrit\pizza\ui\homeui.cpp
 	"HomeUI.h"
 
 1512305559 source:c:\users\einarbi\desktop\pizzaforrit\pizza\ui\pizzaui.cpp
 	"PizzaUI.h"
 
-1512828928 source:c:\users\einarbi\desktop\pizzaforrit\pizza\ui\salesmanui.cpp
+1512831932 source:c:\users\einarbi\desktop\pizzaforrit\pizza\ui\salesmanui.cpp
 	"SalesmanUI.h"
 
 1512305559 I.h"
@@ -761,10 +762,10 @@
 	<stdio.h>
 	<vector>
 
-1512828637 c:\users\einarbi\desktop\pizzaforrit\pizza\ui\aboutui.h
+1512831932 c:\users\einarbi\desktop\pizzaforrit\pizza\ui\aboutui.h
 	<iostream>
 
-1512828637 source:c:\users\einarbi\desktop\pizzaforrit\pizza\ui\aboutui.cpp
+1512831932 source:c:\users\einarbi\desktop\pizzaforrit\pizza\ui\aboutui.cpp
 	"AboutUI.h"
 
 1512829269 c:\users\karal\desktop\pizzaforrit\pizza\ui\aboutui.h
@@ -843,10 +844,10 @@
 	<stdio.h>
 	<fstream>
 
-1512752576 source:c:\users\einarbi\desktop\pizzaforrit\pizza\repo\crustdata.cpp
+1512831932 source:c:\users\einarbi\desktop\pizzaforrit\pizza\repo\crustdata.cpp
 	"CrustData.h"
 
-1512752576 c:\users\einarbi\desktop\pizzaforrit\pizza\repo\crustdata.h
+1512831932 c:\users\einarbi\desktop\pizzaforrit\pizza\repo\crustdata.h
 	"Crust.h"
 	<fstream>
 	<iostream>
@@ -941,25 +942,23 @@
 	"GlobalController.h"
 
 1512827448 9eeea13e24f00aba4a0d12e23b9594fa3fbf8
-<<<<<<< HEAD
 
 1512827764 c:\users\einarbi\desktop\pizzaforrit\pizza\controllers\globalcontroller.h
-=======
-<<<<<<< HEAD
-=======
 
 1512828491 c:\users\karal\desktop\pizzaforrit\pizza\controllers\globalcontroller.h
->>>>>>> fdc27fa71efd66d6f27f70c1883582381d59eb18
+
+1512828491 27fa71efd66d6f27f70c1883582381d59eb18
 	<iostream>
 	<string>
 	<vector>
 	"Location.h"
 	"LocationData.h"
 
-<<<<<<< HEAD
 1512827764 source:c:\users\einarbi\desktop\pizzaforrit\pizza\controllers\globalcontroller.cpp
 	"GlobalController.h"
-=======
+
+1512827764 troller.h"
+
 1512828491 source:c:\users\karal\desktop\pizzaforrit\pizza\controllers\globalcontroller.cpp
 	"GlobalController.h"
 
@@ -975,6 +974,6 @@
 	"Soda.h"
 	"Topping.h"
 	<string>
->>>>>>> b6b12941e19a1a8789a6d0e5b07c2c11648d8d7d
->>>>>>> fdc27fa71efd66d6f27f70c1883582381d59eb18
+
+1512828491 12941e19a1a8789a6d0e5b07c2c11648d8d7d
 
