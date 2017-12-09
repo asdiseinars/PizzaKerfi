@@ -207,7 +207,7 @@ void AdminController::modifyPizzas() {
         addPizzaToMenu();
     }
 
-    else if (selection == '2') { //Remove pizza from menu
+    else if (selection == '3') { //Remove pizza from menu
         removePizzaFromMenu();
     }
 
@@ -293,13 +293,19 @@ void AdminController::addPizzaToMenu() {
 void AdminController::removePizzaFromMenu() { ///kemmst ekki í fallið?? get því ekki testað hvort það sé rétt
     vector<Pizza> pizzas = pizzaData.retrieveAllPizzas();
     cout << endl;
-/*
-    for(unsigned int i = 0; i < pizzas.size(); i++) {
-        Pizza pizza = pizzas.at(i);
-        cout << "Number: [" << i+1 << "]"<< endl;
-        cout << pizza << endl;
-    }
-*/
+
+    for (unsigned int i = 0; i < pizzas.size(); i++) {
+            cout << "[" << i+1 << "] " << pizzas.at(i).getName() << endl;
+            cout << "----------" << endl;
+            cout << "\t" << pizzas.at(i).getPrice() << "kr." << endl;
+            cout << "\tToppings: " << endl;
+            for(unsigned  int j = 0; j < pizzas.at(i).getToppings().size(); j++){
+                Topping t = pizzas.at(i).getToppings().at(j);
+                cout << "\t\t" << pizzas.at(i).getToppings().at(j).getName() << endl;
+            }
+            cout << endl;
+        }
+
     cout << "What topping do you want to remove? ";
     int input;
     cin >> input;
@@ -310,30 +316,6 @@ void AdminController::removePizzaFromMenu() { ///kemmst ekki í fallið?? get því 
     pizzaData.storeAllPizzas(pizzas);
     cout << endl << "The pizza has been removed from the menu!" << endl << endl;
 
-}
-
-
-void AdminController::modifyBreadsticks() {
-    char selection;
-    void displayAdminBreadSticksUI();
-    cin >> selection;
-
-    if (selection == '1') { //All breadsticks
-        displayAllBreadsticks();
-    }
-
-    else if (selection == '2') { //Add new breadsticks to menu
-        addBreadsticksToMenu();
-    }
-
-    else if (selection == '2') { //Remove breadsticks from menu
-        removeBreadsticksFromMenu();
-    }
-
-    else if (selection == 'b') {
-        clearScreen();
-        init();
-    }
 }
 
 void AdminController::modifySodas() {
@@ -361,8 +343,9 @@ void AdminController::modifySodas() {
 
 
 void AdminController::modifyLocations() {
-    char selection;
+
     displayAdminLocationUI();
+    char selection;
     cin >> selection;
 
     if(selection == '1') { // Displays a list of all locations
@@ -433,6 +416,8 @@ void AdminController::modifyLocations() {
 
 void AdminController::displayAllLocations() {
     vector<Location> locations = locationData.retrieveAllLocations();
+    cout << "LOCATIONS" << endl;
+    cout << "------------------------------------------" << endl;
     if(locations.size() < 1){
         cout << "There are no locations on the menu!" << endl;
     }
@@ -442,6 +427,7 @@ void AdminController::displayAllLocations() {
             cout << location.getName() << endl;
         }
     }
+    cout << "------------------------------------------" << endl;
 }
 
 void AdminController::addLocations() {
@@ -470,14 +456,15 @@ void AdminController::addLocations() {
 
 void AdminController::removeLocations() {
     vector<Location> locations = locationData.retrieveAllLocations();
-    cout << endl;
+
+    cout << "LOCATIONS" << endl;
+    cout << "------------------------------------------" << endl;
 
     for(unsigned int i = 0; i < locations.size(); i++) {
         Location location = locations.at(i);
-        cout << "Number: [" << i+1 << "]"<< endl;
-        location.getName();
-
+        cout << "[" << i+1 << "]"<< location.getName() << endl;
     }
+    cout << "------------------------------------------" << endl;
 
     cout << "What location do you want to remove? ";
     int input;
@@ -490,8 +477,28 @@ void AdminController::removeLocations() {
     cout << endl << "The topping has been removed!" << endl << endl;
 }
 
+void AdminController::modifyBreadsticks() {
+    char selection;
+    displayAdminSideOrderUI();
+    cin >> selection;
 
+    if (selection == '1') { //All breadsticks
+        displayAllBreadsticks();
+    }
 
+    else if (selection == '2') { //Add new breadsticks to menu
+        addBreadsticksToMenu();
+    }
+
+    else if (selection == '2') { //Remove breadsticks from menu
+        removeBreadsticksFromMenu();
+    }
+
+    else if (selection == 'b') {
+        clearScreen();
+        init();
+    }
+}
 
 void AdminController::displayAllBreadsticks() {
     vector<Breadsticks> breadsticks = breadsticksData.retrieveAllBreadsticks();
