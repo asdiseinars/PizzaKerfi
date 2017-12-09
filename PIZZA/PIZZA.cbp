@@ -50,6 +50,8 @@
 		<Unit filename="CONTROLLERS/BakerController.h" />
 		<Unit filename="CONTROLLERS/CustomerController.cpp" />
 		<Unit filename="CONTROLLERS/CustomerController.h" />
+		<Unit filename="CONTROLLERS/GlobalController.cpp" />
+		<Unit filename="CONTROLLERS/GlobalController.h" />
 		<Unit filename="CONTROLLERS/HomeController.cpp" />
 		<Unit filename="CONTROLLERS/HomeController.h" />
 		<Unit filename="CONTROLLERS/SalesmanController.cpp" />
@@ -62,6 +64,8 @@
 		<Unit filename="MODELS/Crust.h" />
 		<Unit filename="MODELS/Location.cpp" />
 		<Unit filename="MODELS/Location.h" />
+		<Unit filename="MODELS/Order.cpp" />
+		<Unit filename="MODELS/Order.h" />
 		<Unit filename="MODELS/Pizza.cpp" />
 		<Unit filename="MODELS/Pizza.h" />
 		<Unit filename="MODELS/Soda.cpp" />
