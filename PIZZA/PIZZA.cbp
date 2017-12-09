@@ -62,6 +62,8 @@
 		<Unit filename="MODELS/Crust.h" />
 		<Unit filename="MODELS/Location.cpp" />
 		<Unit filename="MODELS/Location.h" />
+		<Unit filename="MODELS/Order.cpp" />
+		<Unit filename="MODELS/Order.h" />
 		<Unit filename="MODELS/Pizza.cpp" />
 		<Unit filename="MODELS/Pizza.h" />
 		<Unit filename="MODELS/Soda.cpp" />
