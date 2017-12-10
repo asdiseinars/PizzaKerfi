@@ -9,6 +9,7 @@
 #include "AdminController.h"
 #include "AboutUI.h"
 #include "AdminUI.h"
+#include "CustomerUI.h"
 
 using namespace GlobalHelp;
 using namespace HomeUI;
