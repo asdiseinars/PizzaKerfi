@@ -161,73 +161,6 @@ void AdminController::toppingBackFunction() {
         }
 }
 
-void AdminController::pizzaBackFunction() {
-    displayAdminBackOrQuitUI();
-    char selection;
-    cin >> selection;
-
-        if (selection == 'b') {
-            clearScreen();
-            displayLogo();
-            displayAdminLogo();
-            modifyPizzas();
-        }
-        else if (selection == 'q') {
-            return;
-        }
-
-}
-
-void AdminController::locationBackFunction() {
-    displayAdminBackOrQuitUI();
-    char selection;
-    cin >> selection;
-
-    if (selection == 'b') {
-        clearScreen();
-        displayLogo();
-        displayAdminLogo();
-        modifyLocations();
-    }
-
-    else if (selection == 'q') {
-        return;
-    }
-}
-
-void AdminController::breadsticksBackFunction() {
-    displayAdminBackOrQuitUI();
-    char selection;
-    cin >> selection;
-
-    if (selection == 'b') {
-        clearScreen();
-        displayLogo();
-        displayAdminLogo();
-        modifyBreadsticks();
-    }
-
-    else if (selection == 'q') {
-        return;
-    }
-}
-
-void AdminController::sodaBackFunction(){
-    displayAdminBackOrQuitUI();
-    char selection;
-    cin >> selection;
-
-    if (selection == 'b') {
-        clearScreen();
-        displayLogo();
-        displayAdminLogo();
-        modifySodas();
-    }
-    else if (selection == 'q') {
-        return;
-    }
-}
-
 void AdminController::modifyPizzas() {
     char selection;
     displayAdminPizzaUI();
@@ -267,7 +200,6 @@ void AdminController::addPizzaToMenu() { ///gera fallegra
 
     cout << "CRUSTS" << endl;
     cout << "------------------------------------------" << endl;
-
     vector<Crust> crusts = crustData.retrieveAllCrusts();
     for(unsigned int i = 0; i < crusts.size(); i++) {
         Crust crust = crusts.at(i);
@@ -283,7 +215,6 @@ void AdminController::addPizzaToMenu() { ///gera fallegra
 
     cout << "TOPPINGS" << endl;
     cout << "------------------------------------------" << endl;
-
     vector<Topping> toppings = toppingData.retrieveAllToppings();
     for(unsigned int i = 0; i < toppings.size(); i++) {
         Topping topp = toppings.at(i);
@@ -356,6 +287,22 @@ void AdminController::removePizzaFromMenu() {
 
 }
 
+void AdminController::pizzaBackFunction() {
+    displayAdminBackOrQuitUI();
+    char selection;
+    cin >> selection;
+
+    if (selection == 'b') {
+        clearScreen();
+        displayLogo();
+        displayAdminLogo();
+        modifyPizzas();
+    }
+    else if (selection == 'q') {
+        return;
+    }
+}
+
 void AdminController::modifySodas() {
     char selection;
     displayAdminSodasUI();
@@ -425,6 +372,22 @@ void AdminController::removeSodaFromMenu() {
     cout << endl << "The drink has been removed!" << endl << endl;
 }
 
+void AdminController::sodaBackFunction(){
+    displayAdminBackOrQuitUI();
+    char selection;
+    cin >> selection;
+
+    if (selection == 'b') {
+        clearScreen();
+        displayLogo();
+        displayAdminLogo();
+        modifySodas();
+    }
+    else if (selection == 'q') {
+        return;
+    }
+}
+
 void AdminController::modifyLocations() {
 
     displayAdminLocationUI();
@@ -488,14 +451,7 @@ void AdminController::addLocations() {
 void AdminController::removeLocations() {
     vector<Location> locations = locationData.retrieveAllLocations();
 
-    cout << "LOCATIONS" << endl;
-    cout << "------------------------------------------" << endl;
-
-    for(unsigned int i = 0; i < locations.size(); i++) {
-        Location location = locations.at(i);
-        cout << "[" << i+1 << "]"<< location.getName() << endl;
-    }
-    cout << "------------------------------------------" << endl;
+    globalController.displayAllLocations();
 
     cout << "What location do you want to remove? ";
     int input;
@@ -508,6 +464,23 @@ void AdminController::removeLocations() {
     cout << endl << "The topping has been removed!" << endl << endl;
 }
 
+void AdminController::locationBackFunction() {
+    displayAdminBackOrQuitUI();
+    char selection;
+    cin >> selection;
+
+    if (selection == 'b') {
+        clearScreen();
+        displayLogo();
+        displayAdminLogo();
+        modifyLocations();
+    }
+
+    else if (selection == 'q') {
+        return;
+    }
+}
+
 void AdminController::modifyBreadsticks() {
     char selection;
     displayAdminSideOrderUI();
@@ -518,18 +491,15 @@ void AdminController::modifyBreadsticks() {
         breadsticksBackFunction();
     }
 
-
     else if (selection == '2') { //Add new breadsticks to menu
         addBreadsticksToMenu();
         breadsticksBackFunction();
     }
 
-
     else if (selection == '2') { //Remove breadsticks from menu
         removeBreadsticksFromMenu();
         breadsticksBackFunction();
     }
-
 
     else if (selection == 'b') {
         clearScreen();
@@ -578,7 +548,23 @@ void AdminController::removeBreadsticksFromMenu() {
 
     breadsticksData.storeAllBreadsticks(breadsticks);
     cout << endl << "The side order has been removed!" << endl << endl;
+}
 
+void AdminController::breadsticksBackFunction() {
+    displayAdminBackOrQuitUI();
+    char selection;
+    cin >> selection;
+
+    if (selection == 'b') {
+        clearScreen();
+        displayLogo();
+        displayAdminLogo();
+        modifyBreadsticks();
+    }
+
+    else if (selection == 'q') {
+        return;
+    }
 }
 
 void AdminController::modifyCrust() {
@@ -652,17 +638,17 @@ void AdminController::removeCrustFromMenu() {
 
 void AdminController::crustBackFunction() {
     displayAdminBackOrQuitUI();
-        char selection;
-        cin >> selection;
+    char selection;
+    cin >> selection;
 
-        if (selection == 'b') {
-            clearScreen();
-            displayLogo();
-            displayAdminLogo();
-            modifyCrust();
-        }
+    if (selection == 'b') {
+        clearScreen();
+        displayLogo();
+        displayAdminLogo();
+        modifyCrust();
+    }
 
-        else if (selection == 'q') {
-            return;
-        }
+    else if (selection == 'q') {
+        return;
+    }
 }
