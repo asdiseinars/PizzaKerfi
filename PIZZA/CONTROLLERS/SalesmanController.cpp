@@ -30,8 +30,6 @@ void SalesmanController::modifySalesman(string yourLocation) {
         cin >> selection;
 
         if (selection == '1') {
-            AdminController adminController;
-            adminController.displayAllPizzas();
             ///Her velur salesman pizzu af matseðli
         }
 
