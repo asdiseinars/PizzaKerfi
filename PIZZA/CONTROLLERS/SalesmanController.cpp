@@ -74,10 +74,3 @@ void SalesmanController::modifySalesman(string yourLocation) {
         init();
     }
 }
-
-
-
-
-
-
-
