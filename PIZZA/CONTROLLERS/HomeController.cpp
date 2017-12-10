@@ -78,5 +78,6 @@ void HomeController::init() {
         if (selection == 'b') {
             clearScreen();
             init();
+        }
     }
 }

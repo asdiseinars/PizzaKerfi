@@ -278,7 +278,7 @@
 1512828928 c:\users\einarbi\desktop\pizzaforrit\pizza\ui\bakerui.h
 	<iostream>
 
-1512828637 c:\users\einarbi\desktop\pizzaforrit\pizza\controllers\homecontroller.h
+1512914312 c:\users\einarbi\desktop\pizzaforrit\pizza\controllers\homecontroller.h
 	"PizzaUI.h"
 	"HomeUI.h"
 	"GlobalHelp.h"
@@ -288,6 +288,7 @@
 	"AdminController.h"
 	"AboutUI.h"
 	"AdminUI.h"
+	"CustomerUI.h"
 
 1512752577 c:\users\einarbi\desktop\pizzaforrit\pizza\ui\pizzaui.h
 	<iostream>
@@ -355,7 +356,7 @@
 1512831932 source:c:\users\einarbi\desktop\pizzaforrit\pizza\controllers\homecontroller.cpp
 	"HomeController.h"
 
-1512910737 source:c:\users\einarbi\desktop\pizzaforrit\pizza\controllers\salesmancontroller.cpp
+1512914312 source:c:\users\einarbi\desktop\pizzaforrit\pizza\controllers\salesmancontroller.cpp
 	"SalesmanController.h"
 
 1512752576 source:c:\users\einarbi\desktop\pizzaforrit\pizza\global\globalhelp.cpp
