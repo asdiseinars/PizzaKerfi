@@ -11,6 +11,7 @@
 #include "BreadsticksData.h"
 #include "SodaData.h"
 #include "CrustData.h"
+#include "GlobalController.h"
 
 using namespace GlobalHelp;
 using namespace AdminUI;
@@ -23,19 +24,18 @@ class AdminController {
     BreadsticksData breadsticksData;
     SodaData sodaData;
     CrustData crustData;
+    GlobalController globalController;
 
   public:
     AdminController();
     void init();
 
     void modifyPizzas();
-    void displayAllPizzas();
     void addPizzaToMenu();
     void removePizzaFromMenu();
     void pizzaBackFunction();
 
     void modifyToppings();
-    void displayAllToppings();
     void addTopping();
     void removeTopping();
     void toppingBackFunction();
@@ -47,7 +47,6 @@ class AdminController {
     void breadsticksBackFunction();
 
     void modifySodas();
-    void displayAllSodas();
     void addSodaToMenu();
     void removeSodaFromMenu();
     void sodaBackFunction();

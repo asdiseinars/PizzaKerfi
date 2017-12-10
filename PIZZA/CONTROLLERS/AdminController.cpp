@@ -72,7 +72,7 @@ void AdminController::modifyToppings() {
         clearScreen();
         displayLogo();
         displayAdminLogo();
-        displayAllToppings();
+        globalController.displayAllToppings();
         toppingBackFunction();
     }
 
@@ -97,23 +97,6 @@ void AdminController::modifyToppings() {
     else if (selection == 'b') {
         clearScreen();
         init();
-    }
-}
-
-void AdminController::displayAllToppings() {
-    vector<Topping> toppings = toppingData.retrieveAllToppings();
-    if(toppings.size() < 1){
-        cout << "There are no toppings on the menu! " << endl;
-    }
-    else{
-        cout << "TOPPINGS" << endl;
-        cout << "-----------------------------------------" << endl << endl;
-        for (unsigned int i = 0; i < toppings.size(); i++) {
-            Topping topping = toppings.at(i);
-            cout << "Name: " << topping.getName() << "\t \t Price: " << topping.getPrice() << endl;
-            cout << endl;
-        }
-        cout << "------------------------------------------" << endl;
     }
 }
 
@@ -147,13 +130,7 @@ void AdminController::removeTopping() {
     vector<Topping> toppings = toppingData.retrieveAllToppings();
     cout << endl;
 
-    cout << "TOPPINGS" << endl;
-    cout << "------------------------------------------" << endl;
-    for(unsigned int i = 0; i < toppings.size(); i++) {
-        Topping topp = toppings.at(i);
-        cout << "[" << i+1 << "] \t" << topp.getName() << "\t" << topp.getPrice() << endl;
-    }
-    cout << "------------------------------------------" << endl;
+    globalController.displayAllToppings();
 
     cout << "What topping do you want to remove? ";
     int input;
@@ -233,25 +210,22 @@ void AdminController::breadsticksBackFunction() {
     else if (selection == 'q') {
         return;
     }
-
-
-
 }
 
 void AdminController::sodaBackFunction(){
     displayAdminBackOrQuitUI();
-        char selection;
-        cin >> selection;
+    char selection;
+    cin >> selection;
 
-        if (selection == 'b') {
-            clearScreen();
-            displayLogo();
-            displayAdminLogo();
-            modifySodas();
-        }
-        else if (selection == 'q') {
-            return;
-        }
+    if (selection == 'b') {
+        clearScreen();
+        displayLogo();
+        displayAdminLogo();
+        modifySodas();
+    }
+    else if (selection == 'q') {
+        return;
+    }
 }
 
 void AdminController::modifyPizzas() {
@@ -260,7 +234,7 @@ void AdminController::modifyPizzas() {
     cin >> selection;
 
     if (selection == '1') { //See all pizzas
-        displayAllPizzas();
+        globalController.displayAllPizzas();
         pizzaBackFunction();
     }
 
@@ -277,26 +251,6 @@ void AdminController::modifyPizzas() {
     else if (selection == 'b') {
         clearScreen();
         init();
-    }
-}
-
-void AdminController::displayAllPizzas() {
-    vector<Pizza> pizzas = pizzaData.retrieveAllPizzas();
-    if(pizzas.size() < 1){
-        cout << "There are no pizzas on the menu! " << endl;
-    }
-    else{
-        for (unsigned int i = 0; i < pizzas.size(); i++) {
-            cout << "[" << i+1 << "] " << pizzas.at(i).getName() << " " << pizzas.at(i).getPrice() << "kr." << endl;
-            cout << "----------" << endl;
-            cout << "Crust: " << pizzas.at(i).getCrust().getName() << endl;
-            cout << "\tToppings: " << endl;
-            for(unsigned  int j = 0; j < pizzas.at(i).getToppings().size(); j++){
-                Topping t = pizzas.at(i).getToppings().at(j);
-                cout << "\t\t" << pizzas.at(i).getToppings().at(j).getName() << endl;
-            }
-            cout << endl;
-        }
     }
 }
 
@@ -372,7 +326,6 @@ void AdminController::addPizzaToMenu() { ///gera fallegra
     cout << myName << " has been added to your menu" << endl;
     cout << endl;
 
-
 }
 
 void AdminController::removePizzaFromMenu() {
@@ -409,7 +362,7 @@ void AdminController::modifySodas() {
     cin >> selection;
 
     if (selection == '1') { //All pizzas
-        displayAllSodas();
+        globalController.displayAllSodas();
         sodaBackFunction();
     }
 
@@ -429,6 +382,49 @@ void AdminController::modifySodas() {
     }
 }
 
+void AdminController::addSodaToMenu() {
+    char selection = 'y';
+
+    while(selection == 'y') {
+        string newName;
+        double newPrice;
+
+        cout << "Name: ";
+        cin >> newName;
+        cout << "Price: ";
+        cin >> newPrice;
+        Soda soda(newName, newPrice);
+        sodaData.addSoda(soda);
+        cout << endl << "Do you want to add another drink? (y/n)" << endl;
+
+        cin >> selection;
+
+        while(selection != 'y' && selection != 'n') {
+            cout << endl << "Invalid input! " << endl << endl;
+            cout << "Do you want to add another drink? (y/n)" << endl;
+            cin >> selection;
+            cout << endl;
+        }
+    }
+}
+
+void AdminController::removeSodaFromMenu() {
+    vector<Soda> sodas = sodaData.retrieveAllSodas();
+    cout << endl;
+
+    globalController.displayAllSodas();
+
+    cout << "What drink do you want to remove? ";
+    int input;
+    cin >> input;
+    input -= 1;
+
+    sodas.erase(sodas.begin() + input);
+
+    sodaData.storeAllSodas(sodas);
+    cout << endl << "The drink has been removed!" << endl << endl;
+}
+
 void AdminController::modifyLocations() {
 
     displayAdminLocationUI();
@@ -439,7 +435,7 @@ void AdminController::modifyLocations() {
         clearScreen();
         displayLogo();
         displayAdminLogo();
-        displayAllLocations();
+        globalController.displayAllLocations();
         locationBackFunction();
     }
 
@@ -463,22 +459,6 @@ void AdminController::modifyLocations() {
         clearScreen();
         init();
     }
-}
-
-void AdminController::displayAllLocations() {
-    vector<Location> locations = locationData.retrieveAllLocations();
-    cout << "LOCATIONS" << endl;
-    cout << "------------------------------------------" << endl;
-    if(locations.size() < 1){
-        cout << "There are no locations on the menu!" << endl;
-    }
-    else{
-       for (unsigned int i = 0; i < locations.size(); i++) {
-            Location location = locations.at(i);
-            cout << location.getName() << endl;
-        }
-    }
-    cout << "------------------------------------------" << endl;
 }
 
 void AdminController::addLocations() {
@@ -534,7 +514,7 @@ void AdminController::modifyBreadsticks() {
     cin >> selection;
 
     if (selection == '1') { //All breadsticks
-        displayAllBreadsticks();
+        globalController.displayAllBreadsticks();
         breadsticksBackFunction();
     }
 
@@ -554,23 +534,6 @@ void AdminController::modifyBreadsticks() {
     else if (selection == 'b') {
         clearScreen();
         init();
-    }
-}
-
-void AdminController::displayAllBreadsticks() {
-    vector<Breadsticks> breadsticks = breadsticksData.retrieveAllBreadsticks();
-    if(breadsticks.size() < 1){
-        cout << "There are no side orders on the menu! " << endl;
-    }
-    else{
-        cout << "SIDE ORDERS" << endl;
-        cout << "------------------------------------------" << endl << endl;
-        for (unsigned int i = 0; i < breadsticks.size(); i++) {
-            Breadsticks bread = breadsticks.at(i);
-            cout << "Name: " << bread.getName() << "\t \t Price: " << bread.getPrice() << endl;
-            cout << endl;
-        }
-        cout << "------------------------------------------" << endl;
     }
 }
 
@@ -604,13 +567,7 @@ void AdminController::removeBreadsticksFromMenu() {
     vector<Breadsticks> breadsticks = breadsticksData.retrieveAllBreadsticks();
     cout << endl;
 
-    cout << "SIDE ORDERS" << endl;
-    cout << "------------------------------------------" << endl;
-    for(unsigned int i = 0; i < breadsticks.size(); i++) {
-        Breadsticks bread = breadsticks.at(i);
-        cout << "[" << i+1 << "] \t" << bread.getName() << "\t" << bread.getPrice() << endl;
-    }
-    cout << "------------------------------------------" << endl;
+    globalController.displayAllBreadsticks();
 
     cout << "What side order do you want to remove? ";
     int input;
@@ -624,79 +581,13 @@ void AdminController::removeBreadsticksFromMenu() {
 
 }
 
-void AdminController::displayAllSodas() {
-   vector<Soda> sodas = sodaData.retrieveAllSodas();
-    if(sodas.size() < 1){
-        cout << "There are no drinks on the menu! " << endl;
-    }
-    else{
-        cout << "DRINKS" << endl;
-        cout << "------------------------------------------" << endl << endl;
-        for (unsigned int i = 0; i < sodas.size(); i++) {
-            Soda soda = sodas.at(i);
-            cout << "Name: " << soda.getName() << "\t \t Price: " << soda.getPrice() << endl;
-            cout << endl;
-        }
-        cout << "------------------------------------------" << endl;
-    }
-}
-
-void AdminController::addSodaToMenu() {
-    char selection = 'y';
-
-    while(selection == 'y') {
-        string newName;
-        double newPrice;
-
-        cout << "Name: ";
-        cin >> newName;
-        cout << "Price: ";
-        cin >> newPrice;
-        Soda soda(newName, newPrice);
-        sodaData.addSoda(soda);
-        cout << endl << "Do you want to add another drink? (y/n)" << endl;
-
-        cin >> selection;
-
-        while(selection != 'y' && selection != 'n') {
-            cout << endl << "Invalid input! " << endl << endl;
-            cout << "Do you want to add another drink? (y/n)" << endl;
-            cin >> selection;
-            cout << endl;
-        }
-    }
-}
-
-void AdminController::removeSodaFromMenu() {
-    vector<Soda> sodas = sodaData.retrieveAllSodas();
-    cout << endl;
-
-    cout << "DRINKS" << endl;
-    cout << "------------------------------------------" << endl;
-    for(unsigned int i = 0; i < sodas.size(); i++) {
-        Soda soda = sodas.at(i);
-        cout << "[" << i+1 << "] \t" << soda.getName() << "\t" << soda.getPrice() << endl;
-    }
-    cout << "------------------------------------------" << endl;
-
-    cout << "What drink do you want to remove? ";
-    int input;
-    cin >> input;
-    input -= 1;
-
-    sodas.erase(sodas.begin() + input);
-
-    sodaData.storeAllSodas(sodas);
-    cout << endl << "The drink has been removed!" << endl << endl;
-}
-
 void AdminController::modifyCrust() {
     char selection;
     displayAdminCrustUI();
     cin >> selection;
 
     if (selection == '1') { //All crusts on menu
-        displayAllCrusts();
+        globalController.displayAllCrusts();
         crustBackFunction();
     }
 
@@ -713,23 +604,6 @@ void AdminController::modifyCrust() {
     else if (selection == 'b') {
         clearScreen();
         init();
-    }
-}
-
-void AdminController::displayAllCrusts () {
-   vector<Crust> crusts = crustData.retrieveAllCrusts();
-    if(crusts.size() < 1){
-        cout << "There are no crusts on the menu! " << endl;
-    }
-    else{
-        cout << "CRUSTS" << endl;
-        cout << "------------------------------------------" << endl;
-        for (unsigned int i = 0; i < crusts.size(); i++) {
-            Crust crust = crusts.at(i);
-            cout << "Name: " << crust.getName() << "\t \t Price: " << crust.getPrice() << endl;
-            cout << endl;
-        }
-        cout << "------------------------------------------" << endl;
     }
 }
 
@@ -763,13 +637,7 @@ void AdminController::removeCrustFromMenu() {
     vector<Crust> crusts = crustData.retrieveAllCrusts();
     cout << endl;
 
-    cout << "CRUSTS" << endl;
-    cout << "------------------------------------------" << endl;
-    for(unsigned int i = 0; i < crusts.size(); i++) {
-        Crust crust = crusts.at(i);
-        cout << "[" << i+1 << "] \t" << crust.getName() << "\t" << crust.getPrice() << endl;
-    }
-    cout << "------------------------------------------" << endl;
+    globalController.displayAllCrusts();
 
     cout << "What crust do you want to remove? ";
     int input;

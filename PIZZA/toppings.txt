@@ -6,3 +6,7 @@ Mushroom
 38
 Creamcheese
 39
+Pepperoni
+45
+Spinach
+32
