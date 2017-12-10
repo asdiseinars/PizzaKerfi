@@ -38,3 +38,10 @@ Paprika
 28
 Italskur
 74
+ungfruRVK
+2500
+1
+paprika
+50
+venjulegur
+100
