@@ -1,10 +1,8 @@
-Pepperoni
-50
-Pineapple
-25
 Paprika
 28
 Onion
 32
 Mushroom
 38
+Creamcheese
+39

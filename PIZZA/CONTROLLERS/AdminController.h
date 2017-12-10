@@ -61,6 +61,7 @@ class AdminController {
     void displayAllCrusts();
     void addCrustToMenu();
     void removeCrustFromMenu();
+    void crustBackFunction();
 
     void locationBackFunction();
 
