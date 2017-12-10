@@ -7,6 +7,7 @@
 #include "GlobalController.h"
 #include "Location.h"
 #include "LocationData.h"
+#include "AdminController.h"
 
 using namespace GlobalHelp;
 using namespace std;
