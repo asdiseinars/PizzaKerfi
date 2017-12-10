@@ -8,6 +8,8 @@
 #include "Location.h"
 #include "LocationData.h"
 #include "AdminController.h"
+#include "OrderData.h"
+#include "pizzadata.h"
 
 using namespace GlobalHelp;
 using namespace std;
@@ -18,6 +20,7 @@ class SalesmanController {
   private:
       LocationData locationData;
       GlobalController globalController;
+      PizzaData pizzaData;
 
   public:
     SalesmanController();

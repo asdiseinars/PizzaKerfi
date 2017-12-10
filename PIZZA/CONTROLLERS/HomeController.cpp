@@ -55,14 +55,28 @@ void HomeController::init() {
         clearScreen();
         displayLogo();
         displayContactUsUI();
-        ///back or quit
+
+        cout << endl;
+        displayCustumerBackOrQuitUI();
+        char selection;
+        cin >> selection;
+        if (selection == 'b') {
+            clearScreen();
+            init();
+        } //laga?
     }
 
     else if (selection == 'a') {
         clearScreen();
         displayLogo();
         displayAboutUI();
-        ///back or quit
 
+        cout << endl;
+        displayCustumerBackOrQuitUI();
+        char selection;
+        cin >> selection;
+        if (selection == 'b') {
+            clearScreen();
+            init();
     }
 }

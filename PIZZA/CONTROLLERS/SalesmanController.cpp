@@ -30,6 +30,27 @@ void SalesmanController::modifySalesman(string yourLocation) {
         cin >> selection;
 
         if (selection == '1') {
+
+            vector<Pizza> pizzas = pizzaData.retrieveAllPizzas();
+            int input;
+            globalController.displayAllPizzas();
+
+            cout << "What pizza do you want to add to the order? " << endl;
+
+            cin >> input;
+            input -= 1;
+
+
+
+
+
+
+
+
+
+
+
+
             ///Her velur salesman pizzu af matseðli
         }
 
@@ -72,10 +93,3 @@ void SalesmanController::modifySalesman(string yourLocation) {
         init();
     }
 }
-
-
-
-
-
-
-
