@@ -25,11 +25,21 @@ void SalesmanController::modifySalesman(string yourLocation) {
         clearScreen();
         displayLogo();
         displaySalesmanLogo();
-        displaySalesmanMenuUI();
+        displaySalesmanPizzaUI();
 
         cin >> selection;
 
-        if (selection == 'b') {
+        if (selection == '1') {
+            AdminController adminController;
+            adminController.displayAllPizzas();
+            ///Her velur salesman pizzu af matseðli
+        }
+
+        else if (selection == '2') {
+            ///Her velur salesman pizzu fra grunni
+        }
+
+        else if (selection == 'b') {
             clearScreen();
             init();
         }
@@ -39,7 +49,24 @@ void SalesmanController::modifySalesman(string yourLocation) {
         clearScreen();
         displayLogo();
         displaySalesmanLogo();
-        cout << "Make your own pizza" << endl;
+        displaySalesmanDrinksUI();
+        ///Her velur salesman drykki til ad setja i order
+    }
+
+    else if (selection == '3') {
+        clearScreen();
+        displayLogo();
+        displaySalesmanLogo();
+        displaySalesmanSideOrdersUI();
+        ///Her velur salesman side orders til ad setja i order
+    }
+
+    else if (selection == '4') {
+        clearScreen();
+        displayLogo();
+        displaySalesmanLogo();
+        displaySalesmanCompleteOrderUI();
+        ///Her klárar salesman order
     }
 
     else if (selection == 'b') {
