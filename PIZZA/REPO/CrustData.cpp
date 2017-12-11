@@ -1,7 +1,6 @@
 #include "CrustData.h"
 
-CrustData::CrustData()
-{
+CrustData::CrustData() {
     //ctor
 }
 

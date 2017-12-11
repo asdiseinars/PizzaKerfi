@@ -13,25 +13,24 @@
 using namespace std;
 
 
-class GlobalController
-{
-    private:
-        PizzaData pizzaData;
-        ToppingData toppingData;
-        LocationData locationData;
-        BreadsticksData breadsticksData;
-        SodaData sodaData;
-        CrustData crustData;
+class GlobalController {
+  private:
+    PizzaData pizzaData;
+    ToppingData toppingData;
+    LocationData locationData;
+    BreadsticksData breadsticksData;
+    SodaData sodaData;
+    CrustData crustData;
 
-    public:
-        GlobalController();
-        string chooseLocation();
-        void displayAllToppings();
-        void displayAllPizzas();
-        void displayAllSodas();
-        void displayAllLocations();
-        void displayAllBreadsticks();
-        void displayAllCrusts();
+  public:
+    GlobalController();
+    string chooseLocation();
+    void displayAllToppings();
+    void displayAllPizzas();
+    void displayAllSodas();
+    void displayAllLocations();
+    void displayAllBreadsticks();
+    void displayAllCrusts();
 
 
 

@@ -15,6 +15,7 @@ class OrderData {
     void addOrderToOrders(Order& order);
     vector<Order> retrieveAllOrders();
     void storeAllOrders(vector<Order> order);
+    vector<Order> getOrderForLocation(string location);
 };
 
 #endif // ORDERDATA_H

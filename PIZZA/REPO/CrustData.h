@@ -10,13 +10,13 @@ using namespace std;
 
 class CrustData {
 
-      private:
+  private:
 
-      public:
-        CrustData();
-        void storeAllCrusts(vector<Crust> crust);
-        vector<Crust> retrieveAllCrusts();
-        void addCrust(Crust& crust);
+  public:
+    CrustData();
+    void storeAllCrusts(vector<Crust> crust);
+    vector<Crust> retrieveAllCrusts();
+    void addCrust(Crust& crust);
 };
 
 #endif // TOPPINGDATA_H

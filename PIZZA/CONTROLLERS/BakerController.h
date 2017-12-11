@@ -7,6 +7,9 @@
 #include "Location.h"
 #include "LocationData.h"
 #include <iostream>
+#include "OrderData.h"
+#include "Order.h"
+#include <Vector>
 
 using namespace GlobalHelp;
 using namespace BakerUI;
@@ -14,14 +17,15 @@ using namespace std;
 
 class BakerController {
   private:
-      LocationData locationData;
-      GlobalController globalController;
+    LocationData locationData;
+    GlobalController globalController;
+    OrderData orderData;
 
   public:
     BakerController();
     void init();
     string chooseLocation();
-    void modifyBakerOrders();
+    void modifyBakerOrders(string yourLocation);
 
 };
 

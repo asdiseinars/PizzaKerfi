@@ -1,10 +1,10 @@
 #include "LocationData.h"
 
-LocationData::LocationData(){
+LocationData::LocationData() {
 }
 
 
-void LocationData::addLocation(Location& location){
+void LocationData::addLocation(Location& location) {
     ofstream fout;
     fout.open("location.txt", ios::app);
 
@@ -14,7 +14,7 @@ void LocationData::addLocation(Location& location){
 
 }
 
-vector<Location> LocationData::retrieveAllLocations(){
+vector<Location> LocationData::retrieveAllLocations() {
     vector <Location> locations;
     Location location;
 
@@ -31,7 +31,7 @@ vector<Location> LocationData::retrieveAllLocations(){
     return locations;
 }
 
-void LocationData::storeAllLocations(vector<Location> locations){
+void LocationData::storeAllLocations(vector<Location> locations) {
     ofstream fout;
     fout.open("location.txt");
 

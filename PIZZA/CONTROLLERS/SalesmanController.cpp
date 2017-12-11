@@ -16,6 +16,12 @@ void SalesmanController::modifySalesman(string yourLocation) {
     displayLogo();
     displaySalesmanLogo();
     cout << "\033[4m" << "Your location is " << yourLocation << "\033[0m" << endl << endl;
+    ///step 1
+
+    cout << "PIZZA MENU" << endl;
+    cout << "------------------------------------------" << endl;
+    globalController.displayAllPizzas();
+    cout << "------------------------------------------" << endl;
 
     int pizzaFromMenuCount = getPizzaFromMenuCount();
     vector<Pizza> pizzasToOrder = orderPizzaFromMenu(pizzaFromMenuCount);
@@ -23,23 +29,31 @@ void SalesmanController::modifySalesman(string yourLocation) {
 
     displayLogo();
     displaySalesmanLogo();
+    cout << "\033[4m" << "Your location is " << yourLocation << "\033[0m" << endl << endl;
+    ///step 2
     int pizzasFromScratchCount = getPizzaFromScratchCount();
     vector<Pizza> pizzasFromScratchOrder = orderPizzaFromScratch(pizzasFromScratchCount);
     clearScreen();
 
     displayLogo();
     displaySalesmanLogo();
+    cout << "\033[4m" << "Your location is " << yourLocation << "\033[0m" << endl << endl;
+    /// step 3
     int breadsticksCount = getBreadsticksCount();
     vector<Breadsticks> breadsticksToOrder = orderBreadsticksFromMenu(breadsticksCount);
     clearScreen();
 
     displayLogo();
     displaySalesmanLogo();
+    cout << "\033[4m" << "Your location is " << yourLocation << "\033[0m" << endl << endl;
+    ///step 4
     int sodaCount = getSodaCount();
     vector<Soda> sodasToOrder = orderSodaFromMenu(sodaCount);
     clearScreen();
 
     displayLogo();
+    ///complete order
+    display
 
     Order newOrder(yourLocation, pizzasToOrder, pizzaFromMenuCount, pizzasFromScratchOrder, pizzasFromScratchCount, breadsticksToOrder, breadsticksCount, sodasToOrder, sodaCount);
     orderData.addOrderToOrders(newOrder);
@@ -55,7 +69,6 @@ int SalesmanController::getPizzaFromMenuCount() {
 
 vector<Pizza> SalesmanController::orderPizzaFromMenu(int pizzasFromMenuCount) {
     vector<Pizza> pizzas = pizzaData.retrieveAllPizzas();
-    globalController.displayAllPizzas();
 
     vector<Pizza> pizzaToOrder;
 
