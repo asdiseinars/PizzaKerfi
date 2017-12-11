@@ -10,9 +10,6 @@
 
 using namespace std;
 
-const int MAX_TOPPINGS = 15;
-
-
 class Pizza {
   private:
     string name;

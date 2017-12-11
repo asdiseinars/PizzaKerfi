@@ -178,7 +178,7 @@
 1512670078 c:\users\asdis\desktop\pizzaforrit\pizza\ui\homeui.h
 	<iostream>
 
-1512828681 c:\users\asdis\desktop\pizzaforrit\pizza\controllers\homecontroller.h
+1512914341 c:\users\asdis\desktop\pizzaforrit\pizza\controllers\homecontroller.h
 	"PizzaUI.h"
 	"HomeUI.h"
 	"GlobalHelp.h"
@@ -188,6 +188,7 @@
 	"AdminController.h"
 	"AboutUI.h"
 	"AdminUI.h"
+	"CustomerUI.h"
 
 1512670085 c:\users\asdis\desktop\pizzaforrit\pizza\global\globalhelp.h
 	<stdlib.h>
@@ -196,7 +197,7 @@
 1512831788 source:c:\users\asdis\desktop\pizzaforrit\pizza\ui\homeui.cpp
 	"HomeUI.h"
 
-1512831788 source:c:\users\asdis\desktop\pizzaforrit\pizza\controllers\homecontroller.cpp
+1512991940 source:c:\users\asdis\desktop\pizzaforrit\pizza\controllers\homecontroller.cpp
 	"HomeController.h"
 
 1512508537 source:c:\users\asdis\desktop\pizzaforrit\pizza\global\globalhelp.cpp
@@ -225,10 +226,10 @@
 	"LocationData.h"
 	<iostream>
 
-1512911150 source:c:\users\asdis\desktop\pizzaforrit\pizza\controllers\salesmancontroller.cpp
+1512914341 source:c:\users\asdis\desktop\pizzaforrit\pizza\controllers\salesmancontroller.cpp
 	"SalesmanController.h"
 
-1512909881 c:\users\asdis\desktop\pizzaforrit\pizza\controllers\salesmancontroller.h
+1512914341 c:\users\asdis\desktop\pizzaforrit\pizza\controllers\salesmancontroller.h
 	<iostream>
 	"SalesmanUI.h"
 	"HomeController.h"
@@ -237,6 +238,8 @@
 	"Location.h"
 	"LocationData.h"
 	"AdminController.h"
+	"OrderData.h"
+	"pizzadata.h"
 
 1512909881 source:c:\users\asdis\desktop\pizzaforrit\pizza\ui\salesmanui.cpp
 	"SalesmanUI.h"
@@ -398,7 +401,7 @@
 
 1512305559 I.h"
 
-1512911685 source:c:\users\asdis\desktop\pizzaforrit\pizza\controllers\admincontroller.cpp
+1512912762 source:c:\users\asdis\desktop\pizzaforrit\pizza\controllers\admincontroller.cpp
 	"AdminController.h"
 	<iostream>
 
