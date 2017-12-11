@@ -3,22 +3,37 @@
 Order::Order()
 {
     string location = "";
+    int pizzasFromMenuCount = 0;
+    int pizzasFromScratchCount = 0;
+    int breadsticksCount = 0;
+    int sodasCount = 0;
+
 }
 
+Order::Order(string location, vector<Pizza> pizzasFromMenu, int pizzasFromMenuCount, vector<Pizza> pizzasFromScratch, int pizzasFromScratchCount,
+             vector<Breadsticks> breadsticks, int breadsticksCount, vector<Soda> sodas, int sodasCount) {
 
-Order::Order(string location, vector<Pizza> pizzas, vector<Breadsticks> breadsticks, vector<Soda> sodas) {
     this->location = location;
-    this->pizzas = pizzas;
+    this->pizzasFromMenu = pizzasFromMenu;
+    this->pizzasFromMenuCount = pizzasFromMenuCount;
+    this->pizzasFromScratch = pizzasFromScratch;
+    this->pizzasFromScratchCount = pizzasFromScratchCount;
     this->breadsticks = breadsticks;
+    this->breadsticksCount = breadsticksCount;
     this->sodas = sodas;
+    this->sodasCount = sodasCount;
 }
 
 void Order::setLocation(string location) {
     this->location = location;
 }
 
-void Order::setPizzas(vector<Pizza> pizzas) {
-    this->pizzas = pizzas;
+void Order::setPizzasFromMenu(vector<Pizza> pizzasFromMenu) {
+    this->pizzasFromMenu = pizzasFromMenu;
+}
+
+void Order::setPizzasFromScratch(vector<Pizza> pizzasFromScratch) {
+    this->pizzasFromScratch = pizzasFromScratch;
 }
 
 void Order::setBreadsticks(vector<Breadsticks> breadsticks) {
@@ -33,8 +48,12 @@ string Order::getLocation() {
     return location;
 }
 
-vector<Pizza> Order::getPizzas() {
-    return pizzas;
+vector<Pizza> Order::getpizzasFromMenu() {
+    return pizzasFromMenu;
+}
+
+vector<Pizza> Order::getpizzasFromScratch() {
+    return pizzasFromScratch;
 }
 
 vector<Breadsticks> Order::getBreadsticks() {
@@ -48,34 +67,52 @@ vector<Soda> Order::getSodas() {
 ofstream& operator << (ofstream& fout, Order& order) {
     fout << order.location << endl;
 
-    for (unsigned int i = 0; i < order.pizzas.size(); i++) {
-        fout << order.pizzas[i] << endl;
+    for (unsigned int i = 0; i < order.pizzasFromMenu.size(); i++) {
+        fout << order.pizzasFromMenu[i];
     }
+    fout << order.pizzasFromMenuCount << endl;
+
+    for (unsigned int i = 0; i < order.pizzasFromScratch.size(); i++) {
+        fout << order.pizzasFromScratch[i];
+    }
+    fout << order.pizzasFromScratchCount << endl;
 
     for (unsigned int i = 0; i < order.breadsticks.size(); i++) {
-        fout << order.breadsticks[i] << endl;
+        fout << order.breadsticks[i];
     }
+    fout << order.breadsticksCount << endl;
 
     for (unsigned int i = 0; i < order.sodas.size(); i++) {
-        fout << order.sodas[i] << endl;
+        fout << order.sodas[i];
     }
+    fout << order.sodasCount << endl;
+
     return fout;
 }
 
 ifstream& operator >> (ifstream& fin, Order& order) {
     fin >> order.location;
 
-    for (unsigned int i = 0; i < order.pizzas.size(); i++) {
-    fin >> order.pizzas[i];
+    for (unsigned int i = 0; i < order.pizzasFromMenu.size(); i++) {
+    fin >> order.pizzasFromMenu[i];
     }
+    fin >> order.pizzasFromMenuCount;
+
+    for (unsigned int i = 0; i < order.pizzasFromScratch.size(); i++) {
+    fin >> order.pizzasFromScratch[i];
+    }
+    fin >> order.pizzasFromScratchCount;
 
     for (unsigned int i = 0; i < order.breadsticks.size(); i++) {
         fin >> order.breadsticks[i];
     }
+    fin >> order.breadsticksCount;
 
     for (unsigned int i = 0; i < order.sodas.size(); i++) {
         fin >> order.sodas[i];
     }
+    fin >> order.sodasCount;
+
     return fin;
 }
 
