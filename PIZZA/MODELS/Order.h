@@ -13,21 +13,30 @@ class Order
 {
      private:
          string location;
-         vector<Pizza> pizzas;
+         vector<Pizza> pizzasFromMenu;
+         int pizzasFromMenuCount;
+         vector<Pizza> pizzasFromScratch;
+         int pizzasFromScratchCount;
          vector<Breadsticks> breadsticks;
+         int breadsticksCount;
          vector<Soda> sodas;
+         int sodasCount;
+
 
     public:
         Order();
-        Order(string location, vector<Pizza> pizzas, vector<Breadsticks> breadsticks, vector<Soda> sodas);
+        Order(string location, vector<Pizza> pizzasFromMenu, int pizzasFromMenuCount, vector<Pizza> pizzasFromScratch, int pizzasFromScratchCount,
+             vector<Breadsticks> breadsticks, int breadsticksCount, vector<Soda> sodas, int sodasCount);
 
         void setLocation(string location);
-        void setPizzas(vector<Pizza> pizzas);
+        void setPizzasFromMenu(vector<Pizza> pizzasFromMenu);
+        void setPizzasFromScratch(vector<Pizza> pizzasFromScratch);
         void setBreadsticks(vector<Breadsticks> breadsticks);
         void setSodas(vector<Soda> sodas);
 
         string getLocation();
-        vector<Pizza> getPizzas();
+        vector<Pizza> getpizzasFromMenu();
+        vector<Pizza> getpizzasFromScratch();
         vector<Breadsticks> getBreadsticks();
         vector<Soda> getSodas();
 
