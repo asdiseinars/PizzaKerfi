@@ -24,19 +24,16 @@ void HomeController::init() {
             selection != 'q' &&
             selection != 'a');
 
-
     if(selection == '1') {
         clearScreen();
         AdminController admin;
         admin.init();
-
     }
 
     else if (selection == '2') {
         clearScreen();
         SalesmanController salesman;
         salesman.init();
-
     }
 
     else if (selection == '3') {
