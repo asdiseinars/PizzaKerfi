@@ -7,8 +7,7 @@
 
 using namespace std;
 
-class Crust
-{
+class Crust {
   private:
     string name;
     double price;

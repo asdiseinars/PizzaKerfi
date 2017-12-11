@@ -10,13 +10,13 @@ using namespace std;
 
 class ToppingData {
 
-      private:
+  private:
 
-      public:
-        ToppingData();
-        void storeAllToppings(vector<Topping> toppings);
-        vector<Topping> retrieveAllToppings();
-        void addTopping(Topping& topping);
+  public:
+    ToppingData();
+    void storeAllToppings(vector<Topping> toppings);
+    vector<Topping> retrieveAllToppings();
+    void addTopping(Topping& topping);
 };
 
 #endif // TOPPINGDATA_H

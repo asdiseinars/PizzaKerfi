@@ -123,7 +123,7 @@
 1512142759 c:\users\einarbi\desktop\pizzaforrit\pizza\pizza\global\globalhelp.h
 	<stdlib.h>
 
-1512834715 source:c:\users\asdis\desktop\pizzaforrit\pizza\models\pizza.cpp
+1513014212 source:c:\users\asdis\desktop\pizzaforrit\pizza\models\pizza.cpp
 	"Pizza.h"
 
 1512993949 c:\users\asdis\desktop\pizzaforrit\pizza\models\pizza.h
@@ -214,10 +214,10 @@
 1512833651 c:\users\asdis\desktop\pizzaforrit\pizza\ui\bakerui.h
 	<iostream>
 
-1512831723 source:c:\users\asdis\desktop\pizzaforrit\pizza\controllers\bakercontroller.cpp
+1513008601 source:c:\users\asdis\desktop\pizzaforrit\pizza\controllers\bakercontroller.cpp
 	"BakerController.h"
 
-1512827448 c:\users\asdis\desktop\pizzaforrit\pizza\controllers\bakercontroller.h
+1513008322 c:\users\asdis\desktop\pizzaforrit\pizza\controllers\bakercontroller.h
 	"BakerUI.h"
 	"HomeController.h"
 	"GlobalHelp.h"
@@ -225,8 +225,11 @@
 	"Location.h"
 	"LocationData.h"
 	<iostream>
+	"OrderData.h"
+	"Order.h"
+	<Vector>
 
-1513003269 source:c:\users\asdis\desktop\pizzaforrit\pizza\controllers\salesmancontroller.cpp
+1513010245 source:c:\users\asdis\desktop\pizzaforrit\pizza\controllers\salesmancontroller.cpp
 	"SalesmanController.h"
 
 1513003259 c:\users\asdis\desktop\pizzaforrit\pizza\controllers\salesmancontroller.h
@@ -505,10 +508,10 @@
 	<stdio.h>
 	<vector>
 
-1512826715 source:c:\users\asdis\desktop\pizzaforrit\pizza\repo\orderdata.cpp
+1513012480 source:c:\users\asdis\desktop\pizzaforrit\pizza\repo\orderdata.cpp
 	"OrderData.h"
 
-1512826715 c:\users\asdis\desktop\pizzaforrit\pizza\repo\orderdata.h
+1513005648 c:\users\asdis\desktop\pizzaforrit\pizza\repo\orderdata.h
 	<iostream>
 	"Order.h"
 	<vector>
@@ -942,10 +945,10 @@
 
 1512822497 6aba656b123d3c8e5993d1fd082fd27c0da2a
 
-1512826715 source:c:\users\asdis\desktop\pizzaforrit\pizza\models\order.cpp
+1513012141 source:c:\users\asdis\desktop\pizzaforrit\pizza\models\order.cpp
 	"Order.h"
 
-1513003624 c:\users\asdis\desktop\pizzaforrit\pizza\models\order.h
+1513010245 c:\users\asdis\desktop\pizzaforrit\pizza\models\order.h
 	"Breadsticks.h"
 	"Crust.h"
 	"Location.h"

@@ -7,14 +7,13 @@
 
 using namespace std;
 
-class LocationData
-{
-    private:
-    public:
-        LocationData();
-        void addLocation(Location& location);
-        void storeAllLocations(vector<Location> locations);
-        vector<Location> retrieveAllLocations();
+class LocationData {
+  private:
+  public:
+    LocationData();
+    void addLocation(Location& location);
+    void storeAllLocations(vector<Location> locations);
+    vector<Location> retrieveAllLocations();
 
 };
 

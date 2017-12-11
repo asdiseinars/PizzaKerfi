@@ -22,14 +22,14 @@ using namespace SalesmanUI;
 
 class SalesmanController {
   private:
-      LocationData locationData;
-      GlobalController globalController;
-      PizzaData pizzaData;
-      CrustData crustData;
-      ToppingData toppingData;
-      BreadsticksData breadsticksData;
-      SodaData sodaData;
-      OrderData orderData;
+    LocationData locationData;
+    GlobalController globalController;
+    PizzaData pizzaData;
+    CrustData crustData;
+    ToppingData toppingData;
+    BreadsticksData breadsticksData;
+    SodaData sodaData;
+    OrderData orderData;
 
   public:
     SalesmanController();

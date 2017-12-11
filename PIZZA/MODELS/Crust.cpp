@@ -1,8 +1,8 @@
 #include "Crust.h"
 
 Crust::Crust() {
-   name = "";
-   price = 0;
+    name = "";
+    price = 0;
 }
 
 Crust::Crust(string name, double price) {

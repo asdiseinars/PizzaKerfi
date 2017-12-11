@@ -6,8 +6,8 @@ using namespace std;
 
 namespace AboutUI {
 
-    void displayAboutUI();
-    void displayContactUsUI();
+void displayAboutUI();
+void displayContactUsUI();
 };
 
 #endif // ABOUTUI_H
