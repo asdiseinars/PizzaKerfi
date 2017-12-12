@@ -32,8 +32,8 @@ void GlobalHelp::displaySalesmanLogo() {
 
 }
 
-void GlobalHelp::displayCustomerLogo() {
-    cout << "----- CUSTOMER ------" << endl;
+void GlobalHelp::displayDeliveryLogo() {
+    cout << "----- DELIVERY ------" << endl;
     cout << endl;
 
 }

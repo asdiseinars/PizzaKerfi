@@ -69,7 +69,7 @@ void AdminController::init() {
     }
 }
 
-void AdminUI::validateUserInputModifyToppings(char selection) {
+/*void AdminUI::validateUserInputModifyToppings(char selection) {
     if(selection == '2') {
         try{
 
@@ -78,7 +78,7 @@ void AdminUI::validateUserInputModifyToppings(char selection) {
             cout << "Invalid input!" << endl;
         }
     }
-}
+}*/
 
 void AdminController::modifyToppings() {
     char selection;

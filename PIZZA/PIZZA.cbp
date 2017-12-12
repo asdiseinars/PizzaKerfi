@@ -50,8 +50,8 @@
 		<Unit filename="CONTROLLERS/AdminController.h" />
 		<Unit filename="CONTROLLERS/BakerController.cpp" />
 		<Unit filename="CONTROLLERS/BakerController.h" />
-		<Unit filename="CONTROLLERS/CustomerController.cpp" />
-		<Unit filename="CONTROLLERS/CustomerController.h" />
+		<Unit filename="CONTROLLERS/DeliveryController.cpp" />
+		<Unit filename="CONTROLLERS/DeliveryController.h" />
 		<Unit filename="CONTROLLERS/GlobalController.cpp" />
 		<Unit filename="CONTROLLERS/GlobalController.h" />
 		<Unit filename="CONTROLLERS/HomeController.cpp" />
@@ -94,8 +94,8 @@
 		<Unit filename="UI/AdminUI.h" />
 		<Unit filename="UI/BakerUI.cpp" />
 		<Unit filename="UI/BakerUI.h" />
-		<Unit filename="UI/CustomerUI.cpp" />
-		<Unit filename="UI/CustomerUI.h" />
+		<Unit filename="UI/DeliveryUI.cpp" />
+		<Unit filename="UI/DeliveryUI.h" />
 		<Unit filename="UI/HomeUI.cpp" />
 		<Unit filename="UI/HomeUI.h" />
 		<Unit filename="UI/SalesmanUI.cpp" />
