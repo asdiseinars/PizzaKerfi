@@ -69,17 +69,6 @@ void AdminController::init() {
     }
 }
 
-void AdminUI::validateUserInputModifyToppings(char selection) {
-    if(selection == '2') {
-        try{
-
-        }
-        catch (InvalidPriceExceptions) {
-            cout << "Invalid input!" << endl;
-        }
-    }
-}
-
 void AdminController::modifyToppings() {
     char selection;
     displayAdminToppingUI();
@@ -115,6 +104,12 @@ void AdminController::modifyToppings() {
         clearScreen();
         init();
     }
+    else {
+        clearScreen();
+        displayLogo();
+        displayAdminLogo();
+        modifyToppings();
+    }
 }
 
 void AdminController::addTopping() {
@@ -144,6 +139,7 @@ void AdminController::addTopping() {
 }
 
 void AdminController::removeTopping() {
+
     vector<Topping> toppings = toppingData.retrieveAllToppings();
     cout << endl;
 
@@ -154,11 +150,14 @@ void AdminController::removeTopping() {
     cin >> input;
     input -= 1;
 
-    toppings.erase(toppings.begin() + input);
+    if (input > toppings.size() || input <= 0) {
+        cout << "Invalid input!" << endl << endl;
 
-    toppingData.storeAllToppings(toppings);
-    cout << endl << "The topping has been removed!" << endl << endl;
-
+    } else {
+        toppings.erase(toppings.begin() + input);
+        toppingData.storeAllToppings(toppings);
+        cout << endl << "The topping has been removed!" << endl << endl;
+    }
 }
 
 void AdminController::toppingBackFunction() {
@@ -189,11 +188,17 @@ void AdminController::modifyPizzas() {
     }
 
     else if (selection == '2') { //Add new pizza to menu
+        clearScreen();
+        displayLogo();
+        displayAdminLogo();
         addPizzaToMenu();
         pizzaBackFunction();
     }
 
     else if (selection == '3') { //Remove pizza from menu
+        clearScreen();
+        displayLogo();
+        displayAdminLogo();
         removePizzaFromMenu();
         pizzaBackFunction();
     }
@@ -278,16 +283,21 @@ void AdminController::removePizzaFromMenu() {
             cout << endl;
         }
 
-    cout << "What topping do you want to remove? ";
+    cout << "What pizza do you want to remove? ";
     int input;
     cin >> input;
     input -= 1;
 
-    pizzas.erase(pizzas.begin() + input);
+    if (input > pizzas.size() || input <= 0) {
+            cout << "Invalid input!" << endl << endl;
+    }
 
-    pizzaData.storeAllPizzas(pizzas);
-    cout << endl << "The pizza has been removed from the menu!" << endl << endl;
+    else {
+        pizzas.erase(pizzas.begin() + input);
 
+        pizzaData.storeAllPizzas(pizzas);
+        cout << endl << "The pizza has been removed from the menu!" << endl << endl;
+    }
 }
 
 void AdminController::pizzaBackFunction() {

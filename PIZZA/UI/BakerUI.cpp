@@ -8,8 +8,8 @@ void BakerUI::displayBakerOrderUI() {
 }
 
 void BakerUI::displayBakerBackOrQuitUI() {
-    cout << "b: Go back" << endl;
-    cout << "q: Quit" << endl;
+    cout << "Press b to go back" << endl;
+    cout << "Press anything else to quit" << endl;
 }
 
 
