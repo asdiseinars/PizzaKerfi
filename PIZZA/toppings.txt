@@ -18,3 +18,7 @@ Spinach
 32
 extraSkinka
 200
+Ostur
+34
+Sosa
+59

@@ -12,6 +12,7 @@
 #include "SodaData.h"
 #include "CrustData.h"
 #include "GlobalController.h"
+#include "InvalidPriceExceptions.h"
 
 using namespace GlobalHelp;
 using namespace AdminUI;
@@ -55,14 +56,13 @@ class AdminController {
     void displayAllLocations();
     void addLocations();
     void removeLocations();
+    void locationBackFunction();
 
     void modifyCrust();
     void displayAllCrusts();
     void addCrustToMenu();
     void removeCrustFromMenu();
     void crustBackFunction();
-
-    void locationBackFunction();
 
 };
 

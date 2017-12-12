@@ -1,0 +1,6 @@
+#ifndef INVALIDPRICEEXCEPTIONS_H
+#define INVALIDPRICEEXCEPTIONS_H
+
+class InvalidPriceExceptions { };
+
+#endif // INVALIDPRICEEXCEPTIONS_H

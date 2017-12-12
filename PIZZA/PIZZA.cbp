@@ -19,6 +19,7 @@
 					<Add directory="CONTROLLERS" />
 					<Add directory="GLOBAL" />
 					<Add directory="MODEL" />
+					<Add directory="EXCEPTIONS" />
 				</Compiler>
 			</Target>
 			<Target title="Release">
@@ -34,6 +35,7 @@
 					<Add directory="CONTROLLERS" />
 					<Add directory="GLOBAL" />
 					<Add directory="MODEL" />
+					<Add directory="EXCEPTIONS" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />

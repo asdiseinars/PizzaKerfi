@@ -19,6 +19,7 @@ void AdminController::init() {
         displayLogo();
         displayAdminLogo();
         modifyToppings();
+
     }
 
     else if (selection == '2') { // Add/edit pizzas
@@ -60,10 +61,26 @@ void AdminController::init() {
         HomeController home;
         home.init();
     }
+
+    else {
+        clearScreen();
+        init();
+
+    }
+}
+
+void AdminUI::validateUserInputModifyToppings(char selection) {
+    if(selection == '2') {
+        try{
+
+        }
+        catch (InvalidPriceExceptions) {
+            cout << "Invalid input!" << endl;
+        }
+    }
 }
 
 void AdminController::modifyToppings() {
-
     char selection;
     displayAdminToppingUI();
     cin >> selection;

@@ -415,11 +415,11 @@
 
 1512305559 I.h"
 
-1513074603 source:c:\users\asdis\desktop\pizzaforrit\pizza\controllers\admincontroller.cpp
+1513078965 source:c:\users\asdis\desktop\pizzaforrit\pizza\controllers\admincontroller.cpp
 	"AdminController.h"
 	<iostream>
 
-1512910907 c:\users\asdis\desktop\pizzaforrit\pizza\controllers\admincontroller.h
+1513078947 c:\users\asdis\desktop\pizzaforrit\pizza\controllers\admincontroller.h
 	"AdminUI.h"
 	"HomeController.h"
 	"GlobalHelp.h"
@@ -432,11 +432,12 @@
 	"SodaData.h"
 	"CrustData.h"
 	"GlobalController.h"
+	"InvalidPriceExceptions.h"
 
 1513015251 c:\users\asdis\desktop\pizzaforrit\pizza\ui\adminui.h
 	<iostream>
 
-1512833407 source:c:\users\asdis\desktop\pizzaforrit\pizza\ui\adminui.cpp
+1513078947 source:c:\users\asdis\desktop\pizzaforrit\pizza\ui\adminui.cpp
 	"AdminUI.h"
 
 1512308403 c2372843d10f45258e97c51b0ec54b2eee2d8
@@ -950,7 +951,7 @@
 
 1512822497 6aba656b123d3c8e5993d1fd082fd27c0da2a
 
-1513076762 source:c:\users\asdis\desktop\pizzaforrit\pizza\models\order.cpp
+1513076995 source:c:\users\asdis\desktop\pizzaforrit\pizza\models\order.cpp
 	"Order.h"
 
 1513076762 c:\users\asdis\desktop\pizzaforrit\pizza\models\order.h
@@ -1021,4 +1022,9 @@
 	<string>
 
 1512828491 12941e19a1a8789a6d0e5b07c2c11648d8d7d
+
+1513077944 source:c:\users\asdis\desktop\pizzaforrit\pizza\exceptions\invalidpriceexceptions.cpp
+	"InvalidPriceExceptions.h"
+
+1513077944 c:\users\asdis\desktop\pizzaforrit\pizza\exceptions\invalidpriceexceptions.h
 
