@@ -27,8 +27,8 @@ vector<Order> OrderData::retrieveAllOrders() {
     return orders;
 }
 
-void OrderData::storeAllOrders(vector<Order> orders) {
-
+void OrderData::storeAllOrders(vector<Order> orders)
+{
     ofstream fout;
     fout.open("orders.txt");
     for(unsigned int i = 0; i < orders.size(); i++) {
@@ -59,9 +59,8 @@ vector<Order> OrderData::getOrderForLocation(string location) {
         }
 
     }
+
     orders.pop_back();
 
     return orderForLocation;
-
 }
-

@@ -26,6 +26,7 @@ class BakerController {
     void init();
     string chooseLocation();
     void modifyBakerOrders(string yourLocation);
+    void displayOrders(string yourLocation);
 
 };
 

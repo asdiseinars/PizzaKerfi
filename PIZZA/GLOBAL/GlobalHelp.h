@@ -12,7 +12,7 @@ void displayAdminLogo();
 void displayAdminLogo();
 void displayBakerLogo();
 void displaySalesmanLogo();
-void displayCustomerLogo();
+void displayDeliveryLogo();
 void displayHomeLogo();
 
 };
