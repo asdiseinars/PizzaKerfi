@@ -7,11 +7,11 @@ Order::Order()
     int pizzasFromScratchCount = 0;
     int breadsticksCount = 0;
     int sodasCount = 0;
-
+    double totalPrice = 0;
 }
 
 Order::Order(string location, vector<Pizza> pizzasFromMenu, int pizzasFromMenuCount, vector<Pizza> pizzasFromScratch, int pizzasFromScratchCount,
-             vector<Breadsticks> breadsticks, int breadsticksCount, vector<Soda> sodas, int sodasCount) {
+             vector<Breadsticks> breadsticks, int breadsticksCount, vector<Soda> sodas, int sodasCount, double totalPrice) {
 
     this->location = location;
     this->pizzasFromMenu = pizzasFromMenu;
@@ -22,6 +22,7 @@ Order::Order(string location, vector<Pizza> pizzasFromMenu, int pizzasFromMenuCo
     this->breadsticksCount = breadsticksCount;
     this->sodas = sodas;
     this->sodasCount = sodasCount;
+    this->totalPrice = totalPrice;
 }
 
 void Order::setLocation(string location) {
@@ -64,6 +65,10 @@ vector<Soda> Order::getSodas() {
     return sodas;
 }
 
+double Order::getTotalPrice() {
+    return totalPrice;
+}
+
 ofstream& operator << (ofstream& fout, Order& order) {
     fout << order.location << endl;
 
@@ -88,6 +93,8 @@ ofstream& operator << (ofstream& fout, Order& order) {
     {
         fout << order.sodas[i];
     }
+
+    fout << order.totalPrice;
 
     return fout;
 }
@@ -123,10 +130,7 @@ ifstream& operator >> (ifstream& fin, Order& order) {
         order.sodas.push_back(s);
     }
 
+    fin >> order.totalPrice;
+
     return fin;
 }
-
-
-
-
-

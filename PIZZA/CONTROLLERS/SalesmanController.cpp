@@ -25,7 +25,8 @@ void SalesmanController::modifySalesman(string yourLocation) {
 
     int pizzaFromMenuCount = getPizzaFromMenuCount();
     vector<Pizza> pizzasToOrder = orderPizzaFromMenu(pizzaFromMenuCount);
-    clearScreen();
+    cout << "Total price: " << getTotalPriceOfPizzasFromMenu(pizzasToOrder) << endl;
+    //clearScreen();
 
     displayLogo();
     displaySalesmanLogo();
@@ -33,7 +34,8 @@ void SalesmanController::modifySalesman(string yourLocation) {
     ///step 2
     int pizzasFromScratchCount = getPizzaFromScratchCount();
     vector<Pizza> pizzasFromScratchOrder = orderPizzaFromScratch(pizzasFromScratchCount);
-    clearScreen();
+    cout << "Total price: " << getTotalPriceOfPizzasFromScratch(pizzasFromScratchOrder);
+    //clearScreen();
 
     displayLogo();
     displaySalesmanLogo();
@@ -41,7 +43,8 @@ void SalesmanController::modifySalesman(string yourLocation) {
     /// step 3
     int breadsticksCount = getBreadsticksCount();
     vector<Breadsticks> breadsticksToOrder = orderBreadsticksFromMenu(breadsticksCount);
-    clearScreen();
+    cout << "Total price: " << getTotalPriceOfBreadsticks(breadsticksToOrder) << endl;
+    //clearScreen();
 
     displayLogo();
     displaySalesmanLogo();
@@ -49,13 +52,18 @@ void SalesmanController::modifySalesman(string yourLocation) {
     ///step 4
     int sodaCount = getSodaCount();
     vector<Soda> sodasToOrder = orderSodaFromMenu(sodaCount);
-    clearScreen();
+    cout << "Total price: " << getTotalPriceOfSodas(sodasToOrder) << endl;
+
+    double totalPrice = getTotalPriceOfPizzasFromMenu(pizzasToOrder) + getTotalPriceOfPizzasFromScratch(pizzasFromScratchOrder) +getTotalPriceOfBreadsticks(breadsticksToOrder)
+                        + getTotalPriceOfSodas(sodasToOrder);
+    cout << "Total total price: " << totalPrice << endl;
+    //clearScreen();
 
     displayLogo();
     ///complete order
-    display
+    //display
 
-    Order newOrder(yourLocation, pizzasToOrder, pizzaFromMenuCount, pizzasFromScratchOrder, pizzasFromScratchCount, breadsticksToOrder, breadsticksCount, sodasToOrder, sodaCount);
+    Order newOrder(yourLocation, pizzasToOrder, pizzaFromMenuCount, pizzasFromScratchOrder, pizzasFromScratchCount, breadsticksToOrder, breadsticksCount, sodasToOrder, sodaCount, totalPrice);
     orderData.addOrderToOrders(newOrder);
 
 }
@@ -81,6 +89,14 @@ vector<Pizza> SalesmanController::orderPizzaFromMenu(int pizzasFromMenuCount) {
     }
 
     return pizzaToOrder;
+}
+
+double SalesmanController::getTotalPriceOfPizzasFromMenu(vector<Pizza> pizzasFromMenu) {
+    double sumOfOrder = 0;
+    for(unsigned int i = 0; i < pizzasFromMenu.size(); i++) {
+        sumOfOrder += pizzasFromMenu[i].getPrice();
+    }
+    return sumOfOrder;
 }
 
 int SalesmanController::getPizzaFromScratchCount() {
@@ -124,39 +140,38 @@ vector<Pizza> SalesmanController::orderPizzaFromScratch(int pizzasFromScratchCou
         }
         cout << "------------------------------------------" << endl;
 
-        char selection;
         int toppingCount = 0;
+        int inputTopping = 0;
 
-        do {
-            char inputTopping;
-            cout << "Please enter the number of the topping you want to add to your pizza. " << endl;
-            cin >> inputTopping;
-            int inputIntTopping = inputTopping - 48;
-            Topping topping = toppings.at(inputIntTopping - 1);
-            cout << "Name: " << topping.getName() << "\t" <<"Price: " << topping.getPrice() << endl;
-            myToppings.push_back(topping);
+        cout << endl << "How many toppings do you want to add to your pizza?" << endl;
+        cin >> toppingCount;
 
-            toppingCount++;
-            cout << toppingCount;
-
-            cout << endl << "Do you want to add another topping? (y/n)" << endl;
-
-            cin >> selection;
-
-            while(selection != 'y' && selection != 'n') {
-                cout << endl << "Invalid input! " << endl << endl;
-                cout << "Do you want to add another topping? (y/n)" << endl;
-                cin >> selection;
-                cout << endl;
-            }
-        } while(selection == 'y');
-
+        cout << "Please enter the number of toppings you want to add to your pizza. " << endl;
+        for(int i = 0; i < toppingCount; i++) {
+        cin >> inputTopping;
+        Topping topping = toppings.at(inputTopping - 1);
+        cout << "Name: " << topping.getName() << "\t" <<"Price: " << topping.getPrice() << endl;
+        myToppings.push_back(topping);
+    }
 
         Pizza newPizza(myName, myPrice, toppingCount, myToppings, myCrust);
         pizzaToOrderFromScratch.push_back(newPizza);
     }
 
     return pizzaToOrderFromScratch;
+}
+
+double SalesmanController::getTotalPriceOfPizzasFromScratch(vector<Pizza> pizzasFromScratch) {
+    double startingPizzaPrice = 1500;
+    double sumOfOrder = 0;
+    for(unsigned int i = 0; i < pizzasFromScratch.size(); i++) {
+        sumOfOrder += startingPizzaPrice;
+        sumOfOrder += pizzasFromScratch[i].getCrust().getPrice();
+        for(unsigned int j = 0; j < pizzasFromScratch[i].getToppings().size(); j++) {
+            sumOfOrder += pizzasFromScratch[i].getToppings()[j].getPrice();
+        }
+    }
+    return sumOfOrder;
 }
 
 int SalesmanController::getBreadsticksCount() {
@@ -183,6 +198,14 @@ vector<Breadsticks> SalesmanController::orderBreadsticksFromMenu(int breadsticks
     return breadsticksToOrder;
 }
 
+double SalesmanController::getTotalPriceOfBreadsticks(vector<Breadsticks> breadsticks) {
+    double sumOfOrder = 0;
+    for(unsigned int i = 0; i < breadsticks.size(); i++) {
+        sumOfOrder += breadsticks[i].getPrice();
+    }
+    return sumOfOrder;
+}
+
 int SalesmanController::getSodaCount() {
     cout << "How many sodas do you want to order? " << endl;
     int sodaCount = 0;
@@ -206,4 +229,12 @@ vector<Soda> SalesmanController::orderSodaFromMenu(int sodaCount) {
     }
 
     return sodasToOrder;
+}
+
+double SalesmanController::getTotalPriceOfSodas(vector<Soda> sodas) {
+    double sumOfOrder = 0;
+    for(unsigned int i = 0; i < sodas.size(); i++) {
+        sumOfOrder += sodas[i].getPrice();
+    }
+    return sumOfOrder;
 }

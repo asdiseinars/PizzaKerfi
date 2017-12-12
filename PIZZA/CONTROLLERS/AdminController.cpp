@@ -222,39 +222,25 @@ void AdminController::addPizzaToMenu() { ///gera fallegra
     }
     cout << "------------------------------------------" << endl;
 
-    char selection;
     int toppingCount = 0;
+    int inputTopping = 0;
 
-    do {
-        char inputTopping;
-        cout << "Please enter the number of the topping you want to add to your pizza. " << endl;
+    cout << endl << "How many toppings do you want to add to your pizza?" << endl;
+    cin >> toppingCount;
+
+    cout << "Please enter the number of toppings you want to add to your pizza. " << endl;
+    for(int i = 0; i < toppingCount; i++) {
         cin >> inputTopping;
-        int inputIntTopping = inputTopping - 48;
-        Topping topping = toppings.at(inputIntTopping - 1);
+        Topping topping = toppings.at(inputTopping - 1);
         cout << "Name: " << topping.getName() << "\t" <<"Price: " << topping.getPrice() << endl;
         myToppings.push_back(topping);
-
-        toppingCount++;
-        cout << toppingCount;
-
-        cout << endl << "Do you want to add another topping? (y/n)" << endl;
-
-        cin >> selection;
-
-        while(selection != 'y' && selection != 'n') {
-            cout << endl << "Invalid input! " << endl << endl;
-            cout << "Do you want to add another topping? (y/n)" << endl;
-            cin >> selection;
-            cout << endl;
-        }
-    } while(selection == 'y');
-
+    }
 
     Pizza newPizza(myName, myPrice, toppingCount, myToppings, myCrust);
     pizzaData.addPizzaToMenu(newPizza);
 
     cout << endl;
-    cout << myName << " has been added to your menu" << endl;
+    cout << myName << " has been added to your menu!" << endl;
     cout << endl;
 
 }

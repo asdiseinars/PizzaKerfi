@@ -44,6 +44,10 @@ class SalesmanController {
     int getPizzaFromScratchCount();
     int getPizzaFromMenuCount();
     int getBreadsticksCount();
+    double getTotalPriceOfPizzasFromMenu(vector<Pizza> pizzasFromMenu);
+    double getTotalPriceOfPizzasFromScratch(vector<Pizza> pizzasFromScratch);
+    double getTotalPriceOfBreadsticks(vector<Breadsticks> breadsticks);
+    double getTotalPriceOfSodas(vector<Soda> sodas);
 
 
 };

@@ -16,4 +16,5 @@ Pepperoni
 45
 Spinach
 32
-extra
+extraSkinka
+200

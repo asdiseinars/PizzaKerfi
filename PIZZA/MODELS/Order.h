@@ -20,12 +20,13 @@ class Order {
     int breadsticksCount;
     vector<Soda> sodas;
     int sodasCount;
+    double totalPrice;
 
 
   public:
     Order();
     Order(string location, vector<Pizza> pizzasFromMenu, int pizzasFromMenuCount, vector<Pizza> pizzasFromScratch, int pizzasFromScratchCount,
-          vector<Breadsticks> breadsticks, int breadsticksCount, vector<Soda> sodas, int sodasCount);
+          vector<Breadsticks> breadsticks, int breadsticksCount, vector<Soda> sodas, int sodasCount, double totalPrice);
 
     void setLocation(string location);
     void setPizzasFromMenu(vector<Pizza> pizzasFromMenu);
@@ -38,6 +39,7 @@ class Order {
     vector<Pizza> getPizzasFromScratch();
     vector<Breadsticks> getBreadsticks();
     vector<Soda> getSodas();
+    double getTotalPrice();
 
     friend ofstream& operator << (ofstream& fout, Order& order);
     friend ifstream& operator >> (ifstream& fin, Order& order);
