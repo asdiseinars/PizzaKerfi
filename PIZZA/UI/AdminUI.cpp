@@ -19,8 +19,8 @@ void AdminUI::displayAdminToppingUI() {
 }
 
 void AdminUI::displayAdminBackOrQuitUI() {
-    cout << "b: Go back" << endl;
-    cout << "q: Quit" << endl;
+    cout << "Press b to go back" << endl;
+    cout << "Press anything else to quit" << endl;
 }
 
 void AdminUI::displayAdminPizzaUI() {
