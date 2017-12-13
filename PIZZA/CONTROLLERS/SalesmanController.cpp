@@ -79,8 +79,6 @@ void SalesmanController::modifySalesman(string yourLocation) {
     cout << "\e[1m" << "Order pizza/s made from scratch" << "\e[0m" << endl << endl;
 
     int pizzasFromScratchCount = getPizzaFromScratchCount();
-    cout << endl;
-
     vector<Pizza> pizzasFromScratchOrder = orderPizzaFromScratch(pizzasFromScratchCount);
 
     cout << endl;
@@ -191,7 +189,7 @@ vector<Pizza> SalesmanController::orderPizzaFromScratch(int pizzasFromScratchCou
     vector<Pizza> pizzaToOrderFromScratch;
 
     for(int i = 0; i < pizzasFromScratchCount; i++) {
-        string myName = "\e[1m Customized \e[0m";
+        string myName =  "Customized";
         vector<Topping> myToppings;
         double myPrice = 3400;
 

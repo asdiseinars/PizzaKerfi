@@ -54,13 +54,13 @@ void GlobalController::displayAllPizzas() {
         cout << "------------------------------------------" << endl;
         for (unsigned int i = 0; i < pizzas.size(); i++) {
             cout << "[" << i+1 << "] " << pizzas.at(i).getName() << " " << pizzas.at(i).getPrice() << "kr." << endl;
-            cout << "----------" << endl;
-            cout << "Crust: " << pizzas.at(i).getCrust().getName() << endl;
-            cout << "\tToppings: " << endl;
+            cout << "\tCrust: " << pizzas.at(i).getCrust().getName() << endl;
+            cout << "\tToppings: ";
             for(unsigned  int j = 0; j < pizzas.at(i).getToppings().size(); j++) {
                 Topping t = pizzas.at(i).getToppings().at(j);
-                cout << "\t\t" << pizzas.at(i).getToppings().at(j).getName() << endl;
+                cout << pizzas.at(i).getToppings().at(j).getName() << "  ";
             }
+            cout << endl;
         cout << "------------------------------------------" << endl;
             cout << endl;
         }
