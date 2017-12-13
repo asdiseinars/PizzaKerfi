@@ -80,6 +80,7 @@ void SalesmanController::modifySalesman(string yourLocation) {
     Order newOrder(yourLocation, pizzasToOrder, pizzaFromMenuCount, pizzasFromScratchOrder, pizzasFromScratchCount,
                     breadsticksToOrder, breadsticksCount, sodasToOrder, sodaCount, totalPrice, orderStatus, phoneNumber);
     orderData.addOrderToOrders(newOrder);
+    orderData.addOrderToLegacy(newOrder);
 
 }
 
