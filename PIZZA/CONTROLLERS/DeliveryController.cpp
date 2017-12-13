@@ -238,7 +238,7 @@ void DeliveryController::displayReadyOrdersForCustomer(string yourLocation) {
 }
 
 void DeliveryController::markeOrderPaidAndDeliverd(string yourLocation, string phoneNumber) {
-    cout << "Marke order paid and deliverd? (y/n)" << endl;
+    cout << "Mark order paid and deliverd? (y/n)" << endl;
     char selection;
     cin >> selection;
 
@@ -246,6 +246,7 @@ void DeliveryController::markeOrderPaidAndDeliverd(string yourLocation, string p
         vector<Order> thisOrder = orderData.getOrderForLocationAndOrderStatusAndPhoneNumber(yourLocation, 3, phoneNumber);
         thisOrder.at(0).setOrderStatus(4);
         orderData.storeAllOrders(thisOrder);
+        orderData.storeAllOrdersToLegacy(thisOrder);
         //deleteOrderFromFile(yourLocation);
     }
 
@@ -257,7 +258,7 @@ void DeliveryController::markeOrderPaidAndDeliverd(string yourLocation, string p
     }
 }
 
-/*void DeliveryController::deleteOrderFromFile(string yourLocation) {
+void DeliveryController::deleteOrderFromFile(string yourLocation) {
     vector<Order> thisOrder = orderData.getOrderForLocation(yourLocation);
     vector<Order> newOrders;
     for (unsigned int i = 0; i < thisOrder.size(); i++) {
@@ -266,5 +267,5 @@ void DeliveryController::markeOrderPaidAndDeliverd(string yourLocation, string p
         }
         orderData.storeAllOrders(newOrders);
     }
-}*/
+}
 
