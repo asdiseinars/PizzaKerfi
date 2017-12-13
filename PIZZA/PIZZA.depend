@@ -270,14 +270,14 @@
 1512833651 c:\users\asdis\desktop\pizzaforrit\pizza\ui\customerui.h
 	<iostream>
 
-1512827448 D
+1513077944 D
 
 1512827764 571fe2cfd8a7a8047f0b3af937b7096279e83
 
 1513077538 source:c:\users\einarbi\desktop\pizzaforrit\pizza\controllers\bakercontroller.cpp
 	"BakerController.h"
 
-1513015420 c:\users\einarbi\desktop\pizzaforrit\pizza\controllers\bakercontroller.h
+1513098262 c:\users\einarbi\desktop\pizzaforrit\pizza\controllers\bakercontroller.h
 	"BakerUI.h"
 	"HomeController.h"
 	"GlobalHelp.h"
@@ -333,7 +333,7 @@
 	<iostream>
 	<vector>
 
-1512752576 c:\users\einarbi\desktop\pizzaforrit\pizza\global\globalhelp.h
+1513098262 c:\users\einarbi\desktop\pizzaforrit\pizza\global\globalhelp.h
 	<stdlib.h>
 	<iostream>
 
@@ -904,7 +904,7 @@
 1513077538 source:c:\users\einarbi\desktop\pizzaforrit\pizza\models\order.cpp
 	"Order.h"
 
-1513077538 c:\users\einarbi\desktop\pizzaforrit\pizza\models\order.h
+1513098262 c:\users\einarbi\desktop\pizzaforrit\pizza\models\order.h
 	"Breadsticks.h"
 	"Crust.h"
 	"Location.h"
@@ -1032,12 +1032,12 @@
 
 1513077944 c:\users\asdis\desktop\pizzaforrit\pizza\exceptions\invalidpriceexceptions.h
 
-<<<<<<< HEAD
 1513096207 source:c:\users\asdis\desktop\pizzaforrit\pizza\controllers\deliverycontroller.cpp
 	"DeliveryController.h"
 
 1513096207 c:\users\asdis\desktop\pizzaforrit\pizza\controllers\deliverycontroller.h
-=======
+
 1513084988 c:\users\einarbi\desktop\pizzaforrit\pizza\exceptions\invalidpriceexceptions.h
->>>>>>> de4744cffb86c5af30db830dd4ffa3263a58082c
+
+1513084988 744cffb86c5af30db830dd4ffa3263a58082c
 
