@@ -111,8 +111,8 @@ void AdminController::modifyToppings() {
     }
 }
 
-void AdminController::addTopping() {
-    char selection = 'y';
+void AdminController::addTopping() {                    ///má ekki vera bókstafur sem input
+    char selection = 'y';                               ///kemur 4x invalid input ef maður skrifar pepp í (y/n) valmöguleikanum
 
     cout << "\033[4m" << "Add topping to menu" <<  "\033[0m" << endl << endl;
 

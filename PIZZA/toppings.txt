@@ -10,5 +10,10 @@ gradostur
 200
 aukasosa
 23
+<<<<<<< HEAD
 Sveppir
 32
+=======
+bbq
+200
+>>>>>>> b17d213a71bd39ee42e79205ca1247b51449c040

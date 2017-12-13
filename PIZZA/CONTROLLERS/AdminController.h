@@ -7,6 +7,8 @@
 #include "ToppingData.h"
 #include "LocationData.h"
 #include <stdlib.h>
+#include <cctype>
+#include <locale>
 #include "Pizza.h"
 #include "BreadsticksData.h"
 #include "SodaData.h"
