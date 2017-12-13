@@ -18,7 +18,6 @@ void BakerController::init() {
     modifyBakerOrders(yourLocation);
 }
 
-
 void BakerController::modifyBakerOrders(string yourLocation) {
     char selection = '\0';
     cin >> selection;
@@ -28,7 +27,6 @@ void BakerController::modifyBakerOrders(string yourLocation) {
         displayLogo();
         displayBakerLogo();
         displayOrders(yourLocation);
-
     }
 
     else if(selection == '2') {
@@ -67,7 +65,6 @@ void BakerController::modifyBakerOrders(string yourLocation) {
     else if(selection == 'b') {
         clearScreen();
         init();
-
     }
 }
 
@@ -87,11 +84,8 @@ void BakerController::displayOrders(string yourLocation) {
             for (unsigned int k = 0; k < ordersForLocation.at(i).getPizzasFromMenu().at(j).getToppings().size(); k++) {
 
                 cout << ordersForLocation.at(i).getPizzasFromMenu().at(j).getToppings().at(k).getName() << endl;
-
-            }
-            cout << endl;
-        }
-        cout << endl;
+                } cout << endl;
+        } cout << endl;
 
         for(unsigned int m = 0; m < ordersForLocation.at(i).getPizzasFromScratch().size(); m++) {
             cout << "Name: " << ordersForLocation.at(i).getPizzasFromScratch().at(m).getName() << endl;
@@ -130,9 +124,3 @@ void BakerController::displayOrders(string yourLocation) {
     }
     cout << "------------------------------------------" << endl;
 }
-
-
-
-
-
-

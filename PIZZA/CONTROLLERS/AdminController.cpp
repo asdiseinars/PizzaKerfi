@@ -68,22 +68,6 @@ void AdminController::init() {
     }
 }
 
-<<<<<<< HEAD
-=======
-
-/*void AdminUI::validateUserInputModifyToppings(char selection) {
-    if(selection == '2') {
-        try{
-
-        }
-        catch (InvalidPriceExceptions) {
-            cout << "Invalid input!" << endl;
-        }
-    }
-}*/
-
-
->>>>>>> cb85025e10b8e926bcf36fe4d022f7d3c8793b44
 void AdminController::modifyToppings() {
     char selection;
     displayAdminToppingUI();
@@ -127,8 +111,8 @@ void AdminController::modifyToppings() {
     }
 }
 
-void AdminController::addTopping() {
-    char selection = 'y';
+void AdminController::addTopping() {                    ///má ekki vera bókstafur sem input
+    char selection = 'y';                               ///kemur 4x invalid input ef maður skrifar pepp í (y/n) valmöguleikanum
 
     while(selection == 'y') {
         string newName;
