@@ -18,8 +18,9 @@ void SalesmanController::modifySalesman(string yourLocation) {
     cout << "\033[4m" << "Your location is " << yourLocation << "\033[0m" << endl << endl;
     ///step 0
 
-    cout << "Input phone number: " << endl;
-    string phoneNumber;
+    cout << "Input phone number (7 digits): " << endl;
+    string phoneNumber = "";
+    cin >> phoneNumber;
     while(phoneNumber.length() != 7) {
         cin >> phoneNumber;
         cout << "Invalid phone number!" << endl;
@@ -64,7 +65,7 @@ void SalesmanController::modifySalesman(string yourLocation) {
     vector<Soda> sodasToOrder = orderSodaFromMenu(sodaCount);
     cout << "Total price: " << getTotalPriceOfSodas(sodasToOrder) << endl;
 
-    double totalPrice = getTotalPriceOfPizzasFromMenu(pizzasToOrder) + getTotalPriceOfPizzasFromScratch(pizzasFromScratchOrder) +getTotalPriceOfBreadsticks(breadsticksToOrder)
+    double totalPrice = getTotalPriceOfPizzasFromMenu(pizzasToOrder) + getTotalPriceOfPizzasFromScratch(pizzasFromScratchOrder) + getTotalPriceOfBreadsticks(breadsticksToOrder)
                         + getTotalPriceOfSodas(sodasToOrder);
     cout << "Total total price: " << totalPrice << endl;
 

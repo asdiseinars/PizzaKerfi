@@ -64,3 +64,55 @@ vector<Order> OrderData::getOrderForLocation(string location) {
 
     return orderForLocation;
 }
+
+vector<Order> OrderData::getOrderForLocationAndOrderStatus(string location, int orderStatus) {
+    vector <Order> orders;
+
+    ifstream fin;
+    fin.open("orders.txt");
+
+
+    while(!fin.eof()) {
+        Order order;
+        fin >> order;
+        orders.push_back(order);
+    }
+
+    vector<Order> orderForLocationAndOrderStatus;
+
+    for(unsigned int i = 0; i < orders.size(); i++) {
+        if (location == orders[i].getLocation() && orderStatus == orders[i].getOrderStatus()) {
+            orderForLocationAndOrderStatus.push_back(orders[i]);
+        }
+    }
+
+    orders.pop_back();
+
+    return orderForLocationAndOrderStatus;
+}
+
+vector<Order> OrderData::getOrderForLocationAndOrderStatusAndPhoneNumber(string location, int orderStatus, string phoneNumber) {
+    vector <Order> orders;
+
+    ifstream fin;
+    fin.open("orders.txt");
+
+
+    while(!fin.eof()) {
+        Order order;
+        fin >> order;
+        orders.push_back(order);
+    }
+
+    vector<Order> orderForLocationAndOrderStatusAndPhoneNumber;
+
+    for(unsigned int i = 0; i < orders.size(); i++) {
+        if (location == orders[i].getLocation() && orderStatus == orders[i].getOrderStatus() && phoneNumber == orders[i].getPhoneNumber()) {
+            orderForLocationAndOrderStatusAndPhoneNumber.push_back(orders[i]);
+        }
+    }
+
+    orders.pop_back();
+
+    return orderForLocationAndOrderStatusAndPhoneNumber;
+}
