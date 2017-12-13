@@ -50,6 +50,8 @@ void GlobalController::displayAllPizzas() {
     if(pizzas.size() < 1) {
         cout << "There are no pizzas on the menu! " << endl;
     } else {
+        cout << "\e[1m" << "PIZZA MENU" << "\e[0m" << endl;
+        cout << "------------------------------------------" << endl;
         for (unsigned int i = 0; i < pizzas.size(); i++) {
             cout << "[" << i+1 << "] " << pizzas.at(i).getName() << " " << pizzas.at(i).getPrice() << "kr." << endl;
             cout << "----------" << endl;
@@ -59,6 +61,7 @@ void GlobalController::displayAllPizzas() {
                 Topping t = pizzas.at(i).getToppings().at(j);
                 cout << "\t\t" << pizzas.at(i).getToppings().at(j).getName() << endl;
             }
+        cout << "------------------------------------------" << endl;
             cout << endl;
         }
     }
