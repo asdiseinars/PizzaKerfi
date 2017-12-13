@@ -1,5 +1,3 @@
-ham
-200
 pepperoni
 45
 skinka
@@ -10,3 +8,5 @@ gradostur
 200
 aukasosa
 23
+Skinka
+0

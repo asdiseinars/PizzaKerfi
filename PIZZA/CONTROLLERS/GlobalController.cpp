@@ -64,6 +64,7 @@ void GlobalController::displayAllPizzas() {
         cout << "------------------------------------------" << endl;
             cout << endl;
         }
+
     }
 }
 

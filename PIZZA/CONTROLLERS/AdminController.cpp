@@ -121,22 +121,22 @@ void AdminController::addTopping() {
 
     cout << "\033[4m" << "Add topping to menu" <<  "\033[0m" << endl << endl;
 
-    while(selection == 'y') {
+    //while(selection == 'y')//{
         string newName;
-        double newPrice;
+        int newPrice;
 
         cout << "Name: ";
         cin >> newName;
         cout << "Price: ";
         cin >> newPrice;
 
-        if (newPrice < 0 && (typeid(newPrice) == typeid(double))) {
+        if (newPrice < 0 || (typeid(newPrice) != typeid(int))) {
             cout << "Invalid input. Please enter a positive integer as your price!" << endl;
         }
         else {
             Topping topping(newName, newPrice);
             toppingData.addTopping(topping);
-
+        /*
             cout << endl << "Do you want to add another topping? (y/n)" << endl;
 
             cin >> selection;
@@ -147,8 +147,8 @@ void AdminController::addTopping() {
                 cin >> selection;
                 cout << endl;
             }
+        }*/
         }
-    }
 }
 
 void AdminController::removeTopping() {
@@ -168,7 +168,7 @@ void AdminController::removeTopping() {
         cin >> input;
         input -= 1;
 
-        if (input > toppings.size() || input <= 0) {
+        if (input + 1 > toppings.size() || input + 1 <= 0) {
             cout << "Invalid input!" << endl << endl;
 
         } else {
@@ -370,7 +370,7 @@ void AdminController::removePizzaFromMenu() {
     cin >> input;
     input -= 1;
 
-    if (input > pizzas.size() || input <= 0) {
+    if (input + 1 > pizzas.size() || input + 1 <= 0) {
             cout << "Invalid input!" << endl << endl;
     }
 
@@ -503,10 +503,14 @@ void AdminController::removeSodaFromMenu() {
         cin >> input;
         input -= 1;
 
-        sodas.erase(sodas.begin() + input);
-
-        sodaData.storeAllSodas(sodas);
-        cout << endl << "The drink has been removed!" << endl << endl;
+        if (input + 1 > sodas.size() || input + 1 <= 0) {
+            cout << "Invalid input!" << endl << endl;
+        }
+        else {
+            sodas.erase(sodas.begin() + input);
+            sodaData.storeAllSodas(sodas);
+            cout << endl << "The drink has been removed!" << endl << endl;
+        }
 
         cout << "Do you want to remove another drink? (y/n)" << endl;
         cin >> selection;
@@ -629,10 +633,14 @@ void AdminController::removeLocations() {
         cin >> input;
         input -= 1;
 
-        locations.erase(locations.begin() + input);
-
-        locationData.storeAllLocations(locations);
-        cout << endl << "The location has been removed!" << endl << endl;
+        if (input + 1 > locations.size() || input + 1 <= 0) {
+            cout << "Invalid input!" << endl << endl;
+        }
+        else {
+            locations.erase(locations.begin() + input);
+            locationData.storeAllLocations(locations);
+            cout << endl << "The location has been removed!" << endl << endl;
+        }
 
         cout << "Do you want to remove another location? (y/n)" << endl;
         cin >> selection;
@@ -757,10 +765,14 @@ void AdminController::removeBreadsticksFromMenu() {
         cin >> input;
         input -= 1;
 
-        breadsticks.erase(breadsticks.begin() + input);
-
-        breadsticksData.storeAllBreadsticks(breadsticks);
-        cout << endl << "The side order has been removed!" << endl << endl;
+        if (input + 1 > breadsticks.size() || input + 1 <= 0) {
+            cout << "Invalid input!" << endl << endl;
+        }
+        else {
+            breadsticks.erase(breadsticks.begin() + input);
+            breadsticksData.storeAllBreadsticks(breadsticks);
+            cout << endl << "The side order has been removed!" << endl << endl;
+        }
 
         cout << "Do you want to remove another side order? (y/n)" << endl;
         cin >> selection;
@@ -885,10 +897,14 @@ void AdminController::removeCrustFromMenu() {
         cin >> input;
         input -= 1;
 
-        crusts.erase(crusts.begin() + input);
-
-        crustData.storeAllCrusts(crusts);
-        cout << endl << "The crust has been removed!" << endl << endl;
+        if (input + 1 > crusts.size() || input + 1 <= 0) {
+            cout << "Invalid input!" << endl << endl;
+        }
+        else {
+            crusts.erase(crusts.begin() + input);
+            crustData.storeAllCrusts(crusts);
+            cout << endl << "The crust has been removed!" << endl << endl;
+        }
 
         cout << "Do you want to remove another crust? (y/n)" << endl;
         cin >> selection;
