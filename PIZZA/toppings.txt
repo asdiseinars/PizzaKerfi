@@ -1,6 +1,7 @@
 pepperoni
 50
 skinka
+<<<<<<< HEAD
 50
 paprika
 50
@@ -8,3 +9,12 @@ piparostur
 50
 laukur
 20
+=======
+4
+ananas
+23
+gradostur
+200
+aukasosa
+23
+>>>>>>> f18c95298e14c8f6a85ecc9e2d506d309239c1fe
