@@ -114,6 +114,8 @@ void AdminController::modifyToppings() {
 void AdminController::addTopping() {                    ///má ekki vera bókstafur sem input
     char selection = 'y';                               ///kemur 4x invalid input ef maður skrifar pepp í (y/n) valmöguleikanum
 
+    cout << "\033[4m" << "Add topping to menu" <<  "\033[0m" << endl << endl;
+
     while(selection == 'y') {
         string newName;
         double newPrice;
@@ -122,6 +124,8 @@ void AdminController::addTopping() {                    ///má ekki vera bókstafu
         cin >> newName;
         cout << "Price: ";
         cin >> newPrice;
+
+
 
         while (newPrice < 0) {
             cout << "Invalid input. Please enter a positive integer as your price!" << endl;
@@ -147,6 +151,8 @@ void AdminController::addTopping() {                    ///má ekki vera bókstafu
 void AdminController::removeTopping() {
 
     char selection = 'y';
+
+    cout << "\033[4m" << "Remove topping from menu" <<  "\033[0m" << endl << endl;
 
     while(selection == 'y') {
         vector<Topping> toppings = toppingData.retrieveAllToppings();
@@ -237,6 +243,8 @@ void AdminController::modifyPizzas() {
 void AdminController::addPizzaToMenu() {
     char selection = 'y';
 
+    cout << "\033[4m" << "Add pizza to menu" <<  "\033[0m" << endl << endl;
+
     while(selection == 'y') {
 
         string myName;
@@ -323,6 +331,8 @@ void AdminController::addPizzaToMenu() {
 
 void AdminController::removePizzaFromMenu() {
     char selection = 'y';
+
+    cout << "\033[4m" << "Remove pizza from menu" <<  "\033[0m" << endl << endl;
 
     while(selection == 'y') {
     vector<Pizza> pizzas = pizzaData.retrieveAllPizzas();
@@ -430,6 +440,8 @@ void AdminController::modifySodas() {
 void AdminController::addSodaToMenu() {
     char selection = 'y';
 
+    cout << "\033[4m" << "Add soda to menu" <<  "\033[0m" << endl << endl;
+
     while(selection == 'y') {
         string newName;
         double newPrice;
@@ -455,6 +467,8 @@ void AdminController::addSodaToMenu() {
 
 void AdminController::removeSodaFromMenu() {
     char selection = 'y';
+
+    cout << "\033[4m" << "Remove soda from menu" <<  "\033[0m" << endl << endl;
 
     while(selection == 'y') {
         vector<Soda> sodas = sodaData.retrieveAllSodas();
@@ -547,6 +561,9 @@ void AdminController::modifyLocations() {
 
 void AdminController::addLocations() {
     char selection = 'y';
+
+    cout << "\033[4m" << "Add location to menu" <<  "\033[0m" << endl << endl;
+
     while(selection == 'y') {
 
         string newName;
@@ -571,6 +588,8 @@ void AdminController::addLocations() {
 
 void AdminController::removeLocations() {
     char selection = 'y';
+
+    cout << "\033[4m" << "Remove pizza from menu" <<  "\033[0m" << endl << endl;
 
     while(selection == 'y') {
         vector<Location> locations = locationData.retrieveAllLocations();
@@ -663,6 +682,8 @@ void AdminController::modifyBreadsticks() {
 void AdminController::addBreadsticksToMenu() {
     char selection = 'y';
 
+    cout << "\033[4m" << "Add side order to menu" <<  "\033[0m" << endl << endl;
+
     while(selection == 'y') {
         string newName;
         double newPrice;
@@ -688,6 +709,8 @@ void AdminController::addBreadsticksToMenu() {
 
 void AdminController::removeBreadsticksFromMenu() {
     char selection = 'y';
+
+    cout << "\033[4m" << "Remove side order from menu" <<  "\033[0m" << endl << endl;
 
     while(selection == 'y') {
         vector<Breadsticks> breadsticks = breadsticksData.retrieveAllBreadsticks();
@@ -781,6 +804,8 @@ void AdminController::modifyCrust() {
 void AdminController::addCrustToMenu() {
     char selection = 'y';
 
+    cout << "\033[4m" << "Add crust to menu" <<  "\033[0m" << endl << endl;
+
     while(selection == 'y') {
         string newName;
         double newPrice;
@@ -806,6 +831,8 @@ void AdminController::addCrustToMenu() {
 
 void AdminController::removeCrustFromMenu() {
     char selection = 'y';
+
+    cout << "\033[4m" << "Remove crust from menu" <<  "\033[0m" << endl << endl;
 
     while(selection == 'y') {
         vector<Crust> crusts = crustData.retrieveAllCrusts();

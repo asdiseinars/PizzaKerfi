@@ -2,12 +2,12 @@
 
 
 void AdminUI::displayAdminUI() {
-    cout << "1: Add/edit toppings" << endl;
-    cout << "2. Add/edit pizzas" << endl;
-    cout << "3. Add/edit drinks" << endl;
-    cout << "4: Add/edit side orders" << endl;
-    cout << "5: Add/edit locations" << endl;
-    cout << "6: Add/edit crusts" << endl;
+    cout << "1: Toppings" << endl;
+    cout << "2. Pizzas" << endl;
+    cout << "3. Drinks" << endl;
+    cout << "4: Side orders" << endl;
+    cout << "5: Locations" << endl;
+    cout << "6: Crusts" << endl;
     cout << "b: Go back" << endl;
 }
 
@@ -19,7 +19,7 @@ void AdminUI::displayAdminToppingUI() {
 }
 
 void AdminUI::displayAdminBackOrQuitUI() {
-    cout << "Press b to go back" << endl;
+    cout << "b: Go back" << endl;
     cout << "Press anything else to quit" << endl;
 }
 

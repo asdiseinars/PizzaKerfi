@@ -61,13 +61,6 @@ ham
 200
 heilhveiti
 23
-kara
-2000
-1
-Pepperoni
-45
-venjulegt
-100
 skinkuskvisa
 1500
 2
@@ -77,3 +70,12 @@ ham
 200
 venjulegt
 100
+Krissa
+2300
+2
+ham
+200
+skinka
+4
+Italskur
+74
