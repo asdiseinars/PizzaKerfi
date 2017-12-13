@@ -9,15 +9,15 @@ void SalesmanController::init() {
     displaySalesmanLogo();
     string yourLocation = globalController.chooseLocation();
     modifySalesman(yourLocation);
+
 }
 
 void SalesmanController::modifySalesman(string yourLocation) {
     clearScreen();
     displayLogo();
     displaySalesmanLogo();
-    cout << "\033[4m" << "Your location is " << yourLocation << "\033[0m" << endl << endl;
-    ///step 0
 
+    cout <<"\e[1m" << "Your location is " << yourLocation <<  "\e[0m" << endl << endl;    ///step 0
     cout << "Input phone number (7 digits): " << endl;
     string phoneNumber = "";
     cin >> phoneNumber;
@@ -25,8 +25,6 @@ void SalesmanController::modifySalesman(string yourLocation) {
         cin >> phoneNumber;
         cout << "Invalid phone number!" << endl;
     }
-
-    ///step 1
 
     cout << "PIZZA MENU" << endl;
     cout << "------------------------------------------" << endl;
@@ -41,8 +39,7 @@ void SalesmanController::modifySalesman(string yourLocation) {
     displayLogo();
     displaySalesmanLogo();
 
-    cout << "\033[4m" << "Your location is " << yourLocation << "\033[0m" << endl << endl;
-    ///step 2
+    cout <<"\e[1m" << "Your location is " << yourLocation <<  "\e[0m" << endl << endl;    ///step 2
     int pizzasFromScratchCount = getPizzaFromScratchCount();
     vector<Pizza> pizzasFromScratchOrder = orderPizzaFromScratch(pizzasFromScratchCount);
     cout << "Total price: " << getTotalPriceOfPizzasFromScratch(pizzasFromScratchOrder);
@@ -50,7 +47,7 @@ void SalesmanController::modifySalesman(string yourLocation) {
     displayLogo();
     displaySalesmanLogo();
 
-    cout << "\033[4m" << "Your location is " << yourLocation << "\033[0m" << endl << endl;
+    cout << "Your location is " << yourLocation <<  "\e[0m" << endl << endl;
     /// step 3
     int breadsticksCount = getBreadsticksCount();
     vector<Breadsticks> breadsticksToOrder = orderBreadsticksFromMenu(breadsticksCount);
@@ -59,8 +56,7 @@ void SalesmanController::modifySalesman(string yourLocation) {
     clearScreen();
     displayLogo();
     displaySalesmanLogo();
-    cout << "\033[4m" << "Your location is " << yourLocation << "\033[0m" << endl << endl;
-    ///step 4
+    cout <<"\e[1m" << "Your location is " << yourLocation <<  "\e[0m" << endl << endl;    ///step 4
     int sodaCount = getSodaCount();
     vector<Soda> sodasToOrder = orderSodaFromMenu(sodaCount);
     cout << "Total price: " << getTotalPriceOfSodas(sodasToOrder) << endl;

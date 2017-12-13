@@ -11,6 +11,7 @@ void displaySalesmanDrinksUI();
 void displaySalesmanSideOrdersUI();
 void displaySalesmanCompleteOrderUI();
 void displaySalesmanBackOrQuitUI();
+void displayStepsOfOrdering();
 };
 
 #endif // SALESMANUI_H
