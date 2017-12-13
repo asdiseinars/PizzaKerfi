@@ -54,7 +54,7 @@ vector<Order> OrderData::retrieveAllOrdersFromLegacy() {
 void OrderData::storeAllOrdersToLegacy(vector<Order> orders) {
 
     ofstream fout;
-    fout.open ("legacy.txt");
+    fout.open ("legacy.txt", ios::app);
     for(unsigned int i = 0; i < orders.size(); i++) {
         fout << orders[i];
     }
@@ -151,6 +151,7 @@ vector<Order> OrderData::getOrderForLocationAndOrderStatusAndPhoneNumber(string 
     return orderForLocationAndOrderStatusAndPhoneNumber;
 }
 
+/*
 void OrderData::removeFromOrder(string yourLocation) {
     vector<Order> thisOrder = getOrderForLocation(yourLocation);
     vector<Order> newOrders;
@@ -159,8 +160,17 @@ void OrderData::removeFromOrder(string yourLocation) {
         if (thisOrder[i].getOrderStatus() != 4) {
             newOrders.push_back(thisOrder[i]);
         }
+        else{
+            ofstream fout;
+                fout.open("legacy.txt", ios::app);
+                fout << newOrders.at(i);
+                fout.close();
+
+        }
         storeAllOrders(newOrders);
     }
+
+
 }
 
 void OrderData::moveOrderToLegacy(string yourLocation) {
@@ -173,6 +183,29 @@ void OrderData::moveOrderToLegacy(string yourLocation) {
         storeAllOrdersToLegacy(legacyOrders);
     }
 }
+
+
+void OrderData::moveAllOrdersFromOrderstoLegacyAtLocation(string location)
+{
+    vector<Order> allOrders = getOrderForLocation(location);
+    for(int i = 0; i < allOrders.size(); i++)
+    {
+        if(allOrders.at(i).getOrderStatus() == 4)
+        {
+            Order order = allOrders.at(i);
+            allOrders.erase(allOrders.begin() + i);
+            i -= 1;
+
+                ofstream fout;
+                fout.open("legacy.txt", ios::app);
+                fout << order;
+                fout.close();
+        }
+
+    }
+    storeAllOrders(allOrders);
+
+}*/
 
 
 

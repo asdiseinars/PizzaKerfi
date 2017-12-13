@@ -23,6 +23,7 @@ class OrderData {
     void storeAllOrdersToLegacy(vector<Order> orders);
     void removeFromOrder(string yourLocation);
     void moveOrderToLegacy(string yourLocation);
+    void moveAllOrdersFromOrderstoLegacyAtLocation(string location);
 
 };
 

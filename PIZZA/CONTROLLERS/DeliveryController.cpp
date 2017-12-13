@@ -247,8 +247,9 @@ void DeliveryController::markeOrderPaidAndDeliverd(string yourLocation, string p
         for(int i = 0; i < thisOrder.size(); i++) {
             thisOrder.at(i).setOrderStatus(4);
             orderData.storeAllOrders(thisOrder);
-            orderData.moveOrderToLegacy(yourLocation);
-            orderData.removeFromOrder(yourLocation);
+            //orderData.moveOrderToLegacy(yourLocation);
+            //orderData.moveAllOrdersFromOrderstoLegacyAtLocation(yourLocation);
+            //orderData.removeFromOrder(yourLocation);
 
         }
     }
