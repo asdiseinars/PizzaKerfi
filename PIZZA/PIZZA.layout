@@ -2,6 +2,7 @@
 <CodeBlocks_layout_file>
 	<FileVersion major="1" minor="0" />
 	<ActiveTarget name="Debug" />
+<<<<<<< HEAD
 	<File name="CONTROLLERS\DeliveryController.cpp" open="0" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="9359" topLine="225" />
@@ -22,6 +23,10 @@
 			<Cursor1 position="1293" topLine="0" />
 		</Cursor>
 	</File>
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> eb40dcb74a35d38da64949aa50f6ee3ec49a6398
 	<File name="CONTROLLERS\AdminController.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="1308" topLine="27" />
@@ -52,4 +57,5 @@
 			<Cursor1 position="755" topLine="0" />
 		</Cursor>
 	</File>
+>>>>>>> 7735694e50921f311ac469ad364ec08792622faf
 </CodeBlocks_layout_file>
