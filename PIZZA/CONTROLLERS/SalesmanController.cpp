@@ -52,17 +52,21 @@ void SalesmanController::modifySalesman(string yourLocation) {
     cout << "\e[1m" << "STEP 2: " << "\e[0m" << endl;
     cout << "\e[1m" << "Order pizza/s from menu" << "\e[0m" << endl << endl;
 
-    cout << "\e[1m" << "PIZZA MENU" << "\e[0m" << endl;
-    cout << "------------------------------------------" << endl;
     globalController.displayAllPizzas();
-    cout << "------------------------------------------" << endl;
 
     int pizzaFromMenuCount = getPizzaFromMenuCount();
     vector<Pizza> pizzasToOrder = orderPizzaFromMenu(pizzaFromMenuCount);
     cout << endl;
 
-    ///hérna væri flott að skrifa út hvaða pizzur maður hefur pantað - útfæra allsstaðar
-    //cout << "You have selected the following pizzas: " << endl;
+    cout << "You have selected the following pizzas: " << endl;
+    for(int i = 0; i < pizzasToOrder.size(); i++) {
+        cout << "Name: " << pizzasToOrder.at(i).getName() << endl;
+        cout << "Price: " << pizzasToOrder.at(i).getPrice() << endl;
+        cout << "Toppings: " << endl;
+        for(int j = 0; j < pizzasToOrder.at(i).getToppings().size(); j++) {
+            cout << pizzasToOrder.at(i).getToppings().at(j).getName() << endl;
+        }
+    }
 
     cout << "\e[1m" << "Current price for pizzas from menu: " << "\e[0m" << getTotalPriceOfPizzasFromMenu(pizzasToOrder) << endl; ///laga þennnan texta
     cout << "\e[1m" << "Total price: " << "\e[0m" << getTotalPriceOfPizzasFromMenu(pizzasToOrder)<< endl;
@@ -119,7 +123,6 @@ void SalesmanController::modifySalesman(string yourLocation) {
                                                         getTotalPriceOfBreadsticks(breadsticksToOrder) +
                                                         getTotalPriceOfPizzasFromScratch(pizzasFromScratchOrder) +
                                                         getTotalPriceOfPizzasFromMenu(pizzasToOrder);
-
     cout << endl << endl;
     endMessage();
 
