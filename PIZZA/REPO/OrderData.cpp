@@ -12,6 +12,7 @@ void OrderData::addOrderToOrders(Order& order) {
 }
 
 void OrderData::addOrderToLegacy(Order& order) {
+
     ofstream fout;
     fout.open("legacy.txt", ios::app);
     fout << order;
@@ -149,3 +150,29 @@ vector<Order> OrderData::getOrderForLocationAndOrderStatusAndPhoneNumber(string 
 
     return orderForLocationAndOrderStatusAndPhoneNumber;
 }
+
+void OrderData::removeFromOrder(string yourLocation) {
+    vector<Order> thisOrder = getOrderForLocation(yourLocation);
+    vector<Order> newOrders;
+
+    for (unsigned int i = 0; i < thisOrder.size(); i++) {
+        if (thisOrder[i].getOrderStatus() != 4) {
+            newOrders.push_back(thisOrder[i]);
+        }
+        storeAllOrders(newOrders);
+    }
+}
+
+void OrderData::moveOrderToLegacy(string yourLocation) {
+    vector<Order> thisOrder = getOrderForLocation(yourLocation);
+    vector<Order> legacyOrders;
+    for (unsigned int i = 0; i < thisOrder.size(); i++) {
+        if (thisOrder[i].getOrderStatus() == 4) {
+            legacyOrders.push_back(thisOrder[i]);
+        }
+        storeAllOrdersToLegacy(legacyOrders);
+    }
+}
+
+
+

@@ -17,7 +17,10 @@ void SalesmanController::modifySalesman(string yourLocation) {
     displayLogo();
     displaySalesmanLogo();
 
-    cout <<"\e[1m" << "Your location is " << yourLocation <<  "\e[0m" << endl << endl;    ///step 0
+    cout <<"\e[1m" << "Your location is " << yourLocation << "\e[0m" << endl << endl;
+    displayStepsOfOrdering();
+
+    ///step 0
     cout << "Input phone number (7 digits): " << endl;
     string phoneNumber = "";
     cin >> phoneNumber;
@@ -76,7 +79,6 @@ void SalesmanController::modifySalesman(string yourLocation) {
     Order newOrder(yourLocation, pizzasToOrder, pizzaFromMenuCount, pizzasFromScratchOrder, pizzasFromScratchCount,
                     breadsticksToOrder, breadsticksCount, sodasToOrder, sodaCount, totalPrice, orderStatus, phoneNumber);
     orderData.addOrderToOrders(newOrder);
-    orderData.addOrderToLegacy(newOrder);
 
 }
 

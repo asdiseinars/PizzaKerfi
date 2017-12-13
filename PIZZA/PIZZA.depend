@@ -201,7 +201,7 @@
 1513099246 source:c:\users\asdis\desktop\pizzaforrit\pizza\controllers\homecontroller.cpp
 	"HomeController.h"
 
-1513096245 source:c:\users\asdis\desktop\pizzaforrit\pizza\global\globalhelp.cpp
+1513170041 source:c:\users\asdis\desktop\pizzaforrit\pizza\global\globalhelp.cpp
 	"GlobalHelp.h"
 
 1512169830 source:c:\users\asdis\desktop\pizzaforrit\pizza\bakercontroller.cpp
@@ -215,7 +215,7 @@
 1512833651 c:\users\asdis\desktop\pizzaforrit\pizza\ui\bakerui.h
 	<iostream>
 
-1513161255 source:c:\users\asdis\desktop\pizzaforrit\pizza\controllers\bakercontroller.cpp
+1513171532 source:c:\users\asdis\desktop\pizzaforrit\pizza\controllers\bakercontroller.cpp
 	"BakerController.h"
 
 1513092598 c:\users\asdis\desktop\pizzaforrit\pizza\controllers\bakercontroller.h
@@ -230,7 +230,7 @@
 	"Order.h"
 	<Vector>
 
-1513164518 source:c:\users\asdis\desktop\pizzaforrit\pizza\controllers\salesmancontroller.cpp
+1513171532 source:c:\users\asdis\desktop\pizzaforrit\pizza\controllers\salesmancontroller.cpp
 	"SalesmanController.h"
 
 1513164173 c:\users\asdis\desktop\pizzaforrit\pizza\controllers\salesmancontroller.h
@@ -250,7 +250,7 @@
 	"SodaData.h"
 	"OrderData.h"
 
-1513165865 source:c:\users\asdis\desktop\pizzaforrit\pizza\ui\salesmanui.cpp
+1513170760 source:c:\users\asdis\desktop\pizzaforrit\pizza\ui\salesmanui.cpp
 	"SalesmanUI.h"
 
 1513165865 c:\users\asdis\desktop\pizzaforrit\pizza\ui\salesmanui.h
@@ -271,7 +271,7 @@
 1512833651 c:\users\asdis\desktop\pizzaforrit\pizza\ui\customerui.h
 	<iostream>
 
-1513084988 D
+1513161315 D
 
 1512827764 571fe2cfd8a7a8047f0b3af937b7096279e83
 
@@ -420,7 +420,7 @@
 
 1512305559 I.h"
 
-1513161255 source:c:\users\asdis\desktop\pizzaforrit\pizza\controllers\admincontroller.cpp
+1513169432 source:c:\users\asdis\desktop\pizzaforrit\pizza\controllers\admincontroller.cpp
 	"AdminController.h"
 	<iostream>
 
@@ -520,10 +520,10 @@
 	<stdio.h>
 	<vector>
 
-1513161255 source:c:\users\asdis\desktop\pizzaforrit\pizza\repo\orderdata.cpp
+1513172723 source:c:\users\asdis\desktop\pizzaforrit\pizza\repo\orderdata.cpp
 	"OrderData.h"
 
-1513161255 c:\users\asdis\desktop\pizzaforrit\pizza\repo\orderdata.h
+1513172776 c:\users\asdis\desktop\pizzaforrit\pizza\repo\orderdata.h
 	<iostream>
 	"Order.h"
 	<vector>
@@ -1056,17 +1056,17 @@
 
 1513077944 c:\users\asdis\desktop\pizzaforrit\pizza\exceptions\invalidpriceexceptions.h
 
-<<<<<<< HEAD
 1513084646 c:\users\karal\desktop\pizzaforrit\pizza\exceptions\invalidpriceexceptions.h
 
-1513104417 source:c:\users\asdis\desktop\pizzaforrit\pizza\controllers\deliverycontroller.cpp
-=======
-1513163699 source:c:\users\asdis\desktop\pizzaforrit\pizza\controllers\deliverycontroller.cpp
->>>>>>> cb85025e10b8e926bcf36fe4d022f7d3c8793b44
-	"DeliveryController.h"
+1513172937 source:c:\users\asdis\desktop\pizzaforrit\pizza\controllers\deliverycontroller.cpp
 	"DeliveryController.h"
 
-1513163709 c:\users\asdis\desktop\pizzaforrit\pizza\controllers\deliverycontroller.h
+1513159798 5025e10b8e926bcf36fe4d022f7d3c8793b44
+	"DeliveryController.h"
+	"DeliveryController.h"
+	"DeliveryUI.h"
+
+1513172311 c:\users\asdis\desktop\pizzaforrit\pizza\controllers\deliverycontroller.h
 	<iostream>
 	"SalesmanUI.h"
 	"HomeController.h"
@@ -1096,17 +1096,13 @@
 1513097244 c:\users\asdis\desktop\pizzaforrit\pizza\ui\deliveryui.h
 	<iostream>
 
-<<<<<<< HEAD
-1513164069 c:\users\einarbi\desktop\pizzaforrit\pizza\controllers\deliverycontroller.h
-=======
-<<<<<<< HEAD
+1513161315 c:\users\einarbi\desktop\pizzaforrit\pizza\controllers\deliverycontroller.h
+
 1513097244 21581f645abe96f069d2923d513095bd246b6
 
 1513159847 c:\users\karal\desktop\pizzaforrit\pizza\controllers\deliverycontroller.h
-=======
-1513161315 c:\users\einarbi\desktop\pizzaforrit\pizza\controllers\deliverycontroller.h
->>>>>>> cb85025e10b8e926bcf36fe4d022f7d3c8793b44
->>>>>>> 0dff07b36bb07d2fc77248a64d3940b303064fcc
+
+1513161315 f07b36bb07d2fc77248a64d3940b303064fcc
 	<iostream>
 	"SalesmanUI.h"
 	"HomeController.h"
@@ -1124,7 +1120,6 @@
 	"OrderData.h"
 	"DeliveryUI.h"
 
-<<<<<<< HEAD
 1513159847 c:\users\karal\desktop\pizzaforrit\pizza\ui\deliveryui.h
 	<iostream>
 
@@ -1132,7 +1127,7 @@
 	"DeliveryController.h"
 
 1513159847 source:c:\users\karal\desktop\pizzaforrit\pizza\ui\deliveryui.cpp
-=======
+
 1513098262 c:\users\einarbi\desktop\pizzaforrit\pizza\ui\deliveryui.h
 	<iostream>
 
@@ -1140,6 +1135,4 @@
 	"DeliveryController.h"
 
 1513159798 source:c:\users\einarbi\desktop\pizzaforrit\pizza\ui\deliveryui.cpp
->>>>>>> cb85025e10b8e926bcf36fe4d022f7d3c8793b44
-	"DeliveryUI.h"
 
