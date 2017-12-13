@@ -30,3 +30,11 @@ void SalesmanUI::displaySalesmanBackOrQuitUI() {
     cout << "Press b to go back" << endl;
     cout << "Press anything else to quit" << endl;
 }
+
+void SalesmanUI::displayStepsOfOrdering() {
+    cout << "Step 1: Order pizzas from menu" << endl;
+    cout << "Step 2: Make pizza from scratch" << endl;
+    cout << "Step 3: Order side orders" << endl;
+    cout << "Step 4: Add drinks to your order" << endl;
+    cout << "Press anything to continue" << endl;
+}
