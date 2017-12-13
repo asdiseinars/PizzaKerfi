@@ -33,6 +33,7 @@ class SalesmanController {
 
   public:
     SalesmanController();
+    void endMessage();
     void chooseLocation();
     void init();
     void modifySalesman(string yourLocation);

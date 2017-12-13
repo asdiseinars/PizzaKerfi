@@ -2,23 +2,18 @@ ham
 200
 pepperoni
 45
-pepperoni
-45
 skinka
 4
-Ananad
-32
 ananas
 23
-pepperoni
-300
-pepp
-200
-ananas
-100
 gradostur
 200
 aukasosa
 23
+<<<<<<< HEAD
+Sveppir
+32
+=======
 bbq
 200
+>>>>>>> b17d213a71bd39ee42e79205ca1247b51449c040
