@@ -33,6 +33,7 @@ class DeliveryController
         void displayOrders(string yourLocation);
         void displayReadyOrders(string yourLocation);
         void displayReadyOrdersForCustomer(string yourLocation);
+        void markeOrderPaidAndDeliverd(string yourLocation, string phoneNumber);
 };
 
 #endif // DELIVERYCONTROLLER_H
