@@ -34,7 +34,7 @@ class DeliveryController
         void displayReadyOrders(string yourLocation);
         void displayReadyOrdersForCustomer(string yourLocation);
         void markeOrderPaidAndDeliverd(string yourLocation, string phoneNumber);
-        //void deleteOrderFromFile(string yourLocation);
+        void deleteOrderFromFile(string yourLocation);
 };
 
 #endif // DELIVERYCONTROLLER_H
