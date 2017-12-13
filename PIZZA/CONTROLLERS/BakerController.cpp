@@ -42,6 +42,7 @@ void BakerController::modifyBakerOrders(string yourLocation) {
         vector<Order> thisOrders = orderData.getOrderForLocation(yourLocation);
         thisOrders[input].setOrderStatus(2);
         orderData.storeAllOrders(thisOrders);
+        orderData.storeAllOrdersToLegacy(thisOrders);
     }
 
     else if (selection == '3') {
@@ -56,6 +57,7 @@ void BakerController::modifyBakerOrders(string yourLocation) {
         if(thisOrders[input].getOrderStatus() == 2) {
             thisOrders[input].setOrderStatus(3);
             orderData.storeAllOrders(thisOrders);
+            orderData.storeAllOrdersToLegacy(thisOrders);
         }
         else{
             cout << "This order has not been put in the oven yet! Please put the order in the oven first." << endl;

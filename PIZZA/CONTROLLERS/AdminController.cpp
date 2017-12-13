@@ -68,6 +68,22 @@ void AdminController::init() {
     }
 }
 
+<<<<<<< HEAD
+=======
+
+/*void AdminUI::validateUserInputModifyToppings(char selection) {
+    if(selection == '2') {
+        try{
+
+        }
+        catch (InvalidPriceExceptions) {
+            cout << "Invalid input!" << endl;
+        }
+    }
+}*/
+
+
+>>>>>>> cb85025e10b8e926bcf36fe4d022f7d3c8793b44
 void AdminController::modifyToppings() {
     char selection;
     displayAdminToppingUI();

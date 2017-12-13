@@ -3,43 +3,28 @@
 	<FileVersion major="1" minor="0" />
 	<ActiveTarget name="Debug" />
 <<<<<<< HEAD
-	<File name="CONTROLLERS\AdminController.cpp" open="1" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-=======
-<<<<<<< HEAD
-	<File name="CONTROLLERS\HomeController.cpp" open="1" top="0" tabpos="7" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="CONTROLLERS\DeliveryController.cpp" open="0" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="1000" topLine="41" />
+			<Cursor1 position="9359" topLine="225" />
 		</Cursor>
 	</File>
-	<File name="MODELS\Order.cpp" open="1" top="0" tabpos="11" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="UI\AdminUI.cpp" open="1" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="2390" topLine="85" />
+			<Cursor1 position="616" topLine="4" />
 		</Cursor>
 	</File>
-	<File name="CONTROLLERS\HomeController.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="CONTROLLERS\SalesmanController.h" open="1" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="346" topLine="0" />
+			<Cursor1 position="526" topLine="0" />
 		</Cursor>
 	</File>
-	<File name="CONTROLLERS\SalesmanController.cpp" open="1" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="UI\SalesmanUI.cpp" open="1" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="2521" topLine="36" />
-=======
-<<<<<<< HEAD
-	<File name="CONTROLLERS\BakerController.cpp" open="0" top="0" tabpos="7" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-=======
-<<<<<<< HEAD
-	<File name="UI\DeliveryUI.cpp" open="1" top="0" tabpos="11" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
->>>>>>> 3a19470f294ab322b6be1d96dc646cc4b26a0c39
-		<Cursor>
-			<Cursor1 position="1666" topLine="0" />
+			<Cursor1 position="1293" topLine="0" />
 		</Cursor>
 	</File>
-	<File name="CONTROLLERS\HomeController.cpp" open="1" top="1" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-<<<<<<< HEAD
-			<Cursor1 position="938" topLine="35" />
 =======
+<<<<<<< HEAD
 			<Cursor1 position="26" topLine="0" />
 		</Cursor>
 	</File>
@@ -107,83 +92,30 @@
 	<File name="CONTROLLERS\SalesmanController.h" open="1" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 =======
 <<<<<<< HEAD
-	<File name="MODELS\Pizza.cpp" open="0" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="0" topLine="0" />
+>>>>>>> cb85025e10b8e926bcf36fe4d022f7d3c8793b44
 =======
-	<File name="CONTROLLERS\HomeController.cpp" open="1" top="1" tabpos="13" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
->>>>>>> 0d6680658bf0ed115f6cfdec26cc84f10008c624
-		<Cursor>
-			<Cursor1 position="186" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="UI\DeliveryUI.cpp" open="1" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="84" topLine="0" />
-		</Cursor>
-	</File>
+>>>>>>> eb40dcb74a35d38da64949aa50f6ee3ec49a6398
 	<File name="CONTROLLERS\AdminController.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="1426" topLine="52" />
+			<Cursor1 position="1308" topLine="27" />
 		</Cursor>
 	</File>
-	<File name="CONTROLLERS\BakerController.cpp" open="1" top="1" tabpos="8" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="REPO\OrderData.cpp" open="0" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-<<<<<<< HEAD
-			<Cursor1 position="4205" topLine="97" />
+			<Cursor1 position="786" topLine="112" />
 		</Cursor>
 	</File>
-	<File name="UI\HomeUI.cpp" open="1" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-=======
-			<Cursor1 position="911" topLine="17" />
->>>>>>> aa4eba701ff290c60f964a08b5c6dccc31c2a03e
+	<File name="CONTROLLERS\DeliveryController.h" open="0" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1052" topLine="0" />
 		</Cursor>
 	</File>
-	<File name="GLOBAL\GlobalHelp.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="UI\HomeUI.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="1049" topLine="0" />
-=======
-	<File name="UI\AdminUI.cpp" open="1" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="626" topLine="10" />
-		</Cursor>
-	</File>
-	<File name="UI\SalesmanUI.cpp" open="1" top="0" tabpos="8" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="296" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="CONTROLLERS\SalesmanController.cpp" open="0" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
->>>>>>> 0d6680658bf0ed115f6cfdec26cc84f10008c624
-		<Cursor>
-			<Cursor1 position="2710" topLine="41" />
+			<Cursor1 position="131" topLine="0" />
 		</Cursor>
 	</File>
 <<<<<<< HEAD
-	<File name="CONTROLLERS\DeliveryController.cpp" open="1" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="6377" topLine="150" />
-		</Cursor>
-	</File>
-	<File name="CONTROLLERS\DeliveryController.h" open="1" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="683" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="REPO\OrderData.h" open="1" top="0" tabpos="10" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="19" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="REPO\OrderData.cpp" open="1" top="0" tabpos="9" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="2478" topLine="21" />
-=======
-	<File name="UI\AdminUI.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="83" topLine="0" />
-		</Cursor>
-	</File>
 	<File name="CONTROLLERS\AdminController.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="1590" topLine="30" />
@@ -213,12 +145,16 @@
 =======
 <<<<<<< HEAD
 	<File name="MODELS\Order.cpp" open="1" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+=======
+	<File name="UI\SalesmanUI.h" open="1" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+>>>>>>> cb85025e10b8e926bcf36fe4d022f7d3c8793b44
 		<Cursor>
-			<Cursor1 position="2469" topLine="83" />
+			<Cursor1 position="348" topLine="0" />
 		</Cursor>
 	</File>
-	<File name="CONTROLLERS\SalesmanController.cpp" open="1" top="0" tabpos="12" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="CONTROLLERS\SalesmanController.cpp" open="1" top="1" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
+<<<<<<< HEAD
 			<Cursor1 position="2996" topLine="60" />
 		</Cursor>
 	</File>
@@ -293,6 +229,10 @@
 >>>>>>> 0d6680658bf0ed115f6cfdec26cc84f10008c624
 >>>>>>> 3a19470f294ab322b6be1d96dc646cc4b26a0c39
 >>>>>>> 2cb21581f645abe96f069d2923d513095bd246b6
+=======
+			<Cursor1 position="755" topLine="0" />
+>>>>>>> cb85025e10b8e926bcf36fe4d022f7d3c8793b44
 		</Cursor>
 	</File>
+>>>>>>> 7735694e50921f311ac469ad364ec08792622faf
 </CodeBlocks_layout_file>

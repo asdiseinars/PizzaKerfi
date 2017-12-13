@@ -232,6 +232,39 @@ void DeliveryController::displayReadyOrdersForCustomer(string yourLocation) {
         cout << "Total price of order: " << ordersForLocation.at(i).getTotalPrice() << endl;
     }
     cout << "------------------------------------------" << endl;
+    cout << endl;
+
+    markeOrderPaidAndDeliverd(yourLocation, phoneNumber);
 }
 
+void DeliveryController::markeOrderPaidAndDeliverd(string yourLocation, string phoneNumber) {
+    cout << "Marke order paid and deliverd? (y/n)" << endl;
+    char selection;
+    cin >> selection;
+
+    if(selection == 'y') {
+        vector<Order> thisOrder = orderData.getOrderForLocationAndOrderStatusAndPhoneNumber(yourLocation, 3, phoneNumber);
+        thisOrder.at(0).setOrderStatus(4);
+        orderData.storeAllOrders(thisOrder);
+        //deleteOrderFromFile(yourLocation);
+    }
+
+    else {
+        clearScreen();
+        displayLogo();
+        displayDeliveryLogo();
+        displayReadyOrdersForCustomer(yourLocation);
+    }
+}
+
+/*void DeliveryController::deleteOrderFromFile(string yourLocation) {
+    vector<Order> thisOrder = orderData.getOrderForLocation(yourLocation);
+    vector<Order> newOrders;
+    for (unsigned int i = 0; i < thisOrder.size(); i++) {
+        if (thisOrder[i].getOrderStatus() != 4) {
+            newOrders.push_back(thisOrder[i]);
+        }
+        orderData.storeAllOrders(newOrders);
+    }
+}*/
 
