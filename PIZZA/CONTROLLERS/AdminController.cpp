@@ -69,7 +69,6 @@ void AdminController::init() {
     }
 }
 
-<<<<<<< HEAD
 
 /*void AdminUI::validateUserInputModifyToppings(char selection) {
     if(selection == '2') {
@@ -83,8 +82,6 @@ void AdminController::init() {
 }*/
 
 
-=======
->>>>>>> 3a19470f294ab322b6be1d96dc646cc4b26a0c39
 void AdminController::modifyToppings() {
     char selection;
     displayAdminToppingUI();
