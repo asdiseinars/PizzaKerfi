@@ -1,6 +1,15 @@
 pepperoni
-45
+50
 skinka
+<<<<<<< HEAD
+50
+paprika
+50
+piparostur
+50
+laukur
+20
+=======
 4
 ananas
 23
@@ -8,5 +17,9 @@ gradostur
 200
 aukasosa
 23
+<<<<<<< HEAD
 Skinka
 0
+=======
+>>>>>>> f18c95298e14c8f6a85ecc9e2d506d309239c1fe
+>>>>>>> bd23f429e29f8930b61db42d6080fd978a4d3ee3

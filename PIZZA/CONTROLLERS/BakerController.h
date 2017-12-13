@@ -26,7 +26,10 @@ class BakerController {
     void init();
     string chooseLocation();
     void modifyBakerOrders(string yourLocation);
-    void displayOrders(string yourLocation);
+    void displayOrdersForBaker(string yourLocation);
+    void BackOrQuitBakerFunction(string location);
+    void displayOrdersInOven(string yourLocation);
+    void displayOrdersReadyToBePutInOven(string yourLocation);
 
 };
 
