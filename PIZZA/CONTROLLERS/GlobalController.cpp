@@ -7,7 +7,7 @@ GlobalController::GlobalController() {
 string GlobalController::chooseLocation() {
     vector<Location> locations = locationData.retrieveAllLocations();
 
-    cout << "LOCATIONS" << endl;
+    cout << "\e[1m" << "LOCATIONS" << "\e[0m" << endl;
     cout << "------------------------------------------" << endl;
     for(unsigned int i = 0; i < locations.size(); i++) {
         cout << "[" << i+1 << "] " << locations[i].getName() << endl;
@@ -34,7 +34,7 @@ void GlobalController::displayAllToppings() {
     if(toppings.size() < 1) {
         cout << "There are no toppings on the menu! " << endl;
     } else {
-        cout << "TOPPINGS" << endl;
+        cout << "\e[1m" << "TOPPINGS" << "\e[0m" << endl;
         cout << "-----------------------------------------" << endl << endl;
         for (unsigned int i = 0; i < toppings.size(); i++) {
             Topping topping = toppings.at(i);
@@ -69,7 +69,7 @@ void GlobalController::displayAllSodas() {
     if(sodas.size() < 1) {
         cout << "There are no drinks on the menu! " << endl;
     } else {
-        cout << "DRINKS" << endl;
+        cout << "\e[1m" << "DRINKS" << "\e[0m" << endl;
         cout << "------------------------------------------" << endl << endl;
         for (unsigned int i = 0; i < sodas.size(); i++) {
             Soda soda = sodas.at(i);
@@ -82,7 +82,7 @@ void GlobalController::displayAllSodas() {
 
 void GlobalController::displayAllLocations() {
     vector<Location> locations = locationData.retrieveAllLocations();
-    cout << "LOCATIONS" << endl;
+    cout << "\e[1m" << "LOCATIONS" << "\e[0m" << endl;
     cout << "------------------------------------------" << endl;
     if(locations.size() < 1) {
         cout << "There are no locations on the menu!" << endl;
@@ -100,7 +100,7 @@ void GlobalController::displayAllBreadsticks() {
     if(breadsticks.size() < 1) {
         cout << "There are no side orders on the menu! " << endl;
     } else {
-        cout << "SIDE ORDERS" << endl;
+        cout << "\e[1m" << "SIDE ORDERS" << "\e[0m" << endl;
         cout << "------------------------------------------" << endl << endl;
         for (unsigned int i = 0; i < breadsticks.size(); i++) {
             Breadsticks bread = breadsticks.at(i);
@@ -116,7 +116,7 @@ void GlobalController::displayAllCrusts () {
     if(crusts.size() < 1) {
         cout << "There are no crusts on the menu! " << endl;
     } else {
-        cout << "CRUSTS" << endl;
+        cout << "\e[1m" << "CRUSTS" << "\e[0m" << endl;
         cout << "------------------------------------------" << endl;
         for (unsigned int i = 0; i < crusts.size(); i++) {
             Crust crust = crusts.at(i);

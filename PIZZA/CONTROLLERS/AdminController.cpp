@@ -57,7 +57,7 @@ void AdminController::init() {
         modifyCrust();
     }
 
-    else if (selection == 'b') {
+    else if (selection == 'h') {
         HomeController home;
         home.init();
     }
@@ -103,6 +103,11 @@ void AdminController::modifyToppings() {
         clearScreen();
         init();
     }
+
+    else if (selection == 'h') {
+        HomeController home;
+        home.init();
+    }
     else {
         clearScreen();
         displayLogo();
@@ -111,8 +116,8 @@ void AdminController::modifyToppings() {
     }
 }
 
-void AdminController::addTopping() {                    ///má ekki vera bókstafur sem input
-    char selection = 'y';                               ///kemur 4x invalid input ef maður skrifar pepp í (y/n) valmöguleikanum
+void AdminController::addTopping() {
+    char selection = 'y';
 
     cout << "\033[4m" << "Add topping to menu" <<  "\033[0m" << endl << endl;
 
@@ -125,25 +130,23 @@ void AdminController::addTopping() {                    ///má ekki vera bókstafu
         cout << "Price: ";
         cin >> newPrice;
 
-
-
-        while (newPrice < 0) {
+        if (newPrice < 0 && (typeid(newPrice) == typeid(double))) {
             cout << "Invalid input. Please enter a positive integer as your price!" << endl;
-            cout << "Price: ";
-            cin >> newPrice;
         }
+        else {
+            Topping topping(newName, newPrice);
+            toppingData.addTopping(topping);
 
-        Topping topping(newName, newPrice);
-        toppingData.addTopping(topping);
-        cout << endl << "Do you want to add another topping? (y/n)" << endl;
+            cout << endl << "Do you want to add another topping? (y/n)" << endl;
 
-        cin >> selection;
-
-        while(selection != 'y' && selection != 'n') {
-            cout << endl << "Invalid input! " << endl << endl;
-            cout << "Do you want to add another topping? (y/n)" << endl;
             cin >> selection;
-            cout << endl;
+
+            while(selection != 'y' && selection != 'n') {
+                cout << endl << "Invalid input! " << endl << endl;
+                cout << "Do you want to add another topping? (y/n)" << endl;
+                cin >> selection;
+                cout << endl;
+            }
         }
     }
 }
@@ -237,6 +240,18 @@ void AdminController::modifyPizzas() {
     else if (selection == 'b') {
         clearScreen();
         init();
+    }
+
+    else if (selection == 'h') {
+        HomeController home;
+        home.init();
+    }
+
+    else {
+        clearScreen();
+        displayLogo();
+        displayAdminLogo();
+        modifyCrust();
     }
 }
 
@@ -429,12 +444,19 @@ void AdminController::modifySodas() {
         clearScreen();
         init();
     }
+
+    else if (selection == 'h') {
+        HomeController home;
+        home.init();
+    }
+
     else {
         clearScreen();
         displayLogo();
         displayAdminLogo();
         modifySodas();
     }
+
 }
 
 void AdminController::addSodaToMenu() {
@@ -551,6 +573,12 @@ void AdminController::modifyLocations() {
         clearScreen();
         init();
     }
+
+    else if (selection == 'h') {
+        HomeController home;
+        home.init();
+    }
+
     else {
         clearScreen();
         displayLogo();
@@ -671,6 +699,12 @@ void AdminController::modifyBreadsticks() {
         clearScreen();
         init();
     }
+
+    else if (selection == 'h') {
+        HomeController home;
+        home.init();
+    }
+
     else {
         clearScreen();
         displayLogo();
@@ -793,6 +827,12 @@ void AdminController::modifyCrust() {
         clearScreen();
         init();
     }
+
+    else if (selection == 'h') {
+        HomeController home;
+        home.init();
+    }
+
     else {
         clearScreen();
         displayLogo();
