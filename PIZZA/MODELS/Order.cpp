@@ -8,10 +8,13 @@ Order::Order()
     int breadsticksCount = 0;
     int sodasCount = 0;
     double totalPrice = 0;
+    int orderStatus = 0;
+    string phoneNumber = "";
 }
 
 Order::Order(string location, vector<Pizza> pizzasFromMenu, int pizzasFromMenuCount, vector<Pizza> pizzasFromScratch, int pizzasFromScratchCount,
-             vector<Breadsticks> breadsticks, int breadsticksCount, vector<Soda> sodas, int sodasCount, double totalPrice) {
+             vector<Breadsticks> breadsticks, int breadsticksCount, vector<Soda> sodas, int sodasCount, double totalPrice, int orderStatus,
+             string phoneNumber) {
 
     this->location = location;
     this->pizzasFromMenu = pizzasFromMenu;
@@ -23,6 +26,8 @@ Order::Order(string location, vector<Pizza> pizzasFromMenu, int pizzasFromMenuCo
     this->sodas = sodas;
     this->sodasCount = sodasCount;
     this->totalPrice = totalPrice;
+    this->orderStatus = orderStatus;
+    this->phoneNumber = phoneNumber;
 }
 
 void Order::setLocation(string location) {
@@ -43,6 +48,14 @@ void Order::setBreadsticks(vector<Breadsticks> breadsticks) {
 
 void Order::setSodas(vector<Soda> sodas) {
     this->sodas = sodas;
+}
+
+void Order::setOrderStatus(int orderStatus) {
+    this->orderStatus = orderStatus;
+}
+
+void Order::setPhoneNumber(string phoneNumber) {
+    this->phoneNumber = phoneNumber;
 }
 
 string Order::getLocation() {
@@ -69,8 +82,18 @@ double Order::getTotalPrice() {
     return totalPrice;
 }
 
+int Order::getOrderStatus() {
+    return orderStatus;
+}
+
+string Order::getPhoneNumber() {
+    return phoneNumber;
+}
+
 ofstream& operator << (ofstream& fout, Order& order) {
     fout << order.location << endl;
+
+    fout << order.phoneNumber << endl;
 
     fout << order.pizzasFromMenu.size() << endl;
 
@@ -94,13 +117,17 @@ ofstream& operator << (ofstream& fout, Order& order) {
         fout << order.sodas[i];
     }
 
-    fout << order.totalPrice;
+    fout << order.totalPrice << endl;
+
+    fout << order.orderStatus << endl;
 
     return fout;
 }
 
 ifstream& operator >> (ifstream& fin, Order& order) {
     fin >> order.location;
+
+    fin >> order.phoneNumber;
 
     fin >> order.pizzasFromMenuCount;
     for (unsigned int i = 0; i < order.pizzasFromMenuCount; i++) {
@@ -132,5 +159,8 @@ ifstream& operator >> (ifstream& fin, Order& order) {
 
     fin >> order.totalPrice;
 
+    fin >> order.orderStatus;
+
     return fin;
 }
+

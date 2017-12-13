@@ -10,6 +10,7 @@
 #include "AboutUI.h"
 #include "AdminUI.h"
 #include "CustomerUI.h"
+#include "DeliveryController.h"
 
 using namespace GlobalHelp;
 using namespace HomeUI;

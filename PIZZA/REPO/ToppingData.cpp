@@ -31,6 +31,22 @@ vector<Topping> ToppingData::retrieveAllToppings() {
     return toppings;
 }
 
+/*void ToppingData::changeTopping(Topping topping) {
+    vector<Topping> toppings = retrieveAllToppings();
+    vector<Topping> newToppings;
+    ofstream fout;
+    fout.open ("toppings.txt");
+
+    for (unsigned int i = 0; i < toppings.size(); i++) {
+        if (toppings[i] == topping) {
+            cin >> newtopping[i].getName();
+            cin >> newtopping[i].getPrice();
+        }
+    }
+
+} */
+
+
 void ToppingData::addTopping(Topping& topping) {
     ofstream fout;
     fout.open("toppings.txt", ios::app);

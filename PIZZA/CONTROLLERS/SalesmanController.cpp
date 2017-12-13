@@ -16,6 +16,16 @@ void SalesmanController::modifySalesman(string yourLocation) {
     displayLogo();
     displaySalesmanLogo();
     cout << "\033[4m" << "Your location is " << yourLocation << "\033[0m" << endl << endl;
+    ///step 0
+
+    cout << "Input phone number (7 digits): " << endl;
+    string phoneNumber = "";
+    cin >> phoneNumber;
+    while(phoneNumber.length() != 7) {
+        cin >> phoneNumber;
+        cout << "Invalid phone number!" << endl;
+    }
+
     ///step 1
 
     cout << "PIZZA MENU" << endl;
@@ -26,26 +36,27 @@ void SalesmanController::modifySalesman(string yourLocation) {
     int pizzaFromMenuCount = getPizzaFromMenuCount();
     vector<Pizza> pizzasToOrder = orderPizzaFromMenu(pizzaFromMenuCount);
     cout << "Total price: " << getTotalPriceOfPizzasFromMenu(pizzasToOrder) << endl;
-    //clearScreen();
 
+    clearScreen();
     displayLogo();
     displaySalesmanLogo();
+
     cout << "\033[4m" << "Your location is " << yourLocation << "\033[0m" << endl << endl;
     ///step 2
     int pizzasFromScratchCount = getPizzaFromScratchCount();
     vector<Pizza> pizzasFromScratchOrder = orderPizzaFromScratch(pizzasFromScratchCount);
     cout << "Total price: " << getTotalPriceOfPizzasFromScratch(pizzasFromScratchOrder);
-    //clearScreen();
-
+    clearScreen();
     displayLogo();
     displaySalesmanLogo();
+
     cout << "\033[4m" << "Your location is " << yourLocation << "\033[0m" << endl << endl;
     /// step 3
     int breadsticksCount = getBreadsticksCount();
     vector<Breadsticks> breadsticksToOrder = orderBreadsticksFromMenu(breadsticksCount);
     cout << "Total price: " << getTotalPriceOfBreadsticks(breadsticksToOrder) << endl;
-    //clearScreen();
 
+    clearScreen();
     displayLogo();
     displaySalesmanLogo();
     cout << "\033[4m" << "Your location is " << yourLocation << "\033[0m" << endl << endl;
@@ -54,16 +65,20 @@ void SalesmanController::modifySalesman(string yourLocation) {
     vector<Soda> sodasToOrder = orderSodaFromMenu(sodaCount);
     cout << "Total price: " << getTotalPriceOfSodas(sodasToOrder) << endl;
 
-    double totalPrice = getTotalPriceOfPizzasFromMenu(pizzasToOrder) + getTotalPriceOfPizzasFromScratch(pizzasFromScratchOrder) +getTotalPriceOfBreadsticks(breadsticksToOrder)
+    double totalPrice = getTotalPriceOfPizzasFromMenu(pizzasToOrder) + getTotalPriceOfPizzasFromScratch(pizzasFromScratchOrder) + getTotalPriceOfBreadsticks(breadsticksToOrder)
                         + getTotalPriceOfSodas(sodasToOrder);
     cout << "Total total price: " << totalPrice << endl;
-    //clearScreen();
+
+    int orderStatus = 1;
+
+    clearScreen();
 
     displayLogo();
     ///complete order
     //display
 
-    Order newOrder(yourLocation, pizzasToOrder, pizzaFromMenuCount, pizzasFromScratchOrder, pizzasFromScratchCount, breadsticksToOrder, breadsticksCount, sodasToOrder, sodaCount, totalPrice);
+    Order newOrder(yourLocation, pizzasToOrder, pizzaFromMenuCount, pizzasFromScratchOrder, pizzasFromScratchCount,
+                    breadsticksToOrder, breadsticksCount, sodasToOrder, sodaCount, totalPrice, orderStatus, phoneNumber);
     orderData.addOrderToOrders(newOrder);
 
 }
@@ -121,7 +136,7 @@ vector<Pizza> SalesmanController::orderPizzaFromScratch(int pizzasFromScratchCou
         vector<Crust> crusts = crustData.retrieveAllCrusts();
         for(unsigned int i = 0; i < crusts.size(); i++) {
             Crust crust = crusts.at(i);
-            cout << "[" << i+1 << "] \t" << crust.getName() << endl;
+            cout << "[" << i+1 << "]: " << crust.getName() << "\t" << crust.getPrice() << " kr." << endl;
         }
         cout << "------------------------------------------" << endl;
 
@@ -135,8 +150,8 @@ vector<Pizza> SalesmanController::orderPizzaFromScratch(int pizzasFromScratchCou
         cout << "------------------------------------------" << endl;
         vector<Topping> toppings = toppingData.retrieveAllToppings();
         for(unsigned int i = 0; i < toppings.size(); i++) {
-            Topping topp = toppings.at(i);
-            cout << "[" << i+1 << "] \t" << topp.getName() << endl;
+            Topping topping = toppings.at(i);
+            cout << "[" << i+1 << "]: " << topping.getName() << "\t" << topping.getPrice() << " kr." << endl;
         }
         cout << "------------------------------------------" << endl;
 
