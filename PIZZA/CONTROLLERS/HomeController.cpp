@@ -44,8 +44,8 @@ void HomeController::init() {
 
     else if (selection == '4') {
         clearScreen();
-        CustomerController customer;
-        customer.init();
+        DeliveryController delivery;
+        delivery.init();
     }
 
     else if (selection == 'c') {
@@ -54,7 +54,7 @@ void HomeController::init() {
         displayContactUsUI();
 
         cout << endl;
-        displayCustumerBackOrQuitUI();
+        displayAdminBackOrQuitUI();
         char selection;
         cin >> selection;
         if (selection == 'b') {
@@ -69,7 +69,7 @@ void HomeController::init() {
         displayAboutUI();
 
         cout << endl;
-        displayCustumerBackOrQuitUI();
+        displayAdminBackOrQuitUI();
         char selection;
         cin >> selection;
         if (selection == 'b') {

@@ -118,7 +118,7 @@ void BakerController::displayOrders(string yourLocation) {
             cout << "In oven" << endl;
         }
         else if(ordersForLocation.at(i).getOrderStatus() == 3) {
-            cout << "Ready" << endl;
+            cout << "Ready for delivery" << endl;
         }
         else{
             cout << "Invalid order status! " << endl;
