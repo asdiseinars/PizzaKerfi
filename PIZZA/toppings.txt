@@ -1,0 +1,12 @@
+ham
+200
+pepperoni
+45
+skinka
+4
+ananas
+23
+gradostur
+200
+aukasosa
+23
