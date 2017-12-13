@@ -21,6 +21,8 @@ class OrderData {
     vector<Order> getOrderForLocationAndOrderStatusAndPhoneNumber(string location, int orderStatus, string phoneNumber);
     vector<Order> retrieveAllOrdersFromLegacy();
     void storeAllOrdersToLegacy(vector<Order> orders);
+    void removeFromOrder(string yourLocation);
+    void moveOrderToLegacy(string yourLocation);
 
 };
 

@@ -4,6 +4,23 @@ SalesmanController::SalesmanController() {
     //ctor
 }
 
+void SalesmanController::endMessage() {
+    cout << "Press any button if you would like to continue" << endl;
+    cout << "Press q to quit" << endl;
+
+    char input = '\0';
+    cin >> input;
+
+    if (input == 'q') {
+        return;
+    }
+    else {
+        clearScreen();
+        displayLogo();
+        displaySalesmanLogo();
+    }
+}
+
 void SalesmanController::init() {
     displayLogo();
     displaySalesmanLogo();
@@ -17,14 +34,28 @@ void SalesmanController::modifySalesman(string yourLocation) {
     displayLogo();
     displaySalesmanLogo();
 
-    cout <<"\e[1m" << "Your location is " << yourLocation <<  "\e[0m" << endl << endl;    ///step 0
-    cout << "Input phone number (7 digits): " << endl;
+    cout << "\e[1m" << "Your location is " << yourLocation << "\e[0m" << endl << endl;
+    displayStepsOfOrdering();
     string phoneNumber = "";
+
+    endMessage();
+
+    cout << "\e[1m" << "Your location is " << yourLocation << "\e[0m" << endl << endl;
+    cout << "\e[1m" << "STEP 1: " << "\e[0m";
+    cout << "Input phone number (7 digits): " << endl << endl;
+
     cin >> phoneNumber;
     while(phoneNumber.length() != 7) {
         cin >> phoneNumber;
-        cout << "Invalid phone number!" << endl;
+        cout << "Invalid phone number!";
     }
+    cout << endl;
+
+    endMessage();
+
+    cout << "\e[1m" << "Your location is " << yourLocation << "\e[0m" << endl << endl;
+    cout << "\e[1m" << "STEP 2: " << "\e[0m";
+    cout << "Order pizza/s from menu" << endl << endl;
 
     cout << "PIZZA MENU" << endl;
     cout << "------------------------------------------" << endl;
@@ -33,37 +64,57 @@ void SalesmanController::modifySalesman(string yourLocation) {
 
     int pizzaFromMenuCount = getPizzaFromMenuCount();
     vector<Pizza> pizzasToOrder = orderPizzaFromMenu(pizzaFromMenuCount);
-    cout << "Total price: " << getTotalPriceOfPizzasFromMenu(pizzasToOrder) << endl;
+    cout << "Current Price: " << getTotalPriceOfPizzasFromMenu(pizzasToOrder);
 
-    clearScreen();
-    displayLogo();
-    displaySalesmanLogo();
+    cout << endl << endl;
 
-    cout <<"\e[1m" << "Your location is " << yourLocation <<  "\e[0m" << endl << endl;    ///step 2
+    endMessage();
+
+    cout << "\e[1m" << "Your location is " << yourLocation << "\e[0m" << endl << endl;
+    cout << "\e[1m" << "STEP 3: " << "\e[0m";
+    cout << "Order pizza/s made from scratch" << endl << endl;
+
     int pizzasFromScratchCount = getPizzaFromScratchCount();
+
+    cout << endl;
+
     vector<Pizza> pizzasFromScratchOrder = orderPizzaFromScratch(pizzasFromScratchCount);
-    cout << "Total price: " << getTotalPriceOfPizzasFromScratch(pizzasFromScratchOrder);
-    clearScreen();
-    displayLogo();
-    displaySalesmanLogo();
+    cout << "Current price: " << getTotalPriceOfPizzasFromScratch(pizzasFromScratchOrder);
 
-    cout << "Your location is " << yourLocation <<  "\e[0m" << endl << endl;
-    /// step 3
+    cout << endl << endl;
+
+    endMessage();
+
+    cout << "\e[1m" << "Your location is " << yourLocation << "\e[0m" << endl << endl;
+    cout << "\e[1m" << "STEP 4: " << "\e[0m";
+    cout << "Order side orders" << endl << endl;
+
     int breadsticksCount = getBreadsticksCount();
+    cout << endl;
     vector<Breadsticks> breadsticksToOrder = orderBreadsticksFromMenu(breadsticksCount);
-    cout << "Total price: " << getTotalPriceOfBreadsticks(breadsticksToOrder) << endl;
+    cout << endl << "Current Price: " << getTotalPriceOfBreadsticks(breadsticksToOrder) + getTotalPriceOfPizzasFromScratch(pizzasFromScratchOrder);
 
-    clearScreen();
-    displayLogo();
-    displaySalesmanLogo();
-    cout <<"\e[1m" << "Your location is " << yourLocation <<  "\e[0m" << endl << endl;    ///step 4
+    cout << endl << endl;
+
+    endMessage();
+
+    cout << "\e[1m" << "Your location is " << yourLocation << "\e[0m" << endl << endl;
+    cout << "\e[1m" << "STEP 5: " << "\e[0m";
+    cout << "Order drinks" << endl << endl;
+
     int sodaCount = getSodaCount();
     vector<Soda> sodasToOrder = orderSodaFromMenu(sodaCount);
-    cout << "Total price: " << getTotalPriceOfSodas(sodasToOrder) << endl;
+    cout << endl;
+
+    cout << "Current price: " << getTotalPriceOfSodas(sodasToOrder) + getTotalPriceOfBreadsticks(breadsticksToOrder) + getTotalPriceOfPizzasFromScratch(pizzasFromScratchOrder);
+
+    cout << endl << endl;
+
+    endMessage(); ///eitthvað lost eftir þetta
 
     double totalPrice = getTotalPriceOfPizzasFromMenu(pizzasToOrder) + getTotalPriceOfPizzasFromScratch(pizzasFromScratchOrder) + getTotalPriceOfBreadsticks(breadsticksToOrder)
                         + getTotalPriceOfSodas(sodasToOrder);
-    cout << "Total total price: " << totalPrice << endl;
+    cout << "Total price: " << totalPrice << endl;
 
     int orderStatus = 1;
 
@@ -76,7 +127,6 @@ void SalesmanController::modifySalesman(string yourLocation) {
     Order newOrder(yourLocation, pizzasToOrder, pizzaFromMenuCount, pizzasFromScratchOrder, pizzasFromScratchCount,
                     breadsticksToOrder, breadsticksCount, sodasToOrder, sodaCount, totalPrice, orderStatus, phoneNumber);
     orderData.addOrderToOrders(newOrder);
-    orderData.addOrderToLegacy(newOrder);
 
 }
 
@@ -239,7 +289,6 @@ vector<Soda> SalesmanController::orderSodaFromMenu(int sodaCount) {
         input -= 1;
         sodasToOrder.push_back(sodas.at(input));
     }
-
     return sodasToOrder;
 }
 

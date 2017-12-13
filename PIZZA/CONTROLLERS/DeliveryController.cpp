@@ -244,10 +244,13 @@ void DeliveryController::markeOrderPaidAndDeliverd(string yourLocation, string p
 
     if(selection == 'y') {
         vector<Order> thisOrder = orderData.getOrderForLocationAndOrderStatusAndPhoneNumber(yourLocation, 3, phoneNumber);
-        thisOrder.at(0).setOrderStatus(4);
-        orderData.storeAllOrders(thisOrder);
-        orderData.storeAllOrdersToLegacy(thisOrder);
-        //deleteOrderFromFile(yourLocation);
+        for(int i = 0; i < thisOrder.size(); i++) {
+            thisOrder.at(i).setOrderStatus(4);
+            orderData.storeAllOrders(thisOrder);
+            orderData.moveOrderToLegacy(yourLocation);
+            orderData.removeFromOrder(yourLocation);
+
+        }
     }
 
     else {
@@ -258,14 +261,5 @@ void DeliveryController::markeOrderPaidAndDeliverd(string yourLocation, string p
     }
 }
 
-void DeliveryController::deleteOrderFromFile(string yourLocation) {
-    vector<Order> thisOrder = orderData.getOrderForLocation(yourLocation);
-    vector<Order> newOrders;
-    for (unsigned int i = 0; i < thisOrder.size(); i++) {
-        if (thisOrder[i].getOrderStatus() != 4) {
-            newOrders.push_back(thisOrder[i]);
-        }
-        orderData.storeAllOrders(newOrders);
-    }
-}
+
 
