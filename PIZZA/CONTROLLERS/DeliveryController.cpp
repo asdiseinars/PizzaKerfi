@@ -246,10 +246,7 @@ void DeliveryController::markeOrderPaidAndDeliverd(string yourLocation, string p
         vector<Order> thisOrder = orderData.getOrderForLocationAndOrderStatusAndPhoneNumber(yourLocation, 3, phoneNumber);
         thisOrder.at(0).setOrderStatus(4);
         orderData.storeAllOrders(thisOrder);
-
-        thisOrder.erase(thisOrder.begin());
-        orderData.storeAllOrders(thisOrder);
-
+        //deleteOrderFromFile(yourLocation);
     }
 
     else {
@@ -259,4 +256,15 @@ void DeliveryController::markeOrderPaidAndDeliverd(string yourLocation, string p
         displayReadyOrdersForCustomer(yourLocation);
     }
 }
+
+/*void DeliveryController::deleteOrderFromFile(string yourLocation) {
+    vector<Order> thisOrder = orderData.getOrderForLocation(yourLocation);
+    vector<Order> newOrders;
+    for (unsigned int i = 0; i < thisOrder.size(); i++) {
+        if (thisOrder[i].getOrderStatus() != 4) {
+            newOrders.push_back(thisOrder[i]);
+        }
+        orderData.storeAllOrders(newOrders);
+    }
+}*/
 
