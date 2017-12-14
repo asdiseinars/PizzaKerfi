@@ -15,6 +15,7 @@
 #include "BreadsticksData.h"
 #include "SodaData.h"
 #include "OrderData.h"
+#include "GlobalUI.h"
 
 using namespace GlobalHelp;
 using namespace std;
@@ -30,6 +31,7 @@ class SalesmanController {
     BreadsticksData breadsticksData;
     SodaData sodaData;
     OrderData orderData;
+    GlobalUI globalUI;
 
   public:
     SalesmanController();

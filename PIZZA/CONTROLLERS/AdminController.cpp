@@ -1,6 +1,5 @@
 #include "AdminController.h"
-#include <iostream>
-using namespace std;
+
 
 AdminController::AdminController() {
 
@@ -77,7 +76,7 @@ void AdminController::modifyToppings() {
         clearScreen();
         displayLogo();
         displayAdminLogo();
-        globalController.displayAllToppings();
+        globalUI.displayAllToppings();
         toppingBackFunction();
     }
 
@@ -116,39 +115,48 @@ void AdminController::modifyToppings() {
     }
 }
 
+bool AdminController::validatePrice (double price) {
+    if(price < 0 || !isdigit(price)) {
+        return false;
+    }
+    return true;
+}
+
 void AdminController::addTopping() {
     char selection = 'y';
 
     cout << "\033[4m" << "Add topping to menu" <<  "\033[0m" << endl << endl;
 
-    //while(selection == 'y')//{
+    while(selection == 'y'){
         string newName;
-        int newPrice;
-
+        double newPrice;
         cout << "Name: ";
         cin >> newName;
-        cout << "Price: ";
-        cin >> newPrice;
 
-        if (newPrice < 0 || (typeid(newPrice) != typeid(int))) {
-            cout << "Invalid input. Please enter a positive integer as your price!" << endl;
+        do{ ///do while lykkja komin í rugl eftir mörg test haha
+            cout << "Price: ";
+            cin >> newPrice;
+                if(validatePrice(newPrice)) {
+                    cout << "Invalid input. Please enter a positive integer as your price!" << endl;
+                }
         }
-        else {
-            Topping topping(newName, newPrice);
-            toppingData.addTopping(topping);
-        /*
-            cout << endl << "Do you want to add another topping? (y/n)" << endl;
+        while(validatePrice(newPrice));
 
+        Topping topping(newName, newPrice);
+        toppingData.addTopping(topping);
+
+        cout << endl << "Do you want to add another topping? (y/n)" << endl;
+
+        cin >> selection;
+
+        while(selection != 'y' && selection != 'n') {
+            cout << endl << "Invalid input! " << endl << endl;
+            cout << "Do you want to add another topping? (y/n)" << endl;
             cin >> selection;
+            cout << endl;
 
-            while(selection != 'y' && selection != 'n') {
-                cout << endl << "Invalid input! " << endl << endl;
-                cout << "Do you want to add another topping? (y/n)" << endl;
-                cin >> selection;
-                cout << endl;
-            }
-        }*/
         }
+    }
 }
 
 void AdminController::removeTopping() {
@@ -161,10 +169,10 @@ void AdminController::removeTopping() {
         vector<Topping> toppings = toppingData.retrieveAllToppings();
         cout << endl;
 
-        globalController.displayAllToppings();
+        globalUI.displayAllToppings();
 
         cout << "What topping do you want to remove? ";
-        int input;
+        unsigned int input;
         cin >> input;
         input -= 1;
 
@@ -217,7 +225,7 @@ void AdminController::modifyPizzas() {
         clearScreen();
         displayLogo();
         displayAdminLogo();
-        globalController.displayAllPizzas();
+        globalUI.displayAllPizzas();
         pizzaBackFunction();
     }
 
@@ -366,7 +374,7 @@ void AdminController::removePizzaFromMenu() {
         }
 
     cout << "What pizza do you want to remove? ";
-    int input;
+    unsigned int input;
     cin >> input;
     input -= 1;
 
@@ -420,7 +428,7 @@ void AdminController::modifySodas() {
         clearScreen();
         displayLogo();
         displayAdminLogo();
-        globalController.displayAllSodas();
+        globalUI.displayAllSodas();
         sodaBackFunction();
     }
 
@@ -496,10 +504,10 @@ void AdminController::removeSodaFromMenu() {
         vector<Soda> sodas = sodaData.retrieveAllSodas();
         cout << endl;
 
-        globalController.displayAllSodas();
+        globalUI.displayAllSodas();
 
         cout << "What drink do you want to remove? ";
-        int input;
+        unsigned int input;
         cin >> input;
         input -= 1;
 
@@ -553,7 +561,7 @@ void AdminController::modifyLocations() {
         clearScreen();
         displayLogo();
         displayAdminLogo();
-        globalController.displayAllLocations();
+        globalUI.displayAllLocations();
         locationBackFunction();
     }
 
@@ -626,10 +634,10 @@ void AdminController::removeLocations() {
     while(selection == 'y') {
         vector<Location> locations = locationData.retrieveAllLocations();
 
-        globalController.displayAllLocations();
+        globalUI.displayAllLocations();
 
         cout << "What location do you want to remove? ";
-        int input;
+        unsigned int input;
         cin >> input;
         input -= 1;
 
@@ -683,7 +691,7 @@ void AdminController::modifyBreadsticks() {
         clearScreen();
         displayLogo();
         displayAdminLogo();
-        globalController.displayAllBreadsticks();
+        globalUI.displayAllBreadsticks();
         breadsticksBackFunction();
     }
 
@@ -758,10 +766,10 @@ void AdminController::removeBreadsticksFromMenu() {
         vector<Breadsticks> breadsticks = breadsticksData.retrieveAllBreadsticks();
         cout << endl;
 
-        globalController.displayAllBreadsticks();
+        globalUI.displayAllBreadsticks();
 
         cout << "What side order do you want to remove? ";
-        int input;
+        unsigned int input;
         cin >> input;
         input -= 1;
 
@@ -815,7 +823,7 @@ void AdminController::modifyCrust() {
         clearScreen();
         displayLogo();
         displayAdminLogo();
-        globalController.displayAllCrusts();
+        globalUI.displayAllCrusts();
         crustBackFunction();
     }
 
@@ -890,10 +898,10 @@ void AdminController::removeCrustFromMenu() {
         vector<Crust> crusts = crustData.retrieveAllCrusts();
         cout << endl;
 
-        globalController.displayAllCrusts();
+        globalUI.displayAllCrusts();
 
         cout << "What crust do you want to remove? ";
-        int input;
+        unsigned int input;
         cin >> input;
         input -= 1;
 

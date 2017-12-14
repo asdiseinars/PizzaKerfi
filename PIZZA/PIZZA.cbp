@@ -60,6 +60,8 @@
 		<Unit filename="CONTROLLERS/SalesmanController.h" />
 		<Unit filename="GLOBAL/GlobalHelp.cpp" />
 		<Unit filename="GLOBAL/GlobalHelp.h" />
+		<Unit filename="GLOBAL/GlobalUI.cpp" />
+		<Unit filename="GLOBAL/GlobalUI.h" />
 		<Unit filename="MODELS/Breadsticks.cpp" />
 		<Unit filename="MODELS/Breadsticks.h" />
 		<Unit filename="MODELS/Crust.cpp" />

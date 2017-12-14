@@ -18,6 +18,12 @@ void CrustData::storeAllCrusts(vector<Crust> crust) {
 
 vector<Crust> CrustData::retrieveAllCrusts() {
 
+    ifstream myFile("crusts.txt");
+    if(myFile.fail()) {
+        cout << "There are no crusts on the menu! " << endl;
+        cout << "Please exit and add crusts to the menu first." << endl;
+    }
+
     vector <Crust> crust;
     Crust crustie;
 

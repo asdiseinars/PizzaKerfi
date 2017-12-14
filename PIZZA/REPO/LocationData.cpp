@@ -15,6 +15,12 @@ void LocationData::addLocation(Location& location) {
 }
 
 vector<Location> LocationData::retrieveAllLocations() {
+    ifstream myFile("locations.txt");
+    if(myFile.fail()) {
+        cout << "There are no location! " << endl;
+        cout << "Please exit and add locations first." << endl;
+    }
+
     vector <Location> locations;
     Location location;
 

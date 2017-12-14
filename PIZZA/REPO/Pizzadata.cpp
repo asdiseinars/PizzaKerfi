@@ -12,6 +12,11 @@ void PizzaData::addPizzaToMenu(Pizza& pizza) {
 }
 
 vector<Pizza> PizzaData::retrieveAllPizzas() {
+    ifstream myFile("pizzamenu.txt");
+    if(myFile.fail()) {
+        cout << "There are no pizzas on the menu! " << endl;
+        cout << "Please exit and add pizzas to the menu first." << endl;
+    }
 
     vector <Pizza> pizzas;
 

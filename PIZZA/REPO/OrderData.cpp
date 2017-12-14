@@ -20,6 +20,11 @@ void OrderData::addOrderToLegacy(Order& order) {
 }
 
 vector<Order> OrderData::retrieveAllOrders() {
+    ifstream myFile("orders.txt");
+    if(myFile.fail()) {
+        cout << "There are no orders! " << endl;
+        cout << "Please exit." << endl;
+    }
 
     vector <Order> orders;
 

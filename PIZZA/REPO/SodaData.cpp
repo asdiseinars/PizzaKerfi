@@ -17,6 +17,12 @@ void SodaData::storeAllSodas(vector<Soda> sodas) {
 
 vector<Soda> SodaData::retrieveAllSodas() {
 
+    ifstream myFile("sodas.txt");
+    if(myFile.fail()) {
+        cout << "There are no drinks on the menu! " << endl;
+        cout << "Please exit and add drinks to the menu first." << endl;
+    }
+
     vector <Soda> sodas;
     Soda soda;
 
