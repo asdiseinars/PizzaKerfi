@@ -18,7 +18,6 @@ void AdminController::init() {
         displayLogo();
         displayAdminLogo();
         modifyToppings();
-
     }
 
     else if (selection == '2') { // Add/edit pizzas
@@ -155,8 +154,6 @@ void AdminController::addTopping() {
     }
 }
 
-
-
 void AdminController::removeTopping() {
 
     char selection = 'y';
@@ -264,9 +261,9 @@ void AdminController::modifyPizzas() {
 void AdminController::addPizzaToMenu() {
     char selection = 'y';
 
-    cout << "\033[4m" << "Add pizza to menu" <<  "\033[0m" << endl << endl;
-
     while(selection == 'y') {
+
+        cout << "\033[4m" << "Add pizza to menu" <<  "\033[0m" << endl << endl;
 
         string myName;
         vector<Topping> myToppings;
@@ -731,7 +728,7 @@ void AdminController::modifyBreadsticks() {
         breadsticksBackFunction();
     }
 
-    else if (selection == '2') { //Remove breadsticks from menu
+    else if (selection == '3') { //Remove breadsticks from menu
         clearScreen();
         displayLogo();
         displayAdminLogo();
@@ -1045,5 +1042,27 @@ void AdminController::displayAllOrders() {
 
             cout << "------------------------------------------" << endl;
 
+    }
+    endMessage();
+}
+
+void AdminController::endMessage() {
+    char selection;
+
+    cout << "Press h to go home" << endl;
+    cout << "Press q to quit" << endl;
+
+    cin >> selection;
+
+    if (selection == 'h') {
+        HomeController home;
+        home.init();
+    }
+    else if (selection == 'q') {
+        return;
+    }
+    else {
+        cout << "Invalid input!" << endl;
+        endMessage();
     }
 }
