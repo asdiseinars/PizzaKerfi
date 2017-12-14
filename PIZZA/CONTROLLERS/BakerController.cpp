@@ -130,10 +130,6 @@ void BakerController::displayOrdersForBaker(string yourLocation) {
     cout << "ORDERS" << endl;
     cout << "------------------------------------------" << endl;
 
-<<<<<<< HEAD
-
-=======
->>>>>>> 98544af67eb5a004db3bbe75daeb48c3c1f87f65
         for (unsigned int i = 0; i < ordersForLocation.size(); i++) {
             if (ordersForLocation[i].getOrderStatus() == 1 || ordersForLocation[i].getOrderStatus() == 2) {
                 cout << "\e[1m" << "[" << i + 1 << "]" << "\e[0m" << endl;
@@ -194,9 +190,7 @@ void BakerController::displayOrdersForBaker(string yourLocation) {
             cout << "INVALID!!!" << endl;
            }
         }
-
 }
-
 
 void BakerController::displayOrdersReadyToBePutInOven(string yourLocation) {
     vector<Order> ordersForLocation = orderData.getOrderForLocation(yourLocation);
@@ -325,10 +319,7 @@ void BakerController::BackOrQuitBakerFunction(string location) {
     char selection;
     cin >> selection;
 
-<<<<<<< HEAD
-=======
 
->>>>>>> 98544af67eb5a004db3bbe75daeb48c3c1f87f65
     if (selection == 'b') {
         clearScreen();
         displayLogo();
@@ -340,8 +331,4 @@ void BakerController::BackOrQuitBakerFunction(string location) {
         return;
     }
 }
-<<<<<<< HEAD
-=======
 
-
->>>>>>> 98544af67eb5a004db3bbe75daeb48c3c1f87f65

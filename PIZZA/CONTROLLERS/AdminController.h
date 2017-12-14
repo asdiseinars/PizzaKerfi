@@ -76,6 +76,9 @@ class AdminController {
     void displayAllOrders();
     void modifyOrders();
 
+    void endMessage();
+
+
 };
 
 #endif // ADMINCONTROLLER_H
