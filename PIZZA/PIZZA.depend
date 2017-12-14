@@ -229,6 +229,9 @@
 1513246642 c:\users\karal\desktop\pizzaforrit\pizza\ui\deliveryui.h
 	<iostream>
 
+1513264859 source:c:\users\karal\desktop\pizzaforrit\pizza\controllers\bakercontroller.cpp
+	"BakerController.h"
+
 1513257256 source:c:\users\karal\desktop\pizzaforrit\pizza\controllers\deliverycontroller.cpp
 	"DeliveryController.h"
 
@@ -237,9 +240,6 @@
 
 1513246642 source:c:\users\karal\desktop\pizzaforrit\pizza\controllers\homecontroller.cpp
 	"HomeController.h"
-
-1513263201 source:c:\users\karal\desktop\pizzaforrit\pizza\controllers\salesmancontroller.cpp
-	"SalesmanController.h"
 
 1513246642 source:c:\users\karal\desktop\pizzaforrit\pizza\global\globalhelp.cpp
 	"GlobalHelp.h"
@@ -287,9 +287,6 @@
 1513246642 source:c:\users\karal\desktop\pizzaforrit\pizza\repo\crustdata.cpp
 	"CrustData.h"
 
-1513256524 source:c:\users\karal\desktop\pizzaforrit\pizza\repo\locationdata.cpp
-	"LocationData.h"
-
 1513265899 source:c:\users\karal\desktop\pizzaforrit\pizza\repo\orderdata.cpp
 	"OrderData.h"
 
@@ -320,6 +317,9 @@
 1513256524 source:c:\users\karal\desktop\pizzaforrit\pizza\ui\salesmanui.cpp
 	"SalesmanUI.h"
 
-1513264859 source:c:\users\karal\desktop\pizzaforrit\pizza\controllers\bakercontroller.cpp
-	"BakerController.h"
+1513267069 source:c:\users\karal\desktop\pizzaforrit\pizza\controllers\salesmancontroller.cpp
+	"SalesmanController.h"
+
+1513267069 source:c:\users\karal\desktop\pizzaforrit\pizza\repo\locationdata.cpp
+	"LocationData.h"
 

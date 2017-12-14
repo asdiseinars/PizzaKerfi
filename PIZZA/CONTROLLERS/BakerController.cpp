@@ -127,8 +127,6 @@ void BakerController::displayOrdersForBaker(string yourLocation) {
     cout << "ORDERS" << endl;
     cout << "------------------------------------------" << endl;
 
-    cout << "size of vector: " << ordersForLocation.size() << endl;
-
         for (unsigned int i = 0; i < ordersForLocation.size(); i++) {
             if (ordersForLocation[i].getOrderStatus() == 1 || ordersForLocation[i].getOrderStatus() == 2) {
                 cout << "\e[1m" << "[" << i + 1 << "]" << "\e[0m" << endl;
