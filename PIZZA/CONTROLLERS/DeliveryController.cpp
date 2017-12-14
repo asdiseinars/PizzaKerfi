@@ -84,7 +84,7 @@ void DeliveryController::modifyDelivery(string yourLocation) {
 void DeliveryController::displayOrders(string yourLocation) {
     vector<Order> allOrders = orderData.retrieveAllOrders();
 
-    cout << "\e[1m" << "ORDERS" << "\e[0m" << endl;
+    cout << "ORDERS" << endl;
     cout << "------------------------------------------" << endl;
 
     for (unsigned int i = 0; i < allOrders.size(); i++) {
@@ -113,9 +113,11 @@ void DeliveryController::displayOrders(string yourLocation) {
                 for (unsigned int n = 0; n < allOrders.at(i).getPizzasFromScratch().at(m).getToppings().size(); n++) {
                     cout << allOrders.at(i).getPizzasFromScratch().at(m).getToppings().at(n).getName() << "  ";
                 }
+                cout << endl << endl;
             }
 
-            cout << endl << endl;
+            cout << endl;
+
 
             cout << "\e[1m" << "SIDE ORDERS: " << "\e[0m" << endl;
             for(unsigned int l = 0; l < allOrders.at(i).getBreadsticks().size(); l++) {
@@ -151,7 +153,21 @@ void DeliveryController::displayOrders(string yourLocation) {
             cout << "Total price of order: " << allOrders.at(i).getTotalPrice() << " kr." << "\e[0m" << endl;
 
             cout << "------------------------------------------" << endl;
+    }
 
+    cout << "Press h to go home" << endl;
+    cout << "Press any other button to quit the program" << endl;
+
+
+    char input = '\0';
+    cin >> input;
+
+    if (input == 'h') {
+        HomeController home;
+        home.init();
+    }
+    else {
+        return;
     }
 }
 
@@ -371,6 +387,5 @@ void DeliveryController::markeOrderPaidAndDeliverd(string yourLocation, string p
         displayDeliveryLogo();
         displayReadyOrdersForCustomer(yourLocation);*/
 }
-
 
 
