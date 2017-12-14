@@ -5,16 +5,19 @@ SalesmanController::SalesmanController() {
 }
 
 void SalesmanController::endMessage() {
-    cout << "Press q to quit" << endl;
-    cout << "Press h to go home" << endl;
+    cout << "b: Go back" << endl;
+    cout << "h: Go home" << endl;
     cout << "Press anything else to continue" << endl;
-
 
     char input = '\0';
     cin >> input;
 
     if (input == 'q') {
         return;
+    }
+    else if (input == 'b') {
+        clearScreen();
+        init();
     }
     else if (input == 'h') {
         HomeController home;
@@ -45,6 +48,7 @@ void SalesmanController::modifySalesman(string yourLocation) {
     string phoneNumber = "";
     endMessage();
 
+    /// Step 1
     cout << "\e[1m" << "Your location is " << yourLocation << "\e[0m" << endl << endl;
     cout << "\e[1m" << "STEP 1: Input phone number (7 digits) " << "\e[0m " << endl;
     cin >> phoneNumber;
@@ -54,11 +58,12 @@ void SalesmanController::modifySalesman(string yourLocation) {
         cin >> phoneNumber;
     }
 
-    cout << endl << "\e[1m" << "Your phone number is: " << phoneNumber << "\e[0m" << endl;
+    cout << endl << "\e[1m" << "Customers phone number: " << phoneNumber << "\e[0m" << endl;
 
     cout << endl;
     endMessage();
 
+    /// Step 2
     cout << "\e[1m" << "Your location is " << yourLocation << "\e[0m" << endl << endl;
     cout << "\e[1m" << "STEP 2: Order pizza/s from menu" << "\e[0m" << endl;
 
@@ -82,6 +87,7 @@ void SalesmanController::modifySalesman(string yourLocation) {
     cout << endl;
     endMessage();
 
+    /// Step 3
     cout << "\e[1m" << "Your location is " << yourLocation << "\e[0m" << endl << endl;
     cout << "\e[1m" << "STEP 3: " << "\e[0m";
     cout << "\e[1m" << "Order pizza/s made from scratch" << "\e[0m" << endl << endl;
@@ -105,6 +111,7 @@ void SalesmanController::modifySalesman(string yourLocation) {
     cout << endl << endl;
     endMessage();
 
+    /// Step 4
     cout << "\e[1m" << "Your location is " << yourLocation << "\e[0m" << endl << endl;
     cout << "\e[1m" << "STEP 4: " << "\e[0m";
     cout << "\e[1m" << "Order side orders" << "\e[0m" << endl << endl;
@@ -142,7 +149,12 @@ void SalesmanController::modifySalesman(string yourLocation) {
     cout << "\e[1m" << "Total price: " << "\e[0m" << totalPrice;
     cout << endl << endl;
 
-    cout << "Press q to quit" << endl;
+    Order newOrder(yourLocation, pizzasToOrder, pizzaFromMenuCount, pizzasFromScratchOrder, pizzasFromScratchCount, breadsticksToOrder, breadsticksCount,
+                   sodasToOrder, sodaCount, totalPrice, 1, phoneNumber);
+    orderData.addOrderToOrders(newOrder);
+
+
+    /*cout << "Press q to quit" << endl;
     cout << "Press h to go home" << endl;
     cout << "Press anything else to confirm your order and see your receipt" << endl;
 
@@ -198,7 +210,7 @@ void SalesmanController::modifySalesman(string yourLocation) {
 
     cout << endl << " \e[1m Thank you for your order, come back soon! \e[0m" << endl << endl;
 
-    endMessage();
+    endMessage();*/
 }
 
 int SalesmanController::getPizzaFromMenuCount() {
@@ -220,8 +232,10 @@ vector<Pizza> SalesmanController::orderPizzaFromMenu(int pizzasFromMenuCount) {
         for(int i = 0; i < pizzasFromMenuCount; i++) {
             cin >> input;
             input -= 1;
+            cout << pizzas.at(input).getName() << endl;
             pizzaToOrder.push_back(pizzas.at(input));
         }
+
         return pizzaToOrder;
     }
 }

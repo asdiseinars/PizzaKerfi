@@ -1,9 +1,8 @@
 # depslib dependency file v1.0
-<<<<<<< HEAD
-1513246642 source:c:\users\karal\desktop\pizzaforrit\pizza\controllers\admincontroller.cpp
+1513263488 source:c:\users\asdis\desktop\pizzaforrit\pizza\controllers\admincontroller.cpp
 	"AdminController.h"
 
-1513246642 c:\users\karal\desktop\pizzaforrit\pizza\controllers\admincontroller.h
+1513263488 c:\users\asdis\desktop\pizzaforrit\pizza\controllers\admincontroller.h
 	"AdminUI.h"
 	"HomeController.h"
 	"GlobalHelp.h"
@@ -22,31 +21,10 @@
 	<typeinfo>
 	<iostream>
 
-1513246642 c:\users\karal\desktop\pizzaforrit\pizza\ui\adminui.h
+1513263488 c:\users\asdis\desktop\pizzaforrit\pizza\ui\adminui.h
 	<iostream>
 
-1513246642 c:\users\karal\desktop\pizzaforrit\pizza\controllers\homecontroller.h
-=======
-1513263078 source:c:\users\einarbi\desktop\pizzaforrit\pizza\controllers\bakercontroller.cpp
-	"BakerController.h"
-
-1513257294 c:\users\einarbi\desktop\pizzaforrit\pizza\controllers\bakercontroller.h
-	"BakerUI.h"
-	"HomeController.h"
-	"GlobalHelp.h"
-	"GlobalController.h"
-	"Location.h"
-	"LocationData.h"
-	<iostream>
-	"OrderData.h"
-	"Order.h"
-	<Vector>
-
-1513257294 c:\users\einarbi\desktop\pizzaforrit\pizza\ui\bakerui.h
-	<iostream>
-
-1513257294 c:\users\einarbi\desktop\pizzaforrit\pizza\controllers\homecontroller.h
->>>>>>> db6ff563b0748ea2edc50901af7ced4838e8f1a3
+1513263488 c:\users\asdis\desktop\pizzaforrit\pizza\controllers\homecontroller.h
 	"PizzaUI.h"
 	"HomeUI.h"
 	"GlobalHelp.h"
@@ -59,22 +37,14 @@
 	"CustomerUI.h"
 	"DeliveryController.h"
 
-<<<<<<< HEAD
-1513246642 c:\users\karal\desktop\pizzaforrit\pizza\ui\pizzaui.h
-=======
-1513257294 c:\users\einarbi\desktop\pizzaforrit\pizza\ui\pizzaui.h
->>>>>>> db6ff563b0748ea2edc50901af7ced4838e8f1a3
+1513263488 c:\users\asdis\desktop\pizzaforrit\pizza\ui\pizzaui.h
 	<iostream>
 	"Pizza.h"
 	"PizzaData.h"
 	"GlobalHelp.h"
 	"HomeController.h"
 
-<<<<<<< HEAD
-1513246642 c:\users\karal\desktop\pizzaforrit\pizza\models\pizza.h
-=======
-1513257294 c:\users\einarbi\desktop\pizzaforrit\pizza\models\pizza.h
->>>>>>> db6ff563b0748ea2edc50901af7ced4838e8f1a3
+1513263488 c:\users\asdis\desktop\pizzaforrit\pizza\models\pizza.h
 	"Topping.h"
 	"ToppingData.h"
 	<iostream>
@@ -83,41 +53,25 @@
 	<string>
 	"Crust.h"
 
-<<<<<<< HEAD
-1513246642 c:\users\karal\desktop\pizzaforrit\pizza\models\topping.h
-=======
-1513257294 c:\users\einarbi\desktop\pizzaforrit\pizza\models\topping.h
->>>>>>> db6ff563b0748ea2edc50901af7ced4838e8f1a3
+1513263488 c:\users\asdis\desktop\pizzaforrit\pizza\models\topping.h
 	<iostream>
 	<string>
 	<stdio.h>
 
-<<<<<<< HEAD
-1513246642 c:\users\karal\desktop\pizzaforrit\pizza\repo\toppingdata.h
-=======
-1513257294 c:\users\einarbi\desktop\pizzaforrit\pizza\repo\toppingdata.h
->>>>>>> db6ff563b0748ea2edc50901af7ced4838e8f1a3
+1513263488 c:\users\asdis\desktop\pizzaforrit\pizza\repo\toppingdata.h
 	"topping.h"
 	<fstream>
 	<iostream>
 	<stdio.h>
 	<vector>
 
-<<<<<<< HEAD
-1513246642 c:\users\karal\desktop\pizzaforrit\pizza\models\crust.h
-=======
-1513257294 c:\users\einarbi\desktop\pizzaforrit\pizza\models\crust.h
->>>>>>> db6ff563b0748ea2edc50901af7ced4838e8f1a3
+1513263488 c:\users\asdis\desktop\pizzaforrit\pizza\models\crust.h
 	<iostream>
 	<string>
 	<stdio.h>
 	<fstream>
 
-<<<<<<< HEAD
-1513246642 c:\users\karal\desktop\pizzaforrit\pizza\repo\pizzadata.h
-=======
-1513257294 c:\users\einarbi\desktop\pizzaforrit\pizza\repo\pizzadata.h
->>>>>>> db6ff563b0748ea2edc50901af7ced4838e8f1a3
+1513263488 c:\users\asdis\desktop\pizzaforrit\pizza\repo\pizzadata.h
 	"Pizza.h"
 	"Topping.h"
 	"ToppingData.h"
@@ -125,25 +79,14 @@
 	<iostream>
 	<vector>
 
-<<<<<<< HEAD
-1513246642 c:\users\karal\desktop\pizzaforrit\pizza\global\globalhelp.h
+1513263488 c:\users\asdis\desktop\pizzaforrit\pizza\global\globalhelp.h
 	<stdlib.h>
 	<iostream>
 
-1513246642 c:\users\karal\desktop\pizzaforrit\pizza\ui\homeui.h
+1513263488 c:\users\asdis\desktop\pizzaforrit\pizza\ui\homeui.h
 	<iostream>
 
-1513261426 c:\users\karal\desktop\pizzaforrit\pizza\controllers\salesmancontroller.h
-=======
-1513257294 c:\users\einarbi\desktop\pizzaforrit\pizza\global\globalhelp.h
-	<stdlib.h>
-	<iostream>
-
-1513257294 c:\users\einarbi\desktop\pizzaforrit\pizza\ui\homeui.h
-	<iostream>
-
-1513257294 c:\users\einarbi\desktop\pizzaforrit\pizza\controllers\salesmancontroller.h
->>>>>>> db6ff563b0748ea2edc50901af7ced4838e8f1a3
+1513263488 c:\users\asdis\desktop\pizzaforrit\pizza\controllers\salesmancontroller.h
 	<iostream>
 	"SalesmanUI.h"
 	"HomeController.h"
@@ -161,49 +104,33 @@
 	"OrderData.h"
 	"GlobalUI.h"
 
-<<<<<<< HEAD
-1513246642 c:\users\karal\desktop\pizzaforrit\pizza\ui\salesmanui.h
+1513263488 c:\users\asdis\desktop\pizzaforrit\pizza\ui\salesmanui.h
 	<iostream>
 
-1513246642 c:\users\karal\desktop\pizzaforrit\pizza\controllers\globalcontroller.h
-=======
-1513257294 c:\users\einarbi\desktop\pizzaforrit\pizza\ui\salesmanui.h
-	<iostream>
-
-1513257294 c:\users\einarbi\desktop\pizzaforrit\pizza\controllers\globalcontroller.h
->>>>>>> db6ff563b0748ea2edc50901af7ced4838e8f1a3
+1513263488 c:\users\asdis\desktop\pizzaforrit\pizza\controllers\globalcontroller.h
 	<iostream>
 	<string>
 	<vector>
 	"LocationData.h"
 
-<<<<<<< HEAD
-1513246642 c:\users\karal\desktop\pizzaforrit\pizza\repo\locationdata.h
-=======
-1513257294 c:\users\einarbi\desktop\pizzaforrit\pizza\repo\locationdata.h
->>>>>>> db6ff563b0748ea2edc50901af7ced4838e8f1a3
+1513263488 c:\users\asdis\desktop\pizzaforrit\pizza\repo\locationdata.h
 	<Location.h>
 	<vector>
 	<iostream>
 	<fstream>
 
-<<<<<<< HEAD
-1513246642 c:\users\karal\desktop\pizzaforrit\pizza\models\location.h
-=======
-1513257294 c:\users\einarbi\desktop\pizzaforrit\pizza\models\location.h
->>>>>>> db6ff563b0748ea2edc50901af7ced4838e8f1a3
+1513263488 c:\users\asdis\desktop\pizzaforrit\pizza\models\location.h
 	<iostream>
 	<vector>
 	<string>
 	<fstream>
 
-<<<<<<< HEAD
-1513246642 c:\users\karal\desktop\pizzaforrit\pizza\repo\orderdata.h
+1513263488 c:\users\asdis\desktop\pizzaforrit\pizza\repo\orderdata.h
 	<iostream>
 	"Order.h"
 	<vector>
 
-1513246642 c:\users\karal\desktop\pizzaforrit\pizza\models\order.h
+1513263488 c:\users\asdis\desktop\pizzaforrit\pizza\models\order.h
 	"Breadsticks.h"
 	"Crust.h"
 	"Location.h"
@@ -213,85 +140,37 @@
 	"Topping.h"
 	<string>
 
-1513246642 c:\users\karal\desktop\pizzaforrit\pizza\models\breadsticks.h
+1513263488 c:\users\asdis\desktop\pizzaforrit\pizza\models\breadsticks.h
 	<iostream>
 	<string>
 	<stdio.h>
 
-1513246642 c:\users\karal\desktop\pizzaforrit\pizza\models\soda.h
-=======
-1513257750 c:\users\einarbi\desktop\pizzaforrit\pizza\controllers\admincontroller.h
-	"AdminUI.h"
-	"HomeController.h"
-	"GlobalHelp.h"
-	"pizzadata.h"
-	"ToppingData.h"
-	"LocationData.h"
-	<stdlib.h>
-	<cctype>
-	<locale>
-	"Pizza.h"
-	"BreadsticksData.h"
-	"SodaData.h"
-	"CrustData.h"
-	"GlobalController.h"
-	"GlobalUI.h"
-	<typeinfo>
-	<iostream>
-
-1513257294 c:\users\einarbi\desktop\pizzaforrit\pizza\ui\adminui.h
-	<iostream>
-
-1513257294 c:\users\einarbi\desktop\pizzaforrit\pizza\repo\breadsticksdata.h
-	"Breadsticks.h"
-	<fstream>
-	<iostream>
-	<stdio.h>
-	<vector>
-
-1513257294 c:\users\einarbi\desktop\pizzaforrit\pizza\models\breadsticks.h
-	<iostream>
-	<string>
-	<stdio.h>
-
-1513257294 c:\users\einarbi\desktop\pizzaforrit\pizza\repo\sodadata.h
-	"Soda.h"
-	<fstream>
-	<iostream>
-	<stdio.h>
-	<vector>
-
-1513257294 c:\users\einarbi\desktop\pizzaforrit\pizza\models\soda.h
->>>>>>> db6ff563b0748ea2edc50901af7ced4838e8f1a3
+1513263488 c:\users\asdis\desktop\pizzaforrit\pizza\models\soda.h
 	<iostream>
 	<string>
 
-1513257294 c:\users\einarbi\desktop\pizzaforrit\pizza\repo\crustdata.h
+1513263488 c:\users\asdis\desktop\pizzaforrit\pizza\repo\crustdata.h
 	"Crust.h"
 	<fstream>
 	<iostream>
 	<stdio.h>
 	<vector>
 
-<<<<<<< HEAD
-1513246642 c:\users\karal\desktop\pizzaforrit\pizza\repo\breadsticksdata.h
+1513263488 c:\users\asdis\desktop\pizzaforrit\pizza\repo\breadsticksdata.h
 	"Breadsticks.h"
 	<fstream>
 	<iostream>
 	<stdio.h>
 	<vector>
 
-1513246642 c:\users\karal\desktop\pizzaforrit\pizza\repo\sodadata.h
+1513263488 c:\users\asdis\desktop\pizzaforrit\pizza\repo\sodadata.h
 	"Soda.h"
 	<fstream>
 	<iostream>
 	<stdio.h>
 	<vector>
 
-1513246642 c:\users\karal\desktop\pizzaforrit\pizza\global\globalui.h
-=======
-1513257294 c:\users\einarbi\desktop\pizzaforrit\pizza\global\globalui.h
->>>>>>> db6ff563b0748ea2edc50901af7ced4838e8f1a3
+1513263488 c:\users\asdis\desktop\pizzaforrit\pizza\global\globalui.h
 	<iostream>
 	<string>
 	<vector>
@@ -301,58 +180,34 @@
 	"pizzadata.h"
 	"LocationData.h"
 
-<<<<<<< HEAD
-1513246642 c:\users\karal\desktop\pizzaforrit\pizza\controllers\bakercontroller.h
+1513263488 c:\users\asdis\desktop\pizzaforrit\pizza\controllers\bakercontroller.h
 	"BakerUI.h"
 	"HomeController.h"
 	"GlobalHelp.h"
 	"GlobalController.h"
-=======
-1513261997 c:\users\einarbi\desktop\pizzaforrit\pizza\repo\orderdata.h
-	<iostream>
-	"Order.h"
-	<vector>
-
-1513257294 c:\users\einarbi\desktop\pizzaforrit\pizza\models\order.h
-	"Breadsticks.h"
-	"Crust.h"
->>>>>>> db6ff563b0748ea2edc50901af7ced4838e8f1a3
 	"Location.h"
+	"LocationData.h"
+	<iostream>
+	"OrderData.h"
 	"Order.h"
-<<<<<<< HEAD
 	<Vector>
 
-1513246642 c:\users\karal\desktop\pizzaforrit\pizza\ui\bakerui.h
+1513263488 c:\users\asdis\desktop\pizzaforrit\pizza\ui\bakerui.h
 	<iostream>
 
-1513246642 c:\users\karal\desktop\pizzaforrit\pizza\controllers\customercontroller.h
-=======
-	"Pizza.h"
-	"Soda.h"
-	"Topping.h"
-	<string>
-
-1513257294 c:\users\einarbi\desktop\pizzaforrit\pizza\controllers\customercontroller.h
->>>>>>> db6ff563b0748ea2edc50901af7ced4838e8f1a3
+1513263488 c:\users\asdis\desktop\pizzaforrit\pizza\controllers\customercontroller.h
 	"CustomerUI.h"
 	"HomeController.h"
 	<iostream>
 	"GlobalHelp.h"
 
-<<<<<<< HEAD
-1513246642 c:\users\karal\desktop\pizzaforrit\pizza\ui\customerui.h
+1513263488 c:\users\asdis\desktop\pizzaforrit\pizza\ui\customerui.h
 	<iostream>
 
-1513246642 c:\users\karal\desktop\pizzaforrit\pizza\ui\aboutui.h
-=======
-1513257294 c:\users\einarbi\desktop\pizzaforrit\pizza\ui\customerui.h
+1513263488 c:\users\asdis\desktop\pizzaforrit\pizza\ui\aboutui.h
 	<iostream>
 
-1513257294 c:\users\einarbi\desktop\pizzaforrit\pizza\ui\aboutui.h
->>>>>>> db6ff563b0748ea2edc50901af7ced4838e8f1a3
-	<iostream>
-
-1513257294 c:\users\einarbi\desktop\pizzaforrit\pizza\controllers\deliverycontroller.h
+1513263488 c:\users\asdis\desktop\pizzaforrit\pizza\controllers\deliverycontroller.h
 	<iostream>
 	"SalesmanUI.h"
 	"HomeController.h"
@@ -371,197 +226,100 @@
 	"DeliveryUI.h"
 	"HomeController.h"
 
-<<<<<<< HEAD
-1513246642 c:\users\karal\desktop\pizzaforrit\pizza\ui\deliveryui.h
+1513263488 c:\users\asdis\desktop\pizzaforrit\pizza\ui\deliveryui.h
 	<iostream>
 
-1513246642 source:c:\users\karal\desktop\pizzaforrit\pizza\controllers\bakercontroller.cpp
+1513263488 source:c:\users\asdis\desktop\pizzaforrit\pizza\controllers\bakercontroller.cpp
 	"BakerController.h"
 
-1513257256 source:c:\users\karal\desktop\pizzaforrit\pizza\controllers\deliverycontroller.cpp
+1513263488 source:c:\users\asdis\desktop\pizzaforrit\pizza\controllers\deliverycontroller.cpp
 	"DeliveryController.h"
 
-1513246642 source:c:\users\karal\desktop\pizzaforrit\pizza\controllers\homecontroller.cpp
-	"HomeController.h"
-
-1513246642 source:c:\users\karal\desktop\pizzaforrit\pizza\global\globalhelp.cpp
-	"GlobalHelp.h"
-
-1513246642 source:c:\users\karal\desktop\pizzaforrit\pizza\main.cpp
-=======
-1513257294 c:\users\einarbi\desktop\pizzaforrit\pizza\ui\deliveryui.h
-	<iostream>
-
-1513257294 source:c:\users\einarbi\desktop\pizzaforrit\pizza\controllers\deliverycontroller.cpp
-	"DeliveryController.h"
-
-1513257294 source:c:\users\einarbi\desktop\pizzaforrit\pizza\controllers\globalcontroller.cpp
+1513263488 source:c:\users\asdis\desktop\pizzaforrit\pizza\controllers\globalcontroller.cpp
 	"GlobalController.h"
 
-1513257294 source:c:\users\einarbi\desktop\pizzaforrit\pizza\controllers\homecontroller.cpp
+1513263488 source:c:\users\asdis\desktop\pizzaforrit\pizza\controllers\homecontroller.cpp
 	"HomeController.h"
 
-1513257294 source:c:\users\einarbi\desktop\pizzaforrit\pizza\controllers\salesmancontroller.cpp
+1513264866 source:c:\users\asdis\desktop\pizzaforrit\pizza\controllers\salesmancontroller.cpp
 	"SalesmanController.h"
 
-1513257294 source:c:\users\einarbi\desktop\pizzaforrit\pizza\global\globalhelp.cpp
+1513263488 source:c:\users\asdis\desktop\pizzaforrit\pizza\global\globalhelp.cpp
 	"GlobalHelp.h"
 
-1513257294 source:c:\users\einarbi\desktop\pizzaforrit\pizza\global\globalui.cpp
+1513263488 source:c:\users\asdis\desktop\pizzaforrit\pizza\global\globalui.cpp
 	"GlobalUI.h"
 
-1513257294 source:c:\users\einarbi\desktop\pizzaforrit\pizza\main.cpp
->>>>>>> db6ff563b0748ea2edc50901af7ced4838e8f1a3
+1513263488 source:c:\users\asdis\desktop\pizzaforrit\pizza\main.cpp
 	<iostream>
 	"Home.h"
 	"HomeUI.h"
 	"HomeController.h"
 
-<<<<<<< HEAD
-1513246642 c:\users\karal\desktop\pizzaforrit\pizza\models\home.h
+1513263488 c:\users\asdis\desktop\pizzaforrit\pizza\models\home.h
 	"HomeUI.h"
 	<iostream>
 
-1513246642 source:c:\users\karal\desktop\pizzaforrit\pizza\models\breadsticks.cpp
+1513263488 source:c:\users\asdis\desktop\pizzaforrit\pizza\models\breadsticks.cpp
 	"Breadsticks.h"
 	<fstream>
 
-1513246642 source:c:\users\karal\desktop\pizzaforrit\pizza\models\crust.cpp
+1513263488 source:c:\users\asdis\desktop\pizzaforrit\pizza\models\crust.cpp
 	"Crust.h"
 
-1513246642 source:c:\users\karal\desktop\pizzaforrit\pizza\models\location.cpp
+1513263488 source:c:\users\asdis\desktop\pizzaforrit\pizza\models\location.cpp
 	"Location.h"
 
-1513246642 source:c:\users\karal\desktop\pizzaforrit\pizza\models\order.cpp
+1513263488 source:c:\users\asdis\desktop\pizzaforrit\pizza\models\order.cpp
 	"Order.h"
 
-1513246642 source:c:\users\karal\desktop\pizzaforrit\pizza\models\pizza.cpp
+1513263488 source:c:\users\asdis\desktop\pizzaforrit\pizza\models\pizza.cpp
 	"Pizza.h"
 
-1513246642 source:c:\users\karal\desktop\pizzaforrit\pizza\models\soda.cpp
+1513263488 source:c:\users\asdis\desktop\pizzaforrit\pizza\models\soda.cpp
 	<fstream>
 	"Soda.h"
 
-1513246642 source:c:\users\karal\desktop\pizzaforrit\pizza\models\topping.cpp
+1513263488 source:c:\users\asdis\desktop\pizzaforrit\pizza\models\topping.cpp
 	<fstream>
 	"Topping.h"
 
-1513246642 source:c:\users\karal\desktop\pizzaforrit\pizza\repo\breadsticksdata.cpp
+1513263488 source:c:\users\asdis\desktop\pizzaforrit\pizza\repo\breadsticksdata.cpp
 	"BreadsticksData.h"
 
-1513246642 source:c:\users\karal\desktop\pizzaforrit\pizza\repo\crustdata.cpp
+1513263488 source:c:\users\asdis\desktop\pizzaforrit\pizza\repo\crustdata.cpp
 	"CrustData.h"
 
-1513246642 source:c:\users\karal\desktop\pizzaforrit\pizza\repo\orderdata.cpp
-	"OrderData.h"
-
-1513246642 source:c:\users\karal\desktop\pizzaforrit\pizza\repo\pizzadata.cpp
-	"PizzaData.h"
-
-1513246642 source:c:\users\karal\desktop\pizzaforrit\pizza\repo\sodadata.cpp
-	"SodaData.h"
-
-1513246642 source:c:\users\karal\desktop\pizzaforrit\pizza\repo\toppingdata.cpp
-	"ToppingData.h"
-
-1513246642 source:c:\users\karal\desktop\pizzaforrit\pizza\ui\aboutui.cpp
-	"AboutUI.h"
-
-1513246642 source:c:\users\karal\desktop\pizzaforrit\pizza\ui\adminui.cpp
-	"AdminUI.h"
-
-1513246642 source:c:\users\karal\desktop\pizzaforrit\pizza\ui\bakerui.cpp
-	"BakerUI.h"
-
-1513248665 source:c:\users\karal\desktop\pizzaforrit\pizza\ui\deliveryui.cpp
-	"DeliveryUI.h"
-
-1513246642 source:c:\users\karal\desktop\pizzaforrit\pizza\ui\homeui.cpp
-	"HomeUI.h"
-
-1513256524 source:c:\users\karal\desktop\pizzaforrit\pizza\controllers\globalcontroller.cpp
-	"GlobalController.h"
-
-1513256524 source:c:\users\karal\desktop\pizzaforrit\pizza\global\globalui.cpp
-	"GlobalUI.h"
-
-1513256524 source:c:\users\karal\desktop\pizzaforrit\pizza\repo\locationdata.cpp
+1513263818 source:c:\users\asdis\desktop\pizzaforrit\pizza\repo\locationdata.cpp
 	"LocationData.h"
 
-1513256524 source:c:\users\karal\desktop\pizzaforrit\pizza\ui\salesmanui.cpp
-	"SalesmanUI.h"
-
-1513258830 source:c:\users\karal\desktop\pizzaforrit\pizza\controllers\salesmancontroller.cpp
-	"SalesmanController.h"
-=======
-1513257294 c:\users\einarbi\desktop\pizzaforrit\pizza\models\home.h
-	"HomeUI.h"
-	<iostream>
-
-1513257294 source:c:\users\einarbi\desktop\pizzaforrit\pizza\models\breadsticks.cpp
-	"Breadsticks.h"
-	<fstream>
-
-1513257294 source:c:\users\einarbi\desktop\pizzaforrit\pizza\models\crust.cpp
-	"Crust.h"
-
-1513257294 source:c:\users\einarbi\desktop\pizzaforrit\pizza\models\location.cpp
-	"Location.h"
-
-1513257294 source:c:\users\einarbi\desktop\pizzaforrit\pizza\models\order.cpp
-	"Order.h"
-
-1513257294 source:c:\users\einarbi\desktop\pizzaforrit\pizza\models\pizza.cpp
-	"Pizza.h"
-
-1513257294 source:c:\users\einarbi\desktop\pizzaforrit\pizza\models\soda.cpp
-	<fstream>
-	"Soda.h"
-
-1513257294 source:c:\users\einarbi\desktop\pizzaforrit\pizza\models\topping.cpp
-	<fstream>
-	"Topping.h"
-
-1513257294 source:c:\users\einarbi\desktop\pizzaforrit\pizza\repo\breadsticksdata.cpp
-	"BreadsticksData.h"
-
-1513257294 source:c:\users\einarbi\desktop\pizzaforrit\pizza\repo\crustdata.cpp
-	"CrustData.h"
-
-1513257294 source:c:\users\einarbi\desktop\pizzaforrit\pizza\repo\locationdata.cpp
-	"LocationData.h"
-
-1513261997 source:c:\users\einarbi\desktop\pizzaforrit\pizza\repo\orderdata.cpp
+1513263488 source:c:\users\asdis\desktop\pizzaforrit\pizza\repo\orderdata.cpp
 	"OrderData.h"
 
-1513257294 source:c:\users\einarbi\desktop\pizzaforrit\pizza\repo\pizzadata.cpp
+1513263488 source:c:\users\asdis\desktop\pizzaforrit\pizza\repo\pizzadata.cpp
 	"PizzaData.h"
 
-1513257294 source:c:\users\einarbi\desktop\pizzaforrit\pizza\repo\sodadata.cpp
+1513263488 source:c:\users\asdis\desktop\pizzaforrit\pizza\repo\sodadata.cpp
 	"SodaData.h"
 
-1513257294 source:c:\users\einarbi\desktop\pizzaforrit\pizza\repo\toppingdata.cpp
+1513263488 source:c:\users\asdis\desktop\pizzaforrit\pizza\repo\toppingdata.cpp
 	"ToppingData.h"
 
-1513257294 source:c:\users\einarbi\desktop\pizzaforrit\pizza\ui\aboutui.cpp
+1513263488 source:c:\users\asdis\desktop\pizzaforrit\pizza\ui\aboutui.cpp
 	"AboutUI.h"
 
-1513257294 source:c:\users\einarbi\desktop\pizzaforrit\pizza\ui\adminui.cpp
+1513263488 source:c:\users\asdis\desktop\pizzaforrit\pizza\ui\adminui.cpp
 	"AdminUI.h"
 
-1513257294 source:c:\users\einarbi\desktop\pizzaforrit\pizza\ui\bakerui.cpp
+1513263488 source:c:\users\asdis\desktop\pizzaforrit\pizza\ui\bakerui.cpp
 	"BakerUI.h"
 
-1513257294 source:c:\users\einarbi\desktop\pizzaforrit\pizza\ui\deliveryui.cpp
+1513263488 source:c:\users\asdis\desktop\pizzaforrit\pizza\ui\deliveryui.cpp
 	"DeliveryUI.h"
 
-1513257294 source:c:\users\einarbi\desktop\pizzaforrit\pizza\ui\homeui.cpp
+1513263488 source:c:\users\asdis\desktop\pizzaforrit\pizza\ui\homeui.cpp
 	"HomeUI.h"
 
-1513257294 source:c:\users\einarbi\desktop\pizzaforrit\pizza\ui\salesmanui.cpp
+1513263488 source:c:\users\asdis\desktop\pizzaforrit\pizza\ui\salesmanui.cpp
 	"SalesmanUI.h"
-
-1513257750 source:c:\users\einarbi\desktop\pizzaforrit\pizza\controllers\admincontroller.cpp
-	"AdminController.h"
->>>>>>> db6ff563b0748ea2edc50901af7ced4838e8f1a3
 
