@@ -1,10 +1,22 @@
 Pepperoni
 50
+<<<<<<< HEAD
+skinka
+50
+piparostur
+30
+laukur
+30
+=======
 Skinka
 35
 Ananas
 45
+<<<<<<< HEAD
 skinka
 34
 skinka
 9
+=======
+>>>>>>> 2a7243b775fa436cd229c28fa896d06d887c85ba
+>>>>>>> 2885fff0020c90b01b62ae8d3f8ec3895b7b42a7

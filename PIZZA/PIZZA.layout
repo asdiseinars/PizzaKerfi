@@ -2,7 +2,13 @@
 <CodeBlocks_layout_file>
 	<FileVersion major="1" minor="0" />
 	<ActiveTarget name="Debug" />
+<<<<<<< HEAD
 	<File name="CONTROLLERS\GlobalController.cpp" open="0" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+=======
+<<<<<<< HEAD
+=======
+	<File name="MODELS\Order.cpp" open="1" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+>>>>>>> 2885fff0020c90b01b62ae8d3f8ec3895b7b42a7
 		<Cursor>
 			<Cursor1 position="201" topLine="0" />
 		</Cursor>
@@ -82,4 +88,5 @@
 			<Cursor1 position="734" topLine="0" />
 		</Cursor>
 	</File>
+>>>>>>> 2a7243b775fa436cd229c28fa896d06d887c85ba
 </CodeBlocks_layout_file>
