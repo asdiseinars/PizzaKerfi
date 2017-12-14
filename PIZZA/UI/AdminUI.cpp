@@ -8,6 +8,8 @@ void AdminUI::displayAdminUI() {
     cout << "4: Side orders" << endl;
     cout << "5: Locations" << endl;
     cout << "6: Crusts" << endl;
+    cout << "7: Orders" << endl;
+    cout << "b: Go back" << endl;
     cout << "h: Go home" << endl;
 }
 
@@ -69,6 +71,17 @@ void AdminUI::displayAdminCrustUI() {
     cout << "b: Go back" << endl;
     cout << "h: Go home" << endl;
 }
+
+void AdminUI::displayAdminOrderUI() {
+    cout << "\e[1m" << "ORDERS" << "\e[0m" << endl;
+    cout << "1: See all orders" << endl;
+    cout << "b: Go back" << endl;
+    cout << "h: Go home" << endl;
+}
+
+
+
+
 
 
 

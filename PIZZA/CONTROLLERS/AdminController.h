@@ -17,6 +17,7 @@
 #include "GlobalUI.h"
 #include <typeinfo>
 #include <iostream>
+#include "OrderData.h"
 
 using namespace std;
 using namespace GlobalHelp;
@@ -32,6 +33,7 @@ class AdminController {
     CrustData crustData;
     GlobalController globalController;
     GlobalUI globalUI;
+    OrderData orderData;
 
 
   public:
@@ -70,6 +72,9 @@ class AdminController {
     void addCrustToMenu();
     void removeCrustFromMenu();
     void crustBackFunction();
+
+    void displayAllOrders();
+    void modifyOrders();
 
 };
 
