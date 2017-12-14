@@ -79,15 +79,16 @@ vector<Order> OrderData::getOrderForLocation(string location) {
 
     vector <Order> orders;
 
-    ifstream myFile("orders.txt");
+    /*ifstream myFile("orders.txt");
     if(myFile.fail()) {
         cout << "There are no orders! " << endl;
         cout << "Please exit." << endl;
     }
-    else if(orders.size() < 1) {
-        cout << "There are no toppings on the menu! " << endl;
+
+    else if(orders.size() == 0) {
+        cout << "There are no orders! " << endl;
         cout << "Please exit." << endl;
-    }
+    }*/
 
     ifstream fin;
     fin.open("orders.txt");

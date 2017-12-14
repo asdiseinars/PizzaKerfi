@@ -56,7 +56,19 @@ void AdminController::init() {
         modifyCrust();
     }
 
+    else if (selection == '7') {
+        clearScreen();
+        displayLogo();
+        displayAdminLogo();
+        modifyOrders();
+    }
+
     else if (selection == 'h') {
+        HomeController home;
+        home.init();
+    }
+
+    else if (selection == 'b') {
         HomeController home;
         home.init();
     }
@@ -402,6 +414,36 @@ void AdminController::pizzaBackFunction() {
     }
     else if (selection == 'q') {
         return;
+    }
+}
+
+void AdminController::modifyOrders() {
+    char selection;
+    displayAdminOrderUI();
+    cin >> selection;
+
+    if (selection == '1') {
+        clearScreen();
+        displayLogo();
+        displayAdminLogo();
+        displayAllOrders();
+    }
+
+    else if (selection == 'b') {
+        clearScreen();
+        init();
+    }
+
+    else if (selection == 'h') {
+        HomeController home;
+        home.init();
+    }
+
+    else {
+        clearScreen();
+        displayLogo();
+        displayAdminLogo();
+        modifySodas();
     }
 }
 
@@ -929,5 +971,79 @@ void AdminController::crustBackFunction() {
 
     else if (selection == 'q') {
         return;
+    }
+}
+
+void AdminController::displayAllOrders() {
+    vector<Order> allOrders = orderData.retrieveAllOrders();
+
+    cout << "ORDERS" << endl;
+    cout << "------------------------------------------" << endl;
+
+    for (unsigned int i = 0; i < allOrders.size(); i++) {
+
+            cout << "\e[1m" << "[" << i + 1 << "]" << "\e[0m" << endl;
+
+            cout << "\e[1m" << "PIZZAS FROM MENU: " << "\e[0m" << endl;
+            for(unsigned int j = 0; j < allOrders.at(i).getPizzasFromMenu().size(); j++) {
+
+                cout <<  "\tName: "  << allOrders.at(i).getPizzasFromMenu().at(j).getName() << endl;
+                cout << "\tCrust: " << allOrders.at(i).getPizzasFromMenu().at(j).getCrust().getName() << endl;
+
+                cout <<  "\tToppings: ";
+                for (unsigned int k = 0; k < allOrders.at(i).getPizzasFromMenu().at(j).getToppings().size(); k++) {
+
+                    cout << allOrders.at(i).getPizzasFromMenu().at(j).getToppings().at(k).getName() << "  ";
+                    } cout << endl;
+            }
+            cout << endl;
+
+            cout << "\e[1m" << "CUSTOMIZED PIZZAS: " << "\e[0m" << endl;
+            for(unsigned int m = 0; m < allOrders.at(i).getPizzasFromScratch().size(); m++) {
+                cout << "\tCrust: " << allOrders.at(i).getPizzasFromScratch().at(m).getCrust().getName() << endl;
+
+                cout << "\tToppings: ";
+                for (unsigned int n = 0; n < allOrders.at(i).getPizzasFromScratch().at(m).getToppings().size(); n++) {
+                    cout << allOrders.at(i).getPizzasFromScratch().at(m).getToppings().at(n).getName() << "  ";
+                }
+            }
+
+            cout << endl << endl;
+
+            cout << "\e[1m" << "SIDE ORDERS: " << "\e[0m" << endl;
+            for(unsigned int l = 0; l < allOrders.at(i).getBreadsticks().size(); l++) {
+                cout << "\t" << allOrders.at(i).getBreadsticks().at(l).getName() << endl;
+            }
+
+            cout << endl;
+
+
+            cout << "\e[1m" << "DRINKS: " << "\e[0m" << endl;
+            for(unsigned int l = 0; l < allOrders.at(i).getSodas().size(); l++) {
+                cout << "\t" << allOrders.at(i).getSodas().at(l).getName() << endl;
+            }
+
+            cout << endl;
+
+            cout << "Order status: ";
+            if(allOrders.at(i).getOrderStatus() == 1) {
+                cout << "Order recieved" << endl;
+            }
+            else if(allOrders.at(i).getOrderStatus() == 2) {
+                cout << "In oven" << endl;
+            }
+            else if(allOrders.at(i).getOrderStatus() == 3) {
+                cout << "Ready for delivery" << endl;
+            }
+            else{
+                cout << "Invalid order status" << endl;
+            }
+
+            cout << endl;
+
+            cout << "Total price of order: " << allOrders.at(i).getTotalPrice() << endl;
+
+            cout << "------------------------------------------" << endl;
+
     }
 }
