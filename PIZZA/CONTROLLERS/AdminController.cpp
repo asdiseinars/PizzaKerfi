@@ -1017,21 +1017,31 @@ void AdminController::displayAllOrders() {
 
             cout << endl;
 
-            cout << "Order status: ";
-            if(allOrders.at(i).getOrderStatus() == 1) {
-                cout << "\e[1m" << "Order recieved" << "\e[0m" << endl;
-            }
-            else if(allOrders.at(i).getOrderStatus() == 2) {
-                cout << "\e[1m" << "In oven" << "\e[0m" << endl;
-            }
-            else if(allOrders.at(i).getOrderStatus() == 3) {
-                cout << "\e[1m" << "Ready for delivery" << "\e[0m" << endl;
-            }
-            else{
-                cout << "\e[1m" << "Invalid order status" << "\e[0m" << endl;
+
+            cout << "\e[1m" << "DRINKS: " << "\e[0m" << endl;
+            for(unsigned int l = 0; l < allOrders.at(i).getSodas().size(); l++) {
+                cout << "\t" << allOrders.at(i).getSodas().at(l).getName() << endl;
             }
 
             cout << endl;
+
+            cout << "Order status: ";
+            if(allOrders.at(i).getOrderStatus() == 1) {
+                cout << "Order recieved" << endl;
+            }
+            else if(allOrders.at(i).getOrderStatus() == 2) {
+                cout << "In oven" << endl;
+            }
+            else if(allOrders.at(i).getOrderStatus() == 3) {
+                cout << "Ready for delivery" << endl;
+            }
+            else{
+                cout << "Invalid order status" << endl;
+            }
+
+            cout << endl;
+
+            cout << "Total price of order: " << allOrders.at(i).getTotalPrice() << endl;
 
             cout << "------------------------------------------" << endl;
 

@@ -39,19 +39,18 @@ void BakerController::modifyBakerOrders(string yourLocation) {
         displayBakerLogo();
         displayOrdersReadyToBePutInOven(yourLocation);
 
-        cout << "What order do you put in the oven? " << endl;
+        cout << "What order do you want to put in the oven? " << endl;
 
         cin >> input;
         input -= 1;
 
-
-         while (input > thisOrders.size() || input < 1 || thisOrders[input].getOrderStatus() != 1) {
+        while (input > thisOrders.size() || input < 0 || thisOrders[input].getOrderStatus() != 1) {
             clearScreen();
             displayLogo();
             displayBakerLogo();
-            displayOrdersInOven(yourLocation);
+            displayOrdersReadyToBePutInOven(yourLocation);
 
-            cout << "What order do you want to take out of the oven? " << endl;
+            cout << "What order do you want to put in the oven? " << endl;
 
             cin >> input;
             input -= 1;
@@ -60,9 +59,11 @@ void BakerController::modifyBakerOrders(string yourLocation) {
         if(thisOrders[input].getOrderStatus() == 1) {
             thisOrders[input].setOrderStatus(2);
             orderData.storeAllOrders(thisOrders);
-        }
 
-        BackOrQuitBakerFunction(yourLocation);
+            cout << "The order has been put in the oven" << endl;
+
+            BackOrQuitBakerFunction(yourLocation);
+        }
     }
 
     else if (selection == '3') {
@@ -80,7 +81,8 @@ void BakerController::modifyBakerOrders(string yourLocation) {
         cin >> input;
         input -= 1;
 
-        while (input > thisOrders.size() || input < 1 || thisOrders[input].getOrderStatus() != 2) {
+        while (input > thisOrders.size() || input < 0 || thisOrders[input].getOrderStatus() != 2) {
+
             clearScreen();
             displayLogo();
             displayBakerLogo();
@@ -92,13 +94,14 @@ void BakerController::modifyBakerOrders(string yourLocation) {
             input -= 1;
         }
 
-
         if(thisOrders[input].getOrderStatus() == 2) {
             thisOrders[input].setOrderStatus(3);
             orderData.storeAllOrders(thisOrders);
-        }
 
-        BackOrQuitBakerFunction(yourLocation);
+            cout << "The order has been taken out of the oven" << endl;
+
+            BackOrQuitBakerFunction(yourLocation);
+        }
     }
 
     else if(selection == 'b') {
@@ -126,9 +129,6 @@ void BakerController::displayOrdersForBaker(string yourLocation) {
 
     cout << "ORDERS" << endl;
     cout << "------------------------------------------" << endl;
-
-    cout << "size of vector: " << ordersForLocation.size() << endl;
-
         for (unsigned int i = 0; i < ordersForLocation.size(); i++) {
             if (ordersForLocation[i].getOrderStatus() == 1 || ordersForLocation[i].getOrderStatus() == 2) {
                 cout << "\e[1m" << "[" << i + 1 << "]" << "\e[0m" << endl;
@@ -183,6 +183,10 @@ void BakerController::displayOrdersForBaker(string yourLocation) {
                 cout << endl;
 
                 cout << "------------------------------------------" << endl;
+           }
+
+           else {
+            cout << "INVALID!!!" << endl;
            }
         }
 
@@ -249,13 +253,9 @@ void BakerController::displayOrdersReadyToBePutInOven(string yourLocation) {
 
             cout << "------------------------------------------" << endl;
         }
-        else {
-            cout << "There is no received order! " << endl;
-            break;
-        }
     }
-
 }
+
 
 void BakerController::displayOrdersInOven(string yourLocation) {
     vector<Order> ordersForLocation = orderData.getOrderForLocation(yourLocation);
@@ -323,19 +323,19 @@ void BakerController::displayOrdersInOven(string yourLocation) {
 
 void BakerController::BackOrQuitBakerFunction(string location) {
     displayBakerBackOrQuitUI();
-        char selection;
-        cin >> selection;
+    char selection;
+    cin >> selection;
 
-        if (selection == 'b') {
-            clearScreen();
-            displayLogo();
-            displayBakerLogo();
-            displayBakerOrderUI();
-            modifyBakerOrders(location);
-        }
-
-        else{
-            return;
-        }
+    if (selection == 'b') {
+        clearScreen();
+        displayLogo();
+        displayBakerLogo();
+        displayBakerOrderUI();
+        modifyBakerOrders(location);
     }
+
+    else{
+        return;
+    }
+}
 
