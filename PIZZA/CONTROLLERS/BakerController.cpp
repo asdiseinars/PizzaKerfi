@@ -289,14 +289,11 @@ void BakerController::displayOrdersInOven(string yourLocation) {
                     cout << ordersForLocation.at(i).getPizzasFromScratch().at(m).getToppings().at(n).getName() << "  ";
                 }
             }
-
             cout << endl << endl;
-
             cout << "\e[1m" << "SIDE ORDERS: " << "\e[0m" << endl;
             for(unsigned int l = 0; l < ordersForLocation.at(i).getBreadsticks().size(); l++) {
                 cout << "\t" << ordersForLocation.at(i).getBreadsticks().at(l).getName() << endl;
             }
-
             cout << endl;
 
             cout << "Order status: ";
@@ -312,14 +309,11 @@ void BakerController::displayOrdersInOven(string yourLocation) {
             else{
                 cout << "\e[1m" << "Invalid order status" << "\e[0m" << endl;
             }
-
             cout << endl;
-
             cout << "------------------------------------------" << endl;
         }
     }
 }
-
 
 void BakerController::BackOrQuitBakerFunction(string location) {
     displayBakerBackOrQuitUI();
@@ -333,9 +327,7 @@ void BakerController::BackOrQuitBakerFunction(string location) {
             displayBakerOrderUI();
             modifyBakerOrders(location);
         }
-
         else{
             return;
         }
     }
-
