@@ -151,7 +151,21 @@ void DeliveryController::displayOrders(string yourLocation) {
             cout << "Total price of order: " << allOrders.at(i).getTotalPrice() << " kr." << "\e[0m" << endl;
 
             cout << "------------------------------------------" << endl;
+    }
 
+    cout << "Press h to go home" << endl;
+    cout << "Press any other button to quit the program" << endl;
+
+
+    char input = '\0';
+    cin >> input;
+
+    if (input == 'h') {
+        HomeController home;
+        home.init();
+    }
+    else {
+        return;
     }
 }
 
@@ -371,6 +385,5 @@ void DeliveryController::markeOrderPaidAndDeliverd(string yourLocation, string p
         displayDeliveryLogo();
         displayReadyOrdersForCustomer(yourLocation);*/
 }
-
 
 
