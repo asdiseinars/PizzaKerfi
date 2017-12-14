@@ -6,8 +6,8 @@ DeliveryController::DeliveryController()
 }
 
 void DeliveryController::endMessage() {
-    cout << "Press q to quit" << endl;
-    cout << "Press h to go home" << endl;
+    cout << "q: Quit" << endl;
+    cout << "h: Go home" << endl;
     cout << "Press anything else to continue" << endl;
 
 
@@ -36,9 +36,6 @@ void DeliveryController::init() {
 }
 
 void DeliveryController::modifyDelivery(string yourLocation) {
-    /*cout << " is your current location" << endl << endl; ///viljum ekki að þetta komi ef location er ekki valid
-    endMessage();*/
-
     clearScreen();
     displayLogo();
     displayDeliveryLogo();
@@ -63,11 +60,37 @@ void DeliveryController::modifyDelivery(string yourLocation) {
     }
 
     else if (selection == '3') {
+        vector<Order> thisOrders = orderData.getOrderForLocation(yourLocation);
+        int input = 0;
+
         clearScreen();
         displayLogo();
         displayDeliveryLogo();
         displayReadyOrdersForCustomer(yourLocation);
+
+        cout << "What order do you want to deliver? " << endl;
+
+        cin >> input;
+        input -= 1;
+
+        while (input > thisOrders.size() || input < 0 || thisOrders.at(input).getOrderStatus() != 3) {
+
+            cout << "Wrong input, try again " << endl;
+
+            cin >> input;
+            input -= 1;
+        }
+
+        if(thisOrders[input].getOrderStatus() == 3) {
+            thisOrders[input].setOrderStatus(4);
+            orderData.storeAllOrders(thisOrders);
+
+            cout << "The order has been delivered" << endl;
+
+            //BackOrQuitDeliveryFunction();
+        }
     }
+
     else if (selection == 'b') {
         clearScreen();
         init();
@@ -143,6 +166,9 @@ void DeliveryController::displayOrders(string yourLocation) {
             }
             else if(allOrders.at(i).getOrderStatus() == 3) {
                 cout << "Ready for delivery" << endl;
+            }
+            else if(allOrders.at(i).getOrderStatus() == 4) {
+                cout << "Paid and deliverd" << endl;
             }
             else{
                 cout << "Invalid order status" << endl;
@@ -277,13 +303,16 @@ void DeliveryController::displayReadyOrdersForCustomer(string yourLocation) {
         cout << "Invalid phone number!" << endl;
     }
 
-    vector<Order> ordersForLocation = orderData.getOrderForLocationAndOrderStatusAndPhoneNumber(yourLocation, 3, phoneNumber);
+    //vector<Order> ordersForLocation = orderData.getOrderForLocationAndOrderStatusAndPhoneNumber(yourLocation, 3, phoneNumber);
+    vector<Order> ordersForLocation = orderData.getOrderForLocation(yourLocation);
 
     cout << endl;
-    cout << "ORDER FOR PHONENUMBER " << phoneNumber << endl;
+    cout << "ORDER FOR PHONE NUMBER " << phoneNumber << endl;
     cout << "------------------------------------------" << endl;
 
+
     for (unsigned int i = 0; i < ordersForLocation.size(); i++) {
+        if (ordersForLocation[i].getOrderStatus() == 3 && ordersForLocation[i].getPhoneNumber() == phoneNumber ) {
         cout << "[" << i + 1 << "]" << endl;
         for(unsigned int j = 0; j < ordersForLocation.at(i).getPizzasFromMenu().size(); j++) {
 
@@ -320,46 +349,32 @@ void DeliveryController::displayReadyOrdersForCustomer(string yourLocation) {
         cout << endl;
 
         cout << "Total price of order: " << ordersForLocation.at(i).getTotalPrice() << endl;
+        cout << "------------------------------------------" << endl;
     }
-    cout << "------------------------------------------" << endl;
+
     cout << endl;
-
-    markeOrderPaidAndDeliverd(yourLocation, phoneNumber);
-
-    char selection = '\0';
-    cin >> selection;
-
-    if (selection == 'h') {
-        HomeController home;
-        home.init();
     }
-    else if (selection == 'b') {
-        clearScreen();
-        modifyDelivery(yourLocation);
-    }
-    else {
-        return;
-    }
+
 }
 
 void DeliveryController::markeOrderPaidAndDeliverd(string yourLocation, string phoneNumber) {
     cout << "Mark order paid and deliverd? (y/n)" << endl;
-    char inputforno;
-    char inputforyes;
-    cin >> inputforno;
+    char selection;
+    cin >> selection;
 
-    if(inputforno == 'y') {
+    if(selection == 'y') {
         vector<Order> thisOrder = orderData.getOrderForLocationAndOrderStatusAndPhoneNumber(yourLocation, 3, phoneNumber);
         for(int i = 0; i < thisOrder.size(); i++) {
             thisOrder.at(i).setOrderStatus(4);
             orderData.storeAllOrders(thisOrder);
         }
+
         cout << "The order has been marked" << endl;
         cout << "Press h to go home" << endl;
         cout << "Press anything else to quit" << endl;
-        cin >> inputforyes;
+        cin >> selection;
 
-        if (inputforyes == 'h') {
+        if (selection == 'h') {
             HomeController home;
             home.init();
         }
@@ -370,9 +385,9 @@ void DeliveryController::markeOrderPaidAndDeliverd(string yourLocation, string p
     else {
         cout << "Press h to go home" << endl;
         cout << "Press anything else to quit" << endl;
-        cin >> inputforno;
+        cin >> selection;
 
-        if (inputforno == 'h') {
+        if (selection == 'h') {
             HomeController home;
             home.init();
         }
@@ -380,12 +395,27 @@ void DeliveryController::markeOrderPaidAndDeliverd(string yourLocation, string p
             return;
         }
     }
-
-
         /*clearScreen();
         displayLogo();
         displayDeliveryLogo();
         displayReadyOrdersForCustomer(yourLocation);*/
 }
 
+void BackOrQuitDeliveryFunction() {
+    displayDeliveryBackOrQuitUI();
+    DeliveryController delivery;
+    char selection;
+    cin >> selection;
+
+    if (selection == 'b') {
+        clearScreen();
+        displayLogo();
+        displayDeliveryLogo();
+        delivery.init();
+    }
+
+    else if (selection == 'q') {
+        return;
+    }
+}
 

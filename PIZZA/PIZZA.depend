@@ -213,7 +213,7 @@
 1513257294 c:\users\einarbi\desktop\pizzaforrit\pizza\ui\aboutui.h
 	<iostream>
 
-1513257294 c:\users\einarbi\desktop\pizzaforrit\pizza\controllers\deliverycontroller.h
+1513288605 c:\users\einarbi\desktop\pizzaforrit\pizza\controllers\deliverycontroller.h
 	<iostream>
 	"SalesmanUI.h"
 	"HomeController.h"
@@ -232,7 +232,7 @@
 	"DeliveryUI.h"
 	"HomeController.h"
 
-1513257294 c:\users\einarbi\desktop\pizzaforrit\pizza\ui\deliveryui.h
+1513288556 c:\users\einarbi\desktop\pizzaforrit\pizza\ui\deliveryui.h
 	<iostream>
 
 1513279944 source:c:\users\einarbi\desktop\pizzaforrit\pizza\controllers\salesmancontroller.cpp
@@ -287,7 +287,7 @@
 1513267440 source:c:\users\einarbi\desktop\pizzaforrit\pizza\repo\locationdata.cpp
 	"LocationData.h"
 
-1513270353 source:c:\users\einarbi\desktop\pizzaforrit\pizza\repo\orderdata.cpp
+1513286747 source:c:\users\einarbi\desktop\pizzaforrit\pizza\repo\orderdata.cpp
 	"OrderData.h"
 
 1513257294 source:c:\users\einarbi\desktop\pizzaforrit\pizza\repo\pizzadata.cpp
@@ -308,7 +308,7 @@
 1513257294 source:c:\users\einarbi\desktop\pizzaforrit\pizza\ui\bakerui.cpp
 	"BakerUI.h"
 
-1513257294 source:c:\users\einarbi\desktop\pizzaforrit\pizza\ui\deliveryui.cpp
+1513288556 source:c:\users\einarbi\desktop\pizzaforrit\pizza\ui\deliveryui.cpp
 	"DeliveryUI.h"
 
 1513257294 source:c:\users\einarbi\desktop\pizzaforrit\pizza\ui\homeui.cpp
@@ -317,9 +317,12 @@
 1513257294 source:c:\users\einarbi\desktop\pizzaforrit\pizza\ui\salesmanui.cpp
 	"SalesmanUI.h"
 
-1513280630 source:c:\users\einarbi\desktop\pizzaforrit\pizza\controllers\admincontroller.cpp
+1513282979 source:c:\users\einarbi\desktop\pizzaforrit\pizza\controllers\admincontroller.cpp
 	"AdminController.h"
 
-1513280630 source:c:\users\einarbi\desktop\pizzaforrit\pizza\controllers\deliverycontroller.cpp
+1513288715 source:c:\users\einarbi\desktop\pizzaforrit\pizza\controllers\deliverycontroller.cpp
 	"DeliveryController.h"
+
+1513285711 source:c:\users\einarbi\desktop\pizzaforrit\pizza\controllers\bakercontroller.cpp
+	"BakerController.h"
 

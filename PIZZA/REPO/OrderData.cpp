@@ -11,14 +11,6 @@ void OrderData::addOrderToOrders(Order& order) {
     fout.close();
 }
 
-void OrderData::addOrderToLegacy(Order& order) {
-
-    ofstream fout;
-    fout.open("legacy.txt", ios::app);
-    fout << order;
-    fout.close();
-}
-
 vector<Order> OrderData::retrieveAllOrders() {
     ifstream myFile("orders.txt");
     if(myFile.fail()) {
@@ -40,30 +32,6 @@ vector<Order> OrderData::retrieveAllOrders() {
     return orders;
 }
 
-vector<Order> OrderData::retrieveAllOrdersFromLegacy() {
-    vector <Order> orders;
-
-    ifstream fin;
-    fin.open("legacy.txt");
-    while(!fin.eof()) {
-        Order order;
-        fin >> order;
-        orders.push_back(order);
-    }
-    orders.pop_back();
-
-    return orders;
-}
-
-void OrderData::storeAllOrdersToLegacy(vector<Order> orders) {
-
-    ofstream fout;
-    fout.open ("legacy.txt", ios::app);
-    for(unsigned int i = 0; i < orders.size(); i++) {
-        fout << orders[i];
-    }
-    fout.close();
-}
 
 void OrderData::storeAllOrders(vector<Order> orders)
 {
@@ -105,9 +73,7 @@ vector<Order> OrderData::getOrderForLocation(string location) {
     for(unsigned int i = 0; i < orders.size(); i++) {
         if (location == orders[i].getLocation()) {
             orderForLocation.push_back(orders[i]);
-
         }
-
     }
 
     orders.pop_back();

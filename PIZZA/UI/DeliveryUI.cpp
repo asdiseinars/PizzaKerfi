@@ -7,3 +7,9 @@ void DeliveryUI::displayDeliveryUI() {
     cout << "b: Go back" << endl;
     cout << "h: Go home" << endl;
 }
+
+void DeliveryUI::displayDeliveryBackOrQuitUI() {
+    cout << "b: Back" << endl;
+    cout << "q: Quit" << endl;
+
+}

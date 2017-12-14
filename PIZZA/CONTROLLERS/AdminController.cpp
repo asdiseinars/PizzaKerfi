@@ -1033,6 +1033,9 @@ void AdminController::displayAllOrders() {
             else if(allOrders.at(i).getOrderStatus() == 3) {
                 cout << "Ready for delivery" << endl;
             }
+            else if(allOrders.at(i).getOrderStatus() == 4) {
+                cout << "Paid and deliverd" << endl;
+            }
             else{
                 cout << "Invalid order status" << endl;
             }
