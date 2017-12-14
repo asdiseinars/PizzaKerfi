@@ -1,6 +1,5 @@
 #include "AdminController.h"
-#include <iostream>
-using namespace std;
+
 
 AdminController::AdminController() {
 

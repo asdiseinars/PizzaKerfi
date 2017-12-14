@@ -16,7 +16,9 @@
 #include "GlobalController.h"
 #include "GlobalUI.h"
 #include <typeinfo>
+#include <iostream>
 
+using namespace std;
 using namespace GlobalHelp;
 using namespace AdminUI;
 
