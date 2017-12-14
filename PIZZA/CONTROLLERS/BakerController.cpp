@@ -129,7 +129,10 @@ void BakerController::displayOrdersForBaker(string yourLocation) {
 
     cout << "ORDERS" << endl;
     cout << "------------------------------------------" << endl;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 17cd11bb9532f5dbc4779fa1430779ed4900a732
         for (unsigned int i = 0; i < ordersForLocation.size(); i++) {
             if (ordersForLocation[i].getOrderStatus() == 1 || ordersForLocation[i].getOrderStatus() == 2) {
                 cout << "\e[1m" << "[" << i + 1 << "]" << "\e[0m" << endl;
