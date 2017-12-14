@@ -85,8 +85,9 @@ void AdminController::modifyToppings() {
         displayLogo();
         displayAdminLogo();
         addTopping();
-
-        toppingBackFunction();
+        if(addTopping()) {
+            toppingBackFunction();
+        }
     }
 
     else if (selection == '3') { // Removes topping from the list
@@ -115,49 +116,52 @@ void AdminController::modifyToppings() {
     }
 }
 
-bool AdminController::validatePrice (double price) {
+bool AdminController::isValidPrice (double price) {
     if(price < 0 || !isdigit(price)) {
         return false;
     }
     return true;
 }
 
-void AdminController::addTopping() {
+bool AdminController::addTopping() {
     char selection = 'y';
+    string newName;
+    double newPrice;
 
     cout << "\033[4m" << "Add topping to menu" <<  "\033[0m" << endl << endl;
 
-    while(selection == 'y'){
-        string newName;
-        double newPrice;
+    while(selection == 'y') {
+
+
         cout << "Name: ";
         cin >> newName;
+        cout << "Price: ";
+        cin >> newPrice;
 
-        do{ ///do while lykkja komin í rugl eftir mörg test haha
-            cout << "Price: ";
-            cin >> newPrice;
-                if(validatePrice(newPrice)) {
-                    cout << "Invalid input. Please enter a positive integer as your price!" << endl;
-                }
+        if (!isValidPrice(newPrice)) {
+            clearScreen();
+            displayLogo();
+            displayAdminLogo();
+            cout << "Invalid input! " << endl;
+            return isValidPrice(newPrice);
         }
-        while(validatePrice(newPrice));
 
         Topping topping(newName, newPrice);
         toppingData.addTopping(topping);
-
         cout << endl << "Do you want to add another topping? (y/n)" << endl;
 
         cin >> selection;
 
-        while(selection != 'y' && selection != 'n') {
+        while((selection != 'y' && selection != 'n') || isValidPrice(newPrice)) {
             cout << endl << "Invalid input! " << endl << endl;
             cout << "Do you want to add another topping? (y/n)" << endl;
             cin >> selection;
             cout << endl;
-
         }
     }
+    return isValidPrice(newPrice);
 }
+
 
 void AdminController::removeTopping() {
 

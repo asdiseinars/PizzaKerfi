@@ -38,7 +38,7 @@ class AdminController {
     AdminController();
     void init();
 
-    bool validatePrice (double price);
+    bool isValidPrice (double price);
 
     void modifyPizzas();
     void addPizzaToMenu();
@@ -46,7 +46,7 @@ class AdminController {
     void pizzaBackFunction();
 
     void modifyToppings();
-    void addTopping();
+    bool addTopping();
     void removeTopping();
     void toppingBackFunction();
 
