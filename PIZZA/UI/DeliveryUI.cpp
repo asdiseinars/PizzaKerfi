@@ -5,4 +5,5 @@ void DeliveryUI::displayDeliveryUI() {
     cout << "2. Orders ready for delivery" << endl;
     cout << "3. Deliver order" << endl;
     cout << "b: Go back" << endl;
+    cout << "h: Go home" << endl;
 }

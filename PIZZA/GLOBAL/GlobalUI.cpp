@@ -63,7 +63,7 @@ void GlobalUI::displayAllSodas() {
 void GlobalUI::displayAllLocations() {
     vector<Location> locations = locationData.retrieveAllLocations();
     if(locations.size() < 1) {
-        cout << "There are no locations on the menu!" << endl;
+        cout << "There are no locations!" << endl;
     } else {
         cout << "\e[1m" << "LOCATIONS" << "\e[0m" << endl;
         cout << "------------------------------------------" << endl;
