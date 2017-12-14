@@ -82,91 +82,77 @@ void DeliveryController::modifyDelivery(string yourLocation) {
 }
 
 void DeliveryController::displayOrders(string yourLocation) {
-    vector<Order> ordersForLocation = orderData.getOrderForLocation(yourLocation);
+    vector<Order> allOrders = orderData.retrieveAllOrders();
 
-    cout << "\e[1m" << "Your location is " << yourLocation << "\e[0m" << endl << endl;
-
-    cout << "ORDERS" << endl;
+    cout << "\e[1m" << "ORDERS" << "\e[0m" << endl;
     cout << "------------------------------------------" << endl;
 
-    for (unsigned int i = 0; i < ordersForLocation.size(); i++) {
-        cout << "[" << i + 1 << "]" << endl;
-        for(unsigned int j = 0; j < ordersForLocation.at(i).getPizzasFromMenu().size(); j++) {
+    for (unsigned int i = 0; i < allOrders.size(); i++) {
 
-            cout << "Name: " << ordersForLocation.at(i).getPizzasFromMenu().at(j).getName() << endl;
-            cout << "Crust: " << ordersForLocation.at(i).getPizzasFromMenu().at(j).getCrust().getName() << endl;
+            cout << "\e[1m" << "[" << i + 1 << "]" << "\e[0m" << endl;
 
-            cout << "Toppings: " << endl;
-            for (unsigned int k = 0; k < ordersForLocation.at(i).getPizzasFromMenu().at(j).getToppings().size(); k++) {
+            cout << "\e[1m" << "PIZZAS FROM MENU: " << "\e[0m" << endl;
+            for(unsigned int j = 0; j < allOrders.at(i).getPizzasFromMenu().size(); j++) {
 
-                cout << ordersForLocation.at(i).getPizzasFromMenu().at(j).getToppings().at(k).getName() << endl;
+                cout <<  "\tName: "  << allOrders.at(i).getPizzasFromMenu().at(j).getName() << endl;
+                cout << "\tCrust: " << allOrders.at(i).getPizzasFromMenu().at(j).getCrust().getName() << endl;
 
+                cout <<  "\tToppings: ";
+                for (unsigned int k = 0; k < allOrders.at(i).getPizzasFromMenu().at(j).getToppings().size(); k++) {
+
+                    cout << allOrders.at(i).getPizzasFromMenu().at(j).getToppings().at(k).getName() << "  ";
+                    } cout << endl;
             }
             cout << endl;
-        }
-        cout << endl;
 
+            cout << "\e[1m" << "CUSTOMIZED PIZZAS: " << "\e[0m" << endl;
+            for(unsigned int m = 0; m < allOrders.at(i).getPizzasFromScratch().size(); m++) {
+                cout << "\tCrust: " << allOrders.at(i).getPizzasFromScratch().at(m).getCrust().getName() << endl;
 
-        for(unsigned int m = 0; m < ordersForLocation.at(i).getPizzasFromScratch().size(); m++) {
-            cout << "Name: " << ordersForLocation.at(i).getPizzasFromScratch().at(m).getName() << endl;
-            cout << "Crust: " << ordersForLocation.at(i).getPizzasFromScratch().at(m).getCrust().getName() << endl;
-
-            cout << "Toppings: " << endl;
-            for (unsigned int n = 0; n < ordersForLocation.at(i).getPizzasFromScratch().at(m).getToppings().size(); n++) {
-                cout << ordersForLocation.at(i).getPizzasFromScratch().at(m).getToppings().at(n).getName() << endl;
+                cout << "\tToppings: ";
+                for (unsigned int n = 0; n < allOrders.at(i).getPizzasFromScratch().at(m).getToppings().size(); n++) {
+                    cout << allOrders.at(i).getPizzasFromScratch().at(m).getToppings().at(n).getName() << "  ";
+                }
             }
-        }
 
-        cout << endl;
+            cout << endl << endl;
 
-        cout << "Side orders: " << endl;
-        for(unsigned int l = 0; l < ordersForLocation.at(i).getBreadsticks().size(); l++) {
-            cout << ordersForLocation.at(i).getBreadsticks().at(l).getName() << endl;
-        }
+            cout << "\e[1m" << "SIDE ORDERS: " << "\e[0m" << endl;
+            for(unsigned int l = 0; l < allOrders.at(i).getBreadsticks().size(); l++) {
+                cout << "\t" << allOrders.at(i).getBreadsticks().at(l).getName() << endl;
+            }
 
-        cout << endl;
+            cout << endl;
 
-        cout << "Order status: ";
-        if(ordersForLocation.at(i).getOrderStatus() == 1) {
-            cout << "Order recieved" << endl;
-        }
-        else if(ordersForLocation.at(i).getOrderStatus() == 2) {
-            cout << "In oven" << endl;
-        }
-        else if(ordersForLocation.at(i).getOrderStatus() == 3) {
-            cout << "Ready" << endl;
-        }
-        else{
-            cout << "Invalid order status! " << endl;
-        }
 
-        cout << endl;
+            cout << "\e[1m" << "DRINKS: " << "\e[0m" << endl;
+            for(unsigned int l = 0; l < allOrders.at(i).getSodas().size(); l++) {
+                cout << "\t" << allOrders.at(i).getSodas().at(l).getName() << endl;
+            }
 
-        cout << "Total price of order: " << ordersForLocation.at(i).getTotalPrice() << endl;
+            cout << endl;
+
+            cout << "Order status: ";
+            if(allOrders.at(i).getOrderStatus() == 1) {
+                cout << "Order recieved" << endl;
+            }
+            else if(allOrders.at(i).getOrderStatus() == 2) {
+                cout << "In oven" << endl;
+            }
+            else if(allOrders.at(i).getOrderStatus() == 3) {
+                cout << "Ready for delivery" << endl;
+            }
+            else{
+                cout << "Invalid order status" << endl;
+            }
+
+            cout << endl;
+
+            cout << "Total price of order: " << allOrders.at(i).getTotalPrice() << " kr." << "\e[0m" << endl;
+
+            cout << "------------------------------------------" << endl;
+
     }
-    cout << "------------------------------------------" << endl;
-
-    ///viljum hér geta valið að fara home, back og quit
-
-    cout << "Press h to go home" << endl;
-    cout << "Press b to go back" << endl;
-    cout << "Press anything else to quit" << endl;
-
-    char selection = '\0';
-    cin >> selection;
-
-    if (selection == 'h') {
-        HomeController home;
-        home.init();
-    }
-    else if (selection == 'b') {
-        clearScreen();
-        modifyDelivery(yourLocation);
-    }
-    else {
-        return;
-    }
-
 }
 
 void DeliveryController::displayReadyOrders(string yourLocation) {
@@ -174,65 +160,76 @@ void DeliveryController::displayReadyOrders(string yourLocation) {
 
     cout << "\e[1m" << "Your location is " << yourLocation << "\e[0m" << endl << endl;
 
-    cout << "ORDERS" << endl;
+    cout << "\e[1m" << "ORDERS" << "\e[0m" << endl;
     cout << "------------------------------------------" << endl;
 
     for (unsigned int i = 0; i < ordersForLocation.size(); i++) {
-        cout << "[" << i + 1 << "]" << endl;
-        for(unsigned int j = 0; j < ordersForLocation.at(i).getPizzasFromMenu().size(); j++) {
+        if (ordersForLocation[i].getOrderStatus() == 3) {
+            cout << "\e[1m" << "[" << i + 1 << "]" << "\e[0m" << endl;
 
-            cout << "Name: " << ordersForLocation.at(i).getPizzasFromMenu().at(j).getName() << endl;
-            cout << "Crust: " << ordersForLocation.at(i).getPizzasFromMenu().at(j).getCrust().getName() << endl;
+            cout << "\e[1m" << "PIZZAS FROM MENU: " << "\e[0m" << endl;
+            for(unsigned int j = 0; j < ordersForLocation.at(i).getPizzasFromMenu().size(); j++) {
 
-            cout << "Toppings: " << endl;
-            for (unsigned int k = 0; k < ordersForLocation.at(i).getPizzasFromMenu().at(j).getToppings().size(); k++) {
+                cout <<  "\t"  << ordersForLocation.at(i).getPizzasFromMenu().at(j).getName() << " " << ordersForLocation.at(i).getPizzasFromMenu().at(j).getPrice() << " kr." << endl;
+                cout << "\tCrust: " << ordersForLocation.at(i).getPizzasFromMenu().at(j).getCrust().getName() << endl;
 
-                cout << ordersForLocation.at(i).getPizzasFromMenu().at(j).getToppings().at(k).getName() << endl;
+                cout <<  "\tToppings: ";
+                for (unsigned int k = 0; k < ordersForLocation.at(i).getPizzasFromMenu().at(j).getToppings().size(); k++) {
 
+                    cout << ordersForLocation.at(i).getPizzasFromMenu().at(j).getToppings().at(k).getName() << "  ";
+                    }
+                    cout << endl << endl;
             }
             cout << endl;
-        }
-        cout << endl;
 
+            cout << "\e[1m" << "CUSTOMIZED PIZZAS: " << "\e[0m" << endl;
+            for(unsigned int m = 0; m < ordersForLocation.at(i).getPizzasFromScratch().size(); m++) {
+                cout << "\tCrust: " << ordersForLocation.at(i).getPizzasFromScratch().at(m).getCrust().getName() << endl;
 
-        for(unsigned int m = 0; m < ordersForLocation.at(i).getPizzasFromScratch().size(); m++) {
-            cout << "Name: " << ordersForLocation.at(i).getPizzasFromScratch().at(m).getName() << endl;
-            cout << "Crust: " << ordersForLocation.at(i).getPizzasFromScratch().at(m).getCrust().getName() << endl;
+                cout << "\tToppings: ";
+                double sum = 0;
+                for (unsigned int n = 0; n < ordersForLocation.at(i).getPizzasFromScratch().at(m).getToppings().size(); n++) {
 
-            cout << "Toppings: " << endl;
-            for (unsigned int n = 0; n < ordersForLocation.at(i).getPizzasFromScratch().at(m).getToppings().size(); n++) {
-                cout << ordersForLocation.at(i).getPizzasFromScratch().at(m).getToppings().at(n).getName() << endl;
+                    cout << ordersForLocation.at(i).getPizzasFromScratch().at(m).getToppings().at(n).getName() << "  ";
+                    sum += ordersForLocation.at(i).getPizzasFromScratch().at(m).getToppings().at(n).getPrice();
+                }
+                cout << endl << "\tPrice: " << sum + ordersForLocation.at(i).getPizzasFromScratch().at(m).getCrust().getPrice() + 1500 <<  " kr." << endl;
+                cout << endl;
             }
-        }
 
-        cout << endl;
+            cout << "\e[1m" << "SIDE ORDERS: " << "\e[0m" << endl;
+            for(unsigned int l = 0; l < ordersForLocation.at(i).getBreadsticks().size(); l++) {
+                cout << "\t" << ordersForLocation.at(i).getBreadsticks().at(l).getName() << "  " << ordersForLocation.at(i).getBreadsticks().at(l).getPrice() << " kr." << endl;
+            }
 
-        cout << "Side orders: " << endl;
-        for(unsigned int l = 0; l < ordersForLocation.at(i).getBreadsticks().size(); l++) {
-            cout << ordersForLocation.at(i).getBreadsticks().at(l).getName() << endl;
-        }
+            cout << "\e[1m" << "SODAS: " << "\e[0m" << endl;
+            for(unsigned int p = 0; p < ordersForLocation.at(i).getBreadsticks().size(); p++) {
+                cout << "\t" << ordersForLocation.at(i).getSodas().at(p).getName() << "  " << ordersForLocation.at(i).getSodas().at(p).getPrice() << " kr." << endl;
+            }
 
-        cout << endl;
+            cout << endl;
 
-        cout << "Order status: ";
-        if(ordersForLocation.at(i).getOrderStatus() == 1) {
-            cout << "Order received" << endl;
-        }
-        else if(ordersForLocation.at(i).getOrderStatus() == 2) {
-            cout << "In oven" << endl;
-        }
-        else if(ordersForLocation.at(i).getOrderStatus() == 3) {
-            cout << "Ready" << endl;
-        }
-        else{
-            cout << "Invalid order status! " << endl;
-        }
+            cout << "Order status: ";
+            if(ordersForLocation.at(i).getOrderStatus() == 1) {
+                cout << "\e[1m" << "Order recieved" << "\e[0m" << endl;
+            }
+            else if(ordersForLocation.at(i).getOrderStatus() == 2) {
+                cout << "\e[1m" << "In oven" << "\e[0m" << endl;
+            }
+            else if(ordersForLocation.at(i).getOrderStatus() == 3) {
+                cout << "Ready for delivery" << endl;
+            }
+            else{
+                cout << "\e[1m" << "Invalid order status" << "\e[0m" << endl;
+            }
 
-        cout << endl;
+            cout << endl;
 
-        cout << "Total price of order: " << ordersForLocation.at(i).getTotalPrice() << endl;
+            cout << "Total price: "  << "\e[1m" << ordersForLocation.at(i).getTotalPrice() << " kr." << "\e[0m" << endl;
+
+            cout << "------------------------------------------" << endl;
+        }
     }
-    cout << "------------------------------------------" << endl;
 
     cout << "Press h to go home" << endl;
     cout << "Press b to go back" << endl;
@@ -340,10 +337,6 @@ void DeliveryController::markeOrderPaidAndDeliverd(string yourLocation, string p
         for(int i = 0; i < thisOrder.size(); i++) {
             thisOrder.at(i).setOrderStatus(4);
             orderData.storeAllOrders(thisOrder);
-            //orderData.moveOrderToLegacy(yourLocation);
-            //orderData.moveAllOrdersFromOrderstoLegacyAtLocation(yourLocation);
-            //orderData.removeFromOrder(yourLocation);
-
         }
         cout << "The order has been marked" << endl;
         cout << "Press h to go home" << endl;
