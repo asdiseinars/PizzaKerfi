@@ -38,15 +38,13 @@ class AdminController {
     AdminController();
     void init();
 
-    bool isValidPrice (double price);
-
     void modifyPizzas();
     void addPizzaToMenu();
     void removePizzaFromMenu();
     void pizzaBackFunction();
 
     void modifyToppings();
-    bool addTopping();
+    void addTopping();
     void removeTopping();
     void toppingBackFunction();
 
