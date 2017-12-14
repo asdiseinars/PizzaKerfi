@@ -1,6 +1,10 @@
 #ifndef ADMINUI_H
 #define ADMINUI_H
 #include <iostream>
+#include <vector>
+#include "Order.h"
+#
+
 
 using namespace std;
 
@@ -12,7 +16,9 @@ void displayAdminSodasUI();
 void displayAdminBackOrQuitUI();
 void displayAdminLocationUI();
 void displayAdminSideOrderUI();
+void displayAdminOrderUI();
 void displayAdminCrustUI();
+
 };
 
 #endif // ADMINUI_H
