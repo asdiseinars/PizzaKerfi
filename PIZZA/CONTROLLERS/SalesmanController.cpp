@@ -71,7 +71,10 @@ void SalesmanController::modifySalesman(string yourLocation) {
     vector<Pizza> pizzasToOrder = orderPizzaFromMenu(pizzaFromMenuCount);
     cout << endl;
 
-    cout << endl;
+    clearScreen();
+    displayLogo();
+    displayAdminLogo();
+    cout << endl << "Your location is " << yourLocation << endl << endl;
     cout << "\e[1m" << "ORDER STATUS" << "\e[0m" << endl;
      if (pizzaFromMenuCount != 0) {
         cout << "Pizza: ";
@@ -93,6 +96,10 @@ void SalesmanController::modifySalesman(string yourLocation) {
     int pizzasFromScratchCount = getPizzaFromScratchCount();
     vector<Pizza> pizzasFromScratchOrder = orderPizzaFromScratch(pizzasFromScratchCount);
 
+    clearScreen();
+    displayLogo();
+    displayAdminLogo();
+    cout << endl << "Your location is " << yourLocation << endl << endl;
     cout << "\e[1m" << "ORDER STATUS" << "\e[0m" << endl;
     if (pizzaFromMenuCount != 0) {
         cout << "Pizza: ";
@@ -120,7 +127,10 @@ void SalesmanController::modifySalesman(string yourLocation) {
     cout << endl;
     vector<Breadsticks> breadsticksToOrder = orderBreadsticksFromMenu(breadsticksCount);
 
-    cout << endl;
+    clearScreen();
+    displayLogo();
+    displayAdminLogo();
+    cout << endl << "Your location is " << yourLocation << endl << endl;
     cout << "\e[1m" << "ORDER STATUS" << "\e[0m" << endl;
     if (pizzaFromMenuCount != 0) {
         cout << "Pizza: ";
@@ -154,40 +164,11 @@ void SalesmanController::modifySalesman(string yourLocation) {
     vector<Soda> sodasToOrder = orderSodaFromMenu(sodaCount);
     cout << endl;
 
-    cout << endl;
-    cout << "\e[1m" << "ORDER STATUS" << "\e[0m" << endl;
-    if (pizzaFromMenuCount != 0) {
-        cout << "Pizza: ";
-        for(int i = 0; i < pizzasToOrder.size(); i++) {
-            cout << pizzasToOrder.at(i).getName() << "  ";
-        }
-        cout << endl;
-    }
-    if (pizzasFromScratchCount != 0) {
-        cout << pizzasFromScratchOrder.size() << " customized pizzas";
-        cout << endl;
-    }
-    if (breadsticksCount != 0) {
-        cout << "Side Orders: ";
-        for(int i = 0; i < breadsticksToOrder.size(); i++) {
-            cout << breadsticksToOrder.at(i).getName() << "  ";
-        }
-        cout << endl;
-    }
-    if (sodaCount != 0) {
-        cout << "Sodas: ";
-        for(int i = 0; i < sodasToOrder.size(); i++) {
-            cout << sodasToOrder.at(i).getName() << "  ";
-        }
-        cout << endl;
-    }
 
     double totalPrice = getTotalPriceOfSodas(sodasToOrder) +
                         getTotalPriceOfBreadsticks(breadsticksToOrder) +
                         getTotalPriceOfPizzasFromScratch(pizzasFromScratchOrder) +
                         getTotalPriceOfPizzasFromMenu(pizzasToOrder);
-
-    cout << "Total: " << totalPrice << endl;
 
     cout << endl << endl;
 
@@ -226,31 +207,45 @@ void SalesmanController::modifySalesman(string yourLocation) {
 
     cout << "\e[1m" << "Pizzas from menu: " << "\e[0m";
 
-    if (pizzaFromMenuCount > 1) {
+    if (pizzaFromMenuCount >= 1) {
         for(int i = 0; i < pizzasToOrder.size(); i++) {
-        cout << pizzasToOrder.at(i).getName() << ", ";
+        cout << pizzasToOrder.at(i).getName() << "  ";
         }
         cout << endl;
     }
-    else if (pizzaFromMenuCount == 1) {
-        for(int i = 0; i < pizzasToOrder.size(); i++) {
-        cout << pizzasToOrder.at(i).getName() << endl;
-        }
-    }
+
     else {
         cout << "There are no pizzas from menu on your order" << endl;
     }
 
     cout << "\e[1m" << "Pizzas made from scratch: " << "\e[0m" << endl;
 
+    for (unsigned int i = 0; i < pizzasFromScratchOrder.size(); i++) {
+        cout << "Customized pizza number " << i + 1 << endl;
+        for (unsigned int j = 0; j < pizzasFromScratchOrder.at(i).getToppings().size(); j++) {
+            cout << pizzasFromScratchOrder.at(i).getToppings().at(j).getName() << endl;
+        }
+        cout << endl;
+    }
+
 
     cout << "\e[1m" << "Side orders: " << "\e[0m" << endl;
+
+    for(int i = 0; i < breadsticksToOrder.size(); i++) {
+            cout << breadsticksToOrder.at(i).getName() << "  ";
+        }
+        cout << endl;
+
 
 
     cout << "\e[1m" << "Drinks: " << "\e[0m" << endl;
 
+    for(int i = 0; i < sodasToOrder.size(); i++) {
+            cout << sodasToOrder.at(i).getName() << "  ";
+        }
+        cout << endl;
 
-    cout << endl << " \e[1m Thank you for your order, come back soon! \e[0m" << endl << endl;
+    cout << endl << "\e[1m" << "Thank you for your order, come back soon!" << "\e[0m" << endl << endl;
 
     endMessage();
 }
@@ -291,7 +286,7 @@ double SalesmanController::getTotalPriceOfPizzasFromMenu(vector<Pizza> pizzasFro
 }
 
 int SalesmanController::getPizzaFromScratchCount() {
-    cout << "\e[1m" << "How many pizzas do you want to make? " << "\e[0m" << endl;
+    cout << "How many pizzas do you want to make? " << endl;
     int pizzasFromScratchCount = 0;
     cin >> pizzasFromScratchCount;
     return pizzasFromScratchCount;
@@ -321,7 +316,7 @@ vector<Pizza> SalesmanController::orderPizzaFromScratch(int pizzasFromScratchCou
         cout << "------------------------------------------" << endl << endl;
 
         char inputCrust;
-        cout << "\e[1m" << "Please select a crust" << "\e[0m" << endl;
+        cout << "Please select a crust" << endl;
         cin >> inputCrust;
         int inputIntCrust = inputCrust - 48;
         Crust myCrust = crusts.at(inputIntCrust - 1);
@@ -338,10 +333,10 @@ vector<Pizza> SalesmanController::orderPizzaFromScratch(int pizzasFromScratchCou
         int toppingCount = 0;
         int inputTopping = 0;
 
-        cout <<  "\e[1m" << "How many toppings?" << "\e[0m" << endl;
+        cout << "How many toppings?" << endl;
         cin >> toppingCount;
 
-        cout << "\e[1m" << "Enter toppings: " << "\e[0m" << endl;
+        cout << "Enter toppings: " << endl;
 
         for(int i = 0; i < toppingCount; i++) {
         cin >> inputTopping;
@@ -373,7 +368,7 @@ double SalesmanController::getTotalPriceOfPizzasFromScratch(vector<Pizza> pizzas
 }
 
 int SalesmanController::getBreadsticksCount() {
-    cout << "\e[1m" << "How many side orders?" << "\e[0m" << endl;
+    cout << "How many side orders?" << endl;
     int breadsticksCount = 0;
     cin >> breadsticksCount;
 
@@ -385,7 +380,7 @@ vector<Breadsticks> SalesmanController::orderBreadsticksFromMenu(int breadsticks
     vector<Breadsticks> breadsticksToOrder;
 
     if (breadsticksCount != 0) {
-        cout << "\e[1m" << "Enter side orders: " << "\e[0m" << endl;
+        cout << "Enter side orders: " << endl;
         int input = 0;
         for(int i = 0; i < breadsticksCount; i++) {
             cin >> input;
@@ -406,7 +401,7 @@ double SalesmanController::getTotalPriceOfBreadsticks(vector<Breadsticks> breads
 }
 
 int SalesmanController::getSodaCount() {
-    cout << "\e[1m" << "How many sodas? " << "\e[0m" << endl;
+    cout << "How many sodas? " << endl;
     int sodaCount = 0;
     cin >> sodaCount;
 
@@ -418,7 +413,7 @@ vector<Soda> SalesmanController::orderSodaFromMenu(int sodaCount) {
 
     vector<Soda> sodasToOrder;
     if (sodaCount != 0) {
-        cout << "\e[1m" << "Enter soda: " << "\e[0m" << endl;
+        cout << "Enter soda: " << endl;
         int input = 0;
         for(int i = 0; i < sodaCount; i++) {
             cin >> input;
