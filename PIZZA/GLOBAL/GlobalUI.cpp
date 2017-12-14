@@ -14,7 +14,7 @@ void GlobalUI::displayAllToppings() {
         cout << "-----------------------------------------" << endl << endl;
         for (unsigned int i = 0; i < toppings.size(); i++) {
             Topping topping = toppings.at(i);
-            cout << "[" << i+1 << "] " << "Name: " << topping.getName() << "\t \t Price: " << topping.getPrice() << endl;
+            cout << "[" << i+1 << "] " << "Name: " << topping.getName() << "\t \t Price: " << topping.getPrice() << " kr."  << endl;
             cout << endl;
         }
         cout << "------------------------------------------" << endl;
@@ -29,7 +29,7 @@ void GlobalUI::displayAllPizzas() {
         cout << "\e[1m" << "PIZZA MENU" << "\e[0m" << endl;
         cout << "------------------------------------------" << endl;
         for (unsigned int i = 0; i < pizzas.size(); i++) {
-            cout << "[" << i+1 << "] " << pizzas.at(i).getName() << " " << pizzas.at(i).getPrice() << "kr." << endl;
+            cout << "[" << i+1 << "] " << pizzas.at(i).getName() << " " << pizzas.at(i).getPrice() << " kr." << endl;
             cout << "\tCrust: " << pizzas.at(i).getCrust().getName() << endl;
             cout << "\tToppings: ";
             for(unsigned  int j = 0; j < pizzas.at(i).getToppings().size(); j++) {
@@ -53,7 +53,7 @@ void GlobalUI::displayAllSodas() {
         cout << "------------------------------------------" << endl << endl;
         for (unsigned int i = 0; i < sodas.size(); i++) {
             Soda soda = sodas.at(i);
-            cout << "[" << i+1 << "] " << "Name: " << soda.getName() << "\t \t Price: " << soda.getPrice() << endl;
+            cout << "[" << i+1 << "] " << "Name: " << soda.getName() << "\t \t Price: " << soda.getPrice() << " kr." << endl;
             cout << endl;
         }
         cout << "------------------------------------------" << endl;
@@ -84,7 +84,7 @@ void GlobalUI::displayAllBreadsticks() {
         cout << "------------------------------------------" << endl << endl;
         for (unsigned int i = 0; i < breadsticks.size(); i++) {
             Breadsticks bread = breadsticks.at(i);
-            cout << "[" << i+1 << "] " << "Name: " << bread.getName() << "\t \t Price: " << bread.getPrice() << endl;
+            cout << "[" << i+1 << "] " << "Name: " << bread.getName() << "\t \t Price: " << bread.getPrice() << " kr." << endl;
             cout << endl;
         }
         cout << "------------------------------------------" << endl;
@@ -100,7 +100,7 @@ void GlobalUI::displayAllCrusts () {
         cout << "------------------------------------------" << endl;
         for (unsigned int i = 0; i < crusts.size(); i++) {
             Crust crust = crusts.at(i);
-            cout << "[" << i+1 << "] " << "Name: " << crust.getName() << "\t \t Price: " << crust.getPrice() << endl;
+            cout << "[" << i+1 << "] " << "Name: " << crust.getName() << "\t \t Price: " << crust.getPrice() << " kr." << endl;
             cout << endl;
         }
         cout << "------------------------------------------" << endl;
