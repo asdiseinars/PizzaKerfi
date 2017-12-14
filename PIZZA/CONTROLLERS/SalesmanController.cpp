@@ -5,7 +5,7 @@ SalesmanController::SalesmanController() {
 }
 
 void SalesmanController::endMessage() {
-    cout << "Press any button if you would like to continue" << endl;
+    cout << "Press anything to continue" << endl;
     cout << "Press q to quit" << endl;
 
     char input = '\0';
@@ -29,8 +29,9 @@ void SalesmanController::init() {
 }
 
 void SalesmanController::modifySalesman(string yourLocation) {
-    cout << " is your current location" << endl << endl;
-    endMessage();
+    clearScreen();
+    displayLogo();
+    displaySalesmanLogo();
 
     cout << "\e[1m" << "Your location is " << yourLocation << "\e[0m" << endl << endl;
     displayStepsOfOrdering();
@@ -38,19 +39,19 @@ void SalesmanController::modifySalesman(string yourLocation) {
     endMessage();
 
     cout << "\e[1m" << "Your location is " << yourLocation << "\e[0m" << endl << endl;
-    cout << "\e[1m" << "STEP 1: Input phone number (7 digits)" << "\e[0m";
-
+    cout << "\e[1m" << "STEP 1: Input phone number (7 digits) " << "\e[0m " << endl;
     cin >> phoneNumber;
+
     while(phoneNumber.length() != 7) {
-        cin >> phoneNumber;
         cout << "Invalid phone number!";
+        cin >> phoneNumber;
     }
+
     cout << endl;
     endMessage();
 
     cout << "\e[1m" << "Your location is " << yourLocation << "\e[0m" << endl << endl;
-    cout << "\e[1m" << "STEP 2: " << "\e[0m" << endl;
-    cout << "\e[1m" << "Order pizza/s from menu" << "\e[0m" << endl << endl;
+    cout << "\e[1m" << "STEP 2: Order pizza/s from menu" << "\e[0m" << endl;
 
     globalUI.displayAllPizzas();
 
@@ -61,11 +62,6 @@ void SalesmanController::modifySalesman(string yourLocation) {
     cout << "You have selected the following pizzas: " << endl;
     for(int i = 0; i < pizzasToOrder.size(); i++) {
         cout << "Name: " << pizzasToOrder.at(i).getName() << endl;
-        cout << "Price: " << pizzasToOrder.at(i).getPrice() << endl;
-        cout << "Toppings: " << endl;
-        for(int j = 0; j < pizzasToOrder.at(i).getToppings().size(); j++) {
-            cout << pizzasToOrder.at(i).getToppings().at(j).getName() << endl;
-        }
     }
 
     cout << "\e[1m" << "Current price for pizzas from menu: " << "\e[0m" << getTotalPriceOfPizzasFromMenu(pizzasToOrder) << endl; ///laga þennnan texta

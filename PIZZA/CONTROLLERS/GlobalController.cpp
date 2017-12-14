@@ -14,18 +14,25 @@ string GlobalController::chooseLocation() {
     }
     cout << "------------------------------------------" << endl;
     cout << "Choose location: ";
-    char input = 0;
-    cin >> input;
-
+    int input = 0;
     string yourLocation = "";
+    cin >> input;
+    input -= 1;
 
-    int inputInt = input - 48;
-    for(unsigned int i = 0; i < locations.size(); i++) {
-        if(inputInt == i + 1) {
-            yourLocation = locations[i].getName();
-        }
+    while(input >= locations.size() || locations.size() < 0 ) {
+        cout << "Location not available!" << endl;
+        cout << "Try another location." << endl;
+        cin >> input;
+        input -= 1;
     }
+
+    for(unsigned int i = 0; i < locations.size(); i++) {
+        yourLocation = locations[input].getName();
+    }
+
     cout << yourLocation;
+
     return yourLocation;
 }
+
 
