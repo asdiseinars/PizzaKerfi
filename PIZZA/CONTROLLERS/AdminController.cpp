@@ -1003,9 +1003,10 @@ void AdminController::displayAllOrders() {
                 for (unsigned int n = 0; n < allOrders.at(i).getPizzasFromScratch().at(m).getToppings().size(); n++) {
                     cout << allOrders.at(i).getPizzasFromScratch().at(m).getToppings().at(n).getName() << "  ";
                 }
+                cout << endl << endl;
             }
 
-            cout << endl << endl;
+            cout << endl;
 
             cout << "\e[1m" << "SIDE ORDERS: " << "\e[0m" << endl;
             for(unsigned int l = 0; l < allOrders.at(i).getBreadsticks().size(); l++) {
