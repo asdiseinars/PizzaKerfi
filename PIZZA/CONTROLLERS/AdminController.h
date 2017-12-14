@@ -38,8 +38,6 @@ class AdminController {
     AdminController();
     void init();
 
-    bool validatePrice (double price);
-
     void modifyPizzas();
     void addPizzaToMenu();
     void removePizzaFromMenu();

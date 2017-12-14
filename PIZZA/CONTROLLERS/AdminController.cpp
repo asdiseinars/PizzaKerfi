@@ -85,7 +85,6 @@ void AdminController::modifyToppings() {
         displayLogo();
         displayAdminLogo();
         addTopping();
-
         toppingBackFunction();
     }
 
@@ -115,36 +114,22 @@ void AdminController::modifyToppings() {
     }
 }
 
-bool AdminController::validatePrice (double price) {
-    if(price < 0 || !isdigit(price)) {
-        return false;
-    }
-    return true;
-}
-
 void AdminController::addTopping() {
     char selection = 'y';
 
-    cout << "\033[4m" << "Add topping to menu" <<  "\033[0m" << endl << endl;
+    cout << "\033[4m" << "Add toppings to menu" <<  "\033[0m" << endl << endl;
 
-    while(selection == 'y'){
+    while(selection == 'y') {
         string newName;
         double newPrice;
+
         cout << "Name: ";
         cin >> newName;
-
-        do{ ///do while lykkja komin í rugl eftir mörg test haha
-            cout << "Price: ";
-            cin >> newPrice;
-                if(validatePrice(newPrice)) {
-                    cout << "Invalid input. Please enter a positive integer as your price!" << endl;
-                }
-        }
-        while(validatePrice(newPrice));
+        cout << "Price: ";
+        cin >> newPrice;
 
         Topping topping(newName, newPrice);
         toppingData.addTopping(topping);
-
         cout << endl << "Do you want to add another topping? (y/n)" << endl;
 
         cin >> selection;
@@ -154,10 +139,11 @@ void AdminController::addTopping() {
             cout << "Do you want to add another topping? (y/n)" << endl;
             cin >> selection;
             cout << endl;
-
         }
     }
 }
+
+
 
 void AdminController::removeTopping() {
 

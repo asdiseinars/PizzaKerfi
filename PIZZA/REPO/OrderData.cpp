@@ -41,7 +41,6 @@ vector<Order> OrderData::retrieveAllOrders() {
 }
 
 vector<Order> OrderData::retrieveAllOrdersFromLegacy() {
-
     vector <Order> orders;
 
     ifstream fin;
@@ -77,7 +76,18 @@ void OrderData::storeAllOrders(vector<Order> orders)
 }
 
 vector<Order> OrderData::getOrderForLocation(string location) {
+
     vector <Order> orders;
+
+    ifstream myFile("orders.txt");
+    if(myFile.fail()) {
+        cout << "There are no orders! " << endl;
+        cout << "Please exit." << endl;
+    }
+    else if(orders.size() < 1) {
+        cout << "There are no toppings on the menu! " << endl;
+        cout << "Please exit." << endl;
+    }
 
     ifstream fin;
     fin.open("orders.txt");
@@ -155,6 +165,7 @@ vector<Order> OrderData::getOrderForLocationAndOrderStatusAndPhoneNumber(string 
 
     return orderForLocationAndOrderStatusAndPhoneNumber;
 }
+
 
 /*
 void OrderData::removeFromOrder(string yourLocation) {

@@ -24,7 +24,6 @@ class OrderData {
     void removeFromOrder(string yourLocation);
     void moveOrderToLegacy(string yourLocation);
     void moveAllOrdersFromOrderstoLegacyAtLocation(string location);
-
 };
 
 #endif // ORDERDATA_H
