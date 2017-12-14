@@ -6,6 +6,11 @@ ToppingData::ToppingData() {
 }
 
 void ToppingData::storeAllToppings(vector<Topping> toppings) {
+    ifstream myFile("toppings.txt");
+    if(myFile.fail()) {
+        cout << "There are no toppings on the menu! " << endl;
+        cout << "Please exit and add toppings to the menu first." << endl;
+    }
 
     ofstream fout;
     fout.open("toppings.txt");
@@ -30,22 +35,6 @@ vector<Topping> ToppingData::retrieveAllToppings() {
 
     return toppings;
 }
-
-/*void ToppingData::changeTopping(Topping topping) {
-    vector<Topping> toppings = retrieveAllToppings();
-    vector<Topping> newToppings;
-    ofstream fout;
-    fout.open ("toppings.txt");
-
-    for (unsigned int i = 0; i < toppings.size(); i++) {
-        if (toppings[i] == topping) {
-            cin >> newtopping[i].getName();
-            cin >> newtopping[i].getPrice();
-        }
-    }
-
-} */
-
 
 void ToppingData::addTopping(Topping& topping) {
     ofstream fout;

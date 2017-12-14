@@ -52,7 +52,7 @@ void SalesmanController::modifySalesman(string yourLocation) {
     cout << "\e[1m" << "STEP 2: " << "\e[0m" << endl;
     cout << "\e[1m" << "Order pizza/s from menu" << "\e[0m" << endl << endl;
 
-    globalController.displayAllPizzas();
+    globalUI.displayAllPizzas();
 
     int pizzaFromMenuCount = getPizzaFromMenuCount();
     vector<Pizza> pizzasToOrder = orderPizzaFromMenu(pizzaFromMenuCount);
@@ -94,7 +94,7 @@ void SalesmanController::modifySalesman(string yourLocation) {
     cout << "\e[1m" << "Order side orders" << "\e[0m" << endl << endl;
 
 
-    globalController.displayAllBreadsticks();
+    globalUI.displayAllBreadsticks();
     int breadsticksCount = getBreadsticksCount();
     cout << endl;
     vector<Breadsticks> breadsticksToOrder = orderBreadsticksFromMenu(breadsticksCount);
@@ -110,7 +110,7 @@ void SalesmanController::modifySalesman(string yourLocation) {
     cout << "\e[1m" << "STEP 5: " << "\e[0m";
     cout << "\e[1m" << "Order drinks" << "\e[0m" << endl << endl;
 
-    globalController.displayAllSodas();
+    globalUI.displayAllSodas();
     int sodaCount = getSodaCount();
     vector<Soda> sodasToOrder = orderSodaFromMenu(sodaCount);
     cout << endl;

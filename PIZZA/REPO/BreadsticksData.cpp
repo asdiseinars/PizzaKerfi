@@ -24,6 +24,12 @@ void BreadsticksData::storeAllBreadsticks(vector<Breadsticks> breadsticks) {
 
 vector<Breadsticks> BreadsticksData::retrieveAllBreadsticks() {
 
+    ifstream myFile("breadsticks.txt");
+    if(myFile.fail()) {
+        cout << "There are no side orders on the menu! " << endl;
+        cout << "Please exit and add side orders to the menu first." << endl;
+    }
+
     vector <Breadsticks> breadsticks;
     Breadsticks bread;
 

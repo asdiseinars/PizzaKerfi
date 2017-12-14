@@ -14,6 +14,7 @@
 #include "SodaData.h"
 #include "CrustData.h"
 #include "GlobalController.h"
+#include "GlobalUI.h"
 #include <typeinfo>
 
 using namespace GlobalHelp;
@@ -28,11 +29,14 @@ class AdminController {
     SodaData sodaData;
     CrustData crustData;
     GlobalController globalController;
+    GlobalUI globalUI;
 
 
   public:
     AdminController();
     void init();
+
+    bool validatePrice (double price);
 
     void modifyPizzas();
     void addPizzaToMenu();
