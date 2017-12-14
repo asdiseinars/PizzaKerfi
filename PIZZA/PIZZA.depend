@@ -241,13 +241,66 @@
 1513257294 source:c:\users\einarbi\desktop\pizzaforrit\pizza\controllers\homecontroller.cpp
 	"HomeController.h"
 
+<<<<<<< HEAD
 1513267440 source:c:\users\einarbi\desktop\pizzaforrit\pizza\controllers\salesmancontroller.cpp
+=======
+1513257294 source:c:\users\einarbi\desktop\pizzaforrit\pizza\global\globalhelp.cpp
+	"GlobalHelp.h"
+
+1513257294 source:c:\users\einarbi\desktop\pizzaforrit\pizza\global\globalui.cpp
+	"GlobalUI.h"
+
+1513257294 source:c:\users\einarbi\desktop\pizzaforrit\pizza\main.cpp
+=======
+1513257294 source:c:\users\einarbi\desktop\pizzaforrit\pizza\controllers\globalcontroller.cpp
+=======
+1513263488 c:\users\asdis\desktop\pizzaforrit\pizza\ui\deliveryui.h
+>>>>>>> f5ceded4eb2649a2158a10cdc3dbdfc23b9fe48c
+	<iostream>
+
+1513264859 source:c:\users\karal\desktop\pizzaforrit\pizza\controllers\bakercontroller.cpp
+	"BakerController.h"
+
+1513257256 source:c:\users\karal\desktop\pizzaforrit\pizza\controllers\deliverycontroller.cpp
+	"DeliveryController.h"
+
+<<<<<<< HEAD
+1513256524 source:c:\users\karal\desktop\pizzaforrit\pizza\controllers\globalcontroller.cpp
+=======
+1513263488 source:c:\users\asdis\desktop\pizzaforrit\pizza\controllers\globalcontroller.cpp
+>>>>>>> 2d61bb7b1d2d22f04c23820009f9a4506ca60cfb
+>>>>>>> f5ceded4eb2649a2158a10cdc3dbdfc23b9fe48c
+	"GlobalController.h"
+
+1513246642 source:c:\users\karal\desktop\pizzaforrit\pizza\controllers\homecontroller.cpp
+	"HomeController.h"
+
+<<<<<<< HEAD
+1513273918 source:c:\users\asdis\desktop\pizzaforrit\pizza\controllers\salesmancontroller.cpp
+=======
+<<<<<<< HEAD
+1513246642 source:c:\users\karal\desktop\pizzaforrit\pizza\global\globalhelp.cpp
+=======
+<<<<<<< HEAD
+1513257294 source:c:\users\einarbi\desktop\pizzaforrit\pizza\global\globalhelp.cpp
+=======
+1513264866 source:c:\users\asdis\desktop\pizzaforrit\pizza\controllers\salesmancontroller.cpp
+>>>>>>> 3882bf802bba6ceecb89c1e220f974504cd8dd3b
+>>>>>>> e754df20107920d5961724bc06f72d57722350c6
 	"SalesmanController.h"
 
 1513257294 source:c:\users\einarbi\desktop\pizzaforrit\pizza\global\globalhelp.cpp
 	"GlobalHelp.h"
 
+<<<<<<< HEAD
 1513257294 source:c:\users\einarbi\desktop\pizzaforrit\pizza\global\globalui.cpp
+=======
+<<<<<<< HEAD
+1513268032 source:c:\users\asdis\desktop\pizzaforrit\pizza\global\globalui.cpp
+=======
+1513256524 source:c:\users\karal\desktop\pizzaforrit\pizza\global\globalui.cpp
+>>>>>>> 3882bf802bba6ceecb89c1e220f974504cd8dd3b
+>>>>>>> e754df20107920d5961724bc06f72d57722350c6
 	"GlobalUI.h"
 
 1513257294 source:c:\users\einarbi\desktop\pizzaforrit\pizza\main.cpp
