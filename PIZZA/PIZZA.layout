@@ -2,91 +2,14 @@
 <CodeBlocks_layout_file>
 	<FileVersion major="1" minor="0" />
 	<ActiveTarget name="Debug" />
-<<<<<<< HEAD
-	<File name="CONTROLLERS\AdminController.h" open="1" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="CONTROLLERS\AdminController.cpp" open="1" top="1" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="1073" topLine="45" />
+			<Cursor1 position="2707" topLine="85" />
 		</Cursor>
 	</File>
-	<File name="UI\AdminUI.cpp" open="1" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="CONTROLLERS\AdminController.h" open="1" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="628" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="CONTROLLERS\AdminController.cpp" open="1" top="1" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="2728" topLine="111" />
-		</Cursor>
-	</File>
-	<File name="CONTROLLERS\BakerController.cpp" open="1" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="0" topLine="0" />
-=======
-<<<<<<< HEAD
-	<File name="CONTROLLERS\GlobalController.cpp" open="1" top="1" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="822" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="UI\SalesmanUI.cpp" open="1" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="1327" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="GLOBAL\GlobalUI.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="2987" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="REPO\LocationData.cpp" open="1" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="484" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="CONTROLLERS\SalesmanController.cpp" open="1" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="1198" topLine="36" />
-=======
-	<File name="CONTROLLERS\DeliveryController.cpp" open="1" top="1" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="12190" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="CONTROLLERS\SalesmanController.cpp" open="1" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="629" topLine="19" />
-		</Cursor>
-	</File>
-	<File name="CONTROLLERS\SalesmanController.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="1170" topLine="11" />
-		</Cursor>
-	</File>
-	<File name="CONTROLLERS\HomeController.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="216" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="UI\DeliveryUI.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="272" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="CONTROLLERS\BakerController.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="3187" topLine="12" />
-		</Cursor>
-	</File>
-	<File name="CONTROLLERS\AdminController.cpp" open="0" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="1223" topLine="47" />
-		</Cursor>
-	</File>
-	<File name="CONTROLLERS\DeliveryController.h" open="1" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="608" topLine="10" />
->>>>>>> 752e495cbddb6b269d9190d542ca9259335c7f12
->>>>>>> 1518abf5f236e4085bab63546edc89e4559af84a
+			<Cursor1 position="1032" topLine="30" />
 		</Cursor>
 	</File>
 </CodeBlocks_layout_file>

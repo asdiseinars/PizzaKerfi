@@ -85,9 +85,7 @@ void AdminController::modifyToppings() {
         displayLogo();
         displayAdminLogo();
         addTopping();
-        if(addTopping()) {
-            toppingBackFunction();
-        }
+        toppingBackFunction();
     }
 
     else if (selection == '3') { // Removes topping from the list
@@ -116,35 +114,19 @@ void AdminController::modifyToppings() {
     }
 }
 
-bool AdminController::isValidPrice (double price) {
-    if(price < 0 || !isdigit(price)) {
-        return false;
-    }
-    return true;
-}
-
-bool AdminController::addTopping() {
+void AdminController::addTopping() {
     char selection = 'y';
-    string newName;
-    double newPrice;
 
-    cout << "\033[4m" << "Add topping to menu" <<  "\033[0m" << endl << endl;
+    cout << "\033[4m" << "Add toppings to menu" <<  "\033[0m" << endl << endl;
 
     while(selection == 'y') {
-
+        string newName;
+        double newPrice;
 
         cout << "Name: ";
         cin >> newName;
         cout << "Price: ";
         cin >> newPrice;
-
-        if (!isValidPrice(newPrice)) {
-            clearScreen();
-            displayLogo();
-            displayAdminLogo();
-            cout << "Invalid input! " << endl;
-            return isValidPrice(newPrice);
-        }
 
         Topping topping(newName, newPrice);
         toppingData.addTopping(topping);
@@ -152,15 +134,15 @@ bool AdminController::addTopping() {
 
         cin >> selection;
 
-        while((selection != 'y' && selection != 'n') || isValidPrice(newPrice)) {
+        while(selection != 'y' && selection != 'n') {
             cout << endl << "Invalid input! " << endl << endl;
             cout << "Do you want to add another topping? (y/n)" << endl;
             cin >> selection;
             cout << endl;
         }
     }
-    return isValidPrice(newPrice);
 }
+
 
 
 void AdminController::removeTopping() {
