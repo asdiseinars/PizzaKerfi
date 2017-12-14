@@ -16,6 +16,7 @@
 #include "SodaData.h"
 #include "OrderData.h"
 #include "DeliveryUI.h"
+#include "HomeController.h"
 
 using namespace GlobalHelp;
 using namespace std;
@@ -28,6 +29,7 @@ class DeliveryController
         OrderData orderData;
     public:
         DeliveryController();
+        void endMessage();
         void init();
         void modifyDelivery(string yourLocation);
         void displayOrders(string yourLocation);
