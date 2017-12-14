@@ -6,8 +6,10 @@ DeliveryController::DeliveryController()
 }
 
 void DeliveryController::endMessage() {
-    cout << "Press any button if you would like to continue" << endl;
     cout << "Press q to quit" << endl;
+    cout << "Press h to go home" << endl;
+    cout << "Press anything else to continue" << endl;
+
 
     char input = '\0';
     cin >> input;
@@ -15,10 +17,14 @@ void DeliveryController::endMessage() {
     if (input == 'q') {
         return;
     }
+    else if (input == 'h') {
+        HomeController home;
+        home.init();
+    }
     else {
         clearScreen();
         displayLogo();
-        displayDeliveryLogo();
+        displaySalesmanLogo();
     }
 }
 
