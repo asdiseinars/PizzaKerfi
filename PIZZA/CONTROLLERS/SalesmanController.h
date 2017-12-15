@@ -51,6 +51,7 @@ class SalesmanController {
     double getTotalPriceOfPizzasFromScratch(vector<Pizza> pizzasFromScratch);
     double getTotalPriceOfBreadsticks(vector<Breadsticks> breadsticks);
     double getTotalPriceOfSodas(vector<Soda> sodas);
+    void BackOrQuitSalesmanFunction();
 
 
 };
