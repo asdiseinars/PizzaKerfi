@@ -1,18 +1,6 @@
 #include "SalesmanUI.h"
 
-void SalesmanUI::displaySalesmanUI() {
-    cout << "Press 1 to add pizzas to order" << endl;
-    cout << "Press 2 to add drinks to order" << endl;
-    cout << "Press 3 to add side orders to order" << endl;
-    cout << "Press 4 to complete order" << endl;
-    cout << "Press b to go back" << endl;
-}
 
-void SalesmanUI::displaySalesmanPizzaUI() {
-    cout << "Press 1 to choose pizza from menu" << endl;
-    cout << "Press 2 to make your own pizza" << endl;
-    cout << "b: back" << endl;
-}
 
 void SalesmanUI::displaySalesmanDrinksUI() {
     cout << "Choose drinks: " << endl;
@@ -27,7 +15,7 @@ void SalesmanUI::displaySalesmanCompleteOrderUI() {
 }
 
 void SalesmanUI::displaySalesmanBackOrQuitUI() {
-    cout << "b: back" << endl;
+    cout << "h: Home" << endl;
     cout << "Press anything else to quit" << endl;
 }
 

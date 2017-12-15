@@ -5,7 +5,6 @@ SalesmanController::SalesmanController() {
 }
 
 void SalesmanController::endMessage() {
-    cout << "b: Go back" << endl;
     cout << "h: Go home" << endl;
     cout << "Press anything else to continue" << endl;
 
@@ -16,8 +15,8 @@ void SalesmanController::endMessage() {
         return;
     }
     else if (input == 'b') {
-        clearScreen();
-        init();
+        HomeController home;
+        home.init();
     }
     else if (input == 'h') {
         HomeController home;
@@ -29,6 +28,24 @@ void SalesmanController::endMessage() {
         displaySalesmanLogo();
     }
 }
+
+void SalesmanController::BackOrQuitSalesmanFunction(){
+    char input = '\0';
+    cin >> input;
+
+    if (input == 'b') {
+        HomeController home;
+        home.init();
+    }
+    else if (input == 'h') {
+        HomeController home;
+        home.init();
+    }
+    else {
+        return;
+    }
+}
+
 
 void SalesmanController::init() {
     displayLogo();
@@ -177,8 +194,8 @@ void SalesmanController::modifySalesman(string yourLocation) {
     orderData.addOrderToOrders(newOrder);
 
 
-    cout << "Press q to quit" << endl;
-    cout << "Press h to go home" << endl;
+    cout << "h: Go home" << endl;
+    cout << "q: Quit" << endl;
     cout << "Press anything else to confirm your order and see your receipt" << endl;
 
     char input = '\0';
@@ -244,7 +261,8 @@ void SalesmanController::modifySalesman(string yourLocation) {
 
     cout << "\e[1m" << "Thank you for your order, come back soon!" << "\e[0m" << endl << endl;
 
-    endMessage();
+    displaySalesmanBackOrQuitUI();
+    BackOrQuitSalesmanFunction();
 }
 
 int SalesmanController::getPizzaFromMenuCount() {
