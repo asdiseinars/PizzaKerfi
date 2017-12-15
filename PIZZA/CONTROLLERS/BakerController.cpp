@@ -207,9 +207,8 @@ void BakerController::displayOrdersReadyToBePutInOven(string yourLocation) {
                 for (unsigned int k = 0; k < ordersForLocation.at(i).getPizzasFromMenu().at(j).getToppings().size(); k++) {
 
                     cout << ordersForLocation.at(i).getPizzasFromMenu().at(j).getToppings().at(k).getName() << "  ";
-                    } cout << endl;
+                    } cout << endl << endl;
             }
-            cout << endl;
 
             cout << "\e[1m" << "CUSTOMIZED PIZZAS: " << "\e[0m" << endl;
             for(unsigned int m = 0; m < ordersForLocation.at(i).getPizzasFromScratch().size(); m++) {
@@ -270,9 +269,8 @@ void BakerController::displayOrdersInOven(string yourLocation) {
                 for (unsigned int k = 0; k < ordersForLocation.at(i).getPizzasFromMenu().at(j).getToppings().size(); k++) {
 
                     cout << ordersForLocation.at(i).getPizzasFromMenu().at(j).getToppings().at(k).getName() << "  ";
-                    } cout << endl;
+                    } cout << endl << endl;
             }
-            cout << endl;
 
             cout << "\e[1m" << "CUSTOMIZED PIZZAS: " << "\e[0m" << endl;
             for(unsigned int m = 0; m < ordersForLocation.at(i).getPizzasFromScratch().size(); m++) {
