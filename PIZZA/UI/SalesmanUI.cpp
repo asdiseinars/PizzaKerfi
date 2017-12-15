@@ -15,7 +15,7 @@ void SalesmanUI::displaySalesmanCompleteOrderUI() {
 }
 
 void SalesmanUI::displaySalesmanBackOrQuitUI() {
-    cout << "h: Home" << endl;
+    cout << "h: Go home" << endl;
     cout << "Press anything else to quit" << endl;
 }
 

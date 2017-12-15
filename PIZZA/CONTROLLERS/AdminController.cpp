@@ -1053,8 +1053,8 @@ void AdminController::displayAllOrders() {
 void AdminController::endMessage() {
     char selection;
 
-    cout << "Press h to go home" << endl;
-    cout << "Press q to quit" << endl;
+    cout << "h: Go home" << endl;
+    cout << "Q: Quit" << endl;
 
     cin >> selection;
 
