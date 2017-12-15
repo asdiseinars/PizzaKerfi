@@ -5,29 +5,6 @@ DeliveryController::DeliveryController()
     //ctor
 }
 
-void DeliveryController::endMessage() {
-    cout << "q: Quit" << endl;
-    cout << "h: Go home" << endl;
-    cout << "Press anything else to continue" << endl;
-
-
-    char input = '\0';
-    cin >> input;
-
-    if (input == 'q') {
-        return;
-    }
-    else if (input == 'h') {
-        HomeController home;
-        home.init();
-    }
-    else {
-        clearScreen();
-        displayLogo();
-        displaySalesmanLogo();
-    }
-}
-
 void DeliveryController::init() {
     displayLogo();
     displayDeliveryLogo();
@@ -87,7 +64,25 @@ void DeliveryController::modifyDelivery(string yourLocation) {
 
             cout << "The order has been delivered" << endl;
 
-            //BackOrQuitDeliveryFunction();
+            cout << "h: Go home" << endl;
+            cout << "q: Quit" << endl;
+
+            char input = '\0';
+            cin >> input;
+
+            if (input == 'h') {
+                HomeController home;
+                home.init();
+            }
+            else if (input == 'q') {
+                return;
+            }
+            else {
+                clearScreen();
+                displayLogo();
+                displayDeliveryLogo();
+                modifyDelivery(yourLocation);
+            }
         }
     }
 
@@ -181,19 +176,29 @@ void DeliveryController::displayOrders(string yourLocation) {
             cout << "------------------------------------------" << endl;
     }
 
-    cout << "Press h to go home" << endl;
-    cout << "Press any other button to quit the program" << endl;
+    cout << "h: Go home" << endl;
+    cout << "b: Go back" << endl;
+    cout << "q: Quit" << endl;
 
 
     char input = '\0';
     cin >> input;
 
-    if (input == 'h') {
+    if (input == 'b') {
+        modifyDelivery(yourLocation);
+    }
+    else if (input == 'h') {
         HomeController home;
         home.init();
     }
-    else {
+    else if (input == 'q') {
         return;
+    }
+    else {
+        clearScreen();
+        displayLogo();
+        displayDeliveryLogo();
+        displayOrders(yourLocation);
     }
 }
 
@@ -273,23 +278,28 @@ void DeliveryController::displayReadyOrders(string yourLocation) {
         }
     }
 
-    cout << "Press h to go home" << endl;
-    cout << "Press b to go back" << endl;
-    cout << "Press anything else to quit" << endl;
+    cout << "h: Go home" << endl;
+    cout << "b: Go back" << endl;
+    cout << "q: Quit" << endl;
 
-    char selection = '\0';
-    cin >> selection;
+    char input = '\0';
+    cin >> input;
 
-    if (selection == 'h') {
+    if (input == 'b') {
+        modifyDelivery(yourLocation);
+    }
+    else if (input == 'h') {
         HomeController home;
         home.init();
     }
-    else if (selection == 'b') {
-        clearScreen();
-        modifyDelivery(yourLocation);
+    else if (input == 'q') {
+        return;
     }
     else {
-        return;
+        clearScreen();
+        displayLogo();
+        displayDeliveryLogo();
+        displayReadyOrders(yourLocation);
     }
 }
 
@@ -303,7 +313,6 @@ void DeliveryController::displayReadyOrdersForCustomer(string yourLocation) {
         cout << "Invalid phone number!" << endl;
     }
 
-    //vector<Order> ordersForLocation = orderData.getOrderForLocationAndOrderStatusAndPhoneNumber(yourLocation, 3, phoneNumber);
     vector<Order> ordersForLocation = orderData.getOrderForLocation(yourLocation);
 
     cout << endl;
@@ -354,7 +363,6 @@ void DeliveryController::displayReadyOrdersForCustomer(string yourLocation) {
 
     cout << endl;
     }
-
 }
 
 void DeliveryController::markeOrderPaidAndDeliverd(string yourLocation, string phoneNumber) {
@@ -369,53 +377,29 @@ void DeliveryController::markeOrderPaidAndDeliverd(string yourLocation, string p
             orderData.storeAllOrders(thisOrder);
         }
 
-        cout << "The order has been marked" << endl;
-        cout << "Press h to go home" << endl;
-        cout << "Press anything else to quit" << endl;
-        cin >> selection;
+        cout << "h: Go home" << endl;
+        cout << "b: Go back" << endl;
+        cout << "q: Quit" << endl;
 
-        if (selection == 'h') {
+        char input = '\0';
+        cin >> input;
+
+        if (input == 'b') {
+            modifyDelivery(yourLocation);
+        }
+        else if (input == 'h') {
             HomeController home;
             home.init();
         }
-        else {
+        else if (input == 'q') {
             return;
         }
-    }
-    else {
-        cout << "Press h to go home" << endl;
-        cout << "Press anything else to quit" << endl;
-        cin >> selection;
-
-        if (selection == 'h') {
-            HomeController home;
-            home.init();
-        }
         else {
-            return;
+            clearScreen();
+            displayLogo();
+            displayDeliveryLogo();
+            markeOrderPaidAndDeliverd(yourLocation, phoneNumber);
         }
-    }
-        /*clearScreen();
-        displayLogo();
-        displayDeliveryLogo();
-        displayReadyOrdersForCustomer(yourLocation);*/
-}
-
-void BackOrQuitDeliveryFunction() {
-    displayDeliveryBackOrQuitUI();
-    DeliveryController delivery;
-    char selection;
-    cin >> selection;
-
-    if (selection == 'b') {
-        clearScreen();
-        displayLogo();
-        displayDeliveryLogo();
-        delivery.init();
-    }
-
-    else if (selection == 'q') {
-        return;
     }
 }
 

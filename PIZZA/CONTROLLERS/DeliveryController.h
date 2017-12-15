@@ -37,8 +37,6 @@ class DeliveryController
         void displayReadyOrdersForCustomer(string yourLocation);
         void markeOrderPaidAndDeliverd(string yourLocation, string phoneNumber);
         void displayOrdersForPhoneNumber(string yourLocation);
-        void BackOrQuitDeliveryFunction();
-
 };
 
 #endif // DELIVERYCONTROLLER_H
